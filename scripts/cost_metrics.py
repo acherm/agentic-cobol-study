@@ -27,17 +27,20 @@ Metric conventions
                          In Claude Code this is `message.usage.input_tokens`.
                          In Codex this is `total_token_usage.input_tokens`
                          with `cached_input_tokens` subtracted out.
-- `output_tokens`      : tokens generated, including any visible text AND
-                         thinking blocks (Claude Code) or agent_message (Codex).
-                         `reasoning_tokens` (Codex-only) is a SEPARATE bucket,
-                         billed but invisible.
+- `output_tokens`      : tokens generated. For Claude Code this includes
+                         visible text and thinking blocks. For Codex,
+                         `reasoning_tokens` is a SUBSET of `output_tokens`
+                         (verified on raw rollouts: total = input + output),
+                         so it must not be added on top.
 - `cache_read_tokens`  : tokens served from prompt cache (billed at ~10% of
                          input price on both platforms). Cache HIT indicator.
 - `cache_create_tokens`: tokens written to prompt cache (billed at ~125% of
                          input price on Claude; flat input on Codex).
 - `reasoning_tokens`   : Codex hidden-CoT tokens. Billed at output rate.
-- `total_tokens`       : sum of the five categories above — the cleanest
-                         "compute consumed" metric.
+- `total_tokens`       : vendor-normalized compute consumed. Codex
+                         `input_tokens` includes cache reads and
+                         `output_tokens` includes reasoning, so the sum
+                         avoids double counting per agent.
 - `cache_hit_rate`     : cache_read / (cache_read + input).
 """
 import argparse, csv, json, os, sys
@@ -62,7 +65,16 @@ def sum_tokens(sessions):
         tool_calls += s.get("tool_calls_total", 0) or 0
         user_prompts += s.get("user_turns", 0) or 0
         cost += s.get("cost_usd", 0) or 0
-    t["total_tokens"] = sum(t.values())
+    # vendor-normalized total: Codex input includes cache reads and its
+    # output includes reasoning; Claude fields are disjoint buckets
+    total = 0
+    for s in sessions:
+        i = s.get("input_tokens", 0) or 0
+        o = s.get("output_tokens", 0) or 0
+        cr = s.get("cache_read_tokens", 0) or 0
+        cw = s.get("cache_creation_tokens", 0) or 0
+        total += (i + o) if s.get("agent") == "Codex" else (i + o + cr + cw)
+    t["total_tokens"] = total
     t["tool_calls"] = tool_calls
     t["user_prompts"] = user_prompts
     t["cost_usd"] = round(cost, 2)

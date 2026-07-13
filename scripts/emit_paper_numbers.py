@@ -56,7 +56,9 @@ def main():
         up = m.get("user_prompts", 0)
         user_prompts += up.get("count", 0) if isinstance(up, dict) else (up or 0)
         toks = m.get("tokens") or {}
-        tokens_total += sum(v for v in toks.values() if isinstance(v, (int, float)))
+        # 'reasoning' is a subset of Codex 'out' (raw-rollout verified): skip it
+        tokens_total += sum(v for k, v in toks.items()
+                            if k != "reasoning" and isinstance(v, (int, float)))
         for s in m.get("sessions", []):
             role = s.get("role") or session_role(s)
             if role == "analyst":

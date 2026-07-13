@@ -9,8 +9,8 @@ analyst sessions cost \$\corpusAnalystCostUsd{} of assessment
 overhead. Wall-clock durations include idle gaps (resumed sessions).
 Token columns are vendor-normalized, in millions: fresh input
 (prompt + cache writes, cache reads excluded), cached input (cache
-reads), and output (including hidden reasoning tokens where the
-vendor reports them). Tokenizers differ across vendors, so
+reads), and output (hidden reasoning tokens are a subset of the
+vendor's output count). Tokenizers differ across vendors, so
 cross-agent token comparisons are approximate. Cost is the
 rack-rate upper bound at each vendor's public per-model prices,
 with cache reads billed at the reduced cache rate; tokens are the
@@ -25,25 +25,25 @@ Table~\ref{tab:corpus}.}
 \midrule
 \texttt{CHESS-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.74 & 17d 22h 51m & 47 & 1{,}156 & 11.9 & 166.7 & 0.6 & \$518.44 \\
 \midrule
-\texttt{CHESS-COBOL-CODEX} & Codex & \texttt{gpt-5.2} & 0.98.0 & 2d 1h 16m & 24 & 1{,}872 & 3.6 & 229.9 & 2.0 & \$44.48 \\
+\texttt{CHESS-COBOL-CODEX} & Codex & \texttt{gpt-5.2} & 0.98.0 & 2d 1h 16m & 24 & 1{,}872 & 3.6 & 229.9 & 1.1 & \$44.48 \\
 \texttt{CHESS-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.115.0-alpha.11 & 6m 50s & 1 & 63 & 0.1 & 2.5 & 0.0 & \$0.69 \\
 \midrule
 \texttt{COMPILER-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.87 & 11d 13h 49m & 97 & 3{,}734 & 35.5 & 2{,}933.5 & 1.6 & \$5{,}183.7 \\
 \texttt{COMPILER-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.92 & 30m 58s & 3 & 6 & 0.0 & 0.3 & 0.0 & \$1.27 \\
 \midrule
-\texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.117.0-alpha.24 & 4d 20h 5m & 89 & 5{,}070 & 18.1 & 463.6 & 3.4 & \$102.97 \\
+\texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.117.0-alpha.24 & 4d 20h 5m & 89 & 5{,}070 & 18.1 & 463.6 & 2.2 & \$102.97 \\
 \texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.118.0-alpha.2 & 58m 13s & 4 & 130 & 1.0 & 9.4 & 0.1 & \$3.10 \\
 \texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.118.0-alpha.2 & 5m 9s & 1 & 55 & 0.2 & 1.7 & 0.0 & \$0.56 \\
-\texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.118.0-alpha.2 & 44m 38s & 2 & 115 & 0.4 & 5.0 & 0.1 & \$1.47 \\
+\texttt{COMPILER-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.118.0-alpha.2 & 44m 38s & 2 & 115 & 0.4 & 5.0 & 0.0 & \$1.47 \\
 \midrule
 \texttt{COMPRESS-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.110 & 1d 10h 48m & 7 & 136 & 1.7 & 37.4 & 0.6 & \$129.48 \\
 \midrule
-\texttt{COMPRESS-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.108.0-alpha.12 & 10d 17h 9m & 8 & 237 & 0.6 & 16.0 & 0.2 & \$4.16 \\
+\texttt{COMPRESS-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.108.0-alpha.12 & 10d 17h 9m & 8 & 237 & 0.6 & 16.0 & 0.1 & \$4.16 \\
 \texttt{COMPRESS-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 2m 37s & 1 & 26 & 0.1 & 0.4 & 0.0 & \$0.20 \\
 \midrule
 \texttt{DOOM-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-7} & 2.1.112 & 20h 12m & 20 & 152 & 2.4 & 130.2 & 1.7 & \$367.1 \\
 \midrule
-\texttt{DOOM-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 20h 14m & 31 & 631 & 1.9 & 42.6 & 0.5 & \$11.28 \\
+\texttt{DOOM-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 20h 14m & 31 & 631 & 1.9 & 42.6 & 0.4 & \$11.28 \\
 \midrule
 \texttt{PAYROLL-COBOL-CLAUDE} & Claude Code & \texttt{claude-sonnet-4-6} & 2.1.173 & 26d 1h 34m & 29 & 136 & 1.1 & 19.5 & 0.2 & \$13.35 \\
 \midrule
@@ -52,15 +52,15 @@ Table~\ref{tab:corpus}.}
 \midrule
 \texttt{PYGAME-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.203 & 5h 30m & 17 & 153 & 0.8 & 25.1 & 0.5 & \$90.04 \\
 \midrule
-\texttt{PYGAME-COBOL-CODEX} & Codex & \texttt{gpt-5.2} & 0.98.0 & 1h 1m & 3 & 31 & 0.1 & 1.0 & 0.1 & \$0.70 \\
+\texttt{PYGAME-COBOL-CODEX} & Codex & \texttt{gpt-5.2} & 0.98.0 & 1h 1m & 3 & 31 & 0.1 & 1.0 & 0.0 & \$0.70 \\
 \midrule
 \texttt{SAT-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.109 & 1d 22h 41m & 31 & 360 & 7.8 & 168.6 & 1.0 & \$473.78 \\
 \midrule
-\texttt{SAT-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 17h 24m & 29 & 508 & 2.1 & 41.5 & 0.4 & \$10.71 \\
+\texttt{SAT-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 17h 24m & 29 & 508 & 2.1 & 41.5 & 0.3 & \$10.71 \\
 \midrule
 \texttt{TTTGAME15-COBOL-CLAUDE} & Claude Code & \texttt{claude-opus-4-6} & 2.1.74 & 6d 19h 51m & 14 & 67 & 0.9 & 7.9 & 0.3 & \$52.79 \\
 \midrule
-\texttt{TTTGAME15-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 3h 37m & 11 & 173 & 0.5 & 8.4 & 0.2 & \$2.77 \\
+\texttt{TTTGAME15-COBOL-CODEX} & Codex & \texttt{gpt-5.4} & 0.119.0-alpha.11 & 3h 37m & 11 & 173 & 0.5 & 8.4 & 0.1 & \$2.77 \\
 \bottomrule
 \end{tabular}
 \end{table*}

@@ -31,18 +31,36 @@ for p in glob.glob("output/metrics/*.json"):
 diff = json.load(open("output/difficulty.json"))
 
 # ---------------------------------------------------------------- session table
-def tok_cols(s):
-    """Vendor-normalized token columns, in millions.
-    Fresh-in: Claude Code input_tokens excludes cache reads (add cache
-    writes); Codex input_tokens includes cache reads (subtract them).
-    Out includes Codex hidden reasoning tokens (Claude output_tokens
-    already contains visible thinking)."""
+REF_SHEET = {"in": 15.0, "out": 75.0, "cache_read": 1.5, "cache_create": 18.75}
+
+
+def tok_parts(s):
+    """Vendor-normalized token buckets. Fresh-in: Claude Code input_tokens
+    excludes cache reads (add cache writes); Codex input_tokens includes
+    cache reads (subtract them). Out: vendor output count; Codex hidden
+    reasoning is a SUBSET of output_tokens (verified on the raw rollouts),
+    so it is NOT added again."""
     i = s.get("input_tokens", 0) or 0
     cr = s.get("cache_read_tokens", 0) or 0
     cw = s.get("cache_creation_tokens", 0) or 0
-    o = (s.get("output_tokens", 0) or 0) + (s.get("reasoning_tokens", 0) or 0)
+    o = s.get("output_tokens", 0) or 0
     fresh = i + cw if s.get("agent") != "Codex" else max(i - cr, 0) + cw
+    return fresh, cr, o
+
+
+def ref_cost(s):
+    """Cost of this session's token profile at the single reference price
+    sheet (Claude Opus rack rates), isolating token volume from vendor
+    pricing. Tokenizer differences across vendors remain."""
+    fresh, cr, o = tok_parts(s)
+    cw = s.get("cache_creation_tokens", 0) or 0
+    return ((fresh - cw) * REF_SHEET["in"] + cw * REF_SHEET["cache_create"]
+            + cr * REF_SHEET["cache_read"] + o * REF_SHEET["out"]) / 1e6
+
+
+def tok_cols(s):
     f1 = lambda v: f"{v/1e6:,.1f}".replace(",", "{,}")
+    fresh, cr, o = tok_parts(s)
     return f1(fresh), f1(cr), f1(o)
 
 
@@ -83,8 +101,8 @@ analyst sessions cost \\$\\corpusAnalystCostUsd{} of assessment
 overhead. Wall-clock durations include idle gaps (resumed sessions).
 Token columns are vendor-normalized, in millions: fresh input
 (prompt + cache writes, cache reads excluded), cached input (cache
-reads), and output (including hidden reasoning tokens where the
-vendor reports them). Tokenizers differ across vendors, so
+reads), and output (hidden reasoning tokens are a subset of the
+vendor's output count). Tokenizers differ across vendors, so
 cross-agent token comparisons are approximate. Cost is the
 rack-rate upper bound at each vendor's public per-model prices,
 with cache reads billed at the reduced cache rate; tokens are the
@@ -137,21 +155,19 @@ print(f"difficulty_table.tex: {len(drows)} rows")
 
 # ---------------------------------------------------------------- corpus table
 crows = []
-tot = dict(up=0, calls=0, fresh=0.0, cache=0.0, out=0.0, cost=0.0, act=0.0, loc=0)
+tot = dict(up=0, calls=0, fresh=0.0, cache=0.0, out=0.0, cost=0.0, refc=0.0, act=0.0, loc=0)
 f1 = lambda v: f"{v/1e6:,.1f}".replace(",", "{,}")
 for proj in sorted(diff, key=lambda p: diff[p]["index"]):
     m = metrics[proj]
     dev = [s for s in m["sessions"] if (s.get("role") or "dev") == "dev"]
     model = max(dev, key=lambda s: s.get("cost_usd") or 0).get("model") or "---"
-    fresh = cache = out = 0.0
+    fresh = cache = out = refc = 0.0
     for s in dev:
-        i = s.get("input_tokens", 0) or 0
-        cr = s.get("cache_read_tokens", 0) or 0
-        cw = s.get("cache_creation_tokens", 0) or 0
-        o = (s.get("output_tokens", 0) or 0) + (s.get("reasoning_tokens", 0) or 0)
-        fresh += (i + cw) if s.get("agent") != "Codex" else max(i - cr, 0) + cw
+        fr, cr, o = tok_parts(s)
+        fresh += fr
         cache += cr
         out += o
+        refc += ref_cost(s)
     up = m["user_prompts"]["count"]
     calls = m["tool_calls_total"]
     cost = m["cost_usd"]
@@ -159,35 +175,42 @@ for proj in sorted(diff, key=lambda p: diff[p]["index"]):
     loc = ((m.get("complexity") or {}).get("aggregate") or {}).get("code_lines", 0)
     lab = diff[proj]["label"]
     for k, v in dict(up=up, calls=calls, fresh=fresh, cache=cache, out=out,
-                     cost=cost, act=act, loc=loc).items():
+                     cost=cost, refc=refc, act=act, loc=loc).items():
         tot[k] += v
     cost_s = f"{cost:.2f}" if cost < 10 else fmt(int(round(cost)))
+    ref_s = f"{refc:.2f}" if refc < 10 else fmt(int(round(refc)))
     crows.append(f"\\texttt{{{display(proj)}}} & \\texttt{{{model}}} & {up} & "
                  f"{fmt(calls)} & {f1(fresh)} & {f1(cache)} & {f1(out)} & "
-                 f"\\${cost_s} & {act:.1f} & {fmt(loc)} & \\textsc{{{lab}}} \\\\")
+                 f"\\${cost_s} & \\${ref_s} & {act:.1f} & {fmt(loc)} & \\textsc{{{lab}}} \\\\")
 total_row = (f"\\textbf{{Total ({len(crows)} systems)}} &  & \\textbf{{{tot['up']}}} & "
              f"\\textbf{{{fmt(tot['calls'])}}} & \\textbf{{{f1(tot['fresh'])}}} & "
              f"\\textbf{{{f1(tot['cache'])}}} & \\textbf{{{f1(tot['out'])}}} & "
-             f"\\textbf{{\\${fmt(int(round(tot['cost'])))}}} & \\textbf{{{tot['act']:.1f}}} & "
+             f"\\textbf{{\\${fmt(int(round(tot['cost'])))}}} & "
+             f"\\textbf{{\\${fmt(int(round(tot['refc'])))}}} & \\textbf{{{tot['act']:.1f}}} & "
              f"\\textbf{{{fmt(tot['loc'])}}} &  \\\\")
 corpus_tex = """% AUTO-GENERATED by scripts/gen_appendix_tables.py -- do not edit by hand.
-\\begin{table*}[!t]
+\\begin{table*}[!tp]
 \\centering
 \\caption{Measured development profile of the \\nSystems{} systems,
 sorted by difficulty index: dominant model, substantive user
 prompts, tool calls, vendor-normalized tokens in millions (fresh
 input, cache reads, output including hidden reasoning), rack-rate
-cost upper bound, active hours, COBOL code lines, and difficulty
-class. Development sessions only (Section~\\ref{sec:method}).
+cost upper bound, the cost of the same token profile at a single
+reference price sheet (USD@ref, Claude Opus rack rates: 15/75 USD
+per Mtok in/out, 1.5 cache reads, 18.75 cache writes), active
+hours, COBOL code lines, and difficulty class. USD@ref isolates
+token volume from vendor pricing (tokenizer differences across
+vendors remain). Development sessions only
+(Section~\\ref{sec:method}).
 Design rationale and oracles per system are in
 Table~\\ref{tab:projects}, per-session details in
 Table~\\ref{tab:appendix-sessions} (appendix).}
 \\label{tab:corpus}
 \\renewcommand{\\arraystretch}{1.1}
 \\scriptsize
-\\begin{tabular}{llrrrrrrrrl}
+\\begin{tabular}{llrrrrrrrrrl}
 \\toprule
-\\textbf{System} & \\textbf{Model} & \\textbf{Prompts} & \\textbf{Tool calls} & \\textbf{In (M)} & \\textbf{Cache (M)} & \\textbf{Out (M)} & \\textbf{Cost (USD)} & \\textbf{Act.\\ h} & \\textbf{LoC} & \\textbf{Diff.} \\\\
+\\textbf{System} & \\textbf{Model} & \\textbf{Prompts} & \\textbf{Tool calls} & \\textbf{In (M)} & \\textbf{Cache (M)} & \\textbf{Out (M)} & \\textbf{Cost (USD)} & \\textbf{USD@ref} & \\textbf{Act.\\ h} & \\textbf{LoC} & \\textbf{Diff.} \\\\
 \\midrule
 """ + "\n".join(crows) + """
 \\midrule
