@@ -1,0 +1,45 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc",
+  "has_git": true,
+  "commits": 2,
+  "commit_log": [
+    {
+      "sha": "b9482aa7f3a4b8870eb3b1da371ac83170a93bcf",
+      "date": "2026-07-08T17:08:28+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Flappy Bird clone and rewrite README for fresh users"
+    },
+    {
+      "sha": "95e7034e50ade303cd0900d3ccb866744e9ae007",
+      "date": "2026-07-08T16:20:47+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add pygame-style graphics framework for GnuCOBOL"
+    }
+  ],
+  "first_commit": "2026-07-08T16:20:47+02:00",
+  "last_commit": "2026-07-08T17:08:28+02:00",
+  "authors": {
+    "Mathieu Acher": 2
+  },
+  "churn": {
+    "files_changed_total": 13,
+    "insertions_total": 1888,
+    "deletions_total": 153,
+    "per_commit": [
+      {
+        "sha": "b9482aa7f3a4b8870eb3b1da371ac83170a93bcf",
+        "date": "2026-07-08T17:08:28+02:00",
+        "files": 4,
+        "ins": 679,
+        "del": 153
+      },
+      {
+        "sha": "95e7034e50ade303cd0900d3ccb866744e9ae007",
+        "date": "2026-07-08T16:20:47+02:00",
+        "files": 9,
+        "ins": 1209,
+        "del": 0
+      }
+    ]
+  }
+}

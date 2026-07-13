@@ -1,0 +1,107 @@
+Game of 15 -- Optimal Play Tree (Avoid/Branches)
+========================================================================
+
+Legend:  P1+ = P1 wins  |  P2+ = P2 wins  |  D = Draw
+
+  |--  = safe/optimal move (preserves the game-theoretic value)
+  AVOID = losing move (changes the game-theoretic value against you)
+
+Root [D]  (255168 terminal games)
+
+|-- P1=1 -> [D] (29592 games)
+|   AVOID P2=2 -> [P1+] (3396 games)
+|   AVOID P2=3 -> [P1+] (3524 games)
+|   AVOID P2=4 -> [P1+] (3396 games)
+|   |-- P2=5 -> [D] (3810 games)
+|   |-- P2=6 -> [D] (3938 games)
+|   AVOID P2=7 -> [P1+] (3524 games)
+|   |-- P2=8 -> [D] (3938 games)
+|   +-- P2=9 -> [D] (4066 games)
+|-- P1=2 -> [D] (27732 games)
+|   AVOID P2=1 -> [P1+] (3126 games)
+|   AVOID P2=3 -> [P1+] (3126 games)
+|   AVOID P2=4 -> [P1+] (3540 games)
+|   |-- P2=5 -> [D] (3468 games)
+|   AVOID P2=6 -> [P1+] (3540 games)
+|   AVOID P2=7 -> [P1+] (3668 games)
+|   AVOID P2=8 -> [P1+] (3596 games)
+|   AVOID P2=9 -> [P1+] (3668 games)
+|-- P1=3 -> [D] (29592 games)
+|   AVOID P2=1 -> [P1+] (3524 games)
+|   AVOID P2=2 -> [P1+] (3396 games)
+|   |-- P2=4 -> [D] (3938 games)
+|   |-- P2=5 -> [D] (3810 games)
+|   AVOID P2=6 -> [P1+] (3396 games)
+|   |-- P2=7 -> [D] (4066 games)
+|   |-- P2=8 -> [D] (3938 games)
+|   AVOID P2=9 -> [P1+] (3524 games)
+|-- P1=4 -> [D] (27732 games)
+|   AVOID P2=1 -> [P1+] (3126 games)
+|   AVOID P2=2 -> [P1+] (3540 games)
+|   AVOID P2=3 -> [P1+] (3668 games)
+|   |-- P2=5 -> [D] (3468 games)
+|   AVOID P2=6 -> [P1+] (3596 games)
+|   AVOID P2=7 -> [P1+] (3126 games)
+|   AVOID P2=8 -> [P1+] (3540 games)
+|   AVOID P2=9 -> [P1+] (3668 games)
+|-- P1=5 -> [D] (25872 games)
+|   AVOID P2=1 -> [P1+] (3270 games)
+|   |-- P2=2 -> [D] (3198 games)
+|   AVOID P2=3 -> [P1+] (3270 games)
+|   |-- P2=4 -> [D] (3198 games)
+|   |-- P2=6 -> [D] (3198 games)
+|   AVOID P2=7 -> [P1+] (3270 games)
+|   |-- P2=8 -> [D] (3198 games)
+|   AVOID P2=9 -> [P1+] (3270 games)
+|-- P1=6 -> [D] (27732 games)
+|   AVOID P2=1 -> [P1+] (3668 games)
+|   AVOID P2=2 -> [P1+] (3540 games)
+|   AVOID P2=3 -> [P1+] (3126 games)
+|   AVOID P2=4 -> [P1+] (3596 games)
+|   |-- P2=5 -> [D] (3468 games)
+|   AVOID P2=7 -> [P1+] (3668 games)
+|   AVOID P2=8 -> [P1+] (3540 games)
+|   AVOID P2=9 -> [P1+] (3126 games)
+|-- P1=7 -> [D] (29592 games)
+|   AVOID P2=1 -> [P1+] (3524 games)
+|   |-- P2=2 -> [D] (3938 games)
+|   |-- P2=3 -> [D] (4066 games)
+|   AVOID P2=4 -> [P1+] (3396 games)
+|   |-- P2=5 -> [D] (3810 games)
+|   |-- P2=6 -> [D] (3938 games)
+|   AVOID P2=8 -> [P1+] (3396 games)
+|   AVOID P2=9 -> [P1+] (3524 games)
+|-- P1=8 -> [D] (27732 games)
+|   AVOID P2=1 -> [P1+] (3668 games)
+|   AVOID P2=2 -> [P1+] (3596 games)
+|   AVOID P2=3 -> [P1+] (3668 games)
+|   AVOID P2=4 -> [P1+] (3540 games)
+|   |-- P2=5 -> [D] (3468 games)
+|   AVOID P2=6 -> [P1+] (3540 games)
+|   AVOID P2=7 -> [P1+] (3126 games)
+|   AVOID P2=9 -> [P1+] (3126 games)
++-- P1=9 -> [D] (29592 games)
+    |-- P2=1 -> [D] (4066 games)
+    |-- P2=2 -> [D] (3938 games)
+    AVOID P2=3 -> [P1+] (3524 games)
+    |-- P2=4 -> [D] (3938 games)
+    |-- P2=5 -> [D] (3810 games)
+    AVOID P2=6 -> [P1+] (3396 games)
+    AVOID P2=7 -> [P1+] (3524 games)
+    AVOID P2=8 -> [P1+] (3396 games)
+
+========================================================================
+Summary by depth (game-theoretic value of each position)
+========================================================================
+
+Depth    P1 wins       Draw    P2 wins      Total
+    0          0          1          0          1
+    1          0          9          0          9
+    2         48         24          0         72
+    3        128        276        100        504
+    4       2336        544        144       3024
+    5       5472       3168       6480      15120
+    6      38016       7200       9504      54720
+    7      59472      28800      59904     148176
+    8      81792      46080      72576     200448
+    9      81792      46080          0     127872

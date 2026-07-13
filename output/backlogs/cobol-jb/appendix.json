@@ -1,0 +1,212 @@
+{
+  "project": {
+    "name": "cobol-jb",
+    "root": "/Users/mathieuacher/SANDBOX/cobol-jb",
+    "primary_language": "COBOL",
+    "compiler": "GnuCOBOL 3.2.0 (cobc)",
+    "build_command": "cobc -x -free -o program program.cbl",
+    "run_command": "./program",
+    "entry_point": "program.cbl",
+    "git_head": "4b148bc1a9043215a0d27cb9990e5dd5003b21dd",
+    "remote_inferred": "https://github.com/acherm/cobol-agentic-dev-case-studies"
+  },
+  "session_metadata": [
+    {
+      "session_id": "434a5a96-69b6-43bb-b0dc-dbccafc2ee29",
+      "path": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-cobol-jb/434a5a96-69b6-43bb-b0dc-dbccafc2ee29.jsonl",
+      "agent": "Claude Code",
+      "cli_version": "2.1.91",
+      "model": "claude-opus-4-6",
+      "first_event": "2026-04-03T14:45:40.447Z",
+      "last_event": "2026-04-03T15:59:03.756Z",
+      "user_prompts": 6,
+      "assistant_turns": 126,
+      "tool_use_bash": 31,
+      "tool_use_write": 6,
+      "tool_use_edit": 25,
+      "tool_use_read": 6,
+      "tool_use_grep": 6,
+      "tool_result_events": 74,
+      "role": "feature_build"
+    },
+    {
+      "session_id": "3fa13850-2149-4f81-ac43-899fba3d4ef5",
+      "path": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-cobol-jb/3fa13850-2149-4f81-ac43-899fba3d4ef5.jsonl",
+      "agent": "Claude Code",
+      "cli_version": "2.1.91",
+      "model": "claude-opus-4-6",
+      "first_event": "2026-04-03T15:46:12.349Z",
+      "last_event": "2026-04-04T11:03:15.183Z",
+      "user_prompts": 5,
+      "assistant_turns": 44,
+      "tool_use_bash": 18,
+      "tool_use_write": 3,
+      "tool_use_edit": 0,
+      "tool_use_read": 4,
+      "tool_use_grep": 0,
+      "tool_use_glob": 1,
+      "tool_result_events": 26,
+      "role": "verification_and_publish"
+    }
+  ],
+  "user_instruction_index": [
+    {"id": "UI-001", "session": "434a5a96", "line": 5, "timestamp": "2026-04-03T14:45:44.440Z", "category": "FeatureRequest+Constraint", "strength": "Explicit imperative", "target_surface": "Code", "maps_to": ["BL-001"], "quote": "You are a mainframe COBOL expert. Generate a complete, self-contained COBOL program. Domain: Payroll management system."},
+    {"id": "UI-002", "session": "434a5a96", "line": 63, "timestamp": "2026-04-03T15:33:01.684Z", "category": "Tooling/Ops", "strength": "Explicit imperative", "target_surface": "Repo structure", "maps_to": ["OP-001"], "quote": "create a git and commit"},
+    {"id": "UI-003", "session": "434a5a96", "line": 86, "timestamp": "2026-04-03T15:34:37.220Z", "category": "FeatureRequest", "strength": "Explicit imperative", "target_surface": "Code", "maps_to": ["BL-002"], "quote": "Add social contribution deductions to the payroll calculation."},
+    {"id": "UI-004", "session": "434a5a96", "line": 130, "timestamp": "2026-04-03T15:39:44.666Z", "category": "Tooling+Docs", "strength": "Explicit imperative", "target_surface": "Repo+Docs", "maps_to": ["OP-002"], "quote": "please commit (incl. update of README)"},
+    {"id": "UI-005", "session": "434a5a96", "line": 155, "timestamp": "2026-04-03T15:40:50.515Z", "category": "FeatureRequest+AcceptanceCriteria", "strength": "Explicit imperative", "target_surface": "Code", "maps_to": ["BL-003"], "quote": "Add input data validation with a dedicated reject file for invalid records."},
+    {"id": "UI-006", "session": "434a5a96", "line": 227, "timestamp": "2026-04-03T15:44:07.397Z", "category": "Tooling", "strength": "Explicit imperative", "target_surface": "Repo", "maps_to": ["OP-003"], "quote": "please commit"},
+    {"id": "UI-007", "session": "3fa13850", "line": 3, "timestamp": "2026-04-03T15:46:12.349Z", "category": "TestRequest+AcceptanceCriteria", "strength": "Explicit imperative", "target_surface": "Runtime+Docs", "maps_to": ["BL-004"], "quote": "look at the current repo... grid to objectively verify whether the agent produced equivalent results"},
+    {"id": "UI-008", "session": "3fa13850", "line": 30, "timestamp": "2026-04-03T15:54:04.262Z", "category": "Tooling", "strength": "Explicit imperative", "target_surface": "Repo", "maps_to": ["OP-004"], "quote": "please commit this report"},
+    {"id": "UI-009", "session": "3fa13850", "line": 47, "timestamp": "2026-04-03T15:56:12.731Z", "category": "Tooling/Ops", "strength": "Explicit imperative", "target_surface": "Repo remote", "maps_to": ["OP-005"], "quote": "please push on Github in this fork repo: https://github.com/acherm/cobol-agentic-dev-case-studies"},
+    {"id": "UI-010", "session": "3fa13850", "line": 58, "timestamp": "2026-04-03T15:58:35.062Z", "category": "ScopeChange", "strength": "Explicit imperative", "target_surface": "Repo remote", "maps_to": ["OP-005"], "quote": "push in the main, not master"},
+    {"id": "UI-011", "session": "3fa13850", "line": 67, "timestamp": "2026-04-03T15:59:25.584Z", "category": "Constraint", "strength": "Explicit imperative", "target_surface": "Repo remote", "maps_to": ["OP-005"], "quote": "I want to keep history"}
+  ],
+  "project_constraints_index": [
+    {"id": "PC-001", "source": "R:case-study-1.md", "type": "repo policy", "paraphrase": "Fixed-variable case-study protocol (LOC=300, compiler cobc -x -free -o program program.cbl, required COBOL patterns, file names)", "impact": "Shapes PL-ROOT, PL-001, PL-002 verbatim"},
+    {"id": "PC-002", "source": "R:case-study-1/.agents/skills/cobol-backlog-writer/SKILL.md", "type": "tooling", "paraphrase": "'Backlog extractor skill' referenced in the prompts", "impact": "Explains the agent's README-authoring reflex"},
+    {"id": "PC-003", "source": "R:.gitignore", "type": "build", "paraphrase": "Ignore compiled binary 'program' + OS artefacts", "impact": "Agent re-opened and extended during Step-2 / rebase"}
+  ],
+  "prompt_ledger": [
+    {"id": "PL-ROOT", "session": "434a5a96", "line": 5, "linked_ui": ["UI-001"], "linked_bl": ["BL-001"], "raw_snippet": "You are a mainframe COBOL expert. Generate a complete, self-contained COBOL program. Domain: Payroll management system.", "canonical": "Role: Mainframe COBOL expert. Produce `program.cbl` compiled with `cobc -x -free -o program program.cbl`. ~300 LOC. Must use PERFORM, EVALUATE, FILE SECTION (FD), COMPUTE, 88-levels. Read employees_input.dat; compute gross salary with category-based overtime (A +20%, B +10%, C 0%); write payslips_output.dat; print totals. Iterate compile until exit 0; then author README.md."},
+    {"id": "PL-001", "session": "434a5a96", "line": 86, "linked_ui": ["UI-003"], "linked_bl": ["BL-002"], "raw_snippet": "Add social contribution deductions... Health 7.30%, Retirement 6.90%, Unemployment 2.40%.", "canonical": "Modify program.cbl: add health (7.30%), retirement (6.90%), unemployment (2.40%) deductions; net = gross - total-deduction; enrich payslip record with 4 new values; display total gross + total net. Recompile cleanly; update README.md."},
+    {"id": "PL-002", "session": "434a5a96", "line": 155, "linked_ui": ["UI-005"], "linked_bl": ["BL-003"], "raw_snippet": "Add input data validation with a dedicated reject file for invalid records... ERR-001..004.", "canonical": "Modify program.cbl: validate each record (ERR-001 ID non-zero; ERR-002 hours in (0,80]; ERR-003 rate in (0,999.99]; ERR-004 category in {A,B,C}). Invalid records skip salary math, go to a new FD rejects_output.dat (OPEN OUTPUT) with original row + code. Totals: valid count, rejected count, total gross, total net. Recompile cleanly; update README.md."},
+    {"id": "PL-003", "session": "3fa13850", "line": 3, "linked_ui": ["UI-007"], "linked_bl": ["BL-004"], "raw_snippet": "look at the current repo... grid to objectively verify whether the agent produced equivalent results.", "canonical": "Without modifying program.cbl, apply the 27-item verification grid from case-study-1.md to the current repo (recompile to confirm exit 0, then PASS/FAIL each criterion with evidence). Emit VERIFICATION_REPORT.md with step-by-step breakdown and final /27 score."}
+  ],
+  "feature_backlog": [
+    {"id": "BL-001", "title": "Base COBOL payroll program (read employees, overtime-aware gross salary, payslips, totals)", "type": "Feature", "source_ui": ["UI-001"], "source_pl": ["PL-ROOT"], "source_pc": ["PC-001"], "commit": "b4c6c66", "dod": "Yes", "evidence": ["T:434a5a96:L5", "T:434a5a96:L19-25 compile", "T:434a5a96:L31 run", "G:b4c6c66", "R:program.cbl"], "subtasks": ["Write program.cbl", "Fix WS-FILE-STATUS defs", "Generate employees_input.dat", "Run & inspect output", "Author README.md"]},
+    {"id": "BL-002", "title": "Social-contribution deductions (health 7.30%, retirement 6.90%, unemployment 2.40%) + net salary + extended totals", "type": "Feature", "source_ui": ["UI-003", "UI-004"], "source_pl": ["PL-001"], "source_pc": ["PC-001"], "commit": "a566a9e", "dod": "Yes", "evidence": ["T:434a5a96:L86", "T:434a5a96:L119 clean compile", "T:434a5a96:L122 run", "G:a566a9e", "R:program.cbl"], "subtasks": ["10x Edit program.cbl", "Recompile", "Run & inspect", "Edit README x3", "Commit"]},
+    {"id": "BL-003", "title": "Input validation (ERR-001..004) + reject file rejects_output.dat + valid/rejected counters", "type": "Feature", "source_ui": ["UI-005", "UI-006"], "source_pl": ["PL-002"], "source_pc": ["PC-001"], "commit": "704baa8", "dod": "Partial", "dod_reason": "Program correct but README not updated (criterion #27 fail per VERIFICATION_REPORT.md)", "evidence": ["T:434a5a96:L155", "T:434a5a96:L191 clean compile", "T:434a5a96:L198 regen data", "T:434a5a96:L200-203 run+rejects", "G:704baa8", "R:program.cbl", "R:rejects_output.dat"], "subtasks": ["10x Edit program.cbl", "Recompile", "Regen employees_input.dat with invalid rows", "Run & inspect rejects", "Extend .gitignore", "Commit"]},
+    {"id": "BL-004", "title": "Self-applied verification report (27-criterion grid → VERIFICATION_REPORT.md)", "type": "Documentation/Test", "source_ui": ["UI-007", "UI-008"], "source_pl": ["PL-003"], "source_pc": ["PC-001"], "commit": "71d46f1", "dod": "Yes", "evidence": ["T:3fa13850:L3", "T:3fa13850:L11 recompile exit 0", "T:3fa13850:L21-24 git log/show evidence gathering", "G:71d46f1", "R:VERIFICATION_REPORT.md"], "subtasks": ["Read program.cbl", "Read README.md", "Recompile verify", "Inspect git log/show for README timing", "Author VERIFICATION_REPORT.md", "Commit"]}
+  ],
+  "reproducibility_ops": [
+    {"id": "OP-001", "title": "git init + initial commit", "ui": ["UI-002"], "commit": "b4c6c66"},
+    {"id": "OP-002", "title": "Commit Step-1 changes (+ README)", "ui": ["UI-004"], "commit": "a566a9e"},
+    {"id": "OP-003", "title": "Commit Step-2 changes", "ui": ["UI-006"], "commit": "704baa8"},
+    {"id": "OP-004", "title": "Commit verification report", "ui": ["UI-008"], "commit": "71d46f1"},
+    {"id": "OP-005", "title": "Push to fork + rebase onto origin/main (keep history)", "ui": ["UI-009", "UI-010", "UI-011"], "commits_chain": ["22a3d0d", "cf26a12", "ad841ed", "ca7cf7a", "4b148bc"], "events": ["T:3fa13850:L50 remote add", "T:3fa13850:L53 push master", "T:3fa13850:L60 fetch origin main", "T:3fa13850:L71 rebase (conflict)", "T:3fa13850:L80 resolve .gitignore", "T:3fa13850:L83 resolve README.md", "T:3fa13850:L86 continue", "T:3fa13850:L89 push master:main"]}
+  ],
+  "specification_backlog_summary": {
+    "count": 33,
+    "step_labels": ["STEP-0", "STEP-1", "STEP-2", "STEP-3"],
+    "provenance_counts": {"User-driven": 25, "Agent-initiated": 4, "Required prerequisite": 4},
+    "gap_items": ["SB-030b (README not updated after BL-003)"]
+  },
+  "replay_plan": {
+    "preconditions": "GnuCOBOL cobc >= 3.2 on $PATH",
+    "per_bl": {
+      "BL-001": {"prompt": "PL-ROOT canonical", "validate": ["cobc -x -free -o program program.cbl exit 0", "./program produces payslips_output.dat"], "checkpoint": "G:b4c6c66"},
+      "BL-002": {"prompt": "PL-001 canonical", "validate": ["source contains 0.0730/0.0690/0.0240 or 7.30/6.90/2.40", "net salary field present", "totals include Total Net Payroll"], "checkpoint": "G:a566a9e"},
+      "BL-003": {"prompt": "PL-002 canonical", "validate": ["3 FD entries", "ERR-001..004 strings", "rejects_output.dat OPEN OUTPUT", "Employees Rejected counter"], "checkpoint": "G:704baa8"},
+      "BL-004": {"prompt": "PL-003 canonical", "validate": ["VERIFICATION_REPORT.md lists 27 rows", "final /27 score present"], "checkpoint": "G:71d46f1"}
+    }
+  },
+  "repo_stats": {
+    "scope": "/Users/mathieuacher/SANDBOX/cobol-jb (top level; excludes .git/; case-study-1/ listed separately as evidence snapshot)",
+    "total_top_level_files": 9,
+    "by_language_top_level": {
+      "COBOL": {"files": 1, "loc": 705},
+      "Markdown": {"files": 3, "loc": 514},
+      "Data_dat": {"files": 3, "loc": 196},
+      "Config_gitignore": {"files": 1, "loc": 3}
+    },
+    "program_kinds_top_level": {
+      "production": {"files": 1, "loc": 705},
+      "tests": {"files": 0, "loc": 0},
+      "build_tooling": {"files": 1, "loc": 3},
+      "docs": {"files": 3, "loc": 514},
+      "data_examples": {"files": 3, "loc": 196}
+    },
+    "entry_points": {"main": "program.cbl (PROGRAM-ID PAYROLL-SYSTEM)", "build": "cobc -x -free -o program program.cbl", "run": "./program", "test_runner": null}
+  },
+  "rq_coverage_matrix": [
+    {"rq": "RQ1 strategies", "sources": ["session tool_use traces", "commit chain"], "indicators": ["PLAN", "SCAF", "INCR", "DBG", "TEST", "VERIFY", "TOOL", "RETR"], "output_sections": ["B2", "B3", "B4"]},
+    {"rq": "RQ2 outcome quality", "sources": ["cobc exit codes", "run logs", "VERIFICATION_REPORT.md"], "indicators": ["Q1-Q6 rubric"], "output_sections": ["B5"]},
+    {"rq": "RQ3 interaction demand", "sources": ["UII", "PL ledger"], "indicators": ["UI density per BL", "clarification cycles", "scope churn"], "output_sections": ["B7"]},
+    {"rq": "RQ4 reproducibility", "sources": ["replay package", "commit checkpoints"], "indicators": ["canonical prompts + commands"], "output_sections": ["README+A4"]},
+    {"rq": "RQ5 COBOL quality", "sources": ["program.cbl", "compile logs"], "indicators": ["idioms", "cobc exit"], "output_sections": ["B6"]}
+  ],
+  "strategy_codebook": {
+    "PLAN": "Explicit/implicit decomposition before coding",
+    "SCAF": "One-shot scaffolding write of a whole artefact",
+    "INCR": "Small localized edits to an existing artefact",
+    "DBG": "Fix-after-fail loop triggered by tool error",
+    "TEST": "Empirical validation via run",
+    "VERIFY": "Structured check against a declared criterion set",
+    "REFA": "Refactor with no behaviour change",
+    "RETR": "Re-read of own past output to plan next step",
+    "TOOL": "Repo/tooling action (git, .gitignore, remote ops)",
+    "PROMPT": "Agent restructures instruction space",
+    "RISK": "Explicit risk mitigation"
+  },
+  "episodes": [
+    {"id": "EP-BL001-01", "bl": "BL-001", "macro": "bootstrap", "strategies": ["PLAN", "SCAF"], "evidence": ["T:434a5a96:L10-15"]},
+    {"id": "EP-BL001-02", "bl": "BL-001", "macro": "bootstrap", "strategies": ["DBG"], "evidence": ["T:434a5a96:L19-25"]},
+    {"id": "EP-BL001-03", "bl": "BL-001", "macro": "bootstrap", "strategies": ["TEST"], "evidence": ["T:434a5a96:L28-36"]},
+    {"id": "EP-BL001-04", "bl": "BL-001", "macro": "bootstrap", "strategies": ["SCAF", "TOOL"], "evidence": ["T:434a5a96:L58-80"]},
+    {"id": "EP-BL002-01", "bl": "BL-002", "macro": "feature-growth", "strategies": ["INCR", "TEST", "INCR", "TOOL"], "evidence": ["T:434a5a96:L92-150"]},
+    {"id": "EP-BL003-01", "bl": "BL-003", "macro": "feature-growth", "strategies": ["INCR", "TEST", "TOOL"], "evidence": ["T:434a5a96:L161-230"]},
+    {"id": "EP-BL004-01", "bl": "BL-004", "macro": "stabilization", "strategies": ["RETR", "VERIFY", "SCAF", "TOOL"], "evidence": ["T:3fa13850:L8-45"]},
+    {"id": "EP-OP005", "bl": null, "macro": "ops", "strategies": ["TOOL", "DBG"], "evidence": ["T:3fa13850:L50-89"]}
+  ],
+  "strategy_annotations_per_bl": {
+    "BL-001": {"sequence": ["PLAN", "SCAF", "DBG", "TEST", "SCAF(README)", "TOOL"], "dbg_loops": 1, "build_runs": 2, "run_tests": 1, "blockers": ["undefined WS-FILE-STATUS fields"], "recovery": "single edit added file-status + fixed DATA DIVISION"},
+    "BL-002": {"sequence": ["INCR x10", "TEST", "INCR(README) x3", "TOOL"], "dbg_loops": 0, "build_runs": 1, "run_tests": 1, "blockers": [], "recovery": null},
+    "BL-003": {"sequence": ["INCR x10", "TEST-compile", "data-regen", "TEST-run", "TOOL"], "dbg_loops": 0, "build_runs": 1, "run_tests": 1, "blockers": [], "recovery": null, "gap": "README.md not updated (criterion #27 fail)"},
+    "BL-004": {"sequence": ["RETR", "VERIFY-build", "VERIFY-git-log", "SCAF(VERIFICATION_REPORT)", "TOOL"], "dbg_loops": 0, "build_runs": 1, "run_tests": 0, "blockers": [], "recovery": null}
+  },
+  "rubric_scores": [
+    {"bl": "BL-001", "Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_rigor": 1, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 2, "confidence": "High"},
+    {"bl": "BL-002", "Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_rigor": 1, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 2, "confidence": "High"},
+    {"bl": "BL-003", "Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_rigor": 1, "Q4_robustness": 2, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "High"},
+    {"bl": "BL-004", "Q1_correctness": 2, "Q2_build_run": "NA", "Q3_test_rigor": 2, "Q4_robustness": 1, "Q5_maintainability": 2, "Q6_reproducibility": 2, "confidence": "High"}
+  ],
+  "interaction_metrics": {
+    "total_user_turns": 11,
+    "feature_turns": 4,
+    "ops_turns": 6,
+    "constraint_turns": 1,
+    "strength_distribution": {"Explicit imperative": 11, "Suggestion": 0, "Question": 0, "Constraint-only": 0, "Example-only": 0, "Meta": 0},
+    "ui_density_per_bl": {"BL-001": 1, "BL-002": 1, "BL-003": 1, "BL-004": 1, "OP-005": 3},
+    "clarification_cycles": {"BL-001": 0, "BL-002": 0, "BL-003": 0, "BL-004": 0, "OP-005": 2},
+    "scope_churn_events": 1
+  },
+  "cobol_panel": {
+    "compiler": "GnuCOBOL 3.2.0",
+    "build_command": "cobc -x -free -o program program.cbl",
+    "compile_results": {
+      "BL-001": ["exit 97 (undefined file-status fields + misplaced DATA DIVISION)", "exit 0 after single edit"],
+      "BL-002": ["exit 0 (first attempt)"],
+      "BL-003": ["exit 0 (first attempt)"],
+      "BL-004": ["exit 0 (re-compile verification)"]
+    },
+    "idioms_used": ["FD entries (3 at HEAD)", "SELECT ... ASSIGN TO ... ORGANIZATION IS LINE SEQUENTIAL ... FILE STATUS IS", "WORKING-STORAGE", "88-levels (CATEGORY-A/B/C, EMP-FILE-EOF, END-OF-FILE)", "PERFORM UNTIL", "EVALUATE TRUE", "COMPUTE", "OPEN INPUT/OUTPUT + CLOSE", "sequential READ/WRITE"],
+    "final_loc": 705,
+    "loc_target": "250-350 per case-study-1.md",
+    "loc_criterion_result": "FAIL (#3 in VERIFICATION_REPORT.md)"
+  },
+  "process_tracing_claims": [
+    {"claim": "Fixed-variable prompt design drives high outcome quality", "for": ["1 user turn per feature", "3/4 BL hit DoD Yes"], "against": ["BL-003 missed the implicit README update"], "judgment": "Supported; prompt specificity high but multi-clause 'and also' can be dropped"},
+    {"claim": "Agent self-verifies accurately when given a checklist", "for": ["VERIFICATION_REPORT.md matches independent cross-checks", "self-detected own README gap"], "against": ["n=1 pass, no adversarial input"], "judgment": "Supported (single-study)"},
+    {"claim": "DBG loops are rare", "for": ["1 DBG loop across 4 BLs"], "against": [], "judgment": "Supported"},
+    {"claim": "README drift is the dominant quality failure mode", "for": ["BL-003 DoD-Partial driven solely by README omission"], "against": [], "judgment": "Supported"},
+    {"claim": "Ops phase is where the user pays the interaction tax", "for": ["6/11 turns Ops; 2 clarifications; 1 scope-churn — all Ops"], "against": [], "judgment": "Supported"}
+  ],
+  "threats_to_validity": [
+    "N=1 project, 1 agent, 1 model version",
+    "tool_result outputs paraphrased/truncated in JSONLs — rely on what is present",
+    "Git segmentation was clean; would degrade under squash/force-push",
+    "case-study-1/session-ses_2b16.md is another run's snapshot — intentionally excluded from prompt-mining",
+    "No human available for CP1-CP3; defaults applied"
+  ],
+  "open_questions_and_defaults": [
+    {"checkpoint": "CP1", "question": "Are the 2 pre-identified JSONLs the only relevant sessions?", "default_used": "Yes — per per-project prompt; no alternatives considered"},
+    {"checkpoint": "CP2", "question": "Is BL-003 DoD Yes or Partial given README not updated?", "default_used": "Partial — agent's own VERIFICATION_REPORT.md flags criterion #27 FAIL"},
+    {"checkpoint": "CP3", "question": "What is the acceptable LOC range (strict 300 vs 250-350 vs flexible)?", "default_used": "250-350 per case-study-1.md §5 row #3; 705 LOC recorded as FAIL on that criterion only"}
+  ],
+  "evidence_gaps": [
+    "Intermediate snapshots of program.cbl per commit not re-extracted (git show not run)",
+    "cobc warnings not exhaustively grepped in session logs",
+    "No independent CI run — we rely on session-captured cobc outputs"
+  ]
+}

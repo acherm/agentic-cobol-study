@@ -1,0 +1,613 @@
+{
+  "project": "cobol-jb-cc",
+  "spec_backlog": [],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Target lines of code (LOC): 300 lines"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Number of files the program must handle: 2"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Target compiler: GnuCOBOL (cobc)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Compilation command: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "PERFORM (with VARYING or UNTIL loop)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "EVALUATE (multi-branch conditional logic)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "FILE SECTION with FD entries"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "COMPUTE (arithmetic expressions)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "88-level condition names"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "The program must be complete and self-contained (no external dependencies)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "All data is declared in the WORKING-STORAGE SECTION or FILE SECTION"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Copybooks are inlined in the program (no separate .cpy file)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "The program must compile without warnings or errors using GnuCOBOL"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "The .cbl file must be named program.cbl"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Do not use comments to reach the target line count."
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Use EVALUATE to apply overtime bonus if hours_worked > 35"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Category A: +20% bonus on overtime hours"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Category B: +10% bonus on overtime hours"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Category C: no overtime bonus"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Read employee records (ID, name, job category, hours worked, hourly rate)"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Calculate gross salary: hours_worked * hourly_rate"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Write one payslip record per employee to output file"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Display totals (total employees processed, total gross payroll) at end of job"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Think of the data structures that will represent employees and payslips"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Generate the program.cbl file"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "If compilation error -> fix and recompile"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Repeat until successful compilation with no errors"
+    },
+    {
+      "ts": "2026-06-11T10:10:57.620000+00:00",
+      "item": "Once compilation succeeds, run the backlog extractor skill to generate README.md"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Health insurance (Assurance maladie): 7.30% of gross salary"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Retirement contribution (Retraite): 6.90% of gross salary"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Unemployment insurance (Chomage): 2.40% of gross salary"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Total deduction = sum of the three contributions above"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Net salary = gross salary - total deduction"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Do not break existing functionality (file reading, gross salary calc, PERFORM/EVALUATE patterns)"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-06-11T13:37:11.874000+00:00",
+      "item": "Once compilation succeeds, run the backlog extractor skill to update README.md"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Health insurance (Assurance maladie): 7.30% of gross salary"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Retirement contribution (Retraite): 6.90% of gross salary"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Unemployment insurance (Chomage): 2.40% of gross salary"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Total deduction = sum of the three contributions above"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Net salary = gross salary - total deduction"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Do not break existing functionality (file reading, gross salary calc, PERFORM/EVALUATE patterns)"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-06-12T11:04:18.511000+00:00",
+      "item": "Once compilation succeeds, run the backlog extractor skill to update README.md"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Rule 1 (ERR-001): Employee ID must not be spaces or zeros"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Rule 2 (ERR-002): Hours worked must be > 0 and <= 80"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Rule 3 (ERR-003): Hourly rate must be > 0 and <= 999.99"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Rule 4 (ERR-004): Job category must be 'A', 'B', or 'C' (use existing 88-level names)"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Do NOT process it (skip salary calculation)"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Write it to a new output file: rejects_output.dat"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "The reject record must include: the original employee record + the error code (ERR-001 etc.)"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Do not break existing functionality (gross salary, net salary, social contributions)"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "The new file must be declared with a proper FD entry in FILE SECTION"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Once compilation succeeds, run the program with ./program"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Inspect the execution output and verify that the behavior matches the need"
+    },
+    {
+      "ts": "2026-06-12T11:07:06.242000+00:00",
+      "item": "Once execution is verified, run the backlog extractor skill to update README.md"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Category label (A, B, or C)"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Number of valid employees processed in that category"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Total gross payroll for that category"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Total net payroll for that category"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Total valid employees across all categories"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Total gross payroll across all categories"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Total net payroll across all categories"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Use WORKING-STORAGE accumulators per category (one set per A, B, C)"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Accumulators must be incremented during record processing"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "The report file must be written only during the end-of-job routine"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Use PERFORM to loop through category totals when writing the report"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Do not break existing functionality (validation, reject file, social contributions)"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "The new file must be declared with a proper FD entry in FILE SECTION"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Once compilation succeeds, run the program with ./program"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Inspect the execution output and verify that the behavior matches the need"
+    },
+    {
+      "ts": "2026-07-07T11:02:11.406000+00:00",
+      "item": "Once execution is verified, run the backlog extractor skill to update README.md"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "employees_fulltime.dat \u2014 contains full-time employee records (same record layout as before)"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "employees_parttime.dat \u2014 contains part-time employee records (same record layout as before)"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Both files must be declared with separate FD entries in FILE SECTION"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "The program must read and process all records from employees_fulltime.dat first,"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "All existing processing logic applies to both files equally:"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "The category-level report accumulators must aggregate across both files"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "End-of-job totals must reflect all records from both files combined"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Add a WORKING-STORAGE counter to track how many records came from each file,"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Do not break existing functionality (validation, payslips, rejects, report, social contributions)"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Remove the old employees_input FD and replace it with the two new FD entries"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "employees_fulltime.dat : records 1 to 6 from the original file"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "employees_parttime.dat : records 7 to 10 from the original file"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Once compilation succeeds, run the program with ./program"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Inspect the execution output and verify that the behavior matches the need"
+    },
+    {
+      "ts": "2026-07-07T11:12:55.543000+00:00",
+      "item": "Once execution is verified, run the backlog extractor skill to update README.md"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "0000-MAIN : top-level orchestrator, calls all other paragraphs via PERFORM"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "1000-INIT : open all files, initialize all counters and accumulators"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "2000-PROCESS-LOOP : main read loop, calls 3000 for each record"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "3000-PROCESS-RECORD : dispatches to validation then processing"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "3100-VALIDATE-RECORD : applies all 4 validation rules, sets a validation flag"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "3200-COMPUTE-SALARY : gross salary calculation and overtime logic"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "3300-COMPUTE-DEDUCTIONS : social contribution calculations"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "3400-UPDATE-ACCUMULATORS : updates category-level and file-level counters"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "4000-WRITE-PAYSLIP : writes to payslips_output"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "4100-WRITE-REJECT : writes to rejects_output"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "5000-WRITE-REPORT : writes the category summary report to report_output"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "9000-TERMINATION : close all files, display end-of-job summary"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Each paragraph must have a single, clear responsibility"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "All inter-paragraph calls must use PERFORM (no GOTO)"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "No logic must be duplicated between paragraphs"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "The observable behavior must be strictly identical to the input program:"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "The modified program must compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Do not change any business logic, calculation, or file handling behavior"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Only modify the file: program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Do not add or remove any features \u2014 this is a structural refactoring only"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Modify the file program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "If error -> fix and recompile"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Repeat until successful compilation"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Once compilation succeeds, run the program with ./program"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Inspect the execution output and verify that the behavior matches the need"
+    },
+    {
+      "ts": "2026-07-07T11:33:22.978000+00:00",
+      "item": "Once execution is verified, run the backlog extractor skill to update README.md"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "f185429265",
+      "date": "2026-07-07",
+      "subject": "Refactor PROCEDURE DIVISION into cohesive named paragraphs"
+    },
+    {
+      "sha": "d5fc9026fc",
+      "date": "2026-07-07",
+      "subject": "Replace single input file with fulltime/parttime dual input"
+    },
+    {
+      "sha": "0b3240b5e7",
+      "date": "2026-07-07",
+      "subject": "Add category-level summary report to report_output.dat"
+    },
+    {
+      "sha": "9718d9de61",
+      "date": "2026-06-12",
+      "subject": "Add input validation with reject file (ERR-001 to ERR-004)"
+    },
+    {
+      "sha": "a645433ecf",
+      "date": "2026-06-12",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "583a5aefaf",
+      "date": "2026-06-11",
+      "subject": "Add GnuCOBOL payroll management system"
+    }
+  ],
+  "total_features_proxy": 143
+}

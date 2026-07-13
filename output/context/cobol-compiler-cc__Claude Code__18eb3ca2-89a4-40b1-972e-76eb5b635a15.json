@@ -1,0 +1,22 @@
+{
+  "project": "cobol-compiler-cc",
+  "agent": "Claude Code",
+  "session_id": "18eb3ca2-89a4-40b1-972e-76eb5b635a15",
+  "model": null,
+  "file": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-cobol-compiler-cc/18eb3ca2-89a4-40b1-972e-76eb5b635a15.jsonl",
+  "summary": {
+    "model": "?",
+    "context_window": 0,
+    "turns_with_usage": 0,
+    "peak_context": 0,
+    "peak_utilization_pct": null,
+    "median_context": 0,
+    "p90_context": 0,
+    "p99_context": 0,
+    "first_context": 0,
+    "last_context": 0,
+    "compactions": 0,
+    "compaction_events": []
+  },
+  "series": []
+}

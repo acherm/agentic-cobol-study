@@ -1,0 +1,575 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc",
+  "aggregate": {
+    "num_files": 5,
+    "total_lines": 915,
+    "code_lines": 764,
+    "comment_lines": 62,
+    "sections": 4,
+    "paragraphs": 48,
+    "data_items": 159,
+    "max_nesting_any_file": 3,
+    "statements": {
+      "PERFORM": 37,
+      "IF": 40,
+      "EVALUATE": 7,
+      "CALL": 94,
+      "MOVE": 48,
+      "COMPUTE": 33,
+      "READ": 0,
+      "WRITE": 0,
+      "OPEN": 8,
+      "CLOSE": 0,
+      "ACCEPT": 0,
+      "DISPLAY": 16,
+      "GO TO": 0,
+      "EXIT": 0,
+      "STOP": 13,
+      "SET": 22,
+      "ADD": 14,
+      "SUBTRACT": 5,
+      "MULTIPLY": 9,
+      "DIVIDE": 0,
+      "STRING": 3,
+      "UNSTRING": 0,
+      "INSPECT": 0,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 4,
+      "DATA": 4,
+      "PROCEDURE": 4
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "flappy.cob",
+        "code_lines": 307
+      },
+      {
+        "file": "imgtest.cob",
+        "code_lines": 156
+      },
+      {
+        "file": "demo.cob",
+        "code_lines": 114
+      },
+      {
+        "file": "bounce.cob",
+        "code_lines": 111
+      },
+      {
+        "file": "pygame_cobol.cpy",
+        "code_lines": 76
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 199,
+        "files_using": 4,
+        "constructs": {
+          "IF": 80,
+          "ELSE": 6,
+          "EVALUATE": 14,
+          "WHEN": 25,
+          "PERFORM": 45,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 12,
+          "STOP_RUN": 13
+        }
+      },
+      "arithmetic": {
+        "total": 61,
+        "files_using": 4,
+        "constructs": {
+          "ADD": 14,
+          "SUBTRACT": 5,
+          "MULTIPLY": 9,
+          "COMPUTE": 33
+        }
+      },
+      "data_advanced": {
+        "total": 9,
+        "files_using": 5,
+        "constructs": {
+          "PIC_X": 6,
+          "OCCURS": 1,
+          "PIC_9": 2
+        }
+      },
+      "io_file": {
+        "total": 7,
+        "files_using": 3,
+        "constructs": {
+          "DELETE": 1,
+          "START": 6
+        }
+      },
+      "string_ops": {
+        "total": 8,
+        "files_using": 2,
+        "constructs": {
+          "STRING": 4,
+          "DELIMITED_BY": 4
+        }
+      },
+      "tables_search": {
+        "total": 2,
+        "files_using": 1,
+        "constructs": {
+          "SET": 2
+        }
+      },
+      "subprograms": {
+        "total": 357,
+        "files_using": 4,
+        "constructs": {
+          "CALL": 94,
+          "USING": 64,
+          "BY_REFERENCE": 18,
+          "BY_VALUE": 181
+        }
+      },
+      "copy_preproc": {
+        "total": 4,
+        "files_using": 4,
+        "constructs": {
+          "COPY": 4
+        }
+      },
+      "intrinsics": {
+        "total": 4,
+        "files_using": 1,
+        "constructs": {
+          "FUNCTION": 2,
+          "FUNCTION_TRIM": 2
+        }
+      },
+      "misc": {
+        "total": 16,
+        "files_using": 4,
+        "constructs": {
+          "DISPLAY": 16
+        }
+      }
+    },
+    "mastery_score": 28,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.MULTIPLY",
+      "arithmetic.SUBTRACT",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_X",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_TRIM",
+      "io_file.DELETE",
+      "io_file.START",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.STRING",
+      "subprograms.BY_REFERENCE",
+      "subprograms.BY_VALUE",
+      "subprograms.CALL",
+      "subprograms.USING",
+      "tables_search.SET"
+    ],
+    "categories_exercised": 10
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc/pygame_cobol.cpy",
+      "total_lines": 90,
+      "code_lines": 76,
+      "comment_lines": 8,
+      "blank_lines": 6,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 76,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1
+        },
+        "io_file": {
+          "DELETE": 1
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc/flappy.cob",
+      "total_lines": 366,
+      "code_lines": 307,
+      "comment_lines": 30,
+      "blank_lines": 29,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 17,
+      "data_items": 42,
+      "statements": {
+        "PERFORM": 17,
+        "IF": 20,
+        "EVALUATE": 3,
+        "CALL": 34,
+        "MOVE": 26,
+        "COMPUTE": 21,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 2,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 3,
+        "SET": 11,
+        "ADD": 6,
+        "SUBTRACT": 1,
+        "MULTIPLY": 1,
+        "DIVIDE": 0,
+        "STRING": 2,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 40,
+          "ELSE": 1,
+          "EVALUATE": 6,
+          "WHEN": 9,
+          "PERFORM": 22,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 6,
+          "STOP_RUN": 3
+        },
+        "arithmetic": {
+          "ADD": 6,
+          "SUBTRACT": 1,
+          "MULTIPLY": 1,
+          "COMPUTE": 21
+        },
+        "data_advanced": {
+          "PIC_X": 1,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "STRING": 2
+        },
+        "tables_search": {
+          "SET": 2
+        },
+        "subprograms": {
+          "CALL": 34,
+          "USING": 25,
+          "BY_REFERENCE": 4,
+          "BY_VALUE": 85
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc/imgtest.cob",
+      "total_lines": 186,
+      "code_lines": 156,
+      "comment_lines": 9,
+      "blank_lines": 21,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 12,
+      "data_items": 18,
+      "statements": {
+        "PERFORM": 8,
+        "IF": 10,
+        "EVALUATE": 1,
+        "CALL": 22,
+        "MOVE": 9,
+        "COMPUTE": 6,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 2,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 9,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 4,
+        "SET": 1,
+        "ADD": 2,
+        "SUBTRACT": 0,
+        "MULTIPLY": 4,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 20,
+          "ELSE": 3,
+          "EVALUATE": 2,
+          "WHEN": 2,
+          "PERFORM": 9,
+          "PERFORM_UNTIL": 2,
+          "STOP_RUN": 4
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "MULTIPLY": 4,
+          "COMPUTE": 6
+        },
+        "data_advanced": {
+          "PIC_X": 2
+        },
+        "io_file": {
+          "START": 3
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 22,
+          "USING": 14,
+          "BY_REFERENCE": 7,
+          "BY_VALUE": 23
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {
+          "FUNCTION": 2,
+          "FUNCTION_TRIM": 2
+        },
+        "misc": {
+          "DISPLAY": 9
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc/bounce.cob",
+      "total_lines": 138,
+      "code_lines": 111,
+      "comment_lines": 9,
+      "blank_lines": 18,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 10,
+      "data_items": 14,
+      "statements": {
+        "PERFORM": 6,
+        "IF": 8,
+        "EVALUATE": 1,
+        "CALL": 18,
+        "MOVE": 5,
+        "COMPUTE": 6,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 2,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 3,
+        "SET": 4,
+        "ADD": 2,
+        "SUBTRACT": 0,
+        "MULTIPLY": 4,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 16,
+          "ELSE": 2,
+          "EVALUATE": 2,
+          "WHEN": 2,
+          "PERFORM": 7,
+          "PERFORM_UNTIL": 2,
+          "STOP_RUN": 3
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "MULTIPLY": 4,
+          "COMPUTE": 6
+        },
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {
+          "START": 3
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 18,
+          "USING": 11,
+          "BY_REFERENCE": 3,
+          "BY_VALUE": 32
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-pygame-cc/demo.cob",
+      "total_lines": 135,
+      "code_lines": 114,
+      "comment_lines": 6,
+      "blank_lines": 15,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 9,
+      "data_items": 9,
+      "statements": {
+        "PERFORM": 6,
+        "IF": 2,
+        "EVALUATE": 2,
+        "CALL": 20,
+        "MOVE": 8,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 2,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 3,
+        "SET": 6,
+        "ADD": 4,
+        "SUBTRACT": 4,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 1,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 4,
+          "EVALUATE": 4,
+          "WHEN": 12,
+          "PERFORM": 7,
+          "PERFORM_UNTIL": 2,
+          "STOP_RUN": 3
+        },
+        "arithmetic": {
+          "ADD": 4,
+          "SUBTRACT": 4
+        },
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "STRING": 2,
+          "DELIMITED_BY": 4
+        },
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 20,
+          "USING": 14,
+          "BY_REFERENCE": 4,
+          "BY_VALUE": 41
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    }
+  ]
+}

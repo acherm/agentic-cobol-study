@@ -1,0 +1,71 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/game15-cobol-codex",
+  "has_git": true,
+  "commits": 4,
+  "commit_log": [
+    {
+      "sha": "ce67d51325a1d9af2a2b6e4c57697e79ea9c524b",
+      "date": "2026-04-16T15:26:52+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add generalized Game of N program"
+    },
+    {
+      "sha": "f9c2eb18f015e46d56390030202ba379f00523f4",
+      "date": "2026-04-16T15:08:44+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Game of 0.15 programs"
+    },
+    {
+      "sha": "c41b9b5e54588f2f12d006462b568fac5723a0c3",
+      "date": "2026-04-16T12:23:03+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add unique counts and optimal play tree"
+    },
+    {
+      "sha": "29cbcaa73a2db042664fafa55bbe3a57c1d1acc7",
+      "date": "2026-04-16T11:56:20+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Game of 15 enumerator"
+    }
+  ],
+  "first_commit": "2026-04-16T11:56:20+02:00",
+  "last_commit": "2026-04-16T15:26:52+02:00",
+  "authors": {
+    "Mathieu Acher": 4
+  },
+  "churn": {
+    "files_changed_total": 8,
+    "insertions_total": 2834,
+    "deletions_total": 10,
+    "per_commit": [
+      {
+        "sha": "ce67d51325a1d9af2a2b6e4c57697e79ea9c524b",
+        "date": "2026-04-16T15:26:52+02:00",
+        "files": 1,
+        "ins": 465,
+        "del": 0
+      },
+      {
+        "sha": "f9c2eb18f015e46d56390030202ba379f00523f4",
+        "date": "2026-04-16T15:08:44+02:00",
+        "files": 2,
+        "ins": 1186,
+        "del": 0
+      },
+      {
+        "sha": "c41b9b5e54588f2f12d006462b568fac5723a0c3",
+        "date": "2026-04-16T12:23:03+02:00",
+        "files": 3,
+        "ins": 979,
+        "del": 10
+      },
+      {
+        "sha": "29cbcaa73a2db042664fafa55bbe3a57c1d1acc7",
+        "date": "2026-04-16T11:56:20+02:00",
+        "files": 2,
+        "ins": 204,
+        "del": 0
+      }
+    ]
+  }
+}

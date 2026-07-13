@@ -1,0 +1,97 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-jb-codex",
+  "has_git": true,
+  "commits": 6,
+  "commit_log": [
+    {
+      "sha": "03c677aec8d10832683e39cc044e0fa5eb04ed75",
+      "date": "2026-07-07T14:13:15+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor COBOL procedure division structure"
+    },
+    {
+      "sha": "65a755c7aaf9e29bf9ef235abd12842596a286d0",
+      "date": "2026-07-07T14:07:12+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Split payroll processing across two input files"
+    },
+    {
+      "sha": "c39c28184d4de3168a0577a519d5d83c950bc691",
+      "date": "2026-07-07T13:46:27+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add category summary payroll report"
+    },
+    {
+      "sha": "17a479f405787c67531bc0ef7e145d913b480ca7",
+      "date": "2026-06-11T15:21:07+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add payroll reject file validation"
+    },
+    {
+      "sha": "cdd737b85cbb5346e59b8a272273371dc48c7170",
+      "date": "2026-06-11T14:53:41+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add payroll social contribution deductions"
+    },
+    {
+      "sha": "f39ee0aca6138039196465e07de4a003c69323ce",
+      "date": "2026-06-11T14:46:06+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial payroll COBOL program"
+    }
+  ],
+  "first_commit": "2026-06-11T14:46:06+02:00",
+  "last_commit": "2026-07-07T14:13:15+02:00",
+  "authors": {
+    "Mathieu Acher": 6
+  },
+  "churn": {
+    "files_changed_total": 13,
+    "insertions_total": 1016,
+    "deletions_total": 287,
+    "per_commit": [
+      {
+        "sha": "03c677aec8d10832683e39cc044e0fa5eb04ed75",
+        "date": "2026-07-07T14:13:15+02:00",
+        "files": 1,
+        "ins": 170,
+        "del": 216
+      },
+      {
+        "sha": "65a755c7aaf9e29bf9ef235abd12842596a286d0",
+        "date": "2026-07-07T14:07:12+02:00",
+        "files": 3,
+        "ins": 137,
+        "del": 50
+      },
+      {
+        "sha": "c39c28184d4de3168a0577a519d5d83c950bc691",
+        "date": "2026-07-07T13:46:27+02:00",
+        "files": 2,
+        "ins": 116,
+        "del": 3
+      },
+      {
+        "sha": "17a479f405787c67531bc0ef7e145d913b480ca7",
+        "date": "2026-06-11T15:21:07+02:00",
+        "files": 2,
+        "ins": 120,
+        "del": 14
+      },
+      {
+        "sha": "cdd737b85cbb5346e59b8a272273371dc48c7170",
+        "date": "2026-06-11T14:53:41+02:00",
+        "files": 1,
+        "ins": 52,
+        "del": 4
+      },
+      {
+        "sha": "f39ee0aca6138039196465e07de4a003c69323ce",
+        "date": "2026-06-11T14:46:06+02:00",
+        "files": 4,
+        "ins": 421,
+        "del": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-doom-codex",
+  "aggregate": {
+    "num_files": 12,
+    "total_lines": 2096,
+    "code_lines": 1906,
+    "comment_lines": 4,
+    "sections": 10,
+    "paragraphs": 169,
+    "data_items": 626,
+    "max_nesting_any_file": 3,
+    "statements": {
+      "PERFORM": 145,
+      "IF": 125,
+      "EVALUATE": 5,
+      "CALL": 31,
+      "MOVE": 222,
+      "COMPUTE": 107,
+      "READ": 0,
+      "WRITE": 0,
+      "OPEN": 0,
+      "CLOSE": 0,
+      "ACCEPT": 0,
+      "DISPLAY": 1,
+      "GO TO": 0,
+      "EXIT": 13,
+      "STOP": 0,
+      "SET": 2,
+      "ADD": 17,
+      "SUBTRACT": 14,
+      "MULTIPLY": 0,
+      "DIVIDE": 0,
+      "STRING": 0,
+      "UNSTRING": 0,
+      "INSPECT": 0,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 1,
+      "DATA": 1,
+      "PROCEDURE": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "levels.cpy",
+        "code_lines": 447
+      },
+      {
+        "file": "gridwalker_render.cpy",
+        "code_lines": 405
+      },
+      {
+        "file": "gridwalker_data.cpy",
+        "code_lines": 245
+      },
+      {
+        "file": "gridwalker_raycast.cpy",
+        "code_lines": 160
+      },
+      {
+        "file": "gridwalker_entity.cpy",
+        "code_lines": 127
+      },
+      {
+        "file": "gridwalker_level.cpy",
+        "code_lines": 110
+      },
+      {
+        "file": "gridwalker_combat.cpy",
+        "code_lines": 105
+      },
+      {
+        "file": "gridwalker_state.cpy",
+        "code_lines": 92
+      },
+      {
+        "file": "gridwalker_input.cpy",
+        "code_lines": 69
+      },
+      {
+        "file": "gridwalker_bootstrap.cpy",
+        "code_lines": 69
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 535,
+        "files_using": 10,
+        "constructs": {
+          "IF": 250,
+          "ELSE": 23,
+          "EVALUATE": 12,
+          "WHEN": 17,
+          "PERFORM": 172,
+          "EXIT": 17,
+          "PERFORM_VARYING": 20,
+          "PERFORM_UNTIL": 24
+        }
+      },
+      "arithmetic": {
+        "total": 142,
+        "files_using": 8,
+        "constructs": {
+          "ADD": 17,
+          "SUBTRACT": 14,
+          "COMPUTE": 111
+        }
+      },
+      "data_advanced": {
+        "total": 537,
+        "files_using": 2,
+        "constructs": {
+          "PIC_X": 69,
+          "PIC_S9": 220,
+          "OCCURS": 28,
+          "USAGE_COMP_5": 220
+        }
+      },
+      "io_file": {
+        "total": 41,
+        "files_using": 8,
+        "constructs": {
+          "START": 35,
+          "SELECT": 4,
+          "READ": 2
+        }
+      },
+      "string_ops": {
+        "total": 2,
+        "files_using": 1,
+        "constructs": {
+          "INSPECT": 2
+        }
+      },
+      "tables_search": {
+        "total": 68,
+        "files_using": 7,
+        "constructs": {
+          "SORT": 43,
+          "SET": 10,
+          "INITIALIZE": 15
+        }
+      },
+      "subprograms": {
+        "total": 65,
+        "files_using": 4,
+        "constructs": {
+          "CALL": 42,
+          "USING": 21,
+          "BY_VALUE": 2
+        }
+      },
+      "copy_preproc": {
+        "total": 11,
+        "files_using": 1,
+        "constructs": {
+          "COPY": 11
+        }
+      },
+      "intrinsics": {
+        "total": 40,
+        "files_using": 7,
+        "constructs": {
+          "FUNCTION": 40
+        }
+      },
+      "misc": {
+        "total": 3,
+        "files_using": 2,
+        "constructs": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    "mastery_score": 28,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.SUBTRACT",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_X",
+      "data_advanced.USAGE_COMP_5",
+      "intrinsics.FUNCTION",
+      "io_file.READ",
+      "io_file.SELECT",
+      "io_file.START",
+      "misc.DISPLAY",
+      "string_ops.INSPECT",
+      "subprograms.BY_VALUE",
+      "subprograms.CALL",
+      "subprograms.USING",
+      "tables_search.INITIALIZE",
+      "tables_search.SET",
+      "tables_search.SORT"
+    ],
+    "categories_exercised": 10
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_state.cpy",
+      "total_lines": 109,
+      "code_lines": 92,
+      "comment_lines": 0,
+      "blank_lines": 17,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 21,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 23,
+        "IF": 12,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 13,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 3,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 24,
+          "ELSE": 4,
+          "EVALUATE": 4,
+          "WHEN": 4,
+          "PERFORM": 23,
+          "EXIT": 1
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "SUBTRACT": 1,
+          "COMPUTE": 2
+        },
+        "data_advanced": {},
+        "io_file": {
+          "START": 6
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_data.cpy",
+      "total_lines": 254,
+      "code_lines": 245,
+      "comment_lines": 0,
+      "blank_lines": 9,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 245,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "EXIT": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 3,
+          "PIC_S9": 115,
+          "OCCURS": 28,
+          "USAGE_COMP_5": 115
+        },
+        "io_file": {
+          "START": 5
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SORT": 5
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_level.cpy",
+      "total_lines": 121,
+      "code_lines": 110,
+      "comment_lines": 0,
+      "blank_lines": 11,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 14,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 15,
+        "IF": 3,
+        "EVALUATE": 2,
+        "CALL": 1,
+        "MOVE": 48,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 1,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 6,
+          "ELSE": 2,
+          "EVALUATE": 4,
+          "WHEN": 6,
+          "PERFORM": 19,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 4
+        },
+        "arithmetic": {
+          "COMPUTE": 2
+        },
+        "data_advanced": {},
+        "io_file": {
+          "SELECT": 2,
+          "START": 5
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SET": 2,
+          "INITIALIZE": 4
+        },
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_entity.cpy",
+      "total_lines": 145,
+      "code_lines": 127,
+      "comment_lines": 0,
+      "blank_lines": 18,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 26,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 16,
+        "IF": 17,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 26,
+        "COMPUTE": 10,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 3,
+        "SUBTRACT": 3,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 34,
+          "ELSE": 2,
+          "EVALUATE": 2,
+          "WHEN": 3,
+          "PERFORM": 18,
+          "PERFORM_VARYING": 2,
+          "PERFORM_UNTIL": 2
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "SUBTRACT": 3,
+          "COMPUTE": 10
+        },
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {
+          "SET": 2
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_raycast.cpy",
+      "total_lines": 181,
+      "code_lines": 160,
+      "comment_lines": 0,
+      "blank_lines": 21,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 20,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 12,
+        "IF": 22,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 30,
+        "COMPUTE": 31,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 2,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 44,
+          "ELSE": 8,
+          "PERFORM": 13,
+          "PERFORM_UNTIL": 1
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "COMPUTE": 33
+        },
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {
+          "INSPECT": 2
+        },
+        "tables_search": {
+          "INITIALIZE": 6
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 14
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_math.cpy",
+      "total_lines": 73,
+      "code_lines": 61,
+      "comment_lines": 0,
+      "blank_lines": 12,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 7,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 6,
+        "IF": 7,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 9,
+        "COMPUTE": 16,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 6,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 14,
+          "PERFORM": 9,
+          "PERFORM_UNTIL": 3,
+          "EXIT": 6
+        },
+        "arithmetic": {
+          "COMPUTE": 16
+        },
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 7
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker.cob",
+      "total_lines": 18,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {
+          "COPY": 11
+        },
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_render.cpy",
+      "total_lines": 460,
+      "code_lines": 405,
+      "comment_lines": 4,
+      "blank_lines": 51,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 32,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 32,
+        "IF": 36,
+        "EVALUATE": 0,
+        "CALL": 22,
+        "MOVE": 55,
+        "COMPUTE": 35,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 3,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 5,
+        "SUBTRACT": 3,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 72,
+          "ELSE": 3,
+          "PERFORM": 46,
+          "PERFORM_VARYING": 12,
+          "PERFORM_UNTIL": 11,
+          "EXIT": 5
+        },
+        "arithmetic": {
+          "ADD": 5,
+          "SUBTRACT": 3,
+          "COMPUTE": 35
+        },
+        "data_advanced": {},
+        "io_file": {
+          "START": 1
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SORT": 38,
+          "SET": 3
+        },
+        "subprograms": {
+          "CALL": 30,
+          "USING": 13
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 12
+        },
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_input.cpy",
+      "total_lines": 82,
+      "code_lines": 69,
+      "comment_lines": 0,
+      "blank_lines": 13,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 16,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 11,
+        "IF": 9,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 8,
+        "COMPUTE": 4,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 1,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 2,
+        "SUBTRACT": 2,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 18,
+          "PERFORM": 11,
+          "EXIT": 1
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "SUBTRACT": 2,
+          "COMPUTE": 6
+        },
+        "data_advanced": {},
+        "io_file": {
+          "READ": 1
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 2,
+          "USING": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_combat.cpy",
+      "total_lines": 123,
+      "code_lines": 105,
+      "comment_lines": 0,
+      "blank_lines": 18,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 17,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 13,
+        "IF": 14,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 25,
+        "COMPUTE": 7,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 1,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 2,
+        "SUBTRACT": 5,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 28,
+          "ELSE": 2,
+          "PERFORM": 14,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 1,
+          "EXIT": 1
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "SUBTRACT": 5,
+          "COMPUTE": 7
+        },
+        "data_advanced": {},
+        "io_file": {
+          "SELECT": 2
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SET": 3
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/levels.cpy",
+      "total_lines": 449,
+      "code_lines": 447,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 381,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 66,
+          "PIC_S9": 105,
+          "USAGE_COMP_5": 105
+        },
+        "io_file": {
+          "START": 9
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-doom-codex/gridwalker_bootstrap.cpy",
+      "total_lines": 81,
+      "code_lines": 69,
+      "comment_lines": 0,
+      "blank_lines": 12,
+      "divisions": {},
+      "sections": 1,
+      "paragraphs": 16,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 17,
+        "IF": 5,
+        "EVALUATE": 1,
+        "CALL": 7,
+        "MOVE": 8,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 2,
+        "STOP": 0,
+        "SET": 1,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 10,
+          "ELSE": 2,
+          "EVALUATE": 2,
+          "WHEN": 4,
+          "PERFORM": 19,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 2,
+          "EXIT": 2
+        },
+        "arithmetic": {},
+        "data_advanced": {},
+        "io_file": {
+          "READ": 1,
+          "START": 9
+        },
+        "string_ops": {},
+        "tables_search": {
+          "INITIALIZE": 5
+        },
+        "subprograms": {
+          "CALL": 9,
+          "USING": 6,
+          "BY_VALUE": 2
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    }
+  ]
+}

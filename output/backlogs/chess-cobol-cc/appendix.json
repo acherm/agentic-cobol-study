@@ -1,0 +1,277 @@
+{
+  "session_metadata": {
+    "project_root": "/Users/mathieuacher/SANDBOX/chess-cobol-cc",
+    "analysis_output_dir": "/Users/mathieuacher/SANDBOX/cobol-meta-analysis/output/backlogs/chess-cobol-cc",
+    "agent": "Claude Code",
+    "cli_version": "2.1.74",
+    "model": "claude-opus-4-6",
+    "session_file": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-chess-cobol-cc/9d9bb74e-18ea-4bb9-844c-b4e175998988.jsonl",
+    "session_id": "9d9bb74e-18ea-4bb9-844c-b4e175998988",
+    "total_events": 3734,
+    "event_type_counts": {"assistant": 1814, "user": 1202, "progress": 542, "system": 94, "queue-operation": 60, "file-history-snapshot": 16, "last-prompt": 6},
+    "first_timestamp": "2026-03-12T19:37:10.667Z",
+    "last_timestamp": "2026-03-30T18:28:33.877Z",
+    "auto_compactions_at_event": [263, 865, 1661, 2648, 3088],
+    "tool_use_counts": {"Bash": 712, "Edit": 178, "Read": 143, "Grep": 57, "TaskOutput": 53, "Write": 9, "ToolSearch": 2, "Agent": 2},
+    "human_user_turns_total": 11,
+    "notes": "Counts: 47 user-text events in JSONL but 5 are compaction summaries, 1 is an interrupt marker, and 30 are <task-notification> tool-output wrappers; only 11 are genuine human prompts."
+  },
+
+  "user_instruction_index": [
+    {"id": "UI-001", "event": 4,    "ts": "2026-03-12T19:37:41.818Z", "category": "FeatureRequest", "strength": "Explicit imperative", "target_surface": "Code + Runtime behavior", "quote": "I want to build a chess engine in COBOL (using GNU Cobol) ... assess its Elo rating ... playing games against chess engines of 'similar' levels.", "maps_to": ["BL-001", "BL-002"]},
+    {"id": "UI-002", "event": 18,   "ts": "2026-03-12T19:41:25.716Z", "category": "Scenario / ScopeChange", "strength": "Explicit imperative", "target_surface": "Code", "quote": "Let's go for Phase 1", "maps_to": ["BL-002"]},
+    {"id": "UI-003", "event": 103,  "ts": "2026-03-12T20:40:53.184Z", "category": "Scenario / ScopeChange", "strength": "Explicit imperative", "target_surface": "Code", "quote": "go to Phase 2", "maps_to": ["BL-003"]},
+    {"id": "UI-004", "event": 236,  "ts": "2026-03-12T21:44:13.596Z", "category": "Scenario / ScopeChange", "strength": "Explicit imperative", "target_surface": "Code", "quote": "go", "maps_to": ["BL-004"]},
+    {"id": "UI-005", "event": 445,  "ts": "2026-03-12T22:54:08.207Z", "category": "Continuation", "strength": "Explicit imperative", "target_surface": "Code", "quote": "continue", "maps_to": ["BL-005"]},
+    {"id": "UI-006", "event": 558,  "ts": "2026-03-13T08:46:40.837Z", "category": "Continuation", "strength": "Explicit imperative", "target_surface": "Code", "quote": "continue", "maps_to": ["BL-005"]},
+    {"id": "UI-007", "event": 574,  "ts": "2026-03-13T09:15:06.530Z", "category": "AcceptanceCriteria / Agreement", "strength": "Explicit imperative", "target_surface": "Code", "quote": "yes", "maps_to": ["BL-005"]},
+    {"id": "UI-008", "event": 727,  "ts": "2026-03-14T08:23:25.536Z", "category": "Question / Clarification", "strength": "Question", "target_surface": "Meta", "quote": "status?", "maps_to": ["Unmapped: meta query"]},
+    {"id": "UI-009", "event": 733,  "ts": "2026-03-14T08:24:14.876Z", "category": "FeatureRequest", "strength": "Explicit imperative", "target_surface": "Code", "quote": "please go ahead and try to improve the Elo", "maps_to": ["BL-006"]},
+    {"id": "UI-010", "event": 857,  "ts": "2026-03-16T19:49:39.210Z", "category": "FeatureRequest (repeat)", "strength": "Explicit imperative", "target_surface": "Code", "quote": "please go ahead and try to improve the Elo", "maps_to": ["BL-006"]},
+    {"id": "UI-011", "event": 3659, "ts": "2026-03-26T06:35:51.156Z", "category": "ScopeChange", "strength": "Explicit imperative", "target_surface": "Runtime / Tests", "quote": "no refine the Elo assessment", "maps_to": ["BL-007"]}
+  ],
+
+  "project_constraints_index": [
+    {
+      "id": "PC-001",
+      "pointer": "[R:.claude/settings.local.json]",
+      "type": "tooling policy",
+      "quote_or_paraphrase": "Pre-approves 22 specific Bash commands including `cobc -x -o cobolchess chess-engine.cob`, UCI pipe tests via `printf ... | ./cobolchess`, and a fully-specified `cutechess-cli -engine CobolChess vs Stockfish UCI_Elo=1320 -rounds 10 -pgnout phase3_test.pgn` invocation.",
+      "impact": "Shapes execution: the agent did not need to escalate permission for these commands. Also pins the build invocation (before the -fwrapv discovery in SB-026) and the default match template (tc=40/60, UCI_LimitStrength)."
+    }
+  ],
+
+  "prompt_ledger": [
+    {"id": "PL-ROOT", "event": 4,    "ts": "2026-03-12T19:37:41.818Z", "raw": "I want to build a chess engine in COBOL (using GNU Cobol)... assess its Elo rating, typically by playing games against chess engines of 'similar' levels.", "linked_ui": ["UI-001"], "linked_bl": ["BL-001", "BL-002"], "canonical": "Build a UCI-compliant chess engine in GNU COBOL 3.2 from scratch in chess-engine.cob. Iterate through classic phases (board + UCI + random moves -> material + PST -> alpha-beta -> iterative deepening + time mgmt -> quiescence/killers/LMR/eval). After each phase, run a 20-game cutechess-cli match vs Stockfish (UCI_LimitStrength). Final goal: estimate the engine's Elo across 4+ opponent levels (SF 1400/1500/1600/1700)."},
+    {"id": "PL-001", "event": 18,   "ts": "2026-03-12T19:41:25.716Z", "raw": "Let's go for Phase 1", "linked_ui": ["UI-002"], "linked_bl": ["BL-002"]},
+    {"id": "PL-002", "event": 103,  "ts": "2026-03-12T20:40:53.184Z", "raw": "go to Phase 2", "linked_ui": ["UI-003"], "linked_bl": ["BL-003"]},
+    {"id": "PL-003", "event": 236,  "ts": "2026-03-12T21:44:13.596Z", "raw": "go", "linked_ui": ["UI-004"], "linked_bl": ["BL-004"]},
+    {"id": "PL-004", "event": 445,  "ts": "2026-03-12T22:54:08.207Z", "raw": "continue", "linked_ui": ["UI-005"], "linked_bl": ["BL-005"]},
+    {"id": "PL-005", "event": 558,  "ts": "2026-03-13T08:46:40.837Z", "raw": "continue", "linked_ui": ["UI-006"], "linked_bl": ["BL-005"]},
+    {"id": "PL-006", "event": 574,  "ts": "2026-03-13T09:15:06.530Z", "raw": "yes", "linked_ui": ["UI-007"], "linked_bl": ["BL-005"]},
+    {"id": "PL-007", "event": 727,  "ts": "2026-03-14T08:23:25.536Z", "raw": "status?", "linked_ui": ["UI-008"], "linked_bl": []},
+    {"id": "PL-008", "event": 733,  "ts": "2026-03-14T08:24:14.876Z", "raw": "please go ahead and try to improve the Elo", "linked_ui": ["UI-009"], "linked_bl": ["BL-006"]},
+    {"id": "PL-009", "event": 857,  "ts": "2026-03-16T19:49:39.210Z", "raw": "please go ahead and try to improve the Elo", "linked_ui": ["UI-010"], "linked_bl": ["BL-006"]},
+    {"id": "PL-010", "event": 3659, "ts": "2026-03-26T06:35:51.156Z", "raw": "no refine the Elo assessment", "linked_ui": ["UI-011"], "linked_bl": ["BL-007"]}
+  ],
+
+  "feature_backlog": [
+    {"id": "BL-001", "title": "Produce a build-plan for a COBOL chess engine + Elo assessment", "type": "Documentation", "source_ui": ["UI-001"], "source_pl": ["PL-ROOT"], "acceptance": "User agrees to the phased plan before code is written.", "implementation_summary": "4-phase plan proposed with target Elo per phase.", "evidence": ["[T:#14]"], "dod": "Yes"},
+    {"id": "BL-002", "title": "Implement Phase 1: board + UCI + random-legal moves", "type": "Feature", "source_ui": ["UI-002"], "source_pl": ["PL-001"], "acceptance": "20 cutechess games without illegal moves.", "implementation_summary": "8x8 board, FEN parser, UCI protocol (uci/isready/position/go/quit), full pseudo-legal move gen for all pieces with legality filter, random legal-move output.", "evidence": ["[T:#263]", "[R:phase2_games.pgn]", "[R:stress_test2.pgn]"], "dod": "Yes", "bugs_fixed": ["input buffer overflow (256->8192 bytes)", "FEN column PIC 9 overflow"]},
+    {"id": "BL-003", "title": "Implement Phase 2: material + PST + 1-ply search", "type": "Feature", "source_ui": ["UI-003"], "source_pl": ["PL-002"], "acceptance": "Engine prefers winning captures / good PST moves.", "implementation_summary": "Material scores (P=100,N=320,B=330,R=500,Q=900,K=20000) + piece-square tables for P/N/B/R/K + 1-ply SEARCH-BEST-MOVE.", "evidence": ["[T:#263]"], "dod": "Yes"},
+    {"id": "BL-004", "title": "Implement Phase 3: alpha-beta search depth 3-4", "type": "Feature", "source_ui": ["UI-004"], "source_pl": ["PL-003"], "acceptance": "Plays a 10-game match vs SF 1320.", "implementation_summary": "Explicit-stack negamax alpha-beta, per-ply state arrays, SEARCH-MAKE/UNMAKE-MOVE, go depth N parsing.", "evidence": ["[R:phase3_test.pgn]", "[T:#517]"], "dod": "Yes"},
+    {"id": "BL-005", "title": "Implement Phase 4: iterative deepening + time management", "type": "Feature", "source_ui": ["UI-005","UI-006","UI-007"], "source_pl": ["PL-004","PL-005","PL-006"], "acceptance": "Engine respects 40/60 time control in cutechess.", "implementation_summary": "Iterative-deepening loop in UCI-CMD-GO, wtime/btime/movestogo parsing, time limit formula, 512-node time check granularity.", "evidence": ["[T:#865]", "[R:phase4_test.pgn]"], "dod": "Yes"},
+    {"id": "BL-006", "title": "Progressively improve the engine's Elo (open-ended)", "type": "Feature", "source_ui": ["UI-009","UI-010"], "source_pl": ["PL-008","PL-009"], "acceptance": "Each change either improves Elo vs the previous snapshot, or is reverted.", "implementation_summary": "Quiescence, MVV-LVA, killers, delta pruning, history heuristic, aspiration windows, bishop-pair, rook on open file, pawn structure, LMR w/ re-search, PV move-ordering at root, persistent killer/history across iterations, aggressive LMR R=2. Toolchain fix: COB_CFLAGS -fwrapv. Seven agent-initiated reverts after empirical regressions.", "evidence": ["[R:phase4b_test.pgn]","[R:phase4c_test.pgn]","[R:phase4d_*.pgn]","[R:phase4e_vs1500.pgn]","[R:phase5_vs1500.pgn]","[R:phase5b_vs1500.pgn]","[R:phase6_vs1500.pgn]","[R:phase6b_vs1500.pgn]","[R:phase7_vs1500.pgn]","[R:phase8_vs1500.pgn]","[R:phase9_vs1500.pgn]","[M:project_elo_progress.md]","[M:feedback_time_management.md]","[M:feedback_overhead_sensitivity.md]"], "dod": "Yes", "ladder": "v1=1517 -> v2=1608 -> v3b=1627 -> v4=1647 -> v4b~=1627"},
+    {"id": "BL-007", "title": "Refine the Elo assessment via multi-level calibration", "type": "Feature", "source_ui": ["UI-011"], "source_pl": ["PL-010"], "acceptance": "Engine Elo estimated over multiple Stockfish strengths.", "implementation_summary": "5 matches (SF 1400/1500/1500/1600/1700, 100 games), weighted-average + realistic central estimate.", "evidence": ["[R:elo_vs1400.pgn]","[R:elo_vs1600.pgn]","[R:elo_vs1700.pgn]","[T:#3713]"], "dod": "Yes", "result": "~1621 weighted, ~1630 realistic"}
+  ],
+
+  "reproducibility_ops": [],
+
+  "specification_backlog_summary": {
+    "total": 51,
+    "provenance": {"user_driven": 12, "agent_initiated": 37, "prerequisite": 2},
+    "negative_result_reverts": ["SB-027","SB-033","SB-037","SB-038","SB-042","SB-043","SB-047"],
+    "note": "Full per-item table lives in SPECIFICATION_BACKLOG.md"
+  },
+
+  "replay_plan": {
+    "preconditions": {
+      "os": "macOS (Darwin, Apple Silicon)",
+      "gnucobol": "3.2.0 via Homebrew (Cellar/gnucobol/3.2_1)",
+      "gmp": "6.3.0 via Homebrew (Cellar/gmp/6.3.0)",
+      "stockfish": "/opt/homebrew/bin/stockfish (SF 18 tested)",
+      "cutechess_cli": "on $PATH"
+    },
+    "build_command": "COB_CFLAGS=\"-O2 -fwrapv -I/opt/homebrew/Cellar/gmp/6.3.0/include -I/opt/homebrew/Cellar/gnucobol/3.2_1/include\" cobc -x -o chess-engine chess-engine.cob",
+    "sanity_command": "printf 'uci\\nisready\\nposition startpos\\ngo depth 4\\nquit\\n' | timeout 30 ./chess-engine",
+    "validation_command": "cutechess-cli -engine name=CobolChess cmd=./chess-engine proto=uci -engine name=Stockfish cmd=/opt/homebrew/bin/stockfish proto=uci option.UCI_LimitStrength=true option.UCI_Elo=1500 -each tc=40/60 -rounds 20 -pgnout match.pgn -recover",
+    "expected_outputs": {"vs_SF_1500_score_pct": "67-70%", "vs_SF_1500_elo_implied": "1620-1650"},
+    "checkpoints_file_snapshots": [
+      {"step": "Phase 3", "binary": "cobolchess", "pgn": "phase3_test.pgn"},
+      {"step": "Phase 4b", "binary": null, "pgn": "phase4b_test.pgn"},
+      {"step": "v1 (time-mgmt fixed)", "binary": "chess-engine-v1", "pgn": "phase4d_timefix.pgn"},
+      {"step": "v2 (bishop pair + rook files)", "binary": "chess-engine-v2", "pgn": "phase4e_vs1500.pgn"},
+      {"step": "v3b (pawn struct + LMR + soft-time)", "binary": "chess-engine-v3b", "pgn": "phase5b_vs1500.pgn"},
+      {"step": "v4 (PV order + persistent hist/killers)", "binary": "chess-engine-v4", "pgn": "phase7_vs1500.pgn"},
+      {"step": "v4b (aggressive LMR R=2)", "binary": "chess-engine-v4b", "pgn": "phase9_vs1500.pgn"},
+      {"step": "Elo triangulation", "binary": "chess-engine-v4b", "pgn": ["elo_vs1400.pgn","elo_vs1600.pgn","elo_vs1700.pgn"]}
+    ]
+  },
+
+  "repo_stats": {
+    "tool": "_work/repo_stats.py (stats_run_1)",
+    "exclusions": ["node_modules","dist","build","target",".venv","vendor","coverage",".git"],
+    "total_files": 47,
+    "total_directories_excluding_root": 1,
+    "language_breakdown": {
+      "COBOL": {"files": 1, "loc": 3460, "file_list": ["chess-engine.cob"]},
+      "C (compiler-generated)": {"files": 1, "loc": 7667, "file_list": ["chess-engine.c"]},
+      "H (compiler-generated)": {"files": 2, "loc": 451, "file_list": ["chess-engine.c.h","chess-engine.c.l.h"]},
+      "JSON (config)": {"files": 1, "loc": 29, "file_list": [".claude/settings.local.json"]},
+      "PGN (data)": {"files": 25, "loc": 17288},
+      "binaries": {"files": 16, "loc": null},
+      "object_files": {"files": 1, "loc": null}
+    },
+    "program_kind": {
+      "production_source": {"files": 1, "loc": 3460},
+      "build_artefacts": {"files": 20, "loc": 8118},
+      "test_data_pgn": {"files": 25, "loc": 17288},
+      "config": {"files": 1, "loc": 29},
+      "docs": {"files": 0, "loc": 0}
+    },
+    "entry_points": {
+      "source": "chess-engine.cob",
+      "binary_active": "chess-engine (v4b-equivalent)",
+      "test_runner": "cutechess-cli (external tool)",
+      "build_script": null
+    },
+    "git": null
+  },
+
+  "rq_coverage_matrix": [
+    {"rq": "RQ-1 strategies", "evidence_sources": ["session bash cmds","assistant text","file edits"], "indicators": ["codebook frequencies","episode sequences"], "output_sections": ["B2","B3","B4"]},
+    {"rq": "RQ-2 outcome/quality", "evidence_sources": ["PGN match results","memory notes","binary mtimes","compaction summaries"], "indicators": ["rubric 0-2 per axis"], "output_sections": ["B5"]},
+    {"rq": "RQ-3 success/failure factors", "evidence_sources": ["reverts with justifications","feedback memory notes"], "indicators": ["claims FOR/AGAINST"], "output_sections": ["B8"]},
+    {"rq": "RQ-4 reproducibility", "evidence_sources": ["build command","env assumptions","absence of git/CI"], "indicators": ["reproducibility checklist"], "output_sections": ["B9"]},
+    {"rq": "RQ-5 interaction demand", "evidence_sources": ["UI count","UI density","clarification cycles"], "indicators": ["UI-per-BL ratio","scope-change count"], "output_sections": ["B7"]}
+  ],
+
+  "strategy_codebook": {
+    "PLAN": "Propose/revise a multi-step plan explicitly",
+    "SCAF": "Introduce new WORKING-STORAGE / data structure",
+    "INCR": "Small behavioural addition (one eval term, one pruning rule)",
+    "RETR": "Revert a previous change after empirical failure",
+    "DBG": "Diagnose a run-time bug (add DISPLAY, test case)",
+    "TEST": "Run a cutechess 10/20-game match and inspect PGN",
+    "REFA": "Refactor without behavioural change",
+    "TOOL": "Change build / environment settings",
+    "PROMPT": "User prompt changes direction",
+    "RISK": "Explicit risk / constraint accounting",
+    "VERIFY": "Explicit correctness check (test position, sanity UCI run)",
+    "counts_observed": {"INCR": 21, "RETR": 7, "TEST": 18, "SCAF": 12, "DBG": 5, "VERIFY": 6, "REFA": 2, "TOOL": 2, "PLAN": 3, "RISK": 3, "PROMPT": 3}
+  },
+
+  "episodes": [
+    {"id": "EP-bootstrap", "bl": ["BL-001"], "macro_phase": "bootstrap", "window_events": [0, 18], "strategies": ["PLAN"]},
+    {"id": "EP-P1",        "bl": ["BL-002"], "macro_phase": "feature-growth", "window_events": [18, 103], "strategies": ["SCAF","INCR","TEST","DBG","DBG","TEST"]},
+    {"id": "EP-P2",        "bl": ["BL-003"], "macro_phase": "feature-growth", "window_events": [103, 236], "strategies": ["SCAF","INCR","TEST"]},
+    {"id": "EP-P3",        "bl": ["BL-004"], "macro_phase": "feature-growth", "window_events": [236, 722], "strategies": ["SCAF","INCR","DBG","TEST"]},
+    {"id": "EP-P4",        "bl": ["BL-005"], "macro_phase": "feature-growth", "window_events": [722, 816], "strategies": ["SCAF","INCR","DBG","TEST"]},
+    {"id": "EP-P4b",       "bl": ["BL-006"], "macro_phase": "feature-growth", "window_events": [816, 851], "strategies": ["INCR","INCR","TEST"]},
+    {"id": "EP-P4c",       "bl": ["BL-006"], "macro_phase": "feature-growth", "window_events": [851, 865], "strategies": ["TEST"]},
+    {"id": "EP-P4d",       "bl": ["BL-006"], "macro_phase": "stabilization", "window_events": [865, 1661], "strategies": ["INCR","INCR","INCR","TOOL","RETR","TEST","RETR"]},
+    {"id": "EP-v1",        "bl": ["BL-006"], "macro_phase": "stabilization", "window_events": [1661, 2576], "strategies": ["TEST","TEST","VERIFY"]},
+    {"id": "EP-v2",        "bl": ["BL-006"], "macro_phase": "stabilization", "window_events": [2576, 2648], "strategies": ["INCR","INCR","RETR","TEST"]},
+    {"id": "EP-v3",        "bl": ["BL-006"], "macro_phase": "stabilization", "window_events": [2648, 3088], "strategies": ["INCR","INCR","RETR","RETR","TEST","RISK"]},
+    {"id": "EP-P6",        "bl": ["BL-006"], "macro_phase": "hardening",    "window_events": [3088, 3385], "strategies": ["SCAF","INCR","VERIFY","TEST","RETR","RETR","RISK"]},
+    {"id": "EP-v4",        "bl": ["BL-006"], "macro_phase": "hardening",    "window_events": [3385, 3519], "strategies": ["INCR","INCR","VERIFY","TEST"]},
+    {"id": "EP-P8",        "bl": ["BL-006"], "macro_phase": "hardening",    "window_events": [3519, 3596], "strategies": ["INCR","TEST","RETR"]},
+    {"id": "EP-v4b",       "bl": ["BL-006"], "macro_phase": "hardening",    "window_events": [3596, 3659], "strategies": ["INCR","TEST"]},
+    {"id": "EP-Elo",       "bl": ["BL-007"], "macro_phase": "calibration",  "window_events": [3659, 3734], "strategies": ["PROMPT","TEST","TEST","TEST","TEST","TEST"]}
+  ],
+
+  "strategy_annotations": {
+    "BL-001": {"sequence": ["PLAN","PLAN"], "dbg_loops": 0, "match_runs": 0},
+    "BL-002": {"sequence": ["SCAF","INCR","TEST","DBG","DBG","TEST"], "dbg_loops": 2, "match_runs": 3},
+    "BL-003": {"sequence": ["SCAF","INCR","TEST"], "dbg_loops": 0, "match_runs": 1},
+    "BL-004": {"sequence": ["SCAF","INCR","DBG","TEST"], "dbg_loops": 1, "match_runs": 2},
+    "BL-005": {"sequence": ["SCAF","INCR","DBG","TEST"], "dbg_loops": 1, "match_runs": 2},
+    "BL-006": {"sequence": "[INCR->TEST->RETR?]xN + memory-note writes", "dbg_loops": 3, "match_runs": 14, "reverts": 7},
+    "BL-007": {"sequence": ["TEST x5 in parallel","REPORT"], "dbg_loops": 0, "match_runs": 5}
+  },
+
+  "rubric_scores": {
+    "BL-001": {"Q1_correctness": 2, "Q2_build_run": null, "Q3_test_validation": null, "Q4_robustness": null, "Q5_maintainability": 2, "Q6_reproducibility": 2, "confidence": "High"},
+    "BL-002": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 2, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "High"},
+    "BL-003": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 1, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "High"},
+    "BL-004": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 2, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "High"},
+    "BL-005": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 2, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "High"},
+    "BL-006": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 2, "Q4_robustness": 1, "Q5_maintainability": 1, "Q6_reproducibility": 1, "confidence": "Med"},
+    "BL-007": {"Q1_correctness": 2, "Q2_build_run": 2, "Q3_test_validation": 2, "Q4_robustness": 2, "Q5_maintainability": 2, "Q6_reproducibility": 1, "confidence": "High"}
+  },
+
+  "interaction_metrics": {
+    "total_human_prompts": 11,
+    "prompts_per_BL": {"BL-001": 1, "BL-002": 1, "BL-003": 1, "BL-004": 1, "BL-005": 3, "BL-006": 2, "BL-007": 1, "_unmapped": 1},
+    "prompts_that_were_meta": 1,
+    "clarification_cycles": 0,
+    "scope_changes": 1,
+    "scope_change_list": ["UI-011 (refine Elo instead of continuing improvements)"],
+    "avg_prompt_length_chars": 94,
+    "sb_per_user_prompt_on_BL_006": 18.5,
+    "strength_distribution": {"Explicit imperative": 10, "Question": 1},
+    "category_distribution": {"FeatureRequest": 3, "ScopeChange": 2, "Scenario": 2, "Continuation": 2, "Agreement": 1, "Question/Clarification": 1}
+  },
+
+  "cobol_panel": {
+    "compile_status": "clean (no warnings in session logs)",
+    "critical_flag": "-fwrapv required to avoid a GNU COBOL -O2 hang (SB-026)",
+    "runtime_overhead_ms_per_node": 0.23,
+    "idioms": [
+      "fixed-format source (>>SOURCE FORMAT IS FIXED)",
+      "PROGRAM-ID ... IS RECURSIVE declared (but explicit stack used)",
+      "FUNCTION ALL INTRINSIC in REPOSITORY",
+      "ACCEPT ... FROM CONSOLE (STANDARD-INPUT failed initially)",
+      "INITIALIZE on tables, REDEFINES for PST data",
+      "EVALUATE ... WHEN per-piece dispatch",
+      "explicit-stack search with per-ply OCCURS arrays (WS-PLY-DATA)"
+    ],
+    "toolchain": "cobc -x (Homebrew gnucobol 3.2_1) + libcob",
+    "delta_over_time": {
+      "loc": "Phase 1 skeleton (estimated ~800 LOC) -> 3460 LOC final",
+      "eval_growth": "material -> material+PST -> +bishop pair -> +rook file -> +pawn structure (doubled/isolated/passed)",
+      "search_growth": "1-ply -> alpha-beta -> iterative deepening -> +quiescence -> +killers -> +MVV-LVA -> +delta pruning -> +history -> +aspiration -> +LMR (with R=2 branch) -> +PV ordering -> +persistent killers/history"
+    }
+  },
+
+  "process_tracing_claims": [
+    {
+      "claim": "Per-node overhead in the COBOL engine is the dominant cost.",
+      "for": ["3 independent reverts (SB-033,037,043,047) all caused by per-node work","feedback_overhead_sensitivity.md quantifies 0.23ms/node and warns <20% slowdown costs a full ply"],
+      "against": [],
+      "judgment": "Strong"
+    },
+    {
+      "claim": "Eval improvements are 'free' (cost lives inside the existing EVALUATE-POSITION call).",
+      "for": ["SB-031 bishop pair, SB-032 rook file: no node-count regression","v2 match improved +91 Elo"],
+      "against": ["SB-042 tapered king eval regressed -70 Elo despite living inside EVALUATE-POSITION"],
+      "judgment": "Partial - holds for additive terms without extra control flow; integer-division/phase-counting breaks it"
+    },
+    {
+      "claim": "PV-ordering + persistent history/killers is the single largest Elo win.",
+      "for": ["+30 Elo (v3b->v4)","20-37% node reduction at intermediate depths","opening move switched from Na3 to Nc3"],
+      "against": ["v4 vs v4b within noise at SF 1500"],
+      "judgment": "Medium-strong"
+    },
+    {
+      "claim": "Engine is near its ceiling vs SF 1500 at 67-70%.",
+      "for": ["3 consecutive runs stay in 67.5-70% band"],
+      "against": ["only one ceiling-probe run each at SF 1600 / 1700"],
+      "judgment": "Medium"
+    },
+    {
+      "claim": "Auto-compaction preserved enough context across 5 compactions to continue productively.",
+      "for": ["5 compactions, no observed regression blamed on lost context","each compaction carries a ~3k-word agent-authored summary"],
+      "against": ["the -fwrapv discovery happened intra-session without being anticipated"],
+      "judgment": "Medium"
+    }
+  ],
+
+  "threats_to_validity": [
+    "Self-report bias: 5 compaction summaries drive most SB-to-capability mapping; agent-authored; may inflate completeness.",
+    "No re-execution: meta-run was read-only; we did not re-run cobc or cutechess-cli; [L:run_n] pointers are absent.",
+    "No per-change diffing: absent git history; SB item isolation is inferred from mtimes + PGN names.",
+    "Small oracle samples: 20 games per Elo estimate; noise bands ~ plus/minus 50 Elo.",
+    "Terse prompts: 6 of 11 user prompts are <=15 chars; phase labels are agent-interpreted not user-specified.",
+    "Toolchain idiosyncrasy: -fwrapv requirement is macOS + Homebrew GNU COBOL specific; other toolchains may compile without it."
+  ],
+
+  "open_questions_and_defaults_used": [
+    {"cp": "CP1", "invoked": false, "default_applied": "Session selection was unambiguous (one JSONL matched the encoded repo path)."},
+    {"cp": "CP2", "invoked": false, "default_applied": "UI->BL mapping, acceptance criteria and DoD were clear enough; no clarification asked."},
+    {"cp": "CP3", "invoked": false, "default_applied": "Oracle = cutechess-cli 20-game match vs SF UCI_LimitStrength; engine-quality criteria = the agent's own 'per-node cost must not exceed 20% of node budget', captured in feedback_overhead_sensitivity.md. We did not re-execute matches."},
+    {"q": "Is BL-006 considered 'done' despite having no explicit Elo target?", "default": "Yes - DoD = 'improvement measurable against previous snapshot OR reverted', which is satisfied on every cycle."},
+    {"q": "Should binary snapshots v3 (missing), v4test, and test2 count as separate SB items?", "default": "No - they are intermediate debug binaries with no distinct PGN evidence; only v1, v2, v3b, v4, v4b have match evidence."},
+    {"q": "Does UI-008 ('status?') map to any BL?", "default": "No - pure meta query. Recorded but Unmapped."}
+  ]
+}

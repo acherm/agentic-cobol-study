@@ -1,0 +1,151 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-jb",
+  "has_git": true,
+  "commits": 10,
+  "commit_log": [
+    {
+      "sha": "4b148bc1a9043215a0d27cb9990e5dd5003b21dd",
+      "date": "2026-04-03T17:54:34+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add verification report scoring 25/27 on case study reproduction"
+    },
+    {
+      "sha": "ca7cf7a768a3283bea9aa22445a9d50be37d61de",
+      "date": "2026-04-03T17:43:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add input validation with reject file for invalid records"
+    },
+    {
+      "sha": "ad841ed6f20286ad17c0f42933570c2c29c368f6",
+      "date": "2026-04-03T17:40:25+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "cf26a128e7954e15251e11916a6a8f99ecf8a161",
+      "date": "2026-04-03T17:34:26+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add COBOL payroll management system"
+    },
+    {
+      "sha": "71d46f1052e07a1626c521282b5029ebbf392d5b",
+      "date": "2026-04-03T17:54:34+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add verification report scoring 25/27 on case study reproduction"
+    },
+    {
+      "sha": "704baa87c3e105b895694a818969469bea1d8d19",
+      "date": "2026-04-03T17:43:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add input validation with reject file for invalid records"
+    },
+    {
+      "sha": "a566a9ec771c72876b8fec5806eabdd4934b87cd",
+      "date": "2026-04-03T17:40:25+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "b4c6c665fe61fe8aa6b48906424a24f4adfb152b",
+      "date": "2026-04-03T17:34:26+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add COBOL payroll management system"
+    },
+    {
+      "sha": "22a3d0debe9b60c0eba96c6bb929b3f2258f9947",
+      "date": "2026-04-02T18:24:13+02:00",
+      "author": "ESPINASSE Jean-Baptiste",
+      "subject": "add case-study-1  - COBOL payroll sample"
+    },
+    {
+      "sha": "0517d36443c8081b1bc3bcbc51c3bff8d5e8a1c7",
+      "date": "2026-04-02T17:57:08+02:00",
+      "author": "jbespi",
+      "subject": "Initial commit"
+    }
+  ],
+  "first_commit": "2026-04-02T17:57:08+02:00",
+  "last_commit": "2026-04-03T17:54:34+02:00",
+  "authors": {
+    "Mathieu Acher": 8,
+    "ESPINASSE Jean-Baptiste": 1,
+    "jbespi": 1
+  },
+  "churn": {
+    "files_changed_total": 30,
+    "insertions_total": 7494,
+    "deletions_total": 16,
+    "per_commit": [
+      {
+        "sha": "4b148bc1a9043215a0d27cb9990e5dd5003b21dd",
+        "date": "2026-04-03T17:54:34+02:00",
+        "files": 1,
+        "ins": 57,
+        "del": 0
+      },
+      {
+        "sha": "ca7cf7a768a3283bea9aa22445a9d50be37d61de",
+        "date": "2026-04-03T17:43:45+02:00",
+        "files": 3,
+        "ins": 102,
+        "del": 3
+      },
+      {
+        "sha": "ad841ed6f20286ad17c0f42933570c2c29c368f6",
+        "date": "2026-04-03T17:40:25+02:00",
+        "files": 2,
+        "ins": 125,
+        "del": 4
+      },
+      {
+        "sha": "cf26a128e7954e15251e11916a6a8f99ecf8a161",
+        "date": "2026-04-03T17:34:26+02:00",
+        "files": 4,
+        "ins": 611,
+        "del": 2
+      },
+      {
+        "sha": "71d46f1052e07a1626c521282b5029ebbf392d5b",
+        "date": "2026-04-03T17:54:34+02:00",
+        "files": 1,
+        "ins": 57,
+        "del": 0
+      },
+      {
+        "sha": "704baa87c3e105b895694a818969469bea1d8d19",
+        "date": "2026-04-03T17:43:45+02:00",
+        "files": 3,
+        "ins": 102,
+        "del": 3
+      },
+      {
+        "sha": "a566a9ec771c72876b8fec5806eabdd4934b87cd",
+        "date": "2026-04-03T17:40:25+02:00",
+        "files": 2,
+        "ins": 125,
+        "del": 4
+      },
+      {
+        "sha": "b4c6c665fe61fe8aa6b48906424a24f4adfb152b",
+        "date": "2026-04-03T17:34:26+02:00",
+        "files": 4,
+        "ins": 611,
+        "del": 0
+      },
+      {
+        "sha": "22a3d0debe9b60c0eba96c6bb929b3f2258f9947",
+        "date": "2026-04-02T18:24:13+02:00",
+        "files": 9,
+        "ins": 5703,
+        "del": 0
+      },
+      {
+        "sha": "0517d36443c8081b1bc3bcbc51c3bff8d5e8a1c7",
+        "date": "2026-04-02T17:57:08+02:00",
+        "files": 1,
+        "ins": 1,
+        "del": 0
+      }
+    ]
+  }
+}

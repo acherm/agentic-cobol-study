@@ -1,0 +1,503 @@
+{
+  "project": "cobol-compiler-codex",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "COBOL-in-COBOL compiler skeleton `src/minicobc.cob`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "Subset lexer/parser for `IDENTIFICATION`, `DATA`, `WORKING-STORAGE`, `PROCEDURE` divisions",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "Core statements: `DISPLAY`, `ACCEPT`, `MOVE`, `INITIALIZE`, `ADD`/`SUBTRACT`/`MULTIPLY`/`DIVIDE`, `COMPUTE`, `IF`/`ELSE IF`/`ELSE`/`END-IF`, `STOP RUN`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "Three local sample programs `primes.cob`, `collatz.cob`, `gcd.cob`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Build+demo+test scripts (`scripts/demo.sh`, `scripts/test.sh`)",
+      "evidence": "Tooling",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "Compatibility path for `agentic-cobol-game15tictactoe@4ae3129`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "External submodule pinning of `acherm/agentic-cobol-game15tictactoe`",
+      "evidence": "Tooling",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "Benchmark manifest `benchmark/cases.json` with core + compatibility suites",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "GnuCOBOL performance comparison runner (`compare-compilers.sh`, `compare_compilers.py`)",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "GnuCOBOL acceptance fix-up for `primes/collatz/gcd`",
+      "evidence": "Quality/Hardening",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "Bootstrap check `scripts/test-selfhost.sh` with `MINICOB` template",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "Chess engine compatibility path for `agentic-chessengine-cobol-codex@faf0f16` (template-based)",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "Perft benchmark harness `compare-chess-perft.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "OPT mode 1 \u2014 constant folding, constant propagation, dead-store elimination",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "Optimization suite `examples/opt/*.cob` (8 programs)",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "OPT mode 2 \u2014 loop-condition canonicalization, width-aware integer selection",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "Status report `reports/current-status.md` and README summary",
+      "evidence": "Documentation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "DOOM compatibility path for `agentic-cobol-doom@18ce52b`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "Re-architected generic pipeline: `EVALUATE`, `PERFORM VARYING`, paragraph `PERFORM`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "Generic front end: `PIC X`, groups, `REDEFINES`, `OCCURS`, indexed references",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-033",
+      "title": "External `CALL \"name\"` with `USING BY VALUE`/`BY REFERENCE`/`RETURNING`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-034",
+      "title": "`FUNCTION SQRT`, `FUNCTION NUMVAL`, `FUNCTION TRIM`, `FUNCTION MOD`, `FUNCTION REM`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-035",
+      "title": "Multiline free-form procedure statements",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-036",
+      "title": "Generic front-end smoke script `scripts/test-generic-features.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-037",
+      "title": "DOOM OPT comparison `compare-cobol-doom-opt.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-040",
+      "title": "README lead paragraph listing chess, Game of 15, DOOM, Flappy targets",
+      "evidence": "Documentation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-041",
+      "title": "Author/attribution line \"Mathieu Acher and Codex (GPT-5.4, Extra High)\"",
+      "evidence": "Documentation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-042",
+      "title": "Flappy Bird compatibility path for `agentic-cobol-pygame@b2095a1`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-043",
+      "title": "`gameN.cob` graduated to generic front end",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-044",
+      "title": "`game15.cob` graduated to generic front end",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-050",
+      "title": "Chess Phase-1 harness (`BOARD`, `FEN(startpos)`)",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-051",
+      "title": "Chess Phase-2 harness (`PERFT(startpos, depth=2)`)",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-052",
+      "title": "Generic-pipeline support for `PERFORM paragraph UNTIL`, `SEARCH`, qualified `OF`",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-060",
+      "title": "Chess Phase-3 harness (shallow `SEARCH`)",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-061",
+      "title": "Chess Phase-4 harness (top-level `COBOCHESS` driver)",
+      "evidence": "Capability",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-062",
+      "title": "Fixed-depth search benchmark `compare-chess-search-suite.sh` with default + extended profiles",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-063",
+      "title": "Depth-1 cross-check suite against `python-chess`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-064",
+      "title": "Cautionary benchmark caveat section in README",
+      "evidence": "Documentation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-070",
+      "title": "Direct `QUIESCE`/`ALPHABETA` equivalence harness `test-chess-phase3-direct.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-071",
+      "title": "Bug-fix: indexed numeric `MOVE` source lowering in `EVAL`",
+      "evidence": "Bugfix",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-072",
+      "title": "`examples/generic/move_index_expr.cob` regression",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-080",
+      "title": "Paired-game tournament harness `compare-chess-tournament.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-081",
+      "title": "MiniCOBC-vs-Stockfish tournament across `Skill Level` settings",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-090",
+      "title": "`scripts/run_chess_cutechess_elo.py`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-091",
+      "title": "Unbuffered UCI wrapper `run-minicobc-chess-uci.sh`",
+      "evidence": "Tooling",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-092",
+      "title": "NIST COBOL85 starter harness `prepare-nist-cobol85.sh` + `test-nist-cobol85.sh`",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-093",
+      "title": "game15 generic-path MiniCOBC-vs-GnuCOBOL experiment (side session 019d539e)",
+      "evidence": "Test/Validation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-100",
+      "title": "`ELSE IF` chain closure bug fix",
+      "evidence": "Bugfix",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-001",
+      "title": "SB-001, SB-002, SB-003, SB-004, SB-005",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-003",
+      "title": "SB-012",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-005",
+      "title": "SB-014",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-007",
+      "title": "SB-020",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-009",
+      "title": "SB-022, SB-023, SB-024",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-011",
+      "title": "SB-030, SB-033, SB-034",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-013",
+      "title": "SB-032, SB-034, SB-035, SB-036",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-015",
+      "title": "SB-040, SB-041",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-017",
+      "title": "SB-043, SB-044",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-019",
+      "title": "SB-060, SB-061",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-021",
+      "title": "SB-070, SB-071, SB-072",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-023",
+      "title": "SB-081",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "BL-025",
+      "title": "SB-092",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [],
+  "commit_subjects": [
+    {
+      "sha": "1b72b9c9fa",
+      "date": "2026-04-03",
+      "subject": "Fix else-if chain closure handling"
+    },
+    {
+      "sha": "a05a8a47d0",
+      "date": "2026-04-03",
+      "subject": "Add cutechess Elo match tooling"
+    },
+    {
+      "sha": "1b0ca6f91f",
+      "date": "2026-04-03",
+      "subject": "Add chess tournament benchmarking"
+    },
+    {
+      "sha": "ab7f7d052e",
+      "date": "2026-04-02",
+      "subject": "Fix chess search equivalence and document validation"
+    },
+    {
+      "sha": "a8aeb459d1",
+      "date": "2026-04-02",
+      "subject": "Advance generic chess engine support"
+    },
+    {
+      "sha": "3147785e79",
+      "date": "2026-03-31",
+      "subject": "Advance generic chess support and validation"
+    },
+    {
+      "sha": "bdff7bb413",
+      "date": "2026-03-30",
+      "subject": "Target gameN with the generic front end"
+    },
+    {
+      "sha": "b9b2c6ef63",
+      "date": "2026-03-30",
+      "subject": "Refine README attribution and links"
+    },
+    {
+      "sha": "226a25457d",
+      "date": "2026-03-30",
+      "subject": "Update README validation summary"
+    },
+    {
+      "sha": "a012861169",
+      "date": "2026-03-30",
+      "subject": "Expand generic front end and DOOM support"
+    },
+    {
+      "sha": "1b6242ba1b",
+      "date": "2026-03-30",
+      "subject": "Add optimization, bootstrap, and chess status tooling"
+    },
+    {
+      "sha": "8d41ff3b8b",
+      "date": "2026-03-29",
+      "subject": "Extend MiniCOBC validation and benchmarking"
+    },
+    {
+      "sha": "7758f781a3",
+      "date": "2026-03-29",
+      "subject": "Initial commit"
+    }
+  ],
+  "total_features_proxy": 61
+}

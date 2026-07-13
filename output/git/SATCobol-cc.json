@@ -1,0 +1,149 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/SATCobol-cc",
+  "has_git": true,
+  "commits": 10,
+  "commit_log": [
+    {
+      "sha": "6404f111ffae4649bae4c82c9e6a29b072152a73",
+      "date": "2026-04-17T12:52:14+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Conflict-driven clause learning (CDCL) with first-UIP + backjump"
+    },
+    {
+      "sha": "c3b2a7c527a0538f66e8d19095fa150a4e3a2e3e",
+      "date": "2026-04-16T12:03:48+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Phase saving, VSIDS-lite, JW branching, Luby restarts"
+    },
+    {
+      "sha": "57de05d273b2c0e2fd6c5542cd0f3e2eb778fdfb",
+      "date": "2026-04-16T10:34:03+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Pass SAT4J's acceptance test suite"
+    },
+    {
+      "sha": "a121b45cae8e3f0345b0678c33023f97296e7a0d",
+      "date": "2026-04-16T06:44:12+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add scripts/crosscheck_minisat.sh to cross-verify against minisat"
+    },
+    {
+      "sha": "de35d40e715b2b91452063ad7d93f3404b928909",
+      "date": "2026-04-15T18:47:09+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Two-watched literals + occurrence branching; perf script; larger benchmarks"
+    },
+    {
+      "sha": "b2d83241214b00c946b94bea142be2defb61223d",
+      "date": "2026-04-15T17:52:34+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor cobsat into per-module copybooks (io, parser, cnf, propagate, search)"
+    },
+    {
+      "sha": "bdea674016292de4fb24605fcff57800ccc02345",
+      "date": "2026-04-15T17:27:17+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add baseline DPLL solver (--solve) with unit propagation"
+    },
+    {
+      "sha": "88e8e997abcc9a5ee988b7d0d0f450bb45bf4454",
+      "date": "2026-04-15T16:24:43+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Treat SATLIB '%' line as end-of-data; ship uf75/uuf75 benchmarks"
+    },
+    {
+      "sha": "3fc5cdd2fa289a8204da10a7fc74119d1d490529",
+      "date": "2026-04-15T15:54:00+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add --check-model mode for evaluating CNF assignments"
+    },
+    {
+      "sha": "049f4b5a93e8e9cec6d0f39e87e18206e0f09b87",
+      "date": "2026-04-15T14:54:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial COBOL DIMACS CNF parser with --parse mode"
+    }
+  ],
+  "first_commit": "2026-04-15T14:54:45+02:00",
+  "last_commit": "2026-04-17T12:52:14+02:00",
+  "authors": {
+    "Mathieu Acher": 10
+  },
+  "churn": {
+    "files_changed_total": 258,
+    "insertions_total": 795633,
+    "deletions_total": 1141,
+    "per_commit": [
+      {
+        "sha": "6404f111ffae4649bae4c82c9e6a29b072152a73",
+        "date": "2026-04-17T12:52:14+02:00",
+        "files": 5,
+        "ins": 353,
+        "del": 108
+      },
+      {
+        "sha": "c3b2a7c527a0538f66e8d19095fa150a4e3a2e3e",
+        "date": "2026-04-16T12:03:48+02:00",
+        "files": 6,
+        "ins": 210,
+        "del": 70
+      },
+      {
+        "sha": "57de05d273b2c0e2fd6c5542cd0f3e2eb778fdfb",
+        "date": "2026-04-16T10:34:03+02:00",
+        "files": 182,
+        "ins": 792073,
+        "del": 4
+      },
+      {
+        "sha": "a121b45cae8e3f0345b0678c33023f97296e7a0d",
+        "date": "2026-04-16T06:44:12+02:00",
+        "files": 2,
+        "ins": 181,
+        "del": 0
+      },
+      {
+        "sha": "de35d40e715b2b91452063ad7d93f3404b928909",
+        "date": "2026-04-15T18:47:09+02:00",
+        "files": 13,
+        "ins": 490,
+        "del": 68
+      },
+      {
+        "sha": "b2d83241214b00c946b94bea142be2defb61223d",
+        "date": "2026-04-15T17:52:34+02:00",
+        "files": 14,
+        "ins": 903,
+        "del": 855
+      },
+      {
+        "sha": "bdea674016292de4fb24605fcff57800ccc02345",
+        "date": "2026-04-15T17:27:17+02:00",
+        "files": 9,
+        "ins": 443,
+        "del": 18
+      },
+      {
+        "sha": "88e8e997abcc9a5ee988b7d0d0f450bb45bf4454",
+        "date": "2026-04-15T16:24:43+02:00",
+        "files": 4,
+        "ins": 5,
+        "del": 1
+      },
+      {
+        "sha": "3fc5cdd2fa289a8204da10a7fc74119d1d490529",
+        "date": "2026-04-15T15:54:00+02:00",
+        "files": 11,
+        "ins": 314,
+        "del": 17
+      },
+      {
+        "sha": "049f4b5a93e8e9cec6d0f39e87e18206e0f09b87",
+        "date": "2026-04-15T14:54:45+02:00",
+        "files": 12,
+        "ins": 661,
+        "del": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-doom-cc",
+  "has_git": true,
+  "commits": 15,
+  "commit_log": [
+    {
+      "sha": "e9854b2b2cdda4e4a0e0ae4faf6f2d5e11830d37",
+      "date": "2026-04-18T14:45:12+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor walker.cob into cohesive COBOL copybooks"
+    },
+    {
+      "sha": "69ab81f8587152b166608888e2b3292931d167d0",
+      "date": "2026-04-18T14:23:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Replace crosshair with weapon HUD; give enemies a silhouette + eyes"
+    },
+    {
+      "sha": "3398a33cd26cb800189464c7bf5ca7ea3db78f6b",
+      "date": "2026-04-18T14:11:57+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Polish graphics: wall texture, floor checkerboard, crosshair, HUD panel"
+    },
+    {
+      "sha": "3c8416aeeb17b0383e2abe99a3ba6bda36f0b2bb",
+      "date": "2026-04-18T14:03:04+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add scripted demo play-through + Makefile"
+    },
+    {
+      "sha": "93b93fab469db6d4c1d211fd6010c63a05ad838d",
+      "date": "2026-04-18T13:21:38+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add startup level-select menu"
+    },
+    {
+      "sha": "64181fe664ca52eb9ee0d879d6b7faec3fcde0de",
+      "date": "2026-04-18T13:18:17+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add reusable level format and three playable levels"
+    },
+    {
+      "sha": "f0418eb135ea10c7c3df3a9b8fb8e78a22b77c85",
+      "date": "2026-04-18T12:15:15+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Bypass ncurses: read stdin directly via POSIX read(2)"
+    },
+    {
+      "sha": "b2ea5fb085e93349fd0004baa932dadc05aa1d70",
+      "date": "2026-04-18T10:12:59+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add HUD strip, ammo, pickups, weapon switching"
+    },
+    {
+      "sha": "5ed8682b5bb40e62bad2f56fe89d3572864d0568",
+      "date": "2026-04-18T10:01:41+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add enemies, combat, weapon, and death screen"
+    },
+    {
+      "sha": "9d2d9c42d0bc583c8c13100815c7ef02926871da",
+      "date": "2026-04-17T21:31:02+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Drop alt-screen, split frame writes, accept ESC O arrows"
+    },
+    {
+      "sha": "d1df8ebaf97469516e8d795e7a1e9899d2fd26bf",
+      "date": "2026-04-17T21:23:27+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Upgrade to 24-bit colour, alt-screen, and arrow keys"
+    },
+    {
+      "sha": "8d0797494a90da9b744aa030503aaee2ac99b4ae",
+      "date": "2026-04-17T20:36:41+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Render in true 256-colour using Unicode half-blocks"
+    },
+    {
+      "sha": "8a47a283ec67efd46b8ad61dc21bfdf6b6ce310d",
+      "date": "2026-04-17T20:12:04+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add first-person raycast view with minimap overlay"
+    },
+    {
+      "sha": "c0b9bc7932f48199f64f0845c3b973443f61f96c",
+      "date": "2026-04-17T19:18:41+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix invisible output and row misalignment"
+    },
+    {
+      "sha": "75c27adc480de2cf7a119d8551eaa7db9c575625",
+      "date": "2026-04-17T18:48:32+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add top-down 2D walker in GnuCOBOL"
+    }
+  ],
+  "first_commit": "2026-04-17T18:48:32+02:00",
+  "last_commit": "2026-04-18T14:45:12+02:00",
+  "authors": {
+    "Mathieu Acher": 15
+  },
+  "churn": {
+    "files_changed_total": 26,
+    "insertions_total": 4463,
+    "deletions_total": 2450,
+    "per_commit": [
+      {
+        "sha": "e9854b2b2cdda4e4a0e0ae4faf6f2d5e11830d37",
+        "date": "2026-04-18T14:45:12+02:00",
+        "files": 9,
+        "ins": 1824,
+        "del": 1811
+      },
+      {
+        "sha": "69ab81f8587152b166608888e2b3292931d167d0",
+        "date": "2026-04-18T14:23:35+02:00",
+        "files": 1,
+        "ins": 255,
+        "del": 22
+      },
+      {
+        "sha": "3398a33cd26cb800189464c7bf5ca7ea3db78f6b",
+        "date": "2026-04-18T14:11:57+02:00",
+        "files": 1,
+        "ins": 144,
+        "del": 14
+      },
+      {
+        "sha": "3c8416aeeb17b0383e2abe99a3ba6bda36f0b2bb",
+        "date": "2026-04-18T14:03:04+02:00",
+        "files": 3,
+        "ins": 163,
+        "del": 17
+      },
+      {
+        "sha": "93b93fab469db6d4c1d211fd6010c63a05ad838d",
+        "date": "2026-04-18T13:21:38+02:00",
+        "files": 1,
+        "ins": 66,
+        "del": 15
+      },
+      {
+        "sha": "64181fe664ca52eb9ee0d879d6b7faec3fcde0de",
+        "date": "2026-04-18T13:18:17+02:00",
+        "files": 1,
+        "ins": 379,
+        "del": 28
+      },
+      {
+        "sha": "f0418eb135ea10c7c3df3a9b8fb8e78a22b77c85",
+        "date": "2026-04-18T12:15:15+02:00",
+        "files": 1,
+        "ins": 27,
+        "del": 4
+      },
+      {
+        "sha": "b2ea5fb085e93349fd0004baa932dadc05aa1d70",
+        "date": "2026-04-18T10:12:59+02:00",
+        "files": 1,
+        "ins": 332,
+        "del": 104
+      },
+      {
+        "sha": "5ed8682b5bb40e62bad2f56fe89d3572864d0568",
+        "date": "2026-04-18T10:01:41+02:00",
+        "files": 1,
+        "ins": 346,
+        "del": 75
+      },
+      {
+        "sha": "9d2d9c42d0bc583c8c13100815c7ef02926871da",
+        "date": "2026-04-17T21:31:02+02:00",
+        "files": 1,
+        "ins": 47,
+        "del": 21
+      },
+      {
+        "sha": "d1df8ebaf97469516e8d795e7a1e9899d2fd26bf",
+        "date": "2026-04-17T21:23:27+02:00",
+        "files": 1,
+        "ins": 189,
+        "del": 131
+      },
+      {
+        "sha": "8d0797494a90da9b744aa030503aaee2ac99b4ae",
+        "date": "2026-04-17T20:36:41+02:00",
+        "files": 1,
+        "ins": 186,
+        "del": 124
+      },
+      {
+        "sha": "8a47a283ec67efd46b8ad61dc21bfdf6b6ce310d",
+        "date": "2026-04-17T20:12:04+02:00",
+        "files": 1,
+        "ins": 294,
+        "del": 68
+      },
+      {
+        "sha": "c0b9bc7932f48199f64f0845c3b973443f61f96c",
+        "date": "2026-04-17T19:18:41+02:00",
+        "files": 1,
+        "ins": 49,
+        "del": 16
+      },
+      {
+        "sha": "75c27adc480de2cf7a119d8551eaa7db9c575625",
+        "date": "2026-04-17T18:48:32+02:00",
+        "files": 2,
+        "ins": 162,
+        "del": 0
+      }
+    ]
+  }
+}

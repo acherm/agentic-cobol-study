@@ -1,0 +1,981 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compiler-cc",
+  "has_git": true,
+  "commits": 74,
+  "commit_log": [
+    {
+      "sha": "a578b0a1ec001bab25b507d56965f03bb595f1c5",
+      "date": "2026-04-10T06:48:25+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Update README: chess engine fully working, document EXTERNAL limitation"
+    },
+    {
+      "sha": "f289f1c9112bf4bd6c1feabfebf06f418edbf74a",
+      "date": "2026-04-10T06:22:10+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix CU-GRP struct wrapping for cross-file CALL USING groups"
+    },
+    {
+      "sha": "610bd6ddb03e5e81b45a7da07f41d85148e74fb2",
+      "date": "2026-04-09T00:03:21+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix LINKAGE group passthrough and self-copy guard for copy-out"
+    },
+    {
+      "sha": "4ac6bd201c8baa8693b80166efde705c1c58b9b0",
+      "date": "2026-04-08T23:43:51+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Runtime self-copy guard for LINKAGE group copy-in/copy-out"
+    },
+    {
+      "sha": "cc1932b80d60b9e77eaa0846d0e5fec4dbd18575",
+      "date": "2026-04-08T15:56:49+02:00",
+      "author": "Mathieu Acher",
+      "subject": "RECURSIVE frame pointer (Approach E): ALPHABETA/QUIESCE search working"
+    },
+    {
+      "sha": "da3da4f9e02acf28139693a5aafdb278c2e66da5",
+      "date": "2026-04-07T22:45:56+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix cob_trim variable comparison, ACCEPT FROM DATE/TIME, FIX-STRING trigger"
+    },
+    {
+      "sha": "8bcf4e4f26f886371aa99aa165939635ca0711e8",
+      "date": "2026-04-07T21:47:55+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix ALPHABETA/QUIESCE: RECURSIVE locals only for programs without paragraphs"
+    },
+    {
+      "sha": "13163f5472048e177f0c6406bbbfab3d44829d19",
+      "date": "2026-04-07T14:18:26+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix MAKEMOVE legality check: remove _saved_p redirect, perft now 100% correct"
+    },
+    {
+      "sha": "358678e468eac53eefd96b85c14ca59b448a88ab",
+      "date": "2026-04-07T14:11:03+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Chess perft working: depth 1=20 (correct!), depth 2=450, depth 3=10687"
+    },
+    {
+      "sha": "06942ae2548c337d392551efbc88708ade3fc7ce",
+      "date": "2026-04-06T23:17:47+02:00",
+      "author": "Mathieu Acher",
+      "subject": "RECURSIVE program support: stack-allocated WS local structs"
+    },
+    {
+      "sha": "579bbc10ac450e30141db66059b18d6ba22831c0",
+      "date": "2026-04-06T22:33:42+02:00",
+      "author": "Mathieu Acher",
+      "subject": "CALL USING group detection: non-static only for groups passed in CALL"
+    },
+    {
+      "sha": "967f4251bc2136ebe57434c52bbd8b4205e79606",
+      "date": "2026-04-06T22:17:15+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Clean LINKAGE variable sharing: extern/global for cross-file linking"
+    },
+    {
+      "sha": "39a24eade3c83f043679f3e116b7427171b3adb5",
+      "date": "2026-04-06T21:21:47+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix compound string comparisons, duplicate switch, >=/<= operators"
+    },
+    {
+      "sha": "93a21b6805fd49fda5c1478a8d6e1bdb85a9a098",
+      "date": "2026-04-06T09:26:46+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Benchmark: use -free for GnuCOBOL chess build"
+    },
+    {
+      "sha": "00758833a044dbd459f4f461f1caf0e6b22b6610",
+      "date": "2026-04-06T09:26:29+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix ref-mod offset extraction, SPACE comparison, cob_trim, UNSTRING padding"
+    },
+    {
+      "sha": "95a758c0f8e117f7f574e8de7c1c43bfac6bc660",
+      "date": "2026-04-06T01:15:12+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix UNSTRING to handle all destination fields, not just 2"
+    },
+    {
+      "sha": "5ac6763d38898340e62be2caf251d3e4b2cc1068",
+      "date": "2026-04-06T01:05:22+02:00",
+      "author": "Mathieu Acher",
+      "subject": "LINKAGE parameter passing: scalar/string copy-in/out, group BY REFERENCE"
+    },
+    {
+      "sha": "129f8c2ac89945fcb757a1c031f32c8feb2f2561",
+      "date": "2026-04-06T00:16:26+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix benchmark: whitespace-tolerant comparison, don't abort on diffs"
+    },
+    {
+      "sha": "16102a98f4068f039dcb6563743214805390ff2e",
+      "date": "2026-04-06T00:15:22+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix empty main() for main programs, add benchmark script"
+    },
+    {
+      "sha": "e5dff13dac0e0bebcd806d4837c11543b5a518b8",
+      "date": "2026-04-06T00:06:42+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix EVALUATE TRUE condition translation, ACCEPT FROM ARGUMENT-NUMBER/VALUE"
+    },
+    {
+      "sha": "fb46bb782a89d4f402b1d857f305a5ad28f105ec",
+      "date": "2026-04-05T23:51:55+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Multi-program COBOL file support: chess engine now compiles, links, and runs"
+    },
+    {
+      "sha": "28f5e3b9e4fdd7454a78e4c251eb97ad6a162556",
+      "date": "2026-04-05T23:24:37+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix search.cob: EXTCALL constant filter, DIVIDE OF, nested subscripts, const table 300"
+    },
+    {
+      "sha": "36dac42f3a386b1f5c29c2567ce8c0fa03b84010",
+      "date": "2026-04-05T19:45:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "WIP on master: 875c2fd Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "6addd856e476f994c9af6be078bb25cd13a400f9",
+      "date": "2026-04-05T19:45:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "index on master: 875c2fd Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "875c2fd361ce1589d07d8b7bd5b1635f46c4afe3",
+      "date": "2026-04-05T19:36:13+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "9f7440ef2cdac9ba86fbe592abcfc953016f3836",
+      "date": "2026-04-05T18:39:10+02:00",
+      "author": "Mathieu Acher",
+      "subject": "String OCCURS 2D arrays, STRING target WS-STRING-DEST, token limit 80"
+    },
+    {
+      "sha": "22df96b33beb4cc09447333a919749aebfa0e1ec",
+      "date": "2026-04-05T16:46:28+02:00",
+      "author": "Mathieu Acher",
+      "subject": "String OCCURS arrays, STRING target fix, group macro EXTCALL skip"
+    },
+    {
+      "sha": "93463033039e4bd0dc6a66e35a624db7fc49d8de",
+      "date": "2026-04-05T16:32:56+02:00",
+      "author": "Mathieu Acher",
+      "subject": "STRING FUNCTION TRIM, group macro EXTCALL skip, paren/operator fixes"
+    },
+    {
+      "sha": "f9212b55844ebea016db826d4ee580521313d984",
+      "date": "2026-04-05T15:52:54+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Paren handling in conditions, arithmetic operators: search 22\u21928"
+    },
+    {
+      "sha": "fd60ea60e351521b14a5de8af1e883280cdf804a",
+      "date": "2026-04-05T15:47:36+02:00",
+      "author": "Mathieu Acher",
+      "subject": "XCAL instruction scan for missing externs, LOW-VALUES to group"
+    },
+    {
+      "sha": "4a2cbbd691dab36a8b9082cd364e6a15c7c46c9f",
+      "date": "2026-04-05T15:38:23+02:00",
+      "author": "Mathieu Acher",
+      "subject": "LOW-VALUES/SPACES to group \u2192 GEN-INITIALIZE, symbol table 800"
+    },
+    {
+      "sha": "583e40dbfef7c824a1c2c57412c587c3a06d445b",
+      "date": "2026-04-05T14:31:30+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Symbol table 400\u2192800: fixes search.cob variable corruption (162\u219235)"
+    },
+    {
+      "sha": "138affce47fffaf4fb18c4d3ad190bf00c7ec027",
+      "date": "2026-04-05T14:28:55+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Widen PIC fields, skip COMP-5 from REDEFINES, skip store-less macros"
+    },
+    {
+      "sha": "57d5f3a5efa63ba8255469188d39dfb0257990e6",
+      "date": "2026-04-05T13:59:26+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Buffer 1500\u21923000, symbol table 200\u2192400, strcmp scoping, SPACES group"
+    },
+    {
+      "sha": "328a072d86cd43db59732c4b55a8153893ca3753",
+      "date": "2026-04-05T11:06:30+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix 2D subscript comma position: PIC 9 overflow, makemove now compiles"
+    },
+    {
+      "sha": "52b5d90b439c910ffe9c6d556ecd377431012866",
+      "date": "2026-04-05T10:17:21+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Update README: comprehensive compilation status and feature documentation"
+    },
+    {
+      "sha": "cfb79b33b89b6a62b1b63d62c5fcdc2e9c05f51d",
+      "date": "2026-04-05T10:13:16+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix strcmp for compound OR conditions: fen.cob now compiles"
+    },
+    {
+      "sha": "9528b6212127a717f00d6bb409bdf8c65174a039",
+      "date": "2026-04-05T10:11:17+02:00",
+      "author": "Mathieu Acher",
+      "subject": "COMP-5 2D array support: fen 4\u21921 errors, makemove 11\u21926"
+    },
+    {
+      "sha": "ac97b02c7cc8c6de43821da6957c028c390512af",
+      "date": "2026-04-05T08:20:20+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Revert level-10 macro and STRING FUNCTION changes (caused regressions)"
+    },
+    {
+      "sha": "9f489a05a22f9343f3a1029a68c0ada502fa4769",
+      "date": "2026-04-05T08:06:17+02:00",
+      "author": "Mathieu Acher",
+      "subject": "2D subscript tokenizer merge (single-pass, no hang)"
+    },
+    {
+      "sha": "ca6220f46e2547db4898d4f147773d9fc7eed3e0",
+      "date": "2026-04-04T23:17:46+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Revert to simple 8:249 column extraction (no sequence numbers in chess)"
+    },
+    {
+      "sha": "ab95355f42e4326150aadb5e1d33750f7feb24c7",
+      "date": "2026-04-04T22:49:05+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Smart column 73-80 sequence number stripping"
+    },
+    {
+      "sha": "a043a330c663d9b941864da22b5462c6c6a006e9",
+      "date": "2026-04-04T21:30:25+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix paragraph emission for all programs, OCCURS 9(8), main body split"
+    },
+    {
+      "sha": "a6e81553761188e16322a274ce15fce254220ef1",
+      "date": "2026-04-04T21:11:02+02:00",
+      "author": "Mathieu Acher",
+      "subject": "2D subscript comma merge in COMPUTE, remove tokenizer merge (hung)"
+    },
+    {
+      "sha": "1b98f4b67f062aa5557e0498107b7c2621b07768",
+      "date": "2026-04-04T20:40:17+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Case-preserving strings in fixed-format, EVAL breaks, dedup stores"
+    },
+    {
+      "sha": "152fac326464cbbd224447d222358d6107277fec",
+      "date": "2026-04-04T20:20:49+02:00",
+      "author": "Mathieu Acher",
+      "subject": "String EVALUATE, NUMVAL arg translation, char/string switch dispatch"
+    },
+    {
+      "sha": "728acbe3ec07b271f1d2a54dbf70d816a965b798",
+      "date": "2026-04-04T19:45:15+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Char switch, EXIT PARAGRAPH fix, REDEFINES dedup, TRIM in conditions"
+    },
+    {
+      "sha": "59359a5cf7f9bb14c2239c46b6f4bbda274a6456",
+      "date": "2026-04-04T19:31:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "RETURN_CODE register, FUNCTION TRIM in conditions, cob_trim helper"
+    },
+    {
+      "sha": "510307c47d3e4a8e0cd0fb66b305adb51a23f18b",
+      "date": "2026-04-04T19:26:36+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Filter invalid extern declarations, fix search.cob constant noise"
+    },
+    {
+      "sha": "d2b12386d7cfe9008289b99b09264b35a3dedc73",
+      "date": "2026-04-04T19:15:31+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Literal BY REFERENCE, buffer increases: movegen.cob now compiles"
+    },
+    {
+      "sha": "219915b3931d071f9392b5851d9f0517326b1518",
+      "date": "2026-04-04T18:59:30+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Transfer subscript from OF qualifier: perft.cob now compiles"
+    },
+    {
+      "sha": "2b1c634ece6085aec285c212a8447a7837373bea",
+      "date": "2026-04-04T18:50:04+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix multi-parameter PROCEDURE DIVISION USING"
+    },
+    {
+      "sha": "412ed0f9ea5d34383745b43679a4d358c866fa20",
+      "date": "2026-04-04T18:19:18+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix group-name macro for LINKAGE descendants, GAME_STATE now available"
+    },
+    {
+      "sha": "e23b47eb8ede3dde63c347920cb39710af60b098",
+      "date": "2026-04-04T18:16:20+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Smart hyphen\u2192underscore in TRANSLATE-NAME: eval.cob now compiles"
+    },
+    {
+      "sha": "3dc6a83aa7a98726b345398ca33e1705ace0e499",
+      "date": "2026-04-04T18:10:27+02:00",
+      "author": "Mathieu Acher",
+      "subject": "FUNCTION ABS in COMPUTE, hyphen\u2192underscore in conditions, ref-mod fixes"
+    },
+    {
+      "sha": "8f03c073011d25e96442e96e23d7f150972acfb5",
+      "date": "2026-04-04T16:31:44+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix ref-mod in TRANSLATE-EXPR-TOKEN, LOCAL-STORAGE, uci now compiles"
+    },
+    {
+      "sha": "5d051775f08ea837f49d6a08a6f2762e615c1489",
+      "date": "2026-04-04T16:19:06+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Strip END-IF from MOVE dests, widen column extraction, paragraph fix"
+    },
+    {
+      "sha": "d3d16e712dba8cb116b36f76e9f4cdcf7f825150",
+      "date": "2026-04-04T15:49:19+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix OF qualifier in MOVE destinations, preventing false multi-target split"
+    },
+    {
+      "sha": "b3c026e53b28050a1473468991d1e41f6380ae7b",
+      "date": "2026-04-04T15:40:34+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix subprogram paragraph emission, FUNCTION ABS/INTEGER-OF-DATE"
+    },
+    {
+      "sha": "ac8b20e3565b1ab48d0d9b25c5703c0c3513fc20",
+      "date": "2026-04-04T15:26:02+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Period-aware continuation, FUNCTION INTEGER-OF-DATE, END-IF in MOVE"
+    },
+    {
+      "sha": "48bb34c7cb7d2ae1b8081753782888d98680f757",
+      "date": "2026-04-04T14:43:58+02:00",
+      "author": "Mathieu Acher",
+      "subject": "OF in COMPUTE expressions, ref-mod in subscripts, ABS in conditions"
+    },
+    {
+      "sha": "98ba3e94de607cc696ab079d6f7f50cf153afc4f",
+      "date": "2026-04-04T14:34:24+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Re-apply: case label translation, OF in conditions, FUNCTION ABS"
+    },
+    {
+      "sha": "59bd673a3b3f62b16316cbd3e2689bb7b6cc54cf",
+      "date": "2026-04-04T13:49:05+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Group-name macros for LINKAGE groups, skip duplicate variable declarations"
+    },
+    {
+      "sha": "e816dc0b72687462e8fa0bd70dd2d74e16534261",
+      "date": "2026-04-04T13:46:20+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix extern declarations: int for C functions, void for COBOL programs"
+    },
+    {
+      "sha": "ef00babebd61ebc5f1a11ef59b9c8cb18a75e361",
+      "date": "2026-04-04T13:44:04+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix GOBACK/EXIT as paragraph names, various chess engine fixes"
+    },
+    {
+      "sha": "740b7d725e13cf831d575738848a60a588fb6a40",
+      "date": "2026-04-04T13:26:33+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Emit LINKAGE variables as static (file-scope) for chess engine compilation"
+    },
+    {
+      "sha": "1efb31987f99df98291a196f9bc620b25f47f7b0",
+      "date": "2026-04-04T13:07:22+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix CALL group passing, filter bad constant macros, extern void"
+    },
+    {
+      "sha": "d46c4a2a72301e9e9a4b5243aa1c89c74756993b",
+      "date": "2026-04-04T10:23:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "EVALUATE TRUE if/else, OF operator, multi-target MOVE, FUNCTION in expressions"
+    },
+    {
+      "sha": "d505af41e55a58a4ef446248aacab7ab620c9da0",
+      "date": "2026-04-04T09:11:58+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add FUNCTION handling, group-name macros, MOVE token spacing fix"
+    },
+    {
+      "sha": "fef9782cced4f67cd8f7112e2b9aa329f9ab172f",
+      "date": "2026-04-04T06:55:19+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add inline IF, PERFORM FOREVER, EXIT PARAGRAPH/PERFORM, FUNCTION MOD"
+    },
+    {
+      "sha": "e643e3ddde922d6798343f8433a8f03a65c1f5ee",
+      "date": "2026-04-04T05:46:12+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix COPY path resolution, LINKAGE locals, parameter naming for chess engine"
+    },
+    {
+      "sha": "1321b32ee1aa0296466193d7a9de99081391f8b3",
+      "date": "2026-04-03T18:32:52+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Extend cobolcc: free-format, COMP-5, CALL to C, DOOM + chess engine support"
+    },
+    {
+      "sha": "7cc9b7d36120636e898f5c3362134f7560de2043",
+      "date": "2026-03-31T19:27:43+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add COBOL-to-C compiler (cobolcc): all 5 game programs now compile and run"
+    },
+    {
+      "sha": "0eae8060416cdf49b1854bc6e4de77064a91933e",
+      "date": "2026-03-31T14:24:15+02:00",
+      "author": "Mathieu Acher",
+      "subject": "COBOLINT: A COBOL interpreter written in COBOL"
+    }
+  ],
+  "first_commit": "2026-03-31T14:24:15+02:00",
+  "last_commit": "2026-04-10T06:48:25+02:00",
+  "authors": {
+    "Mathieu Acher": 74
+  },
+  "churn": {
+    "files_changed_total": 87,
+    "insertions_total": 17929,
+    "deletions_total": 954,
+    "per_commit": [
+      {
+        "sha": "a578b0a1ec001bab25b507d56965f03bb595f1c5",
+        "date": "2026-04-10T06:48:25+02:00",
+        "files": 1,
+        "ins": 95,
+        "del": 30
+      },
+      {
+        "sha": "f289f1c9112bf4bd6c1feabfebf06f418edbf74a",
+        "date": "2026-04-10T06:22:10+02:00",
+        "files": 1,
+        "ins": 86,
+        "del": 26
+      },
+      {
+        "sha": "610bd6ddb03e5e81b45a7da07f41d85148e74fb2",
+        "date": "2026-04-09T00:03:21+02:00",
+        "files": 1,
+        "ins": 16,
+        "del": 43
+      },
+      {
+        "sha": "4ac6bd201c8baa8693b80166efde705c1c58b9b0",
+        "date": "2026-04-08T23:43:51+02:00",
+        "files": 1,
+        "ins": 73,
+        "del": 4
+      },
+      {
+        "sha": "cc1932b80d60b9e77eaa0846d0e5fec4dbd18575",
+        "date": "2026-04-08T15:56:49+02:00",
+        "files": 1,
+        "ins": 452,
+        "del": 5
+      },
+      {
+        "sha": "da3da4f9e02acf28139693a5aafdb278c2e66da5",
+        "date": "2026-04-07T22:45:56+02:00",
+        "files": 1,
+        "ins": 205,
+        "del": 0
+      },
+      {
+        "sha": "8bcf4e4f26f886371aa99aa165939635ca0711e8",
+        "date": "2026-04-07T21:47:55+02:00",
+        "files": 1,
+        "ins": 57,
+        "del": 1
+      },
+      {
+        "sha": "13163f5472048e177f0c6406bbbfab3d44829d19",
+        "date": "2026-04-07T14:18:26+02:00",
+        "files": 1,
+        "ins": 2,
+        "del": 90
+      },
+      {
+        "sha": "358678e468eac53eefd96b85c14ca59b448a88ab",
+        "date": "2026-04-07T14:11:03+02:00",
+        "files": 1,
+        "ins": 397,
+        "del": 52
+      },
+      {
+        "sha": "06942ae2548c337d392551efbc88708ade3fc7ce",
+        "date": "2026-04-06T23:17:47+02:00",
+        "files": 1,
+        "ins": 333,
+        "del": 6
+      },
+      {
+        "sha": "579bbc10ac450e30141db66059b18d6ba22831c0",
+        "date": "2026-04-06T22:33:42+02:00",
+        "files": 1,
+        "ins": 58,
+        "del": 5
+      },
+      {
+        "sha": "967f4251bc2136ebe57434c52bbd8b4205e79606",
+        "date": "2026-04-06T22:17:15+02:00",
+        "files": 1,
+        "ins": 57,
+        "del": 21
+      },
+      {
+        "sha": "39a24eade3c83f043679f3e116b7427171b3adb5",
+        "date": "2026-04-06T21:21:47+02:00",
+        "files": 2,
+        "ins": 121,
+        "del": 37
+      },
+      {
+        "sha": "93a21b6805fd49fda5c1478a8d6e1bdb85a9a098",
+        "date": "2026-04-06T09:26:46+02:00",
+        "files": 1,
+        "ins": 1,
+        "del": 1
+      },
+      {
+        "sha": "00758833a044dbd459f4f461f1caf0e6b22b6610",
+        "date": "2026-04-06T09:26:29+02:00",
+        "files": 1,
+        "ins": 60,
+        "del": 13
+      },
+      {
+        "sha": "95a758c0f8e117f7f574e8de7c1c43bfac6bc660",
+        "date": "2026-04-06T01:15:12+02:00",
+        "files": 1,
+        "ins": 69,
+        "del": 75
+      },
+      {
+        "sha": "5ac6763d38898340e62be2caf251d3e4b2cc1068",
+        "date": "2026-04-06T01:05:22+02:00",
+        "files": 1,
+        "ins": 486,
+        "del": 0
+      },
+      {
+        "sha": "129f8c2ac89945fcb757a1c031f32c8feb2f2561",
+        "date": "2026-04-06T00:16:26+02:00",
+        "files": 1,
+        "ins": 10,
+        "del": 6
+      },
+      {
+        "sha": "16102a98f4068f039dcb6563743214805390ff2e",
+        "date": "2026-04-06T00:15:22+02:00",
+        "files": 2,
+        "ins": 339,
+        "del": 0
+      },
+      {
+        "sha": "e5dff13dac0e0bebcd806d4837c11543b5a518b8",
+        "date": "2026-04-06T00:06:42+02:00",
+        "files": 1,
+        "ins": 165,
+        "del": 18
+      },
+      {
+        "sha": "fb46bb782a89d4f402b1d857f305a5ad28f105ec",
+        "date": "2026-04-05T23:51:55+02:00",
+        "files": 1,
+        "ins": 165,
+        "del": 39
+      },
+      {
+        "sha": "28f5e3b9e4fdd7454a78e4c251eb97ad6a162556",
+        "date": "2026-04-05T23:24:37+02:00",
+        "files": 1,
+        "ins": 160,
+        "del": 11
+      },
+      {
+        "sha": "36dac42f3a386b1f5c29c2567ce8c0fa03b84010",
+        "date": "2026-04-05T19:45:35+02:00",
+        "files": 0,
+        "ins": 0,
+        "del": 0
+      },
+      {
+        "sha": "6addd856e476f994c9af6be078bb25cd13a400f9",
+        "date": "2026-04-05T19:45:35+02:00",
+        "files": 0,
+        "ins": 0,
+        "del": 0
+      },
+      {
+        "sha": "875c2fd361ce1589d07d8b7bd5b1635f46c4afe3",
+        "date": "2026-04-05T19:36:13+02:00",
+        "files": 1,
+        "ins": 8,
+        "del": 8
+      },
+      {
+        "sha": "9f7440ef2cdac9ba86fbe592abcfc953016f3836",
+        "date": "2026-04-05T18:39:10+02:00",
+        "files": 1,
+        "ins": 7,
+        "del": 6
+      },
+      {
+        "sha": "22df96b33beb4cc09447333a919749aebfa0e1ec",
+        "date": "2026-04-05T16:46:28+02:00",
+        "files": 1,
+        "ins": 38,
+        "del": 12
+      },
+      {
+        "sha": "93463033039e4bd0dc6a66e35a624db7fc49d8de",
+        "date": "2026-04-05T16:32:56+02:00",
+        "files": 1,
+        "ins": 38,
+        "del": 0
+      },
+      {
+        "sha": "f9212b55844ebea016db826d4ee580521313d984",
+        "date": "2026-04-05T15:52:54+02:00",
+        "files": 1,
+        "ins": 51,
+        "del": 1
+      },
+      {
+        "sha": "fd60ea60e351521b14a5de8af1e883280cdf804a",
+        "date": "2026-04-05T15:47:36+02:00",
+        "files": 1,
+        "ins": 51,
+        "del": 10
+      },
+      {
+        "sha": "4a2cbbd691dab36a8b9082cd364e6a15c7c46c9f",
+        "date": "2026-04-05T15:38:23+02:00",
+        "files": 1,
+        "ins": 7,
+        "del": 17
+      },
+      {
+        "sha": "583e40dbfef7c824a1c2c57412c587c3a06d445b",
+        "date": "2026-04-05T14:31:30+02:00",
+        "files": 1,
+        "ins": 4,
+        "del": 3
+      },
+      {
+        "sha": "138affce47fffaf4fb18c4d3ad190bf00c7ec027",
+        "date": "2026-04-05T14:28:55+02:00",
+        "files": 1,
+        "ins": 21,
+        "del": 6
+      },
+      {
+        "sha": "57d5f3a5efa63ba8255469188d39dfb0257990e6",
+        "date": "2026-04-05T13:59:26+02:00",
+        "files": 1,
+        "ins": 72,
+        "del": 9
+      },
+      {
+        "sha": "328a072d86cd43db59732c4b55a8153893ca3753",
+        "date": "2026-04-05T11:06:30+02:00",
+        "files": 1,
+        "ins": 11,
+        "del": 8
+      },
+      {
+        "sha": "52b5d90b439c910ffe9c6d556ecd377431012866",
+        "date": "2026-04-05T10:17:21+02:00",
+        "files": 1,
+        "ins": 121,
+        "del": 6
+      },
+      {
+        "sha": "cfb79b33b89b6a62b1b63d62c5fcdc2e9c05f51d",
+        "date": "2026-04-05T10:13:16+02:00",
+        "files": 1,
+        "ins": 28,
+        "del": 3
+      },
+      {
+        "sha": "9528b6212127a717f00d6bb409bdf8c65174a039",
+        "date": "2026-04-05T10:11:17+02:00",
+        "files": 1,
+        "ins": 28,
+        "del": 7
+      },
+      {
+        "sha": "ac97b02c7cc8c6de43821da6957c028c390512af",
+        "date": "2026-04-05T08:20:20+02:00",
+        "files": 1,
+        "ins": 1,
+        "del": 1
+      },
+      {
+        "sha": "9f489a05a22f9343f3a1029a68c0ada502fa4769",
+        "date": "2026-04-05T08:06:17+02:00",
+        "files": 1,
+        "ins": 44,
+        "del": 0
+      },
+      {
+        "sha": "ca6220f46e2547db4898d4f147773d9fc7eed3e0",
+        "date": "2026-04-04T23:17:46+02:00",
+        "files": 1,
+        "ins": 0,
+        "del": 16
+      },
+      {
+        "sha": "ab95355f42e4326150aadb5e1d33750f7feb24c7",
+        "date": "2026-04-04T22:49:05+02:00",
+        "files": 1,
+        "ins": 16,
+        "del": 0
+      },
+      {
+        "sha": "a043a330c663d9b941864da22b5462c6c6a006e9",
+        "date": "2026-04-04T21:30:25+02:00",
+        "files": 1,
+        "ins": 21,
+        "del": 13
+      },
+      {
+        "sha": "a6e81553761188e16322a274ce15fce254220ef1",
+        "date": "2026-04-04T21:11:02+02:00",
+        "files": 1,
+        "ins": 28,
+        "del": 0
+      },
+      {
+        "sha": "1b98f4b67f062aa5557e0498107b7c2621b07768",
+        "date": "2026-04-04T20:40:17+02:00",
+        "files": 1,
+        "ins": 2,
+        "del": 2
+      },
+      {
+        "sha": "152fac326464cbbd224447d222358d6107277fec",
+        "date": "2026-04-04T20:20:49+02:00",
+        "files": 1,
+        "ins": 60,
+        "del": 16
+      },
+      {
+        "sha": "728acbe3ec07b271f1d2a54dbf70d816a965b798",
+        "date": "2026-04-04T19:45:15+02:00",
+        "files": 1,
+        "ins": 67,
+        "del": 15
+      },
+      {
+        "sha": "59359a5cf7f9bb14c2239c46b6f4bbda274a6456",
+        "date": "2026-04-04T19:31:35+02:00",
+        "files": 1,
+        "ins": 39,
+        "del": 1
+      },
+      {
+        "sha": "510307c47d3e4a8e0cd0fb66b305adb51a23f18b",
+        "date": "2026-04-04T19:26:36+02:00",
+        "files": 1,
+        "ins": 21,
+        "del": 0
+      },
+      {
+        "sha": "d2b12386d7cfe9008289b99b09264b35a3dedc73",
+        "date": "2026-04-04T19:15:31+02:00",
+        "files": 1,
+        "ins": 13,
+        "del": 2
+      },
+      {
+        "sha": "219915b3931d071f9392b5851d9f0517326b1518",
+        "date": "2026-04-04T18:59:30+02:00",
+        "files": 1,
+        "ins": 31,
+        "del": 3
+      },
+      {
+        "sha": "2b1c634ece6085aec285c212a8447a7837373bea",
+        "date": "2026-04-04T18:50:04+02:00",
+        "files": 1,
+        "ins": 4,
+        "del": 6
+      },
+      {
+        "sha": "412ed0f9ea5d34383745b43679a4d358c866fa20",
+        "date": "2026-04-04T18:19:18+02:00",
+        "files": 1,
+        "ins": 0,
+        "del": 2
+      },
+      {
+        "sha": "e23b47eb8ede3dde63c347920cb39710af60b098",
+        "date": "2026-04-04T18:16:20+02:00",
+        "files": 1,
+        "ins": 17,
+        "del": 1
+      },
+      {
+        "sha": "3dc6a83aa7a98726b345398ca33e1705ace0e499",
+        "date": "2026-04-04T18:10:27+02:00",
+        "files": 1,
+        "ins": 48,
+        "del": 0
+      },
+      {
+        "sha": "8f03c073011d25e96442e96e23d7f150972acfb5",
+        "date": "2026-04-04T16:31:44+02:00",
+        "files": 1,
+        "ins": 58,
+        "del": 1
+      },
+      {
+        "sha": "5d051775f08ea837f49d6a08a6f2762e615c1489",
+        "date": "2026-04-04T16:19:06+02:00",
+        "files": 1,
+        "ins": 16,
+        "del": 1
+      },
+      {
+        "sha": "d3d16e712dba8cb116b36f76e9f4cdcf7f825150",
+        "date": "2026-04-04T15:49:19+02:00",
+        "files": 1,
+        "ins": 17,
+        "del": 0
+      },
+      {
+        "sha": "b3c026e53b28050a1473468991d1e41f6380ae7b",
+        "date": "2026-04-04T15:40:34+02:00",
+        "files": 1,
+        "ins": 15,
+        "del": 4
+      },
+      {
+        "sha": "ac8b20e3565b1ab48d0d9b25c5703c0c3513fc20",
+        "date": "2026-04-04T15:26:02+02:00",
+        "files": 1,
+        "ins": 82,
+        "del": 0
+      },
+      {
+        "sha": "48bb34c7cb7d2ae1b8081753782888d98680f757",
+        "date": "2026-04-04T14:43:58+02:00",
+        "files": 1,
+        "ins": 62,
+        "del": 0
+      },
+      {
+        "sha": "98ba3e94de607cc696ab079d6f7f50cf153afc4f",
+        "date": "2026-04-04T14:34:24+02:00",
+        "files": 1,
+        "ins": 16,
+        "del": 1
+      },
+      {
+        "sha": "59bd673a3b3f62b16316cbd3e2689bb7b6cc54cf",
+        "date": "2026-04-04T13:49:05+02:00",
+        "files": 1,
+        "ins": 10,
+        "del": 1
+      },
+      {
+        "sha": "e816dc0b72687462e8fa0bd70dd2d74e16534261",
+        "date": "2026-04-04T13:46:20+02:00",
+        "files": 1,
+        "ins": 23,
+        "del": 8
+      },
+      {
+        "sha": "ef00babebd61ebc5f1a11ef59b9c8cb18a75e361",
+        "date": "2026-04-04T13:44:04+02:00",
+        "files": 1,
+        "ins": 2,
+        "del": 0
+      },
+      {
+        "sha": "740b7d725e13cf831d575738848a60a588fb6a40",
+        "date": "2026-04-04T13:26:33+02:00",
+        "files": 1,
+        "ins": 0,
+        "del": 125
+      },
+      {
+        "sha": "1efb31987f99df98291a196f9bc620b25f47f7b0",
+        "date": "2026-04-04T13:07:22+02:00",
+        "files": 1,
+        "ins": 33,
+        "del": 14
+      },
+      {
+        "sha": "d46c4a2a72301e9e9a4b5243aa1c89c74756993b",
+        "date": "2026-04-04T10:23:35+02:00",
+        "files": 1,
+        "ins": 197,
+        "del": 46
+      },
+      {
+        "sha": "d505af41e55a58a4ef446248aacab7ab620c9da0",
+        "date": "2026-04-04T09:11:58+02:00",
+        "files": 1,
+        "ins": 100,
+        "del": 3
+      },
+      {
+        "sha": "fef9782cced4f67cd8f7112e2b9aa329f9ab172f",
+        "date": "2026-04-04T06:55:19+02:00",
+        "files": 1,
+        "ins": 211,
+        "del": 2
+      },
+      {
+        "sha": "e643e3ddde922d6798343f8433a8f03a65c1f5ee",
+        "date": "2026-04-04T05:46:12+02:00",
+        "files": 1,
+        "ins": 144,
+        "del": 10
+      },
+      {
+        "sha": "1321b32ee1aa0296466193d7a9de99081391f8b3",
+        "date": "2026-04-03T18:32:52+02:00",
+        "files": 1,
+        "ins": 1224,
+        "del": 56
+      },
+      {
+        "sha": "7cc9b7d36120636e898f5c3362134f7560de2043",
+        "date": "2026-03-31T19:27:43+02:00",
+        "files": 3,
+        "ins": 6049,
+        "del": 25
+      },
+      {
+        "sha": "0eae8060416cdf49b1854bc6e4de77064a91933e",
+        "date": "2026-03-31T14:24:15+02:00",
+        "files": 12,
+        "ins": 5366,
+        "del": 0
+      }
+    ]
+  }
+}

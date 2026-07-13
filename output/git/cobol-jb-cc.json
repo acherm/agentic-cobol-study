@@ -1,0 +1,97 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-jb-cc",
+  "has_git": true,
+  "commits": 6,
+  "commit_log": [
+    {
+      "sha": "f185429265cd286c1f331d86f3e721196998f6ef",
+      "date": "2026-07-07T13:38:31+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor PROCEDURE DIVISION into cohesive named paragraphs"
+    },
+    {
+      "sha": "d5fc9026fc4b4eabc359813824dabd9d80b2d3db",
+      "date": "2026-07-07T13:27:37+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Replace single input file with fulltime/parttime dual input"
+    },
+    {
+      "sha": "0b3240b5e72e5a272a9208b85b922eeb9848c402",
+      "date": "2026-07-07T13:10:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add category-level summary report to report_output.dat"
+    },
+    {
+      "sha": "9718d9de61c5818df3460c4d2874478ee0592521",
+      "date": "2026-06-12T13:54:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add input validation with reject file (ERR-001 to ERR-004)"
+    },
+    {
+      "sha": "a645433ecf28ec880d455eb82e27fde31185cf9e",
+      "date": "2026-06-12T10:24:01+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "583a5aefafd2e6e497a340f798145298ca7a0b90",
+      "date": "2026-06-11T15:33:25+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add GnuCOBOL payroll management system"
+    }
+  ],
+  "first_commit": "2026-06-11T15:33:25+02:00",
+  "last_commit": "2026-07-07T13:38:31+02:00",
+  "authors": {
+    "Mathieu Acher": 6
+  },
+  "churn": {
+    "files_changed_total": 11,
+    "insertions_total": 783,
+    "deletions_total": 163,
+    "per_commit": [
+      {
+        "sha": "f185429265cd286c1f331d86f3e721196998f6ef",
+        "date": "2026-07-07T13:38:31+02:00",
+        "files": 1,
+        "ins": 107,
+        "del": 108
+      },
+      {
+        "sha": "d5fc9026fc4b4eabc359813824dabd9d80b2d3db",
+        "date": "2026-07-07T13:27:37+02:00",
+        "files": 3,
+        "ins": 110,
+        "del": 34
+      },
+      {
+        "sha": "0b3240b5e72e5a272a9208b85b922eeb9848c402",
+        "date": "2026-07-07T13:10:45+02:00",
+        "files": 1,
+        "ins": 98,
+        "del": 9
+      },
+      {
+        "sha": "9718d9de61c5818df3460c4d2874478ee0592521",
+        "date": "2026-06-12T13:54:45+02:00",
+        "files": 2,
+        "ins": 90,
+        "del": 9
+      },
+      {
+        "sha": "a645433ecf28ec880d455eb82e27fde31185cf9e",
+        "date": "2026-06-12T10:24:01+02:00",
+        "files": 1,
+        "ins": 56,
+        "del": 3
+      },
+      {
+        "sha": "583a5aefafd2e6e497a340f798145298ca7a0b90",
+        "date": "2026-06-11T15:33:25+02:00",
+        "files": 3,
+        "ins": 322,
+        "del": 0
+      }
+    ]
+  }
+}

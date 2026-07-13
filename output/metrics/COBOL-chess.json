@@ -1,0 +1,4350 @@
+{
+  "project": "COBOL-chess",
+  "project_root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+  "domain_files": [
+    "README.md",
+    "SPECIFICATION.md",
+    "SPECIFICATION_BACKLOG.md",
+    "ARCHITECTURE.md"
+  ],
+  "inventory": {
+    "root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+    "total_files": 145,
+    "total_bytes": 4269696,
+    "by_lang": {
+      "Markdown": {
+        "files": 4,
+        "loc": 1149,
+        "bytes": 51432
+      },
+      "Makefile": {
+        "files": 1,
+        "loc": 105,
+        "bytes": 4055
+      },
+      "Python": {
+        "files": 4,
+        "loc": 681,
+        "bytes": 22265
+      },
+      "Shell": {
+        "files": 1,
+        "loc": 42,
+        "bytes": 1270
+      },
+      "JSON": {
+        "files": 55,
+        "loc": 983,
+        "bytes": 19914
+      },
+      "COBOL": {
+        "files": 16,
+        "loc": 3988,
+        "bytes": 150553
+      }
+    },
+    "cobol_files": [
+      {
+        "path": "copybooks/types.cpy",
+        "loc": 41,
+        "bytes": 1780
+      },
+      {
+        "path": "copybooks/searchstate.cpy",
+        "loc": 29,
+        "bytes": 1380
+      },
+      {
+        "path": "copybooks/constants.cpy",
+        "loc": 45,
+        "bytes": 1663
+      },
+      {
+        "path": "copybooks/offsets.cpy",
+        "loc": 6,
+        "bytes": 296
+      },
+      {
+        "path": "copybooks/hash.cpy",
+        "loc": 13,
+        "bytes": 595
+      },
+      {
+        "path": "src/fen.cob",
+        "loc": 265,
+        "bytes": 9414
+      },
+      {
+        "path": "src/perft.cob",
+        "loc": 66,
+        "bytes": 2464
+      },
+      {
+        "path": "src/board.cob",
+        "loc": 30,
+        "bytes": 795
+      },
+      {
+        "path": "src/attack.cob",
+        "loc": 164,
+        "bytes": 5851
+      },
+      {
+        "path": "src/makemove.cob",
+        "loc": 615,
+        "bytes": 20740
+      },
+      {
+        "path": "src/movegen.cob",
+        "loc": 472,
+        "bytes": 17416
+      },
+      {
+        "path": "src/time.cob",
+        "loc": 49,
+        "bytes": 1424
+      },
+      {
+        "path": "src/uci.cob",
+        "loc": 62,
+        "bytes": 2139
+      },
+      {
+        "path": "src/eval.cob",
+        "loc": 387,
+        "bytes": 16270
+      },
+      {
+        "path": "src/main.cob",
+        "loc": 382,
+        "bytes": 14190
+      },
+      {
+        "path": "src/search.cob",
+        "loc": 1362,
+        "bytes": 54136
+      }
+    ]
+  },
+  "complexity": {
+    "root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+    "aggregate": {
+      "num_files": 16,
+      "total_lines": 3988,
+      "code_lines": 3359,
+      "comment_lines": 117,
+      "sections": 30,
+      "paragraphs": 70,
+      "data_items": 610,
+      "max_nesting_any_file": 6,
+      "statements": {
+        "PERFORM": 182,
+        "IF": 439,
+        "EVALUATE": 22,
+        "CALL": 56,
+        "MOVE": 859,
+        "COMPUTE": 209,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 7,
+        "DISPLAY": 9,
+        "GO TO": 1,
+        "EXIT": 82,
+        "STOP": 6,
+        "SET": 0,
+        "ADD": 79,
+        "SUBTRACT": 52,
+        "MULTIPLY": 0,
+        "DIVIDE": 35,
+        "STRING": 1,
+        "UNSTRING": 2,
+        "INSPECT": 0,
+        "SEARCH": 5,
+        "SORT": 0
+      },
+      "divisions": {
+        "IDENTIFICATION": 14,
+        "DATA": 14,
+        "PROCEDURE": 1
+      },
+      "top_files_by_code_lines": [
+        {
+          "file": "src/search.cob",
+          "code_lines": 1147
+        },
+        {
+          "file": "src/makemove.cob",
+          "code_lines": 501
+        },
+        {
+          "file": "src/movegen.cob",
+          "code_lines": 418
+        },
+        {
+          "file": "src/eval.cob",
+          "code_lines": 328
+        },
+        {
+          "file": "src/main.cob",
+          "code_lines": 321
+        },
+        {
+          "file": "src/fen.cob",
+          "code_lines": 224
+        },
+        {
+          "file": "src/attack.cob",
+          "code_lines": 139
+        },
+        {
+          "file": "src/perft.cob",
+          "code_lines": 55
+        },
+        {
+          "file": "src/uci.cob",
+          "code_lines": 48
+        },
+        {
+          "file": "copybooks/constants.cpy",
+          "code_lines": 38
+        }
+      ],
+      "capabilities": {
+        "control_flow": {
+          "total": 1640,
+          "files_using": 11,
+          "constructs": {
+            "IF": 878,
+            "ELSE": 98,
+            "EVALUATE": 44,
+            "WHEN": 141,
+            "PERFORM": 237,
+            "PERFORM_VARYING": 44,
+            "PERFORM_UNTIL": 53,
+            "EXIT": 82,
+            "CONTINUE": 8,
+            "GOBACK": 50,
+            "STOP_RUN": 5
+          }
+        },
+        "arithmetic": {
+          "total": 460,
+          "files_using": 10,
+          "constructs": {
+            "ADD": 158,
+            "SUBTRACT": 52,
+            "COMPUTE": 215,
+            "DIVIDE": 35
+          }
+        },
+        "data_advanced": {
+          "total": 1040,
+          "files_using": 15,
+          "constructs": {
+            "PIC_S9": 487,
+            "OCCURS": 25,
+            "USAGE_COMP_5": 489,
+            "PIC_X": 31,
+            "PIC_9": 8
+          }
+        },
+        "io_file": {
+          "total": 24,
+          "files_using": 3,
+          "constructs": {
+            "START": 11,
+            "READ": 13
+          }
+        },
+        "string_ops": {
+          "total": 45,
+          "files_using": 4,
+          "constructs": {
+            "UNSTRING": 4,
+            "REFERENCE_MOD": 26,
+            "DELIMITED_BY": 13,
+            "STRING": 2
+          }
+        },
+        "tables_search": {
+          "total": 17,
+          "files_using": 2,
+          "constructs": {
+            "SEARCH": 9,
+            "SET": 8
+          }
+        },
+        "subprograms": {
+          "total": 197,
+          "files_using": 11,
+          "constructs": {
+            "CALL": 77,
+            "LINKAGE_SECTION": 13,
+            "USING": 69,
+            "RECURSIVE": 3,
+            "GIVING": 35
+          }
+        },
+        "copy_preproc": {
+          "total": 34,
+          "files_using": 10,
+          "constructs": {
+            "COPY": 34
+          }
+        },
+        "intrinsics": {
+          "total": 205,
+          "files_using": 9,
+          "constructs": {
+            "FUNCTION": 109,
+            "FUNCTION_NUMVAL": 13,
+            "FUNCTION_MOD": 60,
+            "FUNCTION_TRIM": 23
+          }
+        },
+        "misc": {
+          "total": 16,
+          "files_using": 3,
+          "constructs": {
+            "ACCEPT": 7,
+            "DISPLAY": 9
+          }
+        }
+      },
+      "mastery_score": 40,
+      "mastery_constructs": [
+        "arithmetic.ADD",
+        "arithmetic.COMPUTE",
+        "arithmetic.DIVIDE",
+        "arithmetic.SUBTRACT",
+        "control_flow.CONTINUE",
+        "control_flow.ELSE",
+        "control_flow.EVALUATE",
+        "control_flow.EXIT",
+        "control_flow.GOBACK",
+        "control_flow.IF",
+        "control_flow.PERFORM",
+        "control_flow.PERFORM_UNTIL",
+        "control_flow.PERFORM_VARYING",
+        "control_flow.STOP_RUN",
+        "control_flow.WHEN",
+        "copy_preproc.COPY",
+        "data_advanced.OCCURS",
+        "data_advanced.PIC_9",
+        "data_advanced.PIC_S9",
+        "data_advanced.PIC_X",
+        "data_advanced.USAGE_COMP_5",
+        "intrinsics.FUNCTION",
+        "intrinsics.FUNCTION_MOD",
+        "intrinsics.FUNCTION_NUMVAL",
+        "intrinsics.FUNCTION_TRIM",
+        "io_file.READ",
+        "io_file.START",
+        "misc.ACCEPT",
+        "misc.DISPLAY",
+        "string_ops.DELIMITED_BY",
+        "string_ops.REFERENCE_MOD",
+        "string_ops.STRING",
+        "string_ops.UNSTRING",
+        "subprograms.CALL",
+        "subprograms.GIVING",
+        "subprograms.LINKAGE_SECTION",
+        "subprograms.RECURSIVE",
+        "subprograms.USING",
+        "tables_search.SEARCH",
+        "tables_search.SET"
+      ],
+      "categories_exercised": 10
+    },
+    "per_file": [
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/types.cpy",
+        "total_lines": 41,
+        "code_lines": 36,
+        "comment_lines": 3,
+        "blank_lines": 2,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 36,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_S9": 28,
+            "OCCURS": 4,
+            "USAGE_COMP_5": 28
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/searchstate.cpy",
+        "total_lines": 29,
+        "code_lines": 28,
+        "comment_lines": 1,
+        "blank_lines": 0,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 28,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_S9": 23,
+            "OCCURS": 4,
+            "USAGE_COMP_5": 23
+          },
+          "io_file": {
+            "START": 1
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/constants.cpy",
+        "total_lines": 45,
+        "code_lines": 38,
+        "comment_lines": 0,
+        "blank_lines": 7,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 38,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {},
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/offsets.cpy",
+        "total_lines": 6,
+        "code_lines": 5,
+        "comment_lines": 0,
+        "blank_lines": 1,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 5,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_S9": 4,
+            "OCCURS": 4,
+            "USAGE_COMP_5": 4
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/hash.cpy",
+        "total_lines": 13,
+        "code_lines": 11,
+        "comment_lines": 1,
+        "blank_lines": 1,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 11,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_S9": 6,
+            "OCCURS": 4,
+            "USAGE_COMP_5": 6
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/fen.cob",
+        "total_lines": 265,
+        "code_lines": 224,
+        "comment_lines": 5,
+        "blank_lines": 36,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 5,
+        "data_items": 26,
+        "statements": {
+          "PERFORM": 16,
+          "IF": 23,
+          "EVALUATE": 4,
+          "CALL": 1,
+          "MOVE": 57,
+          "COMPUTE": 11,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 5,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 11,
+          "SUBTRACT": 7,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 1,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 46,
+            "ELSE": 2,
+            "EVALUATE": 8,
+            "WHEN": 30,
+            "PERFORM": 25,
+            "PERFORM_VARYING": 7,
+            "PERFORM_UNTIL": 9,
+            "EXIT": 5,
+            "CONTINUE": 2,
+            "GOBACK": 8
+          },
+          "arithmetic": {
+            "ADD": 11,
+            "SUBTRACT": 7,
+            "COMPUTE": 13
+          },
+          "data_advanced": {
+            "PIC_X": 9,
+            "PIC_S9": 17,
+            "USAGE_COMP_5": 17
+          },
+          "io_file": {},
+          "string_ops": {
+            "UNSTRING": 2,
+            "REFERENCE_MOD": 10,
+            "DELIMITED_BY": 1
+          },
+          "tables_search": {},
+          "subprograms": {
+            "CALL": 1,
+            "LINKAGE_SECTION": 1,
+            "USING": 2
+          },
+          "copy_preproc": {
+            "COPY": 3
+          },
+          "intrinsics": {
+            "FUNCTION": 7,
+            "FUNCTION_NUMVAL": 4,
+            "FUNCTION_MOD": 3
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/perft.cob",
+        "total_lines": 66,
+        "code_lines": 55,
+        "comment_lines": 0,
+        "blank_lines": 11,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 3,
+        "paragraphs": 1,
+        "data_items": 22,
+        "statements": {
+          "PERFORM": 1,
+          "IF": 2,
+          "EVALUATE": 0,
+          "CALL": 4,
+          "MOVE": 9,
+          "COMPUTE": 1,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 1,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 1,
+        "capabilities": {
+          "control_flow": {
+            "IF": 4,
+            "PERFORM": 2,
+            "PERFORM_VARYING": 1,
+            "PERFORM_UNTIL": 1,
+            "GOBACK": 2
+          },
+          "arithmetic": {
+            "ADD": 1,
+            "COMPUTE": 1
+          },
+          "data_advanced": {
+            "PIC_S9": 19,
+            "OCCURS": 1,
+            "USAGE_COMP_5": 19
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "CALL": 4,
+            "LINKAGE_SECTION": 1,
+            "USING": 5,
+            "RECURSIVE": 1
+          },
+          "copy_preproc": {
+            "COPY": 2
+          },
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/board.cob",
+        "total_lines": 30,
+        "code_lines": 23,
+        "comment_lines": 0,
+        "blank_lines": 7,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 1,
+        "data_items": 1,
+        "statements": {
+          "PERFORM": 1,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 10,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {
+            "PERFORM": 2,
+            "PERFORM_VARYING": 1,
+            "PERFORM_UNTIL": 1,
+            "GOBACK": 1
+          },
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_S9": 1,
+            "USAGE_COMP_5": 1
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "LINKAGE_SECTION": 1,
+            "USING": 1
+          },
+          "copy_preproc": {
+            "COPY": 2
+          },
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/attack.cob",
+        "total_lines": 164,
+        "code_lines": 139,
+        "comment_lines": 5,
+        "blank_lines": 20,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 4,
+        "data_items": 9,
+        "statements": {
+          "PERFORM": 13,
+          "IF": 29,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 42,
+          "COMPUTE": 16,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 5,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 58,
+            "ELSE": 5,
+            "PERFORM": 19,
+            "PERFORM_VARYING": 4,
+            "PERFORM_UNTIL": 6,
+            "EXIT": 5,
+            "GOBACK": 8
+          },
+          "arithmetic": {
+            "COMPUTE": 16
+          },
+          "data_advanced": {
+            "PIC_S9": 9,
+            "USAGE_COMP_5": 9
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "LINKAGE_SECTION": 1,
+            "USING": 1
+          },
+          "copy_preproc": {
+            "COPY": 3
+          },
+          "intrinsics": {
+            "FUNCTION": 6,
+            "FUNCTION_MOD": 6
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/makemove.cob",
+        "total_lines": 615,
+        "code_lines": 501,
+        "comment_lines": 27,
+        "blank_lines": 87,
+        "divisions": {
+          "IDENTIFICATION": 2,
+          "DATA": 2
+        },
+        "sections": 4,
+        "paragraphs": 15,
+        "data_items": 55,
+        "statements": {
+          "PERFORM": 29,
+          "IF": 90,
+          "EVALUATE": 2,
+          "CALL": 2,
+          "MOVE": 119,
+          "COMPUTE": 31,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 14,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 16,
+          "SUBTRACT": 17,
+          "MULTIPLY": 0,
+          "DIVIDE": 11,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 4,
+        "capabilities": {
+          "control_flow": {
+            "IF": 180,
+            "ELSE": 22,
+            "EVALUATE": 4,
+            "WHEN": 10,
+            "PERFORM": 33,
+            "PERFORM_VARYING": 4,
+            "PERFORM_UNTIL": 4,
+            "EXIT": 14,
+            "GOBACK": 3
+          },
+          "arithmetic": {
+            "ADD": 16,
+            "SUBTRACT": 17,
+            "DIVIDE": 11,
+            "COMPUTE": 31
+          },
+          "data_advanced": {
+            "PIC_S9": 55,
+            "USAGE_COMP_5": 55
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "CALL": 2,
+            "LINKAGE_SECTION": 2,
+            "USING": 4,
+            "GIVING": 11
+          },
+          "copy_preproc": {
+            "COPY": 5
+          },
+          "intrinsics": {
+            "FUNCTION": 14,
+            "FUNCTION_MOD": 14
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/movegen.cob",
+        "total_lines": 472,
+        "code_lines": 418,
+        "comment_lines": 10,
+        "blank_lines": 44,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 18,
+        "data_items": 19,
+        "statements": {
+          "PERFORM": 57,
+          "IF": 59,
+          "EVALUATE": 1,
+          "CALL": 10,
+          "MOVE": 98,
+          "COMPUTE": 25,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 18,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 1,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 5,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 6,
+        "capabilities": {
+          "control_flow": {
+            "IF": 118,
+            "ELSE": 15,
+            "EVALUATE": 2,
+            "WHEN": 7,
+            "PERFORM": 65,
+            "PERFORM_VARYING": 7,
+            "PERFORM_UNTIL": 8,
+            "EXIT": 18,
+            "CONTINUE": 1,
+            "GOBACK": 1
+          },
+          "arithmetic": {
+            "ADD": 80,
+            "DIVIDE": 5,
+            "COMPUTE": 25
+          },
+          "data_advanced": {
+            "PIC_S9": 19,
+            "USAGE_COMP_5": 19
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "CALL": 10,
+            "LINKAGE_SECTION": 1,
+            "USING": 11,
+            "GIVING": 5
+          },
+          "copy_preproc": {
+            "COPY": 3
+          },
+          "intrinsics": {
+            "FUNCTION": 11,
+            "FUNCTION_MOD": 11
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/time.cob",
+        "total_lines": 49,
+        "code_lines": 37,
+        "comment_lines": 0,
+        "blank_lines": 12,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 1,
+        "data_items": 11,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 1,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 8,
+          "COMPUTE": 1,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 2,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 1,
+        "capabilities": {
+          "control_flow": {
+            "IF": 2,
+            "GOBACK": 1
+          },
+          "arithmetic": {
+            "COMPUTE": 1
+          },
+          "data_advanced": {
+            "PIC_X": 1,
+            "PIC_9": 6,
+            "PIC_S9": 4,
+            "USAGE_COMP_5": 4
+          },
+          "io_file": {},
+          "string_ops": {
+            "REFERENCE_MOD": 4
+          },
+          "tables_search": {},
+          "subprograms": {
+            "LINKAGE_SECTION": 1,
+            "USING": 1
+          },
+          "copy_preproc": {},
+          "intrinsics": {
+            "FUNCTION": 1
+          },
+          "misc": {
+            "ACCEPT": 2
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/uci.cob",
+        "total_lines": 62,
+        "code_lines": 48,
+        "comment_lines": 0,
+        "blank_lines": 14,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 1,
+        "data_items": 15,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 2,
+          "EVALUATE": 1,
+          "CALL": 0,
+          "MOVE": 15,
+          "COMPUTE": 2,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 2,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 2,
+        "capabilities": {
+          "control_flow": {
+            "IF": 4,
+            "EVALUATE": 2,
+            "WHEN": 5,
+            "GOBACK": 2
+          },
+          "arithmetic": {
+            "DIVIDE": 2,
+            "COMPUTE": 2
+          },
+          "data_advanced": {
+            "PIC_X": 3,
+            "PIC_S9": 11,
+            "USAGE_COMP_5": 11
+          },
+          "io_file": {},
+          "string_ops": {
+            "REFERENCE_MOD": 10
+          },
+          "tables_search": {},
+          "subprograms": {
+            "LINKAGE_SECTION": 1,
+            "USING": 1,
+            "GIVING": 2
+          },
+          "copy_preproc": {
+            "COPY": 1
+          },
+          "intrinsics": {
+            "FUNCTION": 2,
+            "FUNCTION_MOD": 2
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/eval.cob",
+        "total_lines": 387,
+        "code_lines": 328,
+        "comment_lines": 21,
+        "blank_lines": 38,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1
+        },
+        "sections": 2,
+        "paragraphs": 1,
+        "data_items": 40,
+        "statements": {
+          "PERFORM": 5,
+          "IF": 62,
+          "EVALUATE": 2,
+          "CALL": 0,
+          "MOVE": 67,
+          "COMPUTE": 52,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 23,
+          "SUBTRACT": 20,
+          "MULTIPLY": 0,
+          "DIVIDE": 4,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 6,
+        "capabilities": {
+          "control_flow": {
+            "IF": 124,
+            "ELSE": 26,
+            "EVALUATE": 4,
+            "WHEN": 12,
+            "PERFORM": 10,
+            "PERFORM_VARYING": 5,
+            "PERFORM_UNTIL": 5,
+            "GOBACK": 1
+          },
+          "arithmetic": {
+            "ADD": 23,
+            "SUBTRACT": 20,
+            "DIVIDE": 4,
+            "COMPUTE": 52
+          },
+          "data_advanced": {
+            "PIC_S9": 40,
+            "OCCURS": 4,
+            "USAGE_COMP_5": 40
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {
+            "LINKAGE_SECTION": 1,
+            "USING": 1,
+            "GIVING": 4
+          },
+          "copy_preproc": {
+            "COPY": 2
+          },
+          "intrinsics": {
+            "FUNCTION": 24,
+            "FUNCTION_MOD": 12
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/main.cob",
+        "total_lines": 382,
+        "code_lines": 321,
+        "comment_lines": 5,
+        "blank_lines": 56,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "DATA": 1,
+          "PROCEDURE": 1
+        },
+        "sections": 1,
+        "paragraphs": 6,
+        "data_items": 54,
+        "statements": {
+          "PERFORM": 28,
+          "IF": 41,
+          "EVALUATE": 2,
+          "CALL": 14,
+          "MOVE": 70,
+          "COMPUTE": 2,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 5,
+          "DISPLAY": 8,
+          "GO TO": 1,
+          "EXIT": 22,
+          "STOP": 6,
+          "SET": 0,
+          "ADD": 3,
+          "SUBTRACT": 2,
+          "MULTIPLY": 0,
+          "DIVIDE": 2,
+          "STRING": 1,
+          "UNSTRING": 1,
+          "INSPECT": 0,
+          "SEARCH": 3,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 82,
+            "ELSE": 3,
+            "EVALUATE": 4,
+            "WHEN": 16,
+            "PERFORM": 36,
+            "PERFORM_VARYING": 2,
+            "PERFORM_UNTIL": 6,
+            "EXIT": 22,
+            "CONTINUE": 4,
+            "STOP_RUN": 5
+          },
+          "arithmetic": {
+            "ADD": 3,
+            "SUBTRACT": 2,
+            "DIVIDE": 2,
+            "COMPUTE": 6
+          },
+          "data_advanced": {
+            "PIC_X": 17,
+            "PIC_9": 2,
+            "PIC_S9": 33,
+            "OCCURS": 1,
+            "USAGE_COMP_5": 35
+          },
+          "io_file": {
+            "READ": 13,
+            "START": 2
+          },
+          "string_ops": {
+            "STRING": 2,
+            "UNSTRING": 2,
+            "REFERENCE_MOD": 2,
+            "DELIMITED_BY": 12
+          },
+          "tables_search": {
+            "SEARCH": 3,
+            "SET": 8
+          },
+          "subprograms": {
+            "CALL": 14,
+            "USING": 14,
+            "GIVING": 2
+          },
+          "copy_preproc": {
+            "COPY": 2
+          },
+          "intrinsics": {
+            "FUNCTION": 28,
+            "FUNCTION_NUMVAL": 9,
+            "FUNCTION_TRIM": 19
+          },
+          "misc": {
+            "DISPLAY": 8,
+            "ACCEPT": 5
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/search.cob",
+        "total_lines": 1362,
+        "code_lines": 1147,
+        "comment_lines": 39,
+        "blank_lines": 176,
+        "divisions": {
+          "IDENTIFICATION": 3,
+          "DATA": 3
+        },
+        "sections": 8,
+        "paragraphs": 17,
+        "data_items": 240,
+        "statements": {
+          "PERFORM": 32,
+          "IF": 130,
+          "EVALUATE": 10,
+          "CALL": 25,
+          "MOVE": 364,
+          "COMPUTE": 68,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 1,
+          "GO TO": 0,
+          "EXIT": 18,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 24,
+          "SUBTRACT": 6,
+          "MULTIPLY": 0,
+          "DIVIDE": 11,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 2,
+          "SORT": 0
+        },
+        "max_nesting": 6,
+        "capabilities": {
+          "control_flow": {
+            "IF": 260,
+            "ELSE": 25,
+            "EVALUATE": 20,
+            "WHEN": 61,
+            "PERFORM": 45,
+            "PERFORM_VARYING": 13,
+            "PERFORM_UNTIL": 13,
+            "EXIT": 18,
+            "CONTINUE": 1,
+            "GOBACK": 23
+          },
+          "arithmetic": {
+            "ADD": 24,
+            "SUBTRACT": 6,
+            "DIVIDE": 11,
+            "COMPUTE": 68
+          },
+          "data_advanced": {
+            "PIC_X": 1,
+            "PIC_S9": 218,
+            "OCCURS": 3,
+            "USAGE_COMP_5": 218
+          },
+          "io_file": {
+            "START": 8
+          },
+          "string_ops": {},
+          "tables_search": {
+            "SEARCH": 6
+          },
+          "subprograms": {
+            "CALL": 46,
+            "LINKAGE_SECTION": 3,
+            "USING": 28,
+            "GIVING": 11,
+            "RECURSIVE": 2
+          },
+          "copy_preproc": {
+            "COPY": 11
+          },
+          "intrinsics": {
+            "FUNCTION": 16,
+            "FUNCTION_TRIM": 4,
+            "FUNCTION_MOD": 12
+          },
+          "misc": {
+            "DISPLAY": 1
+          }
+        }
+      }
+    ]
+  },
+  "git": {
+    "root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+    "has_git": true,
+    "commits": 2,
+    "commit_log": [
+      {
+        "sha": "0e2ab146f3b9111aad6b0a97aec1fb3de09200f5",
+        "date": "2026-05-04T12:30:28+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+      },
+      {
+        "sha": "faf0f163e9b2b4b6475262fc8f00fcaeeedf4919",
+        "date": "2026-03-19T16:36:49+01:00",
+        "author": "Mathieu Acher",
+        "subject": "Initial commit: cobochess \u2014 COBOL (GnuCOBOL) UCI chess engine (~1600-1700 Elo)"
+      }
+    ],
+    "first_commit": "2026-03-19T16:36:49+01:00",
+    "last_commit": "2026-05-04T12:30:28+02:00",
+    "authors": {
+      "Mathieu Acher": 2
+    },
+    "churn": {
+      "files_changed_total": 33,
+      "insertions_total": 8554,
+      "deletions_total": 0,
+      "per_commit": [
+        {
+          "sha": "0e2ab146f3b9111aad6b0a97aec1fb3de09200f5",
+          "date": "2026-05-04T12:30:28+02:00",
+          "files": 3,
+          "ins": 2210,
+          "del": 0
+        },
+        {
+          "sha": "faf0f163e9b2b4b6475262fc8f00fcaeeedf4919",
+          "date": "2026-03-19T16:36:49+01:00",
+          "files": 30,
+          "ins": 6344,
+          "del": 0
+        }
+      ]
+    }
+  },
+  "sessions": [
+    {
+      "agent": "Codex",
+      "model": "gpt-5.2",
+      "all_models": {
+        "gpt-5.2": 1861
+      },
+      "version": "0.98.0",
+      "session_id": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+      "project_dir": "COBOL-chess",
+      "project_cwd": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+      "file": "/Users/mathieuacher/.codex/sessions/2026/02/09/rollout-2026-02-09T10-42-20-019c41c7-d33c-7e03-89a7-1691d6ab564a.jsonl",
+      "file_size": 37464469,
+      "n_lines": 13448,
+      "start": "2026-02-09T09:42:20.739000+00:00",
+      "end": "2026-02-11T10:59:04.337000+00:00",
+      "duration_s": 177403,
+      "user_turns": 24,
+      "assistant_turns": 21,
+      "tool_calls_total": 1872,
+      "tool_breakdown": {
+        "exec_command": 845,
+        "request_user_input": 2,
+        "update_plan": 6,
+        "apply_patch": 190,
+        "write_stdin": 829
+      },
+      "input_tokens": 233512188,
+      "output_tokens": 1125255,
+      "cache_read_tokens": 229924096,
+      "cache_creation_tokens": 0,
+      "reasoning_tokens": 887566,
+      "cost_usd": 44.4782,
+      "first_user_prompt": "I want to build a chess engine in COBOL (GNUCobol)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n",
+      "base_instructions_len": 21544,
+      "role": "dev"
+    },
+    {
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "all_models": {
+        "claude-opus-4-6": 84,
+        "<synthetic>": 1
+      },
+      "version": "2.1.79",
+      "session_id": "fe558a17-0e95-4d84-8c0b-c093b7ae7a17",
+      "project_dir": "-Users-mathieuacher-SANDBOX-COBOL-chess",
+      "file": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-COBOL-chess/fe558a17-0e95-4d84-8c0b-c093b7ae7a17.jsonl",
+      "file_size": 1741213,
+      "n_lines": 482,
+      "start": "2026-03-19T12:54:48.605000+00:00",
+      "end": "2026-04-16T09:40:54.105000+00:00",
+      "duration_s": 2407565,
+      "user_turns": 10,
+      "assistant_turns": 85,
+      "tool_calls_total": 55,
+      "tool_breakdown": {
+        "Bash": 41,
+        "Glob": 1,
+        "Read": 5,
+        "Agent": 5,
+        "Write": 2,
+        "Edit": 1
+      },
+      "input_tokens": 53152,
+      "output_tokens": 44782,
+      "cache_read_tokens": 5121398,
+      "cache_creation_tokens": 474819,
+      "reasoning_tokens": 0,
+      "cost_usd": 20.7409,
+      "first_user_prompt": "You are a \u201cPost-Session Backlog & Strategy Analyst\u201d operating locally inside the current repository.\n\nPRIMARY GOAL\nProduce an evidence-based, reproducible post-session report using a strict TWO-PASS workflow:\n- PASS 1 (Extraction): reconstruct the feature backlog + prompt ledger + replay package (repro-first, factual).\n- PASS 2 (Interpretation): characterize agent strategies, outcomes/quality, interaction demand; correlate with lightweight repo metrics.\n\nINPUT ASSUMPTIONS (Codex)\n- I will NOT pr",
+      "assistant_text_chars": 66957,
+      "role": "analyst"
+    },
+    {
+      "agent": "Codex",
+      "model": "gpt-5.4",
+      "all_models": {
+        "gpt-5.4": 1
+      },
+      "version": "0.115.0-alpha.11",
+      "session_id": "019d0663-34ad-7a03-8d12-888778029a2a",
+      "project_dir": "COBOL-chess",
+      "project_cwd": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+      "file": "/Users/mathieuacher/.codex/sessions/2026/03/19/rollout-2026-03-19T14-57-38-019d0663-34ad-7a03-8d12-888778029a2a.jsonl",
+      "file_size": 526250,
+      "n_lines": 231,
+      "start": "2026-03-19T14:00:57.426000+00:00",
+      "end": "2026-03-19T14:07:48.149000+00:00",
+      "duration_s": 410,
+      "user_turns": 1,
+      "assistant_turns": 11,
+      "tool_calls_total": 63,
+      "tool_breakdown": {
+        "exec_command": 55,
+        "write_stdin": 7,
+        "apply_patch": 1
+      },
+      "input_tokens": 2637865,
+      "output_tokens": 21699,
+      "cache_read_tokens": 2508544,
+      "cache_creation_tokens": 0,
+      "reasoning_tokens": 9937,
+      "cost_usd": 0.6922,
+      "first_user_prompt": "Please analyze thorughly the repo and write a README.md to document the architecture and features (being heavily inspired by the README of https://github.com/acherm/agentic-chessengine-latex-TeXCCChess and https://blog.mathieuacher.com/TeXCCChessEngine/)...\nI suggest a \"light\" README.md (as  https://github.com/acherm/agentic-chessengine-latex-TeXCCChess) and a much more detailed/technical \"report\" (referenced in README.md) let say in ANALYSIS.md or ARCHITECTURE.md\n",
+      "base_instructions_len": 14659,
+      "role": "dev"
+    }
+  ],
+  "n_dev_sessions": 2,
+  "excluded_sessions": {
+    "n_analyst": 1,
+    "n_empty": 0,
+    "analyst_cost_usd": 20.74,
+    "analyst_tool_calls": 55,
+    "note": "analyst/empty sessions are excluded from every aggregate in this file (cost, tokens, tool calls, active time, prompts, span, difficulty signals)"
+  },
+  "span_days": 38,
+  "active_time": {
+    "total_active_s": 17927,
+    "total_wall_gap_s": 147310,
+    "by_se_task_s": {
+      "understanding": 2729,
+      "plan": 15,
+      "unknown": 1041,
+      "feature": 2369,
+      "build": 9495,
+      "bug_fix": 434,
+      "test": 742,
+      "spec": 1102
+    }
+  },
+  "tokens": {
+    "in": 3717413,
+    "out": 1146954,
+    "cache_read": 232432640,
+    "cache_create": 0,
+    "reasoning": 897503
+  },
+  "cost_usd": 45.17,
+  "tool_calls_total": 1935,
+  "wall_duration_s": 177813,
+  "user_prompts": {
+    "count": 26,
+    "avg_len": 1554.5,
+    "max_len": 10014,
+    "total_chars": 40418,
+    "activity_breakdown": {
+      "test": 5,
+      "spec": 8,
+      "build": 1,
+      "fix": 4,
+      "research": 1,
+      "other": 5,
+      "implement": 1,
+      "optimize": 1
+    },
+    "intent_breakdown": {
+      "other": 11,
+      "bug-report": 10,
+      "clarify": 1,
+      "review-ask": 4
+    },
+    "first_prompt": "I want to build a chess engine in COBOL (GNUCobol)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+  },
+  "tool_use": {
+    "total": 1935,
+    "by_tool": {
+      "exec_command": 900,
+      "request_user_input": 2,
+      "update_plan": 6,
+      "apply_patch": 191,
+      "write_stdin": 836
+    },
+    "by_se_task": {
+      "understanding": 77,
+      "build": 618,
+      "plan": 13,
+      "test": 981,
+      "feature": 185,
+      "bug_fix": 61
+    }
+  },
+  "errors": {
+    "tool_outputs": 1935,
+    "tool_output_errors": 66,
+    "error_rate": 0.034,
+    "error_tags": {
+      "cc": 35,
+      "exit-nonzero": 38,
+      "python": 6,
+      "cobc": 10,
+      "missing": 3,
+      "testfail": 13,
+      "abort": 2
+    }
+  },
+  "difficulty_signals": {
+    "active_hours": 4.98,
+    "span_days": 38,
+    "user_prompts": 26,
+    "redirect_bug_prompts": 10,
+    "tool_calls": 1935,
+    "n_turns": 5640,
+    "error_events": 66,
+    "error_rate": 0.034,
+    "fix_cycles": 6,
+    "fix_time_share": 0.024,
+    "tool_calls_per_prompt": 74.4,
+    "user_interventions_per_hr": 5.22
+  },
+  "features": {
+    "project": "COBOL-chess",
+    "spec_backlog": [
+      {
+        "id": "F-001",
+        "title": "Directory structure (`src/`, `copybooks/`, `tools/`, `tests/`, `openings/`, `bin/`, `results/`)",
+        "evidence": "repo layout",
+        "phase": "Phase 1: Project Scaffold",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-002",
+        "title": "Makefile with `cobc` build, `perft`, `uci-smoke`, `clean`, `rebuild` targets",
+        "evidence": "`Makefile:1\u2013105`",
+        "phase": "Phase 1: Project Scaffold",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-003",
+        "title": "`.gitignore` for binaries, results, caches",
+        "evidence": "`.gitignore`",
+        "phase": "Phase 1: Project Scaffold",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-004",
+        "title": "`README.md` with build/test/usage docs",
+        "evidence": "`README.md`",
+        "phase": "Phase 1: Project Scaffold",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-010",
+        "title": "0x88 mailbox board representation (128-element array, off-board detection via `MOD(sq,16) <= 7`)",
+        "evidence": "`copybooks/types.cpy:3\u20134`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-011",
+        "title": "Piece encoding (EMPTY=0, WP=1..BK=12), color constants (WHITE=0, BLACK=1)",
+        "evidence": "`copybooks/constants.cpy:5\u201317`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-012",
+        "title": "Castling bitmask encoding (WK=1, WQ=2, BK=4, BQ=8)",
+        "evidence": "`copybooks/constants.cpy:19\u201322`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-013",
+        "title": "Move flag bitmask (CAPTURE=1, EP=2, CASTLE=4, PROMOTION=8, PAWN-DOUBLE=16)",
+        "evidence": "`copybooks/constants.cpy:24\u201328`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-014",
+        "title": "Move record structure (from, to, promo, flags, score)",
+        "evidence": "`copybooks/types.cpy:26\u201331`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-015",
+        "title": "Move list (count + 256-entry array)",
+        "evidence": "`copybooks/types.cpy:33\u201335`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-016",
+        "title": "Game state structure: board, side, castling, EP sq, halfmove, fullmove, king sqs, ply, Zobrist key",
+        "evidence": "`copybooks/types.cpy:1\u201313`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-017",
+        "title": "Undo stack: 256-entry stack with captured/moved piece, castling, EP, halfmove, fullmove, king sq, key",
+        "evidence": "`copybooks/types.cpy:14\u201323`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-018",
+        "title": "Movement offset tables: knight (8), king (8), bishop (4), rook (4); runtime-initialized",
+        "evidence": "`copybooks/offsets.cpy:1\u20136`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-019",
+        "title": "Board initialization: clear all squares to EMPTY, reset state",
+        "evidence": "`src/board.cob:1\u201330`",
+        "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-020",
+        "title": "FEN string parsing via `UNSTRING ... DELIMITED BY SPACE` (6 fields)",
+        "evidence": "`src/fen.cob:49\u201351`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-021",
+        "title": "Piece placement: rank-by-rank traversal, char-to-piece mapping (12 types)",
+        "evidence": "`src/fen.cob:58\u201396`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-022",
+        "title": "Side-to-move parsing (`w`/`b`)",
+        "evidence": "`src/fen.cob:98\u2013108`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-023",
+        "title": "Castling rights parsing (`KQkq` \u2192 bitmask, `-` for none)",
+        "evidence": "`src/fen.cob:110\u2013127`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-024",
+        "title": "En passant square parsing (algebraic \u2192 0x88 index)",
+        "evidence": "`src/fen.cob:129\u2013156`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-025",
+        "title": "Halfmove/fullmove clock parsing via `NUMVAL`",
+        "evidence": "`src/fen.cob:158\u2013160`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-026",
+        "title": "King square detection during placement",
+        "evidence": "`src/fen.cob:88\u201393`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-027",
+        "title": "FEN validation with error status return",
+        "evidence": "`src/fen.cob:53\u201356, 77\u201384`",
+        "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-030",
+        "title": "Square-attacked-by-side query",
+        "evidence": "`src/attack.cob:1\u2013164`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-031",
+        "title": "Pawn attack detection (white/black pawn diagonal offsets)",
+        "evidence": "`src/attack.cob:65\u201395`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-032",
+        "title": "Knight attack detection (8 offsets)",
+        "evidence": "`src/attack.cob:97\u2013110`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-033",
+        "title": "King attack detection (8 offsets)",
+        "evidence": "`src/attack.cob:112\u2013125`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-034",
+        "title": "Bishop/queen diagonal ray attack detection",
+        "evidence": "`src/attack.cob:127\u2013142`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-035",
+        "title": "Rook/queen orthogonal ray attack detection",
+        "evidence": "`src/attack.cob:144\u2013159`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-036",
+        "title": "0x88 off-board check for ray/step moves",
+        "evidence": "`src/attack.cob:100, 115, 131, 148`",
+        "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-040",
+        "title": "Full legal move generator (iterates 0x88 board, dispatches by piece)",
+        "evidence": "`src/movegen.cob:42\u201355`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-041",
+        "title": "White pawn single push (+16 to empty)",
+        "evidence": "`src/movegen.cob:104\u2013105, 123\u2013146`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-042",
+        "title": "Black pawn single push (-16 to empty)",
+        "evidence": "`src/movegen.cob:117\u2013118, 148\u2013171`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-043",
+        "title": "White pawn double push (+32 from rank 1, both squares empty)",
+        "evidence": "`src/movegen.cob:134\u2013141`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-044",
+        "title": "Black pawn double push (-32 from rank 6)",
+        "evidence": "`src/movegen.cob:159\u2013166`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-045",
+        "title": "Pawn captures (diagonal, enemy piece or EP square)",
+        "evidence": "`src/movegen.cob:96\u201399, 109\u2013112, 173\u2013217`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-046",
+        "title": "En passant capture (detect `TO-SQ = GS-EP-SQ`, flag EP+CAPTURE)",
+        "evidence": "`src/movegen.cob:175\u2013178, 198\u2013201`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-047",
+        "title": "Pawn promotion (all 4 pieces: Q/R/B/N) on push and capture",
+        "evidence": "`src/movegen.cob:415\u2013429`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-048",
+        "title": "Promotion pushes included in captures-only mode (quiescence)",
+        "evidence": "`src/movegen.cob:103, 116`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-049",
+        "title": "Knight moves (8 step offsets)",
+        "evidence": "`src/movegen.cob:219\u2013224, 443\u2013450`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-050",
+        "title": "Bishop moves (4 sliding directions)",
+        "evidence": "`src/movegen.cob:226\u2013231, 461\u2013464`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-051",
+        "title": "Rook moves (4 sliding directions)",
+        "evidence": "`src/movegen.cob:233\u2013238, 466\u2013469`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-052",
+        "title": "Queen moves (union of bishop + rook directions)",
+        "evidence": "`src/movegen.cob:240\u2013249`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-053",
+        "title": "King moves (8 step offsets)",
+        "evidence": "`src/movegen.cob:251\u2013255, 452\u2013459`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-054",
+        "title": "Sliding piece ray traversal (continue until off-board or blocked; capture blocker)",
+        "evidence": "`src/movegen.cob:290\u2013319`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-055",
+        "title": "Castling: White king-side (e1g1), queen-side (e1c1)",
+        "evidence": "`src/movegen.cob:328\u2013365`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-056",
+        "title": "Castling: Black king-side (e8g8), queen-side (e8c8)",
+        "evidence": "`src/movegen.cob:372\u2013409`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-057",
+        "title": "Castling legality: empty path, rook present, no attacked squares",
+        "evidence": "`src/movegen.cob:330\u2013345, 347\u2013365, 374\u2013389, 391\u2013409`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-058",
+        "title": "Castling suppressed in captures-only mode",
+        "evidence": "`src/movegen.cob:257\u2013259`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-059",
+        "title": "Captures-only mode for quiescence search",
+        "evidence": "`src/movegen.cob:267, 296`",
+        "phase": "Phase 5: Core Engine \u2014 Move Generation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-060",
+        "title": "Make move: save full undo state to stack",
+        "evidence": "`src/makemove.cob:73\u201385`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-061",
+        "title": "Flag decoding (bitmask \u2192 EP, CASTLE, PROMOTION, PAWN-DOUBLE)",
+        "evidence": "`src/makemove.cob:335\u2013345`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-062",
+        "title": "En passant execution: remove captured pawn behind target",
+        "evidence": "`src/makemove.cob:119\u2013136`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-063",
+        "title": "Castling rook movement (4 types: h1\u2192f1, a1\u2192d1, h8\u2192f8, a8\u2192d8)",
+        "evidence": "`src/makemove.cob:138\u2013171, 368\u2013397`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-064",
+        "title": "Promotion execution: replace pawn with promoted piece",
+        "evidence": "`src/makemove.cob:173\u2013221, 347\u2013366`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-065",
+        "title": "Castling rights update on king move",
+        "evidence": "`src/makemove.cob:399\u2013406, 445\u2013453`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-066",
+        "title": "Castling rights update on rook move/capture",
+        "evidence": "`src/makemove.cob:408\u2013442`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-067",
+        "title": "Halfmove clock: reset on pawn/capture, increment otherwise",
+        "evidence": "`src/makemove.cob:183\u2013196`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-068",
+        "title": "EP square set on double pawn push",
+        "evidence": "`src/makemove.cob:239\u2013246`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-069",
+        "title": "Fullmove increment after Black's move",
+        "evidence": "`src/makemove.cob:248\u2013251`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-070",
+        "title": "Side toggle + ply increment",
+        "evidence": "`src/makemove.cob:253\u2013255`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-071",
+        "title": "King square tracking",
+        "evidence": "`src/makemove.cob:228\u2013234`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-072",
+        "title": "Legality check: call ATTACK on own king; undo if in check",
+        "evidence": "`src/makemove.cob:280\u2013294`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-073",
+        "title": "Unmake move: full state restore from undo stack",
+        "evidence": "`src/makemove.cob:529\u2013581`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-074",
+        "title": "Unmake: EP capture undo, castling rook undo",
+        "evidence": "`src/makemove.cob:557\u2013613`",
+        "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-080",
+        "title": "Recursive perft node counter (`PROGRAM-ID. PERFT RECURSIVE`)",
+        "evidence": "`src/perft.cob:1\u201366`",
+        "phase": "Phase 7: Core Engine \u2014 Perft",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-081",
+        "title": "`LOCAL-STORAGE SECTION` for per-frame move data (recursion-safe)",
+        "evidence": "`src/perft.cob:24\u201341`",
+        "phase": "Phase 7: Core Engine \u2014 Perft",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-090",
+        "title": "Material values: P=100, N=320, B=330, R=500, Q=900",
+        "evidence": "`src/eval.cob:115\u2013122`",
+        "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-091",
+        "title": "Side-relative scoring (negate for Black)",
+        "evidence": "`src/eval.cob:379\u2013383`",
+        "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-092",
+        "title": "0x88 board traversal with off-board skip",
+        "evidence": "`src/eval.cob:72\u201373, 103\u2013104`",
+        "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-100",
+        "title": "Iterative deepening (depth 1 to max)",
+        "evidence": "`src/search.cob:134`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-101",
+        "title": "Basic alpha-beta (negamax framework)",
+        "evidence": "`src/search.cob:540, 758\u2013764`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-102",
+        "title": "Quiescence search (captures + promotions only, recursive)",
+        "evidence": "`src/search.cob:1108\u20131362`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-103",
+        "title": "Stand-pat evaluation in quiescence",
+        "evidence": "`src/search.cob:1198\u20131205`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-104",
+        "title": "Checkmate detection (legal count = 0, in check)",
+        "evidence": "`src/search.cob:837\u2013839`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-105",
+        "title": "Stalemate detection (legal count = 0, not in check)",
+        "evidence": "`src/search.cob:840\u2013842`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-106",
+        "title": "Root move generation + PV output",
+        "evidence": "`src/search.cob:216\u2013217, 192\u2013201`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-107",
+        "title": "UCI `info depth ... nodes ... score cp ... pv ...` output",
+        "evidence": "`src/search.cob:192\u2013201`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-108",
+        "title": "Node counting (`SS-NODES`)",
+        "evidence": "`src/search.cob:113, 546`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-109",
+        "title": "`PROGRAM-ID. ALPHABETA RECURSIVE` + `LOCAL-STORAGE`",
+        "evidence": "`src/search.cob:410 ff.`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-110",
+        "title": "`PROGRAM-ID. QUIESCE RECURSIVE` + `LOCAL-STORAGE`",
+        "evidence": "`src/search.cob:1108 ff.`",
+        "phase": "Phase 9: Core Engine \u2014 Initial Search",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-120",
+        "title": "UCI command loop (`ACCEPT IN-LINE`, dispatch by keyword)",
+        "evidence": "`src/main.cob:119\u2013146`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-121",
+        "title": "`uci` \u2192 id + options + `uciok`",
+        "evidence": "`src/main.cob:123\u2013131`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-122",
+        "title": "`isready` \u2192 `readyok`",
+        "evidence": "`src/main.cob:132\u2013133`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-123",
+        "title": "`ucinewgame` \u2192 reset heuristics",
+        "evidence": "`src/main.cob:134\u2013138`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-124",
+        "title": "`position startpos [moves ...]`",
+        "evidence": "`src/main.cob:139\u2013140, 154\u2013180`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-125",
+        "title": "`position fen <fen> [moves ...]`",
+        "evidence": "`src/main.cob:182\u2013238`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-126",
+        "title": "`go depth <N>` (fixed depth)",
+        "evidence": "`src/main.cob:308\u2013310`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-127",
+        "title": "`go movetime <ms>` (fixed time)",
+        "evidence": "`src/main.cob:311\u2013314`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-128",
+        "title": "`stop`, `quit`",
+        "evidence": "`src/main.cob:143\u2013146`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-129",
+        "title": "`bestmove <uci-move>` output after search",
+        "evidence": "`src/main.cob:339\u2013340`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-130",
+        "title": "Move-to-UCI string conversion (e.g. `e2e4`, `a7a8q`)",
+        "evidence": "`src/uci.cob:1\u201362`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-131",
+        "title": "Move application from UCI notation (generate all legal, match string, apply)",
+        "evidence": "`src/main.cob:269\u2013289`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-132",
+        "title": "Token parser for input lines (whitespace-delimited, up to 4096 chars)",
+        "evidence": "`src/main.cob:249\u2013267`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-133",
+        "title": "`--perft-startpos <depth>` CLI mode",
+        "evidence": "`src/main.cob:85\u201397`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-134",
+        "title": "`--perft <fen> <depth>` CLI mode",
+        "evidence": "`src/main.cob:99\u2013111`",
+        "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-140",
+        "title": "Wall-clock time in centiseconds via `ACCEPT FROM DATE/TIME` + `INTEGER-OF-DATE`",
+        "evidence": "`src/time.cob:1\u201349`",
+        "phase": "Phase 11: Core Engine \u2014 Time Utility",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-141",
+        "title": "Date-to-days caching for performance",
+        "evidence": "`src/time.cob:19\u201324`",
+        "phase": "Phase 11: Core Engine \u2014 Time Utility",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-150",
+        "title": "Perft test cases: 4 positions (startpos, kiwipete, EP-edge, promotions), depths 1\u20135",
+        "evidence": "`tests/perft_cases.json`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-151",
+        "title": "Perft checker script: runs `cobochess --perft`, compares node counts",
+        "evidence": "`tools/perft_check.py`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-152",
+        "title": "UCI smoke test: sends `uci/isready/position/go depth 3/quit`, verifies responses",
+        "evidence": "`tools/uci_smoke.sh`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-153",
+        "title": "Elo match runner: orchestrates cutechess-cli with Stockfish strength configs, TC, books",
+        "evidence": "`tools/elo_run.py`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-154",
+        "title": "Elo calculator: PGN parser, Elo estimate with 95% Wilson CI",
+        "evidence": "`tools/elo_calc.py`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-155",
+        "title": "Opening book (EPD format, 4 entries from startpos)",
+        "evidence": "`openings/book.epd`",
+        "phase": "Phase 12: Test Suite & Tooling (initial)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-160",
+        "title": "Fix regex character range in PGN result parsing",
+        "evidence": "`tools/elo_calc.py`",
+        "phase": "Phase 13: Elo Calc Bug Fixes",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-161",
+        "title": "Per-game White/Black perspective tracking for correct W/D/L attribution",
+        "evidence": "`tools/elo_calc.py`",
+        "phase": "Phase 13: Elo Calc Bug Fixes",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-170",
+        "title": "UCI input line buffer enlarged from `PIC X(512)` to `PIC X(4096)`",
+        "evidence": "`src/main.cob:25`",
+        "phase": "Phase 14: UCI Buffer Fix",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-180",
+        "title": "Piece-square tables in eval (knight/bishop centralization, pawn advancement with file preference, queen mild centralization)",
+        "evidence": "`src/eval.cob:161\u2013166, 207\u2013211, 234\u2013236`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-181",
+        "title": "MVV-LVA capture ordering: `100000 + victim\u00d710 \u2212 attacker`",
+        "evidence": "`src/search.cob:282\u2013371, 912\u20131009`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-182",
+        "title": "Killer moves: 2 slots per ply (256 plies), +90000/+80000 ordering bonus",
+        "evidence": "`copybooks/searchstate.cpy:9\u201318`, `src/search.cob:993\u2013999, 1046\u20131070`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-183",
+        "title": "History heuristic: 16384-entry table (from\u00d7128+to), depth\u00b2 bonus on cutoff, halving on overflow",
+        "evidence": "`copybooks/searchstate.cpy:19`, `src/search.cob:1001\u20131002, 1072\u20131078`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-184",
+        "title": "In-check extensions: +1 ply when side-to-move king is in check",
+        "evidence": "`src/search.cob:608\u2013611`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-185",
+        "title": "Root promotion bonus (+80000 + piece value)",
+        "evidence": "`src/search.cob:305\u2013316`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-186",
+        "title": "Root castling bonus (+500)",
+        "evidence": "`src/search.cob:318\u2013321`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-187",
+        "title": "Selection sort (pick-best) for move ordering at root, inner nodes, and quiescence",
+        "evidence": "`src/search.cob:373\u2013406, 1011\u20131024, 1327\u20131360`",
+        "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-200",
+        "title": "Zobrist hash tables (EXTERNAL shared singleton across compilation units)",
+        "evidence": "`copybooks/hash.cpy:6`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-201",
+        "title": "LCG PRNG for hash key generation (multiplier=1103515245, increment=12345, modulus=2\u00b3\u00b9\u22121)",
+        "evidence": "`copybooks/hash.cpy:2\u20134`, `src/fen.cob:199\u2013205`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-202",
+        "title": "Piece-square keys: 12 pieces \u00d7 128 squares",
+        "evidence": "`copybooks/hash.cpy:9\u201310`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-203",
+        "title": "Side-to-move key",
+        "evidence": "`copybooks/hash.cpy:11`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-204",
+        "title": "Castling combination keys (16 values)",
+        "evidence": "`copybooks/hash.cpy:12`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-205",
+        "title": "En passant file keys (8 values)",
+        "evidence": "`copybooks/hash.cpy:13`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-206",
+        "title": "Full Zobrist hash computation from position (in FEN parser)",
+        "evidence": "`src/fen.cob:207\u2013244`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-207",
+        "title": "Incremental Zobrist update in MAKEMOVE (pieces, side, castling, EP)",
+        "evidence": "`src/makemove.cob:91\u2013278`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-208",
+        "title": "Transposition table: 1,048,576 entries (key, depth, flag, score, best move)",
+        "evidence": "`copybooks/searchstate.cpy:20\u201329`, `copybooks/constants.cpy:42`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-209",
+        "title": "TT probing: indexed by `MOD(GS-KEY, TT-SIZE) + 1`",
+        "evidence": "`src/search.cob:624\u2013665`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-210",
+        "title": "TT cutoff: exact match returns immediately; lower bound \u2265 beta; upper bound \u2264 alpha",
+        "evidence": "`src/search.cob:645\u2013663`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-211",
+        "title": "TT move extraction for ordering (priority +95000)",
+        "evidence": "`src/search.cob:625\u2013632, 925\u2013930`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-212",
+        "title": "TT mate score normalization (adjust relative to current ply on probe/store)",
+        "evidence": "`src/search.cob:636\u2013643, 1089\u20131097`",
+        "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-220",
+        "title": "Late Move Reductions (LMR): reduce by 1 for quiet moves at depth \u2265 3, legal count \u2265 4; reduce by 2 at depth \u2265 6, legal count \u2265 10; re-search at full depth on fail-high",
+        "evidence": "`src/search.cob:767\u2013796`",
+        "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-221",
+        "title": "Null-move pruning (NMP): R=3 reduction, requires depth \u2265 4, not in check, non-pawn material present; beta cutoff if null-move score \u2265 beta",
+        "evidence": "`src/search.cob:667\u2013705`",
+        "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-222",
+        "title": "Null-move Zobrist update: toggle side, clear EP, adjust hash key",
+        "evidence": "`src/search.cob:866\u2013910`",
+        "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-230",
+        "title": "Aspiration windows: for depth \u2265 3, initial \u00b150 around previous score; re-search with full window on fail",
+        "evidence": "`src/search.cob:142\u2013161`",
+        "phase": "Phase 18: Aspiration Windows & PVS",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-231",
+        "title": "Principal Variation Search (PVS): first move full window, rest null window, re-search on fail-high (root + inner)",
+        "evidence": "`src/search.cob:241\u2013260, 758\u2013805`",
+        "phase": "Phase 18: Aspiration Windows & PVS",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-232",
+        "title": "PV move from previous iteration seeded into next iteration",
+        "evidence": "`src/search.cob:135\u2013139`",
+        "phase": "Phase 18: Aspiration Windows & PVS",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-240",
+        "title": "Late Move Pruning (LMP): skip quiet moves at depth \u2264 2 when legal count \u2265 12 (depth 1) or \u2265 20 (depth 2)",
+        "evidence": "`src/search.cob:739\u2013750`",
+        "phase": "Phase 19: Late Move Pruning & Mate Distance Pruning",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-241",
+        "title": "Mate distance pruning: tighten alpha/beta bounds based on `MATE-SCORE \u00b1 GS-PLY`",
+        "evidence": "`src/search.cob:582\u2013594`",
+        "phase": "Phase 19: Late Move Pruning & Mate Distance Pruning",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-250",
+        "title": "Pawn file count precomputation (`WPC`/`BPC` arrays per file)",
+        "evidence": "`src/eval.cob:64\u201389`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-251",
+        "title": "Pawn rank tracking (`WPMIN`/`BPMAX` per file) for passed pawn detection",
+        "evidence": "`src/eval.cob:68\u201369, 82\u201385`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-252",
+        "title": "Doubled pawn penalty: \u22128 cp per extra pawn on same file",
+        "evidence": "`src/eval.cob:91\u2013101`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-253",
+        "title": "Isolated pawn penalty: \u221210 cp if no friendly pawn on adjacent files",
+        "evidence": "`src/eval.cob:168\u2013187`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-254",
+        "title": "Passed pawn bonus: +10 + `rank \u00d7 8` if no enemy pawn ahead on same/adjacent files",
+        "evidence": "`src/eval.cob:189\u2013205`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-255",
+        "title": "Pawn piece-square heuristic: advancement reward + central file bonus",
+        "evidence": "`src/eval.cob:161\u2013166`",
+        "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-260",
+        "title": "Knight centralization: `24 \u2212 (manhattan_dist \u00d7 6)`",
+        "evidence": "`src/eval.cob:207\u2013208`",
+        "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-261",
+        "title": "Bishop centralization: `16 \u2212 (manhattan_dist \u00d7 4)`",
+        "evidence": "`src/eval.cob:209\u2013211`",
+        "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-262",
+        "title": "Queen mild centralization: `5 \u2212 (manhattan_dist \u00d7 2)`",
+        "evidence": "`src/eval.cob:234\u2013236`",
+        "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-263",
+        "title": "Rook on 7th rank bonus: +20 cp",
+        "evidence": "`src/eval.cob:213\u2013215`",
+        "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-264",
+        "title": "Rook on open file: +12 cp (no pawns), semi-open file: +6 cp (no friendly pawn)",
+        "evidence": "`src/eval.cob:216\u2013233`",
+        "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-270",
+        "title": "Non-pawn material (NPM) tracking for game phase detection",
+        "evidence": "`src/eval.cob:124\u2013127`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-271",
+        "title": "Endgame detection: `NPM-TOTAL \u2264 2600`",
+        "evidence": "`src/eval.cob:252\u2013254`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-272",
+        "title": "King piece-square (middlegame): encourages edge placement `(dist \u00d7 5) \u2212 20`",
+        "evidence": "`src/eval.cob:274\u2013276, 297\u2013298`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-273",
+        "title": "King piece-square (endgame): encourages centralization `20 \u2212 (dist \u00d7 5)`",
+        "evidence": "`src/eval.cob:272\u2013273, 295\u2013296`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-274",
+        "title": "White king pawn shield: +6 per friendly pawn on 3 forward squares, \u22126 per missing",
+        "evidence": "`src/eval.cob:303\u2013334`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-275",
+        "title": "Black king pawn shield",
+        "evidence": "`src/eval.cob:336\u2013365`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-276",
+        "title": "Pawn shield disabled in endgame",
+        "evidence": "`src/eval.cob:304`",
+        "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-280",
+        "title": "Bishop pair bonus: +30 cp for having 2+ bishops",
+        "evidence": "`src/eval.cob:368\u2013370`",
+        "phase": "Phase 23: Evaluation Rewrite \u2014 Misc Terms",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-281",
+        "title": "Tempo bonus: +10 cp for the side to move",
+        "evidence": "`src/eval.cob:372\u2013377`",
+        "phase": "Phase 23: Evaluation Rewrite \u2014 Misc Terms",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-290",
+        "title": "TT replacement policy: depth-preferred (replace only if new depth \u2265 stored depth or different key)",
+        "evidence": "`src/search.cob:1080\u20131104`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-291",
+        "title": "TT flag determination: EXACT (alpha improved, < beta), LOWER (beta cutoff), UPPER (no improvement)",
+        "evidence": "`src/search.cob:850\u2013860`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-292",
+        "title": "Threefold repetition detection: scan undo stack keys within reversible window, draw on 2 hits",
+        "evidence": "`src/search.cob:566\u2013580`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-293",
+        "title": "50-move rule draw: return 0 if `GS-HALFMOVE \u2265 100`",
+        "evidence": "`src/search.cob:561\u2013564`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-294",
+        "title": "Delta pruning in quiescence: prune if `standpat + 950 < alpha`",
+        "evidence": "`src/search.cob:1207\u20131211`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-295",
+        "title": "Quiescence MVV-LVA + promotion scoring",
+        "evidence": "`src/search.cob:1257\u20131325`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-296",
+        "title": "Time check with countdown: every 2048 nodes, call TIMEUTIL, compare elapsed vs limit",
+        "evidence": "`src/search.cob:547\u2013558, 1183\u20131196`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-297",
+        "title": "Time abort at root: retain previous iteration's best move/score",
+        "evidence": "`src/search.cob:163\u2013171`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-298",
+        "title": "Killer move update on beta cutoff: promote to slot 1, demote old to slot 2",
+        "evidence": "`src/search.cob:1046\u20131070`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-299",
+        "title": "History heuristic update on cutoff: depth\u00b2 bonus, halved on overflow (aging)",
+        "evidence": "`src/search.cob:1072\u20131078`",
+        "phase": "Phase 24: Search Refinements",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-300",
+        "title": "`go wtime/btime/winc/binc/movestogo` support",
+        "evidence": "`src/main.cob:315\u2013327`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-301",
+        "title": "Side-aware clock selection (pick wtime/winc or btime/binc based on side-to-move)",
+        "evidence": "`src/main.cob:344\u2013350`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-302",
+        "title": "Moves-to-go estimation: default 22, clamped [10, 60]",
+        "evidence": "`src/main.cob:352\u2013355`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-303",
+        "title": "Overhead subtraction: 50ms safety margin",
+        "evidence": "`src/main.cob:358\u2013360`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-304",
+        "title": "Time allocation formula: `(safe_remaining / movestogo) + (increment \u00d7 0.8)`",
+        "evidence": "`src/main.cob:362`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-305",
+        "title": "Time cap: think time \u2264 20% of remaining",
+        "evidence": "`src/main.cob:363\u2013364`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-306",
+        "title": "Minimum think time: floor of 20ms",
+        "evidence": "`src/main.cob:366\u2013372`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-307",
+        "title": "Final safety clamp: think \u2264 remaining",
+        "evidence": "`src/main.cob:374`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-308",
+        "title": "Centisecond conversion with minimum 1 cs",
+        "evidence": "`src/main.cob:376\u2013379`",
+        "phase": "Phase 25: Time Management (advanced)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-310",
+        "title": "PGN-format opening book for cutechess-cli diversification (100 games from standard openings)",
+        "evidence": "`openings/book.pgn`",
+        "phase": "Phase 26: Opening Book (PGN format)",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-320",
+        "title": "macOS ad-hoc code signing (`codesign -s - -f`) via `make sign` target",
+        "evidence": "`Makefile:75\u201378`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-321",
+        "title": "macOS quarantine xattr clearing (`xattr -dr com.apple.quarantine/provenance`) via `make unquarantine`",
+        "evidence": "`Makefile:80\u201394`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-322",
+        "title": "Engine health check: `tools/engine_check.py` \u2014 runs `--perft-startpos 1`, checks for SIGKILL, prints macOS diagnostics (Mach-O magic, otool, codesign, xattr, strip version)",
+        "evidence": "`tools/engine_check.py:1\u2013132`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-323",
+        "title": "Build retry loop: up to 5 attempts with `engine_check.py` validation between rebuilds",
+        "evidence": "`Makefile:57\u201366`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-324",
+        "title": "Force Apple toolchain PATH prefix: `PATH=\"/usr/bin:/bin:/usr/sbin:/sbin:$$PATH\"` before `cobc` invocation (prevents GNU `strip` from corrupting Mach-O)",
+        "evidence": "`Makefile:73`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-325",
+        "title": "macOS-specific compiler flags: `-target arm64-apple-macosx`, `-isysroot $(MACOS_SDK)`, `-Wl,-adhoc_codesign`",
+        "evidence": "`Makefile:17\u201324`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-326",
+        "title": "`.NOTPARALLEL:` + explicit `clean \u2192 build` ordering to prevent build races",
+        "evidence": "`Makefile:29\u201337`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-327",
+        "title": "Quarantine/codesign workarounds in tool scripts (`perft_check.py`, `uci_smoke.sh`, `elo_run.py`)",
+        "evidence": "`tools/perft_check.py`, `tools/uci_smoke.sh`, `tools/elo_run.py`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "F-328",
+        "title": "Hash UCI option declaration (`option name Hash type spin default 16 min 1 max 1024`)",
+        "evidence": "`src/main.cob:126`",
+        "phase": "Phase 27: macOS Build System Hardening",
+        "source": "SPECIFICATION_BACKLOG.md"
+      }
+    ],
+    "delivered_from_backlog": 184,
+    "readme_features": [
+      "Full rule handling: castling, en passant, promotions, checkmate/stalemate detection, repetition detection, and the 50-move rule inside search.",
+      "UCI support for the common engine loop: `uci`, `isready`, `ucinewgame`, `position startpos|fen`, `go depth`, `go movetime`, and clock-driven `go`.",
+      "CLI perft modes for correctness testing:",
+      "`--perft-startpos <depth>`",
+      "`--perft \"<fen>\" <depth>`",
+      "Root search info output in UCI format.",
+      "Deterministic opening suites in [`openings/book.pgn`](openings/book.pgn) and [`openings/book.epd`](openings/book.epd) for tournament runs.",
+      "Historical tournament artifacts under [`results/`](results/)."
+    ],
+    "prompt_subtasks": [
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "PASS 1 (Extraction): reconstruct the feature backlog + prompt ledger + replay package (repro-first, factual)."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "PASS 2 (Interpretation): characterize agent strategies, outcomes/quality, interaction demand; correlate with lightweight repo metrics."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "I will NOT provide transcripts proactively."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "You must analyze the repo as-is (git history may be minimal/absent)."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Codex stores local state under CODEX_HOME (default ~/.codex). Session artifacts are typically under:"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "$CODEX_HOME/sessions/ (often JSONL files, session-id named)"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "$CODEX_HOME/history.jsonl (if history persistence is enabled)"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "$CODEX_HOME/log/ (diagnostic logs; location may vary via config)"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Prefer transcript evidence from these artifacts; fall back to repo-only when unavailable."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Do NOT invent features, decisions, commands, or outcomes."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Every claim must be traceable to evidence from: repo files, git commits (if any), CODEX_HOME session artifacts, and run/test logs you executed."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "If you infer anything, label it INFERRED and justify why."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Redact secrets (tokens/keys) if encountered in repo or logs."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Keep quotes short (<= 25 words). Prefer pointers."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "[R:path:lines] repo file references (include line ranges when possible)"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "[G:commit <hash>] git commit reference"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "[T:session <id/filename>:event_###] transcript/session-log reference (or timestamp range)"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "[L:run_<n>] outputs of build/test/run commands you executed"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Do NOT list them in the FEATURE BACKLOG table."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "If explicitly requested by the user for reproducibility, put them in a separate section:"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "why it blocks the analysis,"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "what artifact would resolve it,"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "a \u201cDefault if unanswered\u201d assumption."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "repo root, primary language(s), entry points, build system, test framework, CI configs."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "git metadata if present: branch, HEAD, remotes."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Identify project rules that may affect behavior: AGENTS.md, CONTRIBUTING, .codex/config.toml, etc."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Determine CODEX_HOME (env var if set; else ~/.codex)."
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "Search for session files likely tied to this repo by:"
+      },
+      {
+        "ts": "2026-03-19T12:54:52.194000+00:00",
+        "item": "matching the repo absolute"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/Makefile`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/README.md`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/src/` (COBOL programs)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`main.cob` (entry: UCI loop + CLI modes)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`board.cob` (position state init/reset, helpers)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`fen.cob` (FEN parsing/printing)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`movegen.cob` (pseudo-legal generation)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`attack.cob` (is-square-attacked, in-check)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`makemove.cob` (make/unmake + undo stack)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`perft.cob` (perft recursion + CLI hook)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`search.cob` (iterative deepening + alpha-beta + quiescence)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`eval.cob` (evaluation function)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`uci.cob` (parsing UCI commands, \u201cposition/go/stop\u201d glue)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`time.cob` (centisecond clock utilities)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`constants.cpy` (piece codes, flags, limits)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`types.cpy` (GAME-STATE, MOVE, UNDO, MOVE-LIST records)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`offsets.cpy` (0x88 offsets arrays)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/tests/`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`perft_cases.json` (FEN + depth + expected nodes)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/tools/`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`perft_check.py` (runs engine perft and compares)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`uci_smoke.sh` (basic UCI handshake script)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`elo_run.py` (runs cutechess-cli match + produces report)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`elo_calc.py` (parses PGN, computes Elo diff + CI)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/openings/`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`book.epd` (small deterministic opening suite for cutechess)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Build output: `/Users/mathieuacher/SANDBOX/COBOL-chess/bin/cobochess`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Default mode: **UCI** on stdin/stdout."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Extra CLI modes:"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`cobochess --perft \"<FEN>\" <depth>` \u2192 prints `nodes=<N>` and exits non-zero on parse error."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`cobochess --perft-startpos <depth>` \u2192 same, using standard start position."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`uci` \u2192 prints `id name`, `id author`, `option name Hash type spin default 16 min 1 max 1024`, then `uciok`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`isready` \u2192 `readyok`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`ucinewgame` \u2192 clears internal search state (history, TT if any)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`position startpos [moves ...]`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`position fen <fen> [moves ...]`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`go depth N`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`go movetime M` (M in ms; internally use centiseconds = `M/10` rounded)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`go wtime <ms> btime <ms> winc <ms> binc <ms> movestogo <n>` (simple allocation rule)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`stop` (best-effort: stop after current iteration / node batch; must respond promptly)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`quit`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Always output `bestmove <move>` (UCI coordinate, promotion suffix `q/r/b/n`), or `bestmove 0000` if no legal move."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Periodic `info` lines during search (at least at end of each completed depth): `info depth D nodes N score cp S pv ...`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Use 0x88 indices: `sq = rank*16 + file`, where `file=0..7`, `rank=0..7`."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "\u201cOffboard\u201d check: `sq < 0 OR sq > 127 OR (sq MOD 16) > 7`."
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Integers:"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`EMPTY=0`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "White: `WP=1 WN=2 WB=3 WR=4 WQ=5 WK=6`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Black: `BP=7 BN=8 BB=9 BR=10 BQ=11 BK=12`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "Helper functions:"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`ColorOf(piece)` \u2192 WHITE/BLACK/NONE"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`TypeOf(piece)` \u2192 PAWN/KNIGHT/\u2026 (ignoring color)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`BOARD[128]` piece array"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`SIDE-TO-MOVE` (0=white,1=black)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`CASTLING` bitmask (WK,WQ,BK,BQ)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`EP-SQ` (-1 if none)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`HALFMOVE`, `FULLMOVE`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`KING-SQ[2]`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`HISTORY-KEYS[]` (for repetition; store Zobrist key per ply)"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "(Optional later) `ZKEY` (64-bit), `TT` table"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`FROM-SQ`, `TO-SQ`"
+      },
+      {
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "item": "`PROMO-TYPE` (0 none, els"
+      }
+    ],
+    "commit_subjects": [
+      {
+        "sha": "0e2ab146f3",
+        "date": "2026-05-04",
+        "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+      },
+      {
+        "sha": "faf0f163e9",
+        "date": "2026-03-19",
+        "subject": "Initial commit: cobochess \u2014 COBOL (GnuCOBOL) UCI chess engine (~1600-1700 Elo)"
+      }
+    ],
+    "total_features_proxy": 284
+  },
+  "story_excerpts": {
+    "README.md": {
+      "# COBOL Chess Engine (`cobochess`)": "`cobochess` is a small but real chess engine written in GNUCobol. It speaks UCI, enforces full chess move legality, exposes command-line perft modes, and ships with a benchmarking harness built around `cutechess-cli` and Stockfish.\n\nThis repository now has two documentation layers:\n\n- `README.md`: quick project overview, feature list, build/run workflow, and a compact architecture summary.\n- [`ARCHITECTURE.md`](ARCHITECTURE.md): the longer technical report covering data structures, control flow, search, evaluation, tooling, and current limitations.",
+      "## Architecture at a glance": "- Multi-program GNUCobol engine: `COBOCHESS`, `SEARCH`, `ALPHABETA`, `QUIESCE`, `MOVEGEN`, `MAKEMOVE`, `UNMAKEMOVE`, `ATTACK`, `EVAL`, `FEN`, `TIMEUTIL`, and `MOVE2UCI`.\n- Board representation: a shared 0x88 mailbox board stored in `GAME-STATE`.\n- Move legality model: pseudo-legal generation plus legality filtering through `MAKEMOVE`/`UNMAKEMOVE`.\n- Search: iterative deepening negamax with alpha-beta pruning, aspiration windows, principal variation search, quiescence search, transposition table, killer/history heuristics, null-move pruning, late-move reductions, late-move pruning, check extensions, and mate-distance pruning.\n- Evaluation: material plus centralization, pawn structure, passed pawns, rook open-file bonuses, king placement, king shield, bishop pair, and tempo.\n- Hashing: deterministic Zobrist tables with incremental key updates during make/unmake.\n- Tooling: perft regression tests, UCI smoke tests, a Cute Chess tournament harness, and PGN-based Elo estimation scripts.\n\n```mermaid\nflowchart TD\n    A[\"COBOCHESS\\nmain.cob\"] --> B[\"BOARD + FEN\"]\n    A --> C[\"SEARCH\"]\n    C --> D[\"MOVEGEN\"]\n    C --> E[\"MAKEMOVE / UNMAKEMOVE\"]\n    E --> F[\"ATTACK\"]\n    C --> G[\"ALPHABETA / QUIESCE\"]\n    G --> D\n    G --> E\n    G --> H[\"EVAL\"]\n    A --> I[\"MOVE2UCI + TIMEUTIL\"]\n    J[\"Python tools\\nperft / cutechess / elo\"] --> A\n```\n\nWhat emerges is a compact conventional engine built with COBOL records and recursive subprograms instead of bitboards and packed move integers. The resul",
+      "## Features": "- Full rule handling: castling, en passant, promotions, checkmate/stalemate detection, repetition detection, and the 50-move rule inside search.\n- UCI support for the common engine loop: `uci`, `isready`, `ucinewgame`, `position startpos|fen`, `go depth`, `go movetime`, and clock-driven `go`.\n- CLI perft modes for correctness testing:\n  - `--perft-startpos <depth>`\n  - `--perft \"<fen>\" <depth>`\n- Root search info output in UCI format.\n- Deterministic opening suites in [`openings/book.pgn`](openings/book.pgn) and [`openings/book.epd`](openings/book.epd) for tournament runs.\n- Historical tournament artifacts under [`results/`](results/).",
+      "## Quickstart": "Requirements:\n\n- `cobc` (GNUCobol 3.2.x works here)\n- `python3`\n- Optional for matches: `stockfish`, `cutechess-cli`\n\nBuild the engine:\n\n```sh\nmake build\n```\n\nThe main binary is produced at `bin/cobochess`. The Makefile also runs a post-build smoke check and includes macOS-specific signing/quarantine workarounds.\n\nRun in UCI mode:\n\n```sh\n./bin/cobochess\n```\n\nMinimal example:\n\n```sh\nprintf 'uci\\nisready\\nposition startpos moves e2e4 e7e5\\ngo depth 4\\nquit\\n' | ./bin/cobochess\n```\n\nRun correctness checks:\n\n```sh\nmake perft\nmake uci-smoke\n```\n\nRun a match against Stockfish:\n\n```sh\npython3 tools/elo_run.py --games 20 --sf-elo 1320\n```\n\nEstimate Elo from the resulting PGN:\n\n```sh\npython3 tools/elo_calc.py results/match_YYYYMMDD_HHMMSS.pgn --baseline-elo 1320\n```",
+      "## Repository map": "| Path | Role |\n| --- | --- |\n| `src/` | Engine code: entry point, board state, move generation, make/unmake, attack detection, evaluation, search, timing, UCI formatting |\n| `copybooks/` | Shared COBOL data layouts and constants (`GAME-STATE`, move records, search state, hash tables) |\n| `tests/` | Perft regression cases |\n| `tools/` | Python/shell helpers for smoke tests, engine checks, tournaments, and Elo estimation |\n| `openings/` | Deterministic opening suites used by the match harness |\n| `results/` | Historical PGNs and JSON match summaries |\n| `cutechess/` | Vendored third-party Cute Chess source/build tree used for engine-vs-engine evaluation |\n| `bin/` | Built binaries; `bin/cobochess` is the authoritative engine target |"
+    },
+    "SPECIFICATION.md": {
+      "# COBOL Chess Engine \u2014 cobochess": "A UCI chess engine written in COBOL (GnuCOBOL 3.2.x) with an estimated Elo of ~1600-1700.",
+      "## Feature Backlog": "| ID | Title | Type | Status |\n|----|-------|------|--------|\n| BL-001 | Core Chess Engine (0x88, UCI, search, eval) | Feature | Done |\n| BL-002 | Perft Validation Suite | Test | Done |\n| BL-003 | Strength Improvement Phase 1 (~675\u2192~1600) | Feature | Done |\n| BL-004 | Strength Improvement Phase 2 (1600\u2192~1700) | Feature | Partial |\n| BL-005 | Elo Measurement Harness | Tooling | Done |\n| BL-006 | Elo Calculator Bug Fixes | Bugfix | Done |\n| BL-007 | macOS Build System Fix (SIGKILL) | Bugfix | Partial |",
+      "## Prompt Ledger": "",
+      "### PL-ROOT (Initial Prompt)": "**Raw:** \"I want to build a chess engine in COBOL (GNUCobol)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of 'similar' levels\"\n\n**Canonical:** Build a UCI chess engine in COBOL (GnuCOBOL, free-format). 0x88 mailbox board, modular .cob files, iterative deepening alpha-beta + quiescence, material + PST eval. Include perft test suite and cutechess-cli + Stockfish Elo harness.",
+      "### Per-Feature Prompts": "- **BL-001:** \"PLEASE IMPLEMENT THIS PLAN: # COBOL (GnuCOBOL) UCI Chess Engine + Elo Harness [detailed plan]\"\n- **BL-003:** \"the current implementation is very weak. Try to significantly improve the engine\" \u2192 \"let's try to beat Stockfish @1600 now\"\n- **BL-004:** \"now try to significantly improve the strength of the engine\" \u2192 \"continue...\"\n- **BL-007:** \"perft failed (signal 9)\" \u2192 \"please fix the build workflow\"",
+      "## Reproduction Instructions": "",
+      "### Prerequisites": "- GnuCOBOL 3.2.x (`cobc`)\n- Python 3\n- Stockfish (in PATH)\n- cutechess-cli (in PATH)\n- macOS arm64 with Xcode CLI tools",
+      "### Build & Test": "```sh\nmake build              # Compile engine\nmake perft              # Run perft validation (16 test cases)\nmake uci-smoke          # UCI protocol smoke test\n```",
+      "### Elo Assessment": "```sh\npython3 tools/elo_run.py --games 200 --sf-elo 1320    # Baseline\npython3 tools/elo_run.py --games 200 --sf-elo 1600    # Target level\npython3 tools/elo_run.py --games 20 --sf-elo 1800     # Ceiling test\n```",
+      "### Checkpoints": "No git commits available. File snapshot as of Feb 11, 2026 (with binary rebuilt Feb 19).",
+      "## Repo Statistics": "- **27 project files**, **5,286 total LOC**\n- COBOL: 16 files, 3,988 LOC (75%)\n- Python tooling: 4 files, 681 LOC (13%)\n- 1,178 test games played across 54 match sessions",
+      "## Limitations": "- No git history (repo not initialized)\n- macOS build can fail due to quarantine/strip issues\n- No CI/CD pipeline\n- Eval/search improvements from Phase 2 may have regressed after build crisis"
+    },
+    "SPECIFICATION_BACKLOG.md": {
+      "# cobochess \u2014 Implementation Feature Backlog": "This backlog enumerates every distinct feature implemented by the agent, organized chronologically by implementation phase. Each feature is traced to the source code where it resides in the final codebase.\n\n---",
+      "## Phase 1: Project Scaffold": "*Feb 9, 10:28\u201310:32 \u00b7 [T:019c41c7:lines_200\u2013250]*\n\n| ID | Feature | Evidence |\n|----|---------|----------|\n| F-001 | Directory structure (`src/`, `copybooks/`, `tools/`, `tests/`, `openings/`, `bin/`, `results/`) | repo layout |\n| F-002 | Makefile with `cobc` build, `perft`, `uci-smoke`, `clean`, `rebuild` targets | `Makefile:1\u2013105` |\n| F-003 | `.gitignore` for binaries, results, caches | `.gitignore` |\n| F-004 | `README.md` with build/test/usage docs | `README.md` |\n\n---",
+      "## Phase 2: Core Engine \u2014 Board & Data Model": "*Feb 9, 10:32\u201310:45 \u00b7 [T:019c41c7:lines_250\u2013500]*\n\n| ID | Feature | Evidence |\n|----|---------|----------|\n| F-010 | 0x88 mailbox board representation (128-element array, off-board detection via `MOD(sq,16) <= 7`) | `copybooks/types.cpy:3\u20134` |\n| F-011 | Piece encoding (EMPTY=0, WP=1..BK=12), color constants (WHITE=0, BLACK=1) | `copybooks/constants.cpy:5\u201317` |\n| F-012 | Castling bitmask encoding (WK=1, WQ=2, BK=4, BQ=8) | `copybooks/constants.cpy:19\u201322` |\n| F-013 | Move flag bitmask (CAPTURE=1, EP=2, CASTLE=4, PROMOTION=8, PAWN-DOUBLE=16) | `copybooks/constants.cpy:24\u201328` |\n| F-014 | Move record structure (from, to, promo, flags, score) | `copybooks/types.cpy:26\u201331` |\n| F-015 | Move list (count + 256-entry array) | `copybooks/types.cpy:33\u201335` |\n| F-016 | Game state structure: board, side, castling, EP sq, halfmove, fullmove, king sqs, ply, Zobrist key | `copybooks/types.cpy:1\u201313` |\n| F-017 | Undo stack: 256-entry stack with captured/moved piece, castling, EP, halfmove, fullmove, king sq, key | `copybooks/types.cpy:14\u201323` |\n| F-018 | Movement offset tables: knight (8), king (8), bishop (4), rook (4); runtime-initialized | `copybooks/offsets.cpy:1\u20136` |\n| F-019 | Board initialization: clear all squares to EMPTY, reset state | `src/board.cob:1\u201330` |\n\n---",
+      "## Phase 3: Core Engine \u2014 FEN Parsing": "*Feb 9, 10:45\u201310:48*\n\n| ID | Feature | Evidence |\n|----|---------|----------|\n| F-020 | FEN string parsing via `UNSTRING ... DELIMITED BY SPACE` (6 fields) | `src/fen.cob:49\u201351` |\n| F-021 | Piece placement: rank-by-rank traversal, char-to-piece mapping (12 types) | `src/fen.cob:58\u201396` |\n| F-022 | Side-to-move parsing (`w`/`b`) | `src/fen.cob:98\u2013108` |\n| F-023 | Castling rights parsing (`KQkq` \u2192 bitmask, `-` for none) | `src/fen.cob:110\u2013127` |\n| F-024 | En passant square parsing (algebraic \u2192 0x88 index) | `src/fen.cob:129\u2013156` |\n| F-025 | Halfmove/fullmove clock parsing via `NUMVAL` | `src/fen.cob:158\u2013160` |\n| F-026 | King square detection during placement | `src/fen.cob:88\u201393` |\n| F-027 | FEN validation with error status return | `src/fen.cob:53\u201356, 77\u201384` |\n\n---",
+      "## Phase 4: Core Engine \u2014 Attack Detection": "*Feb 9, 10:48\u201310:50*\n\n| ID | Feature | Evidence |\n|----|---------|----------|\n| F-030 | Square-attacked-by-side query | `src/attack.cob:1\u2013164` |\n| F-031 | Pawn attack detection (white/black pawn diagonal offsets) | `src/attack.cob:65\u201395` |\n| F-032 | Knight attack detection (8 offsets) | `src/attack.cob:97\u2013110` |\n| F-033 | King attack detection (8 offsets) | `src/attack.cob:112\u2013125` |\n| F-034 | Bishop/queen diagonal ray attack detection | `src/attack.cob:127\u2013142` |\n| F-035 | Rook/queen orthogonal ray attack detection | `src/attack.cob:144\u2013159` |\n| F-036 | 0x88 off-board check for ray/step moves | `src/attack.cob:100, 115, 131, 148` |\n\n---",
+      "## Phase 5: Core Engine \u2014 Move Generation": "*Feb 9, 10:50\u201310:55*\n\n| ID | Feature | Evidence |\n|----|---------|----------|\n| F-040 | Full legal move generator (iterates 0x88 board, dispatches by piece) | `src/movegen.cob:42\u201355` |\n| F-041 | White pawn single push (+16 to empty) | `src/movegen.cob:104\u2013105, 123\u2013146` |\n| F-042 | Black pawn single push (-16 to empty) | `src/movegen.cob:117\u2013118, 148\u2013171` |\n| F-043 | White pawn double push (+32 from rank 1, both squares empty) | `src/movegen.cob:134\u2013141` |\n| F-044 | Black pawn double push (-32 from rank 6) | `src/movegen.cob:159\u2013166` |\n| F-045 | Pawn captures (diagonal, enemy piece or EP square) | `src/movegen.cob:96\u201399, 109\u2013112, 173\u2013217` |\n| F-046 | En passant capture (detect `TO-SQ = GS-EP-SQ`, flag EP+CAPTURE) | `src/movegen.cob:175\u2013178, 198\u2013201` |\n| F-047 | Pawn promotion (all 4 pieces: Q/R/B/N) on push and capture | `src/movegen.cob:415\u2013429` |\n| F-048 | Promotion pushes included in captures-only mode (quiescence) | `src/movegen.cob:103, 116` |\n| F-049 | Knight moves (8 step offsets) | `src/movegen.cob:219\u2013224, 443\u2013450` |\n| F-050 | Bishop moves (4 sliding directions) | `src/movegen.cob:226\u2013231, 461\u2013464` |\n| F-051 | Rook moves (4 sliding directions) | `src/movegen.cob:233\u2013238, 466\u2013469` |\n| F-052 | Queen moves (union of bishop + rook directions) | `src/movegen.cob:240\u2013249` |\n| F-053 | King moves (8 step offsets) | `src/movegen.cob:251\u2013255, 452\u2013459` |\n| F-054 | Sliding piece ray traversal (continue until off-board or blocked; capture blocker) | `src/movegen.cob:290\u2013319` |\n| F"
+    },
+    "ARCHITECTURE.md": {
+      "# Architecture of `cobochess`": "`cobochess` is not just a parser wrapped around legal move generation. It is a conventional small chess engine implemented in GNUCobol with explicit records, shared copybooks, recursive search subprograms, an incremental hash key, and a full engine-vs-engine evaluation harness.\n\nThe design favors clarity and explicit state transitions over low-level cleverness:\n\n- 0x88 mailbox board instead of bitboards\n- struct-like move records instead of packed move integers\n- pseudo-legal generation plus legality filtering via make/unmake\n- full evaluation recomputation instead of incremental eval bookkeeping\n\nThat makes the code unusually readable for a chess engine, and especially readable for a COBOL codebase.",
+      "## 1. Codebase structure": "",
+      "### Engine modules": "| File | Approx. lines | Responsibility |\n| --- | ---: | --- |\n| `src/main.cob` | 382 | Entry point, CLI modes, UCI loop, `position`, `go`, time allocation |\n| `src/board.cob` | 30 | Clears and initializes `GAME-STATE` |\n| `src/fen.cob` | 265 | Parses FEN, fills board state, computes Zobrist key from scratch |\n| `src/attack.cob` | 164 | Answers \"is this square attacked by side X?\" |\n| `src/movegen.cob` | 472 | Generates pseudo-legal moves on the 0x88 board |\n| `src/makemove.cob` | 615 | Make/unmake, undo stack, legality filter, incremental hash maintenance |\n| `src/perft.cob` | 66 | Recursive node counter for correctness testing |\n| `src/eval.cob` | 387 | Static evaluation |\n| `src/search.cob` | 1362 | Root iterative deepening, recursive alpha-beta, quiescence, move ordering, heuristics, TT |\n| `src/time.cob` | 49 | Centisecond timer helper |\n| `src/uci.cob` | 62 | Move-to-UCI string conversion |",
+      "### Shared data definitions": "| File | Responsibility |\n| --- | --- |\n| `copybooks/constants.cpy` | Piece IDs, colors, flags, search constants |\n| `copybooks/types.cpy` | `GAME-STATE`, `MOVE-REC`, `MOVE-LIST`, undo stack |\n| `copybooks/searchstate.cpy` | Shared search counters, killer moves, history table, transposition table |\n| `copybooks/hash.cpy` | External Zobrist tables and seed state |\n| `copybooks/offsets.cpy` | Knight/king/bishop/rook offsets for 0x88 traversal |",
+      "### Tooling and data": "| Path | Responsibility |\n| --- | --- |\n| `tests/perft_cases.json` | Regression positions for move generator correctness |\n| `tools/perft_check.py` | Runs the perft suite against expected node counts |\n| `tools/uci_smoke.sh` | Sends a minimal UCI session and checks for `uciok`, `readyok`, `bestmove` |\n| `tools/engine_check.py` | Post-build smoke test with extra diagnostics, especially for macOS |\n| `tools/elo_run.py` | Runs engine-vs-engine matches through `cutechess-cli` |\n| `tools/elo_calc.py` | Computes Elo estimate and Wilson-interval confidence bounds from PGN results |\n| `openings/` | Fixed opening suite for deterministic match starts |\n| `results/` | Historical PGNs and JSON summaries from evaluation runs |\n| `cutechess/` | Vendored third-party Cute Chess source/build tree, not engine logic |",
+      "## 2. Data model": "",
+      "### 2.1 `GAME-STATE`": "The central structure is `GAME-STATE` from `copybooks/types.cpy`:\n\n- `GS-PIECE(1..128)`: the 0x88 mailbox board\n- `GS-SIDE-TO-MOVE`: `WHITE` or `BLACK`\n- `GS-CASTLING`: 4-bit castling-rights mask\n- `GS-EP-SQ`: en-passant square, or `-1`\n- `GS-HALFMOVE` / `GS-FULLMOVE`: clocks needed for rules and FEN\n- `GS-KSQ(1..2)`: cached king squares\n- `GS-PLY`: current search ply\n- `GS-KEY`: incremental Zobrist key\n- `GS-UNDO(1..256)`: undo snapshots for make/unmake\n\nThe undo stack stores captured piece, moved piece, castling rights, EP square, clocks, king square, and previous hash key. That is enough to make/unmake without recomputing state from scratch.",
+      "### 2.2 Move representation": "Moves are stored as explicit records:\n\n- `M-FROM`\n- `M-TO`\n- `M-PROMO`\n- `M-FLAGS`\n- `M-SCORE`\n\nThis is slower and bulkier than the packed 16- or 32-bit move encodings common in C engines, but much easier to inspect and debug in COBOL.\n\n`MOVE-LIST` is simply `ML-COUNT` plus up to 256 move records.",
+      "### 2.3 Search state": "`copybooks/searchstate.cpy` defines the mutable state shared across recursive search:\n\n- node counter\n- stop flag\n- search start time\n- time limit\n- periodic time-check countdown\n- killer tables (`K1`, `K2`) indexed by ply\n- history heuristic table (`16384` entries for from/to pairs)\n- fixed-size transposition table with `1,048,576` entries\n\nThe TT stores key, depth, bound type, score, and best move fields."
+    }
+  },
+  "timeline_sample": {
+    "first_events": [
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 0,
+        "ts": "2026-02-09T09:42:20.739000+00:00",
+        "gap_s": 0,
+        "role": "developer",
+        "kind": "text",
+        "text_len": 3685,
+        "preview": "<permissions instructions>\nFilesystem sandboxing defines which files can be read or written. `sandbox_mode` is `workspace-write`: The sandbox permits reading files, and editing files in `cwd` and `writable_roots`. Editing files in other directories requires approval. Network access is restricted.\n# Escalation Requests\n\nCommands are run outside the sandbox if they are approved by the user, or match an existing rule that allows it to run unrestricted. The command string is split into independent command segments at shell control operators, including but not limited to:\n\n- Pipes: |\n- Logical operators: &&, ||\n- Command separators: ;\n- Subshell boundaries: (...), $(...)\n\nEach resulting segment is evaluated independently for sandbox restrictions and approval requirements.\n\nExample:\n\ngit pull | tee output.txt\n\nThis is treated as two command segments:\n\n[\"git\", \"pull\"]\n\n[\"tee\", \"output.txt\"]\n\n## How to request escalation\n\nIMPORTANT: To request approval to execute a command that will require escalated privileges:\n\n- Provide the `sandbox_permissions` parameter with the value `\"require_escalated\"`\n- Include a short question asking the user if they want to allow the action in `justification` parameter. e.g. \"Do you want to download and install dependencies for this project?\"\n- Optionally suggest a `prefix_rule` - this will be shown to the user with an option to persist the rule approval for future sessions.\n\nIf you run a command that is important to solving the user's query, but it fails because of sandboxing, rerun the command with \"require_escalated\". ALWAYS proceed to use the `justification` parameter - do not message the user before requesting approval for the command.\n\n## When to request escalation\n\nWhile commands are running inside the sandbox, here are some scenarios that will require escalation outside the sandbox:\n\n- You need to run a command that writes to a directory that requires it (e.g. running tests that write to /var)\n- You need to run a GUI app (e.g., open/xdg-open/osascript) to open browsers or files.\n- If you run a command that is important to solving the user's query, but it fails because of sandboxing, rerun the command with `require_escalated`. ALWAYS proceed to use the `sandbox_permissions` and `justification` parameters. do not message the user before requesting approval for the command.\n- You are about to take a potentially destructive action such as an `rm` or `git reset` that the user did not explicitly ask for.\n- Be judicious with escalating, but if completing the user's request requires it, you should do so - don't try and circumvent approvals by using other tools.\n\n## prefix_rule guidance\n\nWhen choosing a `prefix_rule`, request one that will allow you to fulfill similar requests from the user in the future without re-requesting escalation. It should be categorical and reasonably scoped to similar capabilities. You should rarely pass the entire command into `prefix_rule`.\n\n### Banned prefix_rules \nAvoid requesting overly broad prefixes that the user would be ill-advised to approve. For example, do not request [\"python3\"], [\"python\", \"-\"], or other similar prefixes.\nNEVER provide a prefix_rule argument for destructive commands like rm.\nNEVER provide a prefix_rule if your command uses a heredoc or herestring. \n\n### Examples\nGood examples of prefixes:\n- [\"npm\", \"run\", \"dev\"]\n- [\"gh\", \"pr\", \"check\"]\n- [\"pytest\"]\n- [\"cargo\", \"test\"]\n\n\n## Approved command prefixes\nThe following prefix rules have already been approved: - [\"git\", \"clone\"]\n- [\"git\", \"fetch\"]\n The writable roots are `/Users/mathieuacher/SANDBOX/COBOL-chess`, `/tmp`, `/var/folders/d4/g2yv44cd60l9fl309jgywkgm0000gn/T`.\n</permissions instructions>",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 1,
+        "ts": "2026-02-09T09:42:20.739000+00:00",
+        "gap_s": 0,
+        "role": "developer",
+        "kind": "text",
+        "text_len": 6684,
+        "preview": "<app-context>\n# Codex desktop context\n- You are running inside the Codex (desktop) app, which allows some additional features not available in the CLI alone:\n\n### Images/Visuals/Files\n- In the app, the model can display images using standard Markdown image syntax: ![alt](url)\n- When sending or referencing a local image, always use an absolute filesystem path in the Markdown image tag (e.g., ![alt](/absolute/path.png)); relative paths and plain text will not render the image.\n- When referencing code or workspace files in responses, always use full absolute file paths instead of relative paths.\n- If a user asks about an image, or asks you to create an image, it is often a good idea to show the image to them in your response.\n- Use mermaid diagrams to represent complex diagrams, graphs, or workflows. Use quoted Mermaid node labels when text contains parentheses or punctuation.\n- Return web URLs as Markdown links (e.g., [label](https://example.com)).\n\n### Automations\n- This app supports recurring tasks/automations\n- Automations are stored as TOML in $CODEX_HOME/automations/<id>/automation.toml (not in SQLite). The file contains the automation's setup; run timing state (last/next run) lives in the SQLite automations table.\n\n#### When to use directives\n- Only use ::automation-update{...} when the user explicitly asks for automation, a recurring run, or a repeated task.\n- If the user asks about their automations and you are not proposing a change, do not enumerate names/status/ids in plain text. Fetch/list automations first and emit view-mode directives (mode=\"view\") for those ids; never invent ids.\n- Never return raw RRULE strings in user-facing responses. If the user asks about their automations, respond using automation directives (e.g., with an \"Open\" button if you're not making changes).\n\n#### Directive format\n- Modes: view, suggested update, suggested create. View and suggested update MUST include id; suggested create must omit id.\n- For view directives, id is required and other fields are optional (the UI can load details).\n- For suggested update/create, include name, prompt, rrule, cwds, and status. cwds can be a comma-separated list or a JSON array string.\n- Always come up with a short name for the automation. If the user does not give one, propose a short name and confirm.\n- Default status to ACTIVE unless the user explicitly asks to start paused.\n- Always interpret and schedule times in the user's locale time zone.\n- Directives should be on their own line(s) and be separated by newlines.\n- Do not generate remark directives with multiline attribute values.\n\n#### Prompting guidance\n- Ask in plain language what it should do, when it should run, and which workspaces it should use (if any), then map those answers into name/prompt/rrule/cwds/status for the directive.\n- The automation prompt should describe only the task itself. Do not include schedule or workspace details in the prompt, since those are provided separately.\n- Keep automation prompts self-sufficient because the user may have limited availability to answer questions. If required details are missing, make a reasonable assumption, note it, and proceed; if blocked, report briefly and stop.\n- When helpful, include clear output expectations (file path, format, sections) and gating rules (only if X, skip if exists) to reduce ambiguity.\n- Automations should always open an inbox item.\n  - Archiving rule: only include `::archive-thread{}` when there is nothing actionable for the user.\n  - Safe to archive: \"no findings\" checks (bug scans that found nothing, clean lint runs, monitoring checks with no incidents).\n  - Do not archive: deliverables or follow-ups (briefs, reports, summaries, plans, recommendations).\n  - If you do archive, include the archive directive after the inbox item.\n- Do not instruct them to write a file or announce \"nothing to do\" unless the user explicitly asks for a file or that output.\n- When mentioning skills in automation prompts, use markdown links w",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 2,
+        "ts": "2026-02-09T09:42:20.739000+00:00",
+        "gap_s": 0,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 3031,
+        "preview": "# AGENTS.md instructions for /Users/mathieuacher/SANDBOX/COBOL-chess\n\n<INSTRUCTIONS>\n## Skills\nA skill is a set of local instructions to follow that is stored in a `SKILL.md` file. Below is the list of skills that can be used. Each entry includes a name, description, and file path so you can open the source for full instructions when using a specific skill.\n### Available skills\n- skill-creator: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations. (file: /Users/mathieuacher/.codex/skills/.system/skill-creator/SKILL.md)\n- skill-installer: Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos). (file: /Users/mathieuacher/.codex/skills/.system/skill-installer/SKILL.md)\n### How to use skills\n- Discovery: The list above is the skills available in this session (name + description + file path). Skill bodies live on disk at the listed paths.\n- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn. Multiple mentions mean use them all. Do not carry skills across turns unless re-mentioned.\n- Missing/blocked: If a named skill isn't in the list or the path can't be read, say so briefly and continue with the best fallback.\n- How to use a skill (progressive disclosure):\n  1) After deciding to use a skill, open its `SKILL.md`. Read only enough to follow the workflow.\n  2) When `SKILL.md` references relative paths (e.g., `scripts/foo.py`), resolve them relative to the skill directory listed above first, and only consider other paths if needed.\n  3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request; don't bulk-load everything.\n  4) If `scripts/` exist, prefer running or patching them instead of retyping large code blocks.\n  5) If `assets/` or templates exist, reuse them instead of recreating from scratch.\n- Coordination and sequencing:\n  - If multiple skills apply, choose the minimal set that covers the request and state the order you'll use them.\n  - Announce which skill(s) you're using and why (one short line). If you skip an obvious skill, say why.\n- Context hygiene:\n  - Keep context small: summarize long sections instead of pasting them; only load extra files when needed.\n  - Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked.\n  - When variants exist (frameworks, providers, domains), pick only the relevant reference file(s) and note that choice.\n- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue.\n</INSTRUCTIONS>",
+        "activity": "spec",
+        "se_task": "spec"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 3,
+        "ts": "2026-02-09T09:42:20.739000+00:00",
+        "gap_s": 0,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 118,
+        "preview": "<environment_context>\n  <cwd>/Users/mathieuacher/SANDBOX/COBOL-chess</cwd>\n  <shell>zsh</shell>\n</environment_context>",
+        "activity": "other",
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 4,
+        "ts": "2026-02-09T09:42:20.771000+00:00",
+        "gap_s": 0,
+        "role": "developer",
+        "kind": "text",
+        "text_len": 3728,
+        "preview": "<permissions instructions>\nFilesystem sandboxing defines which files can be read or written. `sandbox_mode` is `workspace-write`: The sandbox permits reading files, and editing files in `cwd` and `writable_roots`. Editing files in other directories requires approval. Network access is restricted.\n# Escalation Requests\n\nCommands are run outside the sandbox if they are approved by the user, or match an existing rule that allows it to run unrestricted. The command string is split into independent command segments at shell control operators, including but not limited to:\n\n- Pipes: |\n- Logical operators: &&, ||\n- Command separators: ;\n- Subshell boundaries: (...), $(...)\n\nEach resulting segment is evaluated independently for sandbox restrictions and approval requirements.\n\nExample:\n\ngit pull | tee output.txt\n\nThis is treated as two command segments:\n\n[\"git\", \"pull\"]\n\n[\"tee\", \"output.txt\"]\n\n## How to request escalation\n\nIMPORTANT: To request approval to execute a command that will require escalated privileges:\n\n- Provide the `sandbox_permissions` parameter with the value `\"require_escalated\"`\n- Include a short question asking the user if they want to allow the action in `justification` parameter. e.g. \"Do you want to download and install dependencies for this project?\"\n- Optionally suggest a `prefix_rule` - this will be shown to the user with an option to persist the rule approval for future sessions.\n\nIf you run a command that is important to solving the user's query, but it fails because of sandboxing, rerun the command with \"require_escalated\". ALWAYS proceed to use the `justification` parameter - do not message the user before requesting approval for the command.\n\n## When to request escalation\n\nWhile commands are running inside the sandbox, here are some scenarios that will require escalation outside the sandbox:\n\n- You need to run a command that writes to a directory that requires it (e.g. running tests that write to /var)\n- You need to run a GUI app (e.g., open/xdg-open/osascript) to open browsers or files.\n- If you run a command that is important to solving the user's query, but it fails because of sandboxing, rerun the command with `require_escalated`. ALWAYS proceed to use the `sandbox_permissions` and `justification` parameters. do not message the user before requesting approval for the command.\n- You are about to take a potentially destructive action such as an `rm` or `git reset` that the user did not explicitly ask for.\n- Be judicious with escalating, but if completing the user's request requires it, you should do so - don't try and circumvent approvals by using other tools.\n\n## prefix_rule guidance\n\nWhen choosing a `prefix_rule`, request one that will allow you to fulfill similar requests from the user in the future without re-requesting escalation. It should be categorical and reasonably scoped to similar capabilities. You should rarely pass the entire command into `prefix_rule`.\n\n### Banned prefix_rules \nAvoid requesting overly broad prefixes that the user would be ill-advised to approve. For example, do not request [\"python3\"], [\"python\", \"-\"], or other similar prefixes.\nNEVER provide a prefix_rule argument for destructive commands like rm.\nNEVER provide a prefix_rule if your command uses a heredoc or herestring. \n\n### Examples\nGood examples of prefixes:\n- [\"npm\", \"run\", \"dev\"]\n- [\"gh\", \"pr\", \"check\"]\n- [\"pytest\"]\n- [\"cargo\", \"test\"]\n\n\n## Approved command prefixes\nThe following prefix rules have already been approved: - [\"git\", \"clone\"]\n- [\"git\", \"fetch\"]\n The writable roots are `/Users/mathieuacher/SANDBOX/COBOL-chess`, `/Users/mathieuacher/SANDBOX/COBOL-chess`, `/tmp`, `/var/folders/d4/g2yv44cd60l9fl309jgywkgm0000gn/T`.\n</permissions instructions>",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 5,
+        "ts": "2026-02-09T09:42:20.771000+00:00",
+        "gap_s": 0,
+        "role": "developer",
+        "kind": "text",
+        "text_len": 7107,
+        "preview": "<collaboration_mode># Plan Mode (Conversational)\n\nYou work in 3 phases, and you should *chat your way* to a great plan before finalizing it. A great plan is very detailed\u2014intent- and implementation-wise\u2014so that it can be handed to another engineer or agent to be implemented right away. It must be **decision complete**, where the implementer does not need to make any decisions.\n\n## Mode rules (strict)\n\nYou are in **Plan Mode** until a developer message explicitly ends it.\n\nPlan Mode is not changed by user intent, tone, or imperative language. If a user asks for execution while still in Plan Mode, treat it as a request to **plan the execution**, not perform it.\n\n## Plan Mode vs update_plan tool\n\nPlan Mode is a collaboration mode that can involve requesting user input and eventually issuing a `<proposed_plan>` block.\n\nSeparately, `update_plan` is a checklist/progress/TODOs tool; it does not enter or exit Plan Mode. Do not confuse it with Plan mode or try to use it while in Plan mode. If you try to use `update_plan` in Plan mode, it will return an error.\n\n## Execution vs. mutation in Plan Mode\n\nYou may explore and execute **non-mutating** actions that improve the plan. You must not perform **mutating** actions.\n\n### Allowed (non-mutating, plan-improving)\n\nActions that gather truth, reduce ambiguity, or validate feasibility without changing repo-tracked state. Examples:\n\n* Reading or searching files, configs, schemas, types, manifests, and docs\n* Static analysis, inspection, and repo exploration\n* Dry-run style commands when they do not edit repo-tracked files\n* Tests, builds, or checks that may write to caches or build artifacts (for example, `target/`, `.cache/`, or snapshots) so long as they do not edit repo-tracked files\n\n### Not allowed (mutating, plan-executing)\n\nActions that implement the plan or change repo-tracked state. Examples:\n\n* Editing or writing files\n* Running formatters or linters that rewrite files\n* Applying patches, migrations, or codegen that updates repo-tracked files\n* Side-effectful commands whose purpose is to carry out the plan rather than refine it\n\nWhen in doubt: if the action would reasonably be described as \"doing the work\" rather than \"planning the work,\" do not do it.\n\n## PHASE 1 \u2014 Ground in the environment (explore first, ask second)\n\nBegin by grounding yourself in the actual environment. Eliminate unknowns in the prompt by discovering facts, not by asking the user. Resolve all questions that can be answered through exploration or inspection. Identify missing or ambiguous details only if they cannot be derived from the environment. Silent exploration between turns is allowed and encouraged.\n\nBefore asking the user any question, perform at least one targeted non-mutating exploration pass (for example: search relevant files, inspect likely entrypoints/configs, confirm current implementation shape), unless no local environment/repo is available.\n\nException: you may ask clarifying questions about the user's prompt before exploring, ONLY if there are obvious ambiguities or contradictions in the prompt itself. However, if ambiguity might be resolved by exploring, always prefer exploring first.\n\nDo not ask questions that can be answered from the repo or system (for example, \"where is this struct?\" or \"which UI component should we use?\" when exploration can make it clear). Only ask once you have exhausted reasonable non-mutating exploration.\n\n## PHASE 2 \u2014 Intent chat (what they actually want)\n\n* Keep asking until you can clearly state: goal + success criteria, audience, in/out of scope, constraints, current state, and the key preferences/tradeoffs.\n* Bias toward questions over guessing: if any high-impact ambiguity remains, do NOT plan yet\u2014ask.\n\n## PHASE 3 \u2014 Implementation chat (what/how we\u2019ll build)\n\n* Once intent is stable, keep asking until the spec is decision complete: approach, interfaces (APIs/schemas/I/O), data flow, edge cases/failure modes, testing + acceptance criteria, rollout/monitoring, and a",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 6,
+        "ts": "2026-02-09T09:42:20.771000+00:00",
+        "gap_s": 0,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 195,
+        "preview": "I want to build a chess engine in COBOL (GNUCobol)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n",
+        "activity": "test",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 8,
+        "ts": "2026-02-09T09:42:27.608000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 62,
+        "preview": "{\"cmd\":\"cd /Users/mathieuacher/SANDBOX/COBOL-chess && ls -la\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 11,
+        "ts": "2026-02-09T09:42:38.878000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 17,
+        "preview": "{\"cmd\":\"cobc -V\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 14,
+        "ts": "2026-02-09T09:43:01.021000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 27,
+        "preview": "{\"cmd\":\"python3 --version\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 17,
+        "ts": "2026-02-09T09:43:04.609000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 68,
+        "preview": "{\"cmd\":\"python3 -c \\\"import chess, sys; print(chess.__version__)\\\"\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 20,
+        "ts": "2026-02-09T09:43:27.494000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "request_user_input",
+        "activity": "meta",
+        "text_len": 1419,
+        "preview": "{\"questions\":[{\"header\":\"Protocol\",\"id\":\"protocol\",\"question\":\"Which protocol should the engine speak for testing/GUI compatibility?\",\"options\":[{\"label\":\"UCI (Recommended)\",\"description\":\"Works with most GUIs and match managers like cutechess-cli.\"},{\"label\":\"XBoard/WinBoard\",\"description\":\"Older protocol; still usable but less common for modern tooling.\"},{\"label\":\"Both\",\"description\":\"More work now; easiest to add XBoard later once UCI is solid.\"}]},{\"header\":\"Board rep\",\"id\":\"board_rep\",\"question\":\"Preferred internal board representation?\",\"options\":[{\"label\":\"0x88 mailbox (Recommended)\",\"description\":\"Simpler move generation with arrays; good fit for COBOL.\"},{\"label\":\"Bitboards\",\"description\":\"Faster long-term but more complex 64-bit bit-twiddling in COBOL.\"},{\"label\":\"Start 0x88 \u2192 bitboards later\",\"description\":\"Phased approach; plan includes a later refactor for speed.\"}]},{\"header\":\"Elo harness\",\"id\":\"elo_harness\",\"question\":\"How do you want to run engine-vs-engine matches to estimate Elo?\",\"options\":[{\"label\":\"cutechess-cli + Stockfish limit (Recommended)\",\"description\":\"Standard approach; uses Stockfish's built-in strength limiting and produces match results.\"},{\"label\":\"Python runner (subprocess UCI)\",\"description\":\"We write a small runner; no cutechess dependency but more code to maintain.\"},{\"label\":\"Other\",\"description\":\"You\u2019ll specify the tooling/environment you want to use.\"}]}]}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 23,
+        "ts": "2026-02-09T09:46:08.362000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 57,
+        "preview": "{\"cmd\":\"stockfish -help 2>/dev/null | head -n 5 || true\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 26,
+        "ts": "2026-02-09T09:46:12.581000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "test",
+        "text_len": 53,
+        "preview": "{\"cmd\":\"cutechess-cli --version 2>/dev/null || true\"}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 29,
+        "ts": "2026-02-09T09:46:15.168000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "test",
+        "text_len": 54,
+        "preview": "{\"cmd\":\"command -v cutechess-cli || echo 'not found'\"}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 32,
+        "ts": "2026-02-09T09:46:55.682000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 62,
+        "preview": "{\"cmd\":\"printf 'uci\\\\nquit\\\\n' | stockfish | sed -n '1,120p'\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 35,
+        "ts": "2026-02-09T09:49:29.837000+00:00",
+        "gap_s": 5,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "request_user_input",
+        "activity": "meta",
+        "text_len": 1583,
+        "preview": "{\"questions\":[{\"header\":\"Timing\",\"id\":\"timing\",\"question\":\"For UCI time controls, how should we measure time in the engine?\",\"options\":[{\"label\":\"Pure COBOL (centiseconds) (Recommended)\",\"description\":\"Use `ACCEPT ... FROM TIME` / `FUNCTION INTEGER-OF-DATE` for ~10ms resolution; simpler and portable.\"},{\"label\":\"Tiny C helper for ms\",\"description\":\"Add a small C file for monotonic ms timing; more precise and robust for fast time controls.\"},{\"label\":\"Depth-only (no clocks)\",\"description\":\"Support only `go depth N` initially; time controls come later.\"}]},{\"header\":\"Elo scale\",\"id\":\"elo_scale\",\"question\":\"What should the final Elo estimate be relative to?\",\"options\":[{\"label\":\"Stockfish UCI_Elo baseline (Recommended)\",\"description\":\"Play vs Stockfish with `UCI_LimitStrength=true` and a chosen `UCI_Elo` (>=1320) and report our Elo vs that baseline.\"},{\"label\":\"Pool of engines\",\"description\":\"Install multiple engines (e.g., Stockfish skill levels + other weak engines) and estimate Elo within that pool.\"},{\"label\":\"Just win-rate curves\",\"description\":\"Run a ladder vs Stockfish Skill Levels and report win/draw/loss rates (no single Elo number).\"}]},{\"header\":\"Match TC\",\"id\":\"match_tc\",\"question\":\"Default match settings for Elo runs (can be overridden by CLI flags later):\",\"options\":[{\"label\":\"tc=2+0.1 (Recommended)\",\"description\":\"Fast but not ultra-bullet; decent signal with hundreds of games.\"},{\"label\":\"tc=5+0.05\",\"description\":\"More stable but slower to run.\"},{\"label\":\"movetime=250ms\",\"description\":\"Very fast; noisier and sensitive to timing overhead.\"}]}]}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 38,
+        "ts": "2026-02-09T10:24:35.928000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 10018,
+        "preview": "<proposed_plan>\n# COBOL (GnuCOBOL) UCI Chess Engine + Elo Harness\n\n## Summary\nBuild a playable chess engine in **GNUCobol 3.2.x** that speaks **UCI**, using a **0x88 mailbox board**, with correctness validated via **perft** and playing strength estimated via **cutechess-cli matches vs Stockfish** (strength-limited) and a small script that computes an Elo estimate + confidence interval from results.\n\n---\n\n## Repo layout (new)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/Makefile`\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/README.md`\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/src/` (COBOL programs)\n  - `main.cob` (entry: UCI loop + CLI modes)\n  - `board.cob` (position state init/reset, helpers)\n  - `fen.cob` (FEN parsing/printing)\n  - `movegen.cob` (pseudo-legal generation)\n  - `attack.cob` (is-square-attacked, in-check)\n  - `makemove.cob` (make/unmake + undo stack)\n  - `perft.cob` (perft recursion + CLI hook)\n  - `search.cob` (iterative deepening + alpha-beta + quiescence)\n  - `eval.cob` (evaluation function)\n  - `uci.cob` (parsing UCI commands, \u201cposition/go/stop\u201d glue)\n  - `time.cob` (centisecond clock utilities)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/`\n  - `constants.cpy` (piece codes, flags, limits)\n  - `types.cpy` (GAME-STATE, MOVE, UNDO, MOVE-LIST records)\n  - `offsets.cpy` (0x88 offsets arrays)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/tests/`\n  - `perft_cases.json` (FEN + depth + expected nodes)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/tools/`\n  - `perft_check.py` (runs engine perft and compares)\n  - `uci_smoke.sh` (basic UCI handshake script)\n  - `elo_run.py` (runs cutechess-cli match + produces report)\n  - `elo_calc.py` (parses PGN, computes Elo diff + CI)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/openings/`\n  - `book.epd` (small deterministic opening suite for cutechess)\n\n---\n\n## Public interfaces / behavior (decision-complete)\n### 1) Engine executable\n- Build output: `/Users/mathieuacher/SANDBOX/COBOL-chess/bin/cobochess`\n- Default mode: **UCI** on stdin/stdout.\n- Extra CLI modes:\n  - `cobochess --perft \"<FEN>\" <depth>` \u2192 prints `nodes=<N>` and exits non-zero on parse error.\n  - `cobochess --perft-startpos <depth>` \u2192 same, using standard start position.\n\n### 2) UCI commands supported (minimum required)\n- `uci` \u2192 prints `id name`, `id author`, `option name Hash type spin default 16 min 1 max 1024`, then `uciok`\n- `isready` \u2192 `readyok`\n- `ucinewgame` \u2192 clears internal search state (history, TT if any)\n- `position startpos [moves ...]`\n- `position fen <fen> [moves ...]`\n- `go depth N`\n- `go movetime M` (M in ms; internally use centiseconds = `M/10` rounded)\n- `go wtime <ms> btime <ms> winc <ms> binc <ms> movestogo <n>` (simple allocation rule)\n- `stop` (best-effort: stop after current iteration / node batch; must respond promptly)\n- `quit`\n\nOutput:\n- Always output `bestmove <move>` (UCI coordinate, promotion suffix `q/r/b/n`), or `bestmove 0000` if no legal move.\n- Periodic `info` lines during search (at least at end of each completed depth): `info depth D nodes N score cp S pv ...`\n\n---\n\n## Core data model (0x88)\n### Board / squares\n- Use 0x88 indices: `sq = rank*16 + file`, where `file=0..7`, `rank=0..7`.\n- \u201cOffboard\u201d check: `sq < 0 OR sq > 127 OR (sq MOD 16) > 7`.\n\n### Piece encoding\n- Integers:\n  - `EMPTY=0`\n  - White: `WP=1 WN=2 WB=3 WR=4 WQ=5 WK=6`\n  - Black: `BP=7 BN=8 BB=9 BR=10 BQ=11 BK=12`\n- Helper functions:\n  - `ColorOf(piece)` \u2192 WHITE/BLACK/NONE\n  - `TypeOf(piece)` \u2192 PAWN/KNIGHT/\u2026 (ignoring color)\n\n### GAME-STATE record (in `/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/types.cpy`)\nFields:\n- `BOARD[128]` piece array\n- `SIDE-TO-MOVE` (0=white,1=black)\n- `CASTLING` bitmask (WK,WQ,BK,BQ)\n- `EP-SQ` (-1 if none)\n- `HALFMOVE`, `FULLMOVE`\n- `KING-SQ[2]`\n- `HISTORY-KEYS[]` (for repetition; store Zobrist key per ply)\n- (Optional later) `ZKEY` (64-bit), `TT` table\n\n### MOVE record\nStore as a struct (not packed bits) to keep COBOL simple:\n- `FROM-SQ`, `TO-SQ`\n- `PROMO-TYPE` (0 none, else Q/R/B/N)\n-",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 39,
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "gap_s": 26,
+        "role": "developer",
+        "kind": "text",
+        "text_len": 806,
+        "preview": "<collaboration_mode># Collaboration Mode: Default\n\nYou are now in Default mode. Any previous instructions for other modes (e.g. Plan mode) are no longer active.\n\nYour active mode changes only when new developer instructions with a different `<collaboration_mode>...</collaboration_mode>` change it; user requests or tool descriptions do not change mode by themselves. Known mode names are Default and Plan.\n\n## request_user_input availability\n\nThe `request_user_input` tool is unavailable in Default mode. If you call it while in Default mode, it will return an error.\n\nIf a decision is necessary and cannot be discovered from local context, ask the user directly. However, in Default mode you should strongly prefer executing the user's request rather than stopping to ask questions.\n</collaboration_mode>",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 40,
+        "ts": "2026-02-09T10:25:02.001000+00:00",
+        "gap_s": 0,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 10014,
+        "preview": "PLEASE IMPLEMENT THIS PLAN:\n# COBOL (GnuCOBOL) UCI Chess Engine + Elo Harness\n\n## Summary\nBuild a playable chess engine in **GNUCobol 3.2.x** that speaks **UCI**, using a **0x88 mailbox board**, with correctness validated via **perft** and playing strength estimated via **cutechess-cli matches vs Stockfish** (strength-limited) and a small script that computes an Elo estimate + confidence interval from results.\n\n---\n\n## Repo layout (new)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/Makefile`\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/README.md`\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/src/` (COBOL programs)\n  - `main.cob` (entry: UCI loop + CLI modes)\n  - `board.cob` (position state init/reset, helpers)\n  - `fen.cob` (FEN parsing/printing)\n  - `movegen.cob` (pseudo-legal generation)\n  - `attack.cob` (is-square-attacked, in-check)\n  - `makemove.cob` (make/unmake + undo stack)\n  - `perft.cob` (perft recursion + CLI hook)\n  - `search.cob` (iterative deepening + alpha-beta + quiescence)\n  - `eval.cob` (evaluation function)\n  - `uci.cob` (parsing UCI commands, \u201cposition/go/stop\u201d glue)\n  - `time.cob` (centisecond clock utilities)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/`\n  - `constants.cpy` (piece codes, flags, limits)\n  - `types.cpy` (GAME-STATE, MOVE, UNDO, MOVE-LIST records)\n  - `offsets.cpy` (0x88 offsets arrays)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/tests/`\n  - `perft_cases.json` (FEN + depth + expected nodes)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/tools/`\n  - `perft_check.py` (runs engine perft and compares)\n  - `uci_smoke.sh` (basic UCI handshake script)\n  - `elo_run.py` (runs cutechess-cli match + produces report)\n  - `elo_calc.py` (parses PGN, computes Elo diff + CI)\n- `/Users/mathieuacher/SANDBOX/COBOL-chess/openings/`\n  - `book.epd` (small deterministic opening suite for cutechess)\n\n---\n\n## Public interfaces / behavior (decision-complete)\n### 1) Engine executable\n- Build output: `/Users/mathieuacher/SANDBOX/COBOL-chess/bin/cobochess`\n- Default mode: **UCI** on stdin/stdout.\n- Extra CLI modes:\n  - `cobochess --perft \"<FEN>\" <depth>` \u2192 prints `nodes=<N>` and exits non-zero on parse error.\n  - `cobochess --perft-startpos <depth>` \u2192 same, using standard start position.\n\n### 2) UCI commands supported (minimum required)\n- `uci` \u2192 prints `id name`, `id author`, `option name Hash type spin default 16 min 1 max 1024`, then `uciok`\n- `isready` \u2192 `readyok`\n- `ucinewgame` \u2192 clears internal search state (history, TT if any)\n- `position startpos [moves ...]`\n- `position fen <fen> [moves ...]`\n- `go depth N`\n- `go movetime M` (M in ms; internally use centiseconds = `M/10` rounded)\n- `go wtime <ms> btime <ms> winc <ms> binc <ms> movestogo <n>` (simple allocation rule)\n- `stop` (best-effort: stop after current iteration / node batch; must respond promptly)\n- `quit`\n\nOutput:\n- Always output `bestmove <move>` (UCI coordinate, promotion suffix `q/r/b/n`), or `bestmove 0000` if no legal move.\n- Periodic `info` lines during search (at least at end of each completed depth): `info depth D nodes N score cp S pv ...`\n\n---\n\n## Core data model (0x88)\n### Board / squares\n- Use 0x88 indices: `sq = rank*16 + file`, where `file=0..7`, `rank=0..7`.\n- \u201cOffboard\u201d check: `sq < 0 OR sq > 127 OR (sq MOD 16) > 7`.\n\n### Piece encoding\n- Integers:\n  - `EMPTY=0`\n  - White: `WP=1 WN=2 WB=3 WR=4 WQ=5 WK=6`\n  - Black: `BP=7 BN=8 BB=9 BR=10 BQ=11 BK=12`\n- Helper functions:\n  - `ColorOf(piece)` \u2192 WHITE/BLACK/NONE\n  - `TypeOf(piece)` \u2192 PAWN/KNIGHT/\u2026 (ignoring color)\n\n### GAME-STATE record (in `/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/types.cpy`)\nFields:\n- `BOARD[128]` piece array\n- `SIDE-TO-MOVE` (0=white,1=black)\n- `CASTLING` bitmask (WK,WQ,BK,BQ)\n- `EP-SQ` (-1 if none)\n- `HALFMOVE`, `FULLMOVE`\n- `KING-SQ[2]`\n- `HISTORY-KEYS[]` (for repetition; store Zobrist key per ply)\n- (Optional later) `ZKEY` (64-bit), `TT` table\n\n### MOVE record\nStore as a struct (not packed bits) to keep COBOL simple:\n- `FROM-SQ`, `TO-SQ`\n- `PROMO-TYPE` (0 none, els",
+        "activity": "spec",
+        "se_task": "spec"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 42,
+        "ts": "2026-02-09T10:28:46.221000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 130,
+        "preview": "{\"cmd\":\"cd /Users/mathieuacher/SANDBOX/COBOL-chess && printf 'position startpos\\\\ngo perft 1\\\\nquit\\\\n' | stockfish | head -n 40\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 45,
+        "ts": "2026-02-09T10:30:12.844000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "update_plan",
+        "activity": "meta",
+        "text_len": 581,
+        "preview": "{\"plan\":[{\"step\":\"Create repo scaffolding files\",\"status\":\"in_progress\"},{\"step\":\"Implement FEN and board state\",\"status\":\"pending\"},{\"step\":\"Implement movegen and make/unmake\",\"status\":\"pending\"},{\"step\":\"Add perft and test suite\",\"status\":\"pending\"},{\"step\":\"Implement eval and search\",\"status\":\"pending\"},{\"step\":\"Implement UCI loop and CLI\",\"status\":\"pending\"},{\"step\":\"Add Elo harness scripts\",\"status\":\"pending\"},{\"step\":\"Build and run checks\",\"status\":\"pending\"}],\"explanation\":\"Implement the full COBOL UCI engine plus perft + Elo harness in small, verifiable increments.\"}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 48,
+        "ts": "2026-02-09T10:31:12.527000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 111,
+        "preview": "{\"cmd\":\"cd /Users/mathieuacher/SANDBOX/COBOL-chess && mkdir -p src copybooks tools tests openings bin results\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 51,
+        "ts": "2026-02-09T10:32:52.016000+00:00",
+        "gap_s": 87,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 54,
+        "ts": "2026-02-09T10:32:59.076000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "update_plan",
+        "activity": "meta",
+        "text_len": 473,
+        "preview": "{\"plan\":[{\"step\":\"Create repo scaffolding files\",\"status\":\"completed\"},{\"step\":\"Implement FEN and board state\",\"status\":\"in_progress\"},{\"step\":\"Implement movegen and make/unmake\",\"status\":\"pending\"},{\"step\":\"Add perft and test suite\",\"status\":\"pending\"},{\"step\":\"Implement eval and search\",\"status\":\"pending\"},{\"step\":\"Implement UCI loop and CLI\",\"status\":\"pending\"},{\"step\":\"Add Elo harness scripts\",\"status\":\"pending\"},{\"step\":\"Build and run checks\",\"status\":\"pending\"}]}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 57,
+        "ts": "2026-02-09T10:33:45.033000+00:00",
+        "gap_s": 13,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 60,
+        "ts": "2026-02-09T10:33:55.812000+00:00",
+        "gap_s": 5,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 63,
+        "ts": "2026-02-09T10:34:41.892000+00:00",
+        "gap_s": 34,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 66,
+        "ts": "2026-02-09T10:35:32.401000+00:00",
+        "gap_s": 20,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "i": 69,
+        "ts": "2026-02-09T10:36:22.653000+00:00",
+        "gap_s": 34,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      }
+    ],
+    "last_events": [
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 99,
+        "ts": "2026-03-19T14:02:03.010000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 96,
+        "preview": "{\"cmd\":\"ls -l bin\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":2000}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 102,
+        "ts": "2026-03-19T14:02:09.260000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 137,
+        "preview": "{\"cmd\":\"sed -n '1,200p' results/match_20260211_131213.json\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":3000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 103,
+        "ts": "2026-03-19T14:02:09.260000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 119,
+        "preview": "{\"cmd\":\"sed -n '1,80p' openings/book.epd\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":3000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 104,
+        "ts": "2026-03-19T14:02:09.272000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 119,
+        "preview": "{\"cmd\":\"sed -n '1,80p' openings/book.pgn\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":4000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 109,
+        "ts": "2026-03-19T14:02:11.918000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 127,
+        "preview": "{\"cmd\":\"nl -ba src/main.cob | sed -n '261,440p'\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":12000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 112,
+        "ts": "2026-03-19T14:02:15.760000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 162,
+        "preview": "{\"cmd\":\"rg -n \\\"setoption|ponder|go infinite|go movetime|Hash\\\" src tools README.md\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":4000}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 115,
+        "ts": "2026-03-19T14:02:22.211000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 745,
+        "preview": "I\u2019ve finished the code reading. The main documentation risks now are overstating UCI support and under-explaining the search stack, because the engine is more sophisticated than the current README but still has some deliberate limits. My next steps:\n\n1. Verify the build and smoke-test path from the Makefile.\n2. Synthesize the architecture into two layers:\n   - `README.md`: lightweight project overview, feature list, quickstart, repo map, and a short \u201carchitecture at a glance\u201d.\n   - `ARCHITECTURE.md`: detailed data structures, control flow, search techniques, evaluation heuristics, testing/evaluation harness, and current limitations.\n3. Patch both files and then re-run a light verification pass so the docs match the executable behavior.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 116,
+        "ts": "2026-03-19T14:02:22.214000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 119,
+        "preview": "{\"cmd\":\"make build\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":12000,\"yield_time_ms\":1000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 117,
+        "ts": "2026-03-19T14:02:22.227000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 123,
+        "preview": "{\"cmd\":\"make uci-smoke\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":12000,\"yield_time_ms\":1000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 118,
+        "ts": "2026-03-19T14:02:22.228000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 119,
+        "preview": "{\"cmd\":\"make perft\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":16000,\"yield_time_ms\":1000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 123,
+        "ts": "2026-03-19T14:02:25.199000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 198,
+        "preview": "The engine builds and the UCI smoke path passes. I\u2019ve got the full perft suite still running; once that clears I\u2019ll write the docs against verified behavior rather than static source analysis alone.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 124,
+        "ts": "2026-03-19T14:02:25.648000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 127,
+        "ts": "2026-03-19T14:02:34.325000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 130,
+        "ts": "2026-03-19T14:02:43.012000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 133,
+        "ts": "2026-03-19T14:02:51.999000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 136,
+        "ts": "2026-03-19T14:02:59.890000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 139,
+        "ts": "2026-03-19T14:03:06.386000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 78,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":10000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 146,
+        "ts": "2026-03-19T14:03:38.833000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 982,
+        "preview": "{\"cmd\":\"python3 - <<'PY'\\nimport json, pathlib, statistics\\nfrom collections import defaultdict\\nroot=pathlib.Path('results')\\nrows=[]\\nfor p in sorted(root.glob('match_*.json')):\\n    try:\\n        d=json.loads(p.read_text())\\n    except Exception:\\n        continue\\n    games=d.get('games',0)\\n    if not games:\\n        continue\\n    score=(d.get('wins',0)+0.5*d.get('draws',0))/games\\n    rows.append((p.name,d.get('baseline_elo'),games,d.get('wins'),d.get('draws'),d.get('losses'),score,d.get('tc'),d.get('depth')))\\nprint('matches', len(rows))\\nby=defaultdict(list)\\nfor r in rows:\\n    by[r[1]].append(r)\\nfor elo in sorted(by):\\n    lst=by[elo]\\n    avg=statistics.mean(r[6] for r in lst)\\n    print('baseline', elo, 'count', len(lst), 'avg_score', round(avg,3), 'best', max(r[6] for r in lst), 'worst', min(r[6] for r in lst))\\nprint('sample latest 10')\\nfor r in rows[-10:]:\\n    print(r)\\nPY\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":8000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 149,
+        "ts": "2026-03-19T14:03:45.201000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 1094,
+        "preview": "{\"cmd\":\"python3 - <<'PY'\\nimport json, pathlib, statistics\\nfrom collections import defaultdict\\nroot=pathlib.Path('results')\\nrows=[]\\nfor p in sorted(root.glob('match_*.json')):\\n    try:\\n        d=json.loads(p.read_text())\\n    except Exception:\\n        continue\\n    games=d.get('games',0)\\n    if not games:\\n        continue\\n    score=(d.get('wins',0)+0.5*d.get('draws',0))/games\\n    rows.append((p.name,d.get('baseline_elo'),games,d.get('wins'),d.get('draws'),d.get('losses'),score,d.get('tc'),d.get('depth'),d.get('sf_skill'),d.get('sf_depth'),d.get('sf_nodes')))\\nprint('matches', len(rows))\\nby=defaultdict(list)\\nfor r in rows:\\n    by[r[1]].append(r)\\nfor elo in sorted(by, key=lambda x: (-1 if x is None else x)):\\n    lst=by[elo]\\n    avg=statistics.mean(r[6] for r in lst)\\n    print('baseline', elo, 'count', len(lst), 'avg_score', round(avg,3), 'best', round(max(r[6] for r in lst),3), 'worst', round(min(r[6] for r in lst),3))\\nprint('sample latest 10')\\nfor r in rows[-10:]:\\n    print(r)\\nPY\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":8000}",
+        "se_task": "bug_fix"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 152,
+        "ts": "2026-03-19T14:03:51.641000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "test",
+        "text_len": 122,
+        "preview": "{\"cmd\":\"sed -n '1,120p' cutechess/README.md\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":4000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 155,
+        "ts": "2026-03-19T14:03:58.160000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "research",
+        "text_len": 448,
+        "preview": "{\"cmd\":\"python3 - <<'PY'\\nimport pathlib,re\\nfor path in sorted(pathlib.Path('src').glob('*.cob')):\\n    txt=path.read_text()\\n    progs=re.findall(r'PROGRAM-ID\\\\.\\\\s+([A-Z0-9-]+)', txt)\\n    calls=re.findall(r'CALL\\\\s+\\\"([A-Z0-9-]+)\\\"', txt)\\n    print(path.name)\\n    print('  programs:', ', '.join(progs))\\n    print('  calls   :', ', '.join(sorted(set(calls))))\\nPY\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":6000}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 158,
+        "ts": "2026-03-19T14:04:49.489000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "write_stdin",
+        "activity": "test",
+        "text_len": 77,
+        "preview": "{\"session_id\":5521,\"chars\":\"\",\"yield_time_ms\":1000,\"max_output_tokens\":16000}",
+        "se_task": "test"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 161,
+        "ts": "2026-03-19T14:05:16.133000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 243,
+        "preview": "I\u2019m patching the docs now. The README will stay intentionally compact and project-facing; the longer file will capture the code-level details, the search stack, the tooling, and the protocol caveats that would otherwise clutter the front page.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 163,
+        "ts": "2026-03-19T14:07:18.848000+00:00",
+        "gap_s": 94,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "apply_patch",
+        "activity": "implement",
+        "text_len": 0,
+        "preview": "",
+        "se_task": "feature"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 166,
+        "ts": "2026-03-19T14:07:23.590000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 200,
+        "preview": "The doc patch is in place. I\u2019m doing a quick readback now to catch any mismatches between the prose and the code paths I verified, especially around UCI behavior, testing, and the search feature list.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 167,
+        "ts": "2026-03-19T14:07:23.625000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 113,
+        "preview": "{\"cmd\":\"sed -n '1,260p' README.md\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":12000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 168,
+        "ts": "2026-03-19T14:07:23.625000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 119,
+        "preview": "{\"cmd\":\"sed -n '1,360p' ARCHITECTURE.md\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":20000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 169,
+        "ts": "2026-03-19T14:07:23.663000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 279,
+        "preview": "{\"cmd\":\"python3 - <<'PY'\\nfrom pathlib import Path\\nfor name in ['README.md','ARCHITECTURE.md']:\\n    text=Path(name).read_text()\\n    print(name, 'chars', len(text), 'lines', text.count('\\\\n')+1)\\nPY\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":2000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 174,
+        "ts": "2026-03-19T14:07:25.914000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "exec_command",
+        "activity": "build",
+        "text_len": 121,
+        "preview": "{\"cmd\":\"sed -n '361,560p' ARCHITECTURE.md\",\"workdir\":\"/Users/mathieuacher/SANDBOX/COBOL-chess\",\"max_output_tokens\":16000}",
+        "se_task": "build"
+      },
+      {
+        "agent": "codex",
+        "session": "019d0663-34ad-7a03-8d12-888778029a2a",
+        "i": 177,
+        "ts": "2026-03-19T14:07:48.128000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 1012,
+        "preview": "Updated [README.md](/Users/mathieuacher/SANDBOX/COBOL-chess/README.md) into a compact front page and added [ARCHITECTURE.md](/Users/mathieuacher/SANDBOX/COBOL-chess/ARCHITECTURE.md) as the deeper technical report. The README now gives a light TeXCCChess-style overview: architecture at a glance, feature list, quickstart, repo map, evaluation workflow, and explicit current limits. The report goes much deeper into module roles, shared copybooks, the 0x88 board/state layout, make/unmake flow, search techniques, evaluation terms, UCI/time-management behavior, tooling, and obvious next steps.\n\nThe docs are grounded in the actual code rather than generic chess-engine prose, including caveats like the advertised-but-unimplemented `Hash` option, synchronous `stop`, and the fact that `cutechess/` is vendored evaluation infrastructure rather than engine architecture.\n\nVerification:\n- `make build`\n- `make uci-smoke`\n- `make perft` passed all listed suites, including start position depth 5 and Kiwipete depth 4",
+        "activity": null,
+        "se_task": "unknown"
+      }
+    ]
+  },
+  "turn_files": [
+    "output/turns/COBOL-chess__Codex__019c41c7-d33c-7e03-89a7-1691d6ab564a.jsonl",
+    "output/turns/COBOL-chess__Codex__019d0663-34ad-7a03-8d12-888778029a2a.jsonl"
+  ],
+  "n_turns": 5640
+}

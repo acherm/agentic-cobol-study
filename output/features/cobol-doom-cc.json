@@ -1,0 +1,177 @@
+{
+  "project": "cobol-doom-cc",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "Top-down 2D grid walker (commit 75c27ad)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "Fix invisible output (commit c0b9bc7)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "DDA raycaster with minimap (commit 8a47a28)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "Unicode half-block + truecolor rendering",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Arrow key support (commit 9d2d9c4)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "Enemies and combat (commit 5ed8682)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "Pickups, HUD, weapons",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "POSIX read() for input (commit f0418eb)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "3 levels + progression",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "Level-select menu (commit 93b93fa)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "Demo script",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "Weapon sprites + creature silhouettes (commit 69ab81f)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "7-COPY-book refactoring (commit e9854b2)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [],
+  "commit_subjects": [
+    {
+      "sha": "e9854b2b2c",
+      "date": "2026-04-18",
+      "subject": "Refactor walker.cob into cohesive COBOL copybooks"
+    },
+    {
+      "sha": "69ab81f858",
+      "date": "2026-04-18",
+      "subject": "Replace crosshair with weapon HUD; give enemies a silhouette + eyes"
+    },
+    {
+      "sha": "3398a33cd2",
+      "date": "2026-04-18",
+      "subject": "Polish graphics: wall texture, floor checkerboard, crosshair, HUD panel"
+    },
+    {
+      "sha": "3c8416aeeb",
+      "date": "2026-04-18",
+      "subject": "Add scripted demo play-through + Makefile"
+    },
+    {
+      "sha": "93b93fab46",
+      "date": "2026-04-18",
+      "subject": "Add startup level-select menu"
+    },
+    {
+      "sha": "64181fe664",
+      "date": "2026-04-18",
+      "subject": "Add reusable level format and three playable levels"
+    },
+    {
+      "sha": "f0418eb135",
+      "date": "2026-04-18",
+      "subject": "Bypass ncurses: read stdin directly via POSIX read(2)"
+    },
+    {
+      "sha": "b2ea5fb085",
+      "date": "2026-04-18",
+      "subject": "Add HUD strip, ammo, pickups, weapon switching"
+    },
+    {
+      "sha": "5ed8682b5b",
+      "date": "2026-04-18",
+      "subject": "Add enemies, combat, weapon, and death screen"
+    },
+    {
+      "sha": "9d2d9c42d0",
+      "date": "2026-04-17",
+      "subject": "Drop alt-screen, split frame writes, accept ESC O arrows"
+    },
+    {
+      "sha": "d1df8ebaf9",
+      "date": "2026-04-17",
+      "subject": "Upgrade to 24-bit colour, alt-screen, and arrow keys"
+    },
+    {
+      "sha": "8d0797494a",
+      "date": "2026-04-17",
+      "subject": "Render in true 256-colour using Unicode half-blocks"
+    },
+    {
+      "sha": "8a47a283ec",
+      "date": "2026-04-17",
+      "subject": "Add first-person raycast view with minimap overlay"
+    },
+    {
+      "sha": "c0b9bc7932",
+      "date": "2026-04-17",
+      "subject": "Fix invisible output and row misalignment"
+    },
+    {
+      "sha": "75c27adc48",
+      "date": "2026-04-17",
+      "subject": "Add top-down 2D walker in GnuCOBOL"
+    }
+  ],
+  "total_features_proxy": 13
+}

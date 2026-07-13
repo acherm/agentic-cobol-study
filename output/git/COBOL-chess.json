@@ -1,0 +1,45 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+  "has_git": true,
+  "commits": 2,
+  "commit_log": [
+    {
+      "sha": "0e2ab146f3b9111aad6b0a97aec1fb3de09200f5",
+      "date": "2026-05-04T12:30:28+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+    },
+    {
+      "sha": "faf0f163e9b2b4b6475262fc8f00fcaeeedf4919",
+      "date": "2026-03-19T16:36:49+01:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial commit: cobochess \u2014 COBOL (GnuCOBOL) UCI chess engine (~1600-1700 Elo)"
+    }
+  ],
+  "first_commit": "2026-03-19T16:36:49+01:00",
+  "last_commit": "2026-05-04T12:30:28+02:00",
+  "authors": {
+    "Mathieu Acher": 2
+  },
+  "churn": {
+    "files_changed_total": 33,
+    "insertions_total": 8554,
+    "deletions_total": 0,
+    "per_commit": [
+      {
+        "sha": "0e2ab146f3b9111aad6b0a97aec1fb3de09200f5",
+        "date": "2026-05-04T12:30:28+02:00",
+        "files": 3,
+        "ins": 2210,
+        "del": 0
+      },
+      {
+        "sha": "faf0f163e9b2b4b6475262fc8f00fcaeeedf4919",
+        "date": "2026-03-19T16:36:49+01:00",
+        "files": 30,
+        "ins": 6344,
+        "del": 0
+      }
+    ]
+  }
+}

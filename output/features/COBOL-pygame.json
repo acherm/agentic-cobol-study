@@ -1,0 +1,218 @@
+{
+  "project": "COBOL-pygame",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "Environment Discovery & Toolchain Validation",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "API Design (pygame-like C API)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "Scaffold Project (all source files)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "First Build & COBOL Data Type Fix",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Fix Runtime Module Lookup (Bug Fix)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "Makefile Hardening (Prerequisite Tracking)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "README Update (Static Call Note)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "Flappy Bird Game Implementation",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "Extend Makefile for Flappy",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "Fix Flappy Bird Rendering Bug",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "Update README for Flappy Bird",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "PASS 1 (Extraction): reconstruct (i) a USER-DRIVEN Feature Backlog, (ii) an AGENT-CENTRIC Specification Backlog (step-wise), plus Prompt Ledger + Replay Package + Repo Stats, and WRITE:"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "README.md (must reference SPECIFICATION_BACKLOG.md)"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "PASS 2 (Interpretation): characterize strategies, outcomes/quality, interaction demand; correlate with lightweight metrics."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "I will NOT provide transcripts proactively."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "You must analyze the repo as-is (git history may be minimal/absent)."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Codex stores local state under CODEX_HOME (defaults to ~/.codex)."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "$CODEX_HOME/sessions/**.jsonl (session event streams)"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "$CODEX_HOME/history.jsonl (if history persistence is enabled)"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "other logs/caches under CODEX_HOME as available"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Prefer session evidence from these artifacts; fall back to repo-only when unavailable."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Do NOT invent features, decisions, commands, or outcomes."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Every claim must be traceable to evidence from: repo files, git commits (if any), CODEX_HOME session artifacts, and run/test logs you executed."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "If you infer anything, label it INFERRED and justify why."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Redact secrets (tokens/keys) if encountered in repo or logs."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Keep quotes short (<= 25 words). Prefer pointers."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "[R:path:lines] repo file references (include line ranges when possible)"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "[G:commit <hash>] git commit references"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "[T:session <id/filename>:event_###] session-log references (or timestamp ranges)"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "[L:run_<n>] outputs of build/test/run commands you executed"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "[S:stats_run_<n>] outputs of repo statistics commands"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Do NOT list them in the Feature Backlog."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "If explicitly requested by the user for reproducibility, list them in a separate section:"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Specification Backlog (agent-centric changes) and/or"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "PASS 2 as \u201cAgent-Initiated / Internal Decisions\u201d."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "why it blocks the analysis,"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "what artifact would resolve it,"
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "a \u201cDefault if unanswered\u201d assumption."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "repo root, primary language(s), entry points, build system, test framework, CI configs."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "git metadata if present: branch, HEAD, remotes."
+    },
+    {
+      "ts": "2026-03-19T15:49:26.071000+00:00",
+      "item": "Identify project rules that may affect behavior:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "b2095a1ce0",
+      "date": "2026-03-19",
+      "subject": "Initial commit: pygame-like SDL2 framework for COBOL + Flappy Bird"
+    }
+  ],
+  "total_features_proxy": 42
+}

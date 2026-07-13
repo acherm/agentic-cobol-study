@@ -1,0 +1,4797 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex",
+  "aggregate": {
+    "num_files": 69,
+    "total_lines": 13173,
+    "code_lines": 11680,
+    "comment_lines": 731,
+    "sections": 70,
+    "paragraphs": 246,
+    "data_items": 189,
+    "max_nesting_any_file": 396,
+    "statements": {
+      "PERFORM": 1377,
+      "IF": 924,
+      "EVALUATE": 43,
+      "CALL": 67,
+      "MOVE": 2448,
+      "COMPUTE": 143,
+      "READ": 13,
+      "WRITE": 9,
+      "OPEN": 22,
+      "CLOSE": 11,
+      "ACCEPT": 39,
+      "DISPLAY": 147,
+      "GO TO": 0,
+      "EXIT": 198,
+      "STOP": 73,
+      "SET": 0,
+      "ADD": 111,
+      "SUBTRACT": 50,
+      "MULTIPLY": 5,
+      "DIVIDE": 11,
+      "STRING": 1018,
+      "UNSTRING": 12,
+      "INSPECT": 7,
+      "SEARCH": 2,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 68,
+      "DATA": 68,
+      "PROCEDURE": 68,
+      "ENVIRONMENT": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "src/minicobc.cob",
+        "code_lines": 10535
+      },
+      {
+        "file": "tests/chess/phase3_direct_ref.cob",
+        "code_lines": 123
+      },
+      {
+        "file": "tests/chess/phase3_search_ref.cob",
+        "code_lines": 53
+      },
+      {
+        "file": "tests/chess/phase1_fen_ref.cob",
+        "code_lines": 42
+      },
+      {
+        "file": "examples/primes.cob",
+        "code_lines": 25
+      },
+      {
+        "file": "examples/opt/smallwidth.cob",
+        "code_lines": 25
+      },
+      {
+        "file": "examples/collatz.cob",
+        "code_lines": 20
+      },
+      {
+        "file": "tests/chess/phase2_perft_ref.cob",
+        "code_lines": 19
+      },
+      {
+        "file": "examples/generic/group_redefines_children.cob",
+        "code_lines": 19
+      },
+      {
+        "file": "examples/generic/group_occurs_children.cob",
+        "code_lines": 19
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 4265,
+        "files_using": 68,
+        "constructs": {
+          "STOP_RUN": 69,
+          "PERFORM": 1451,
+          "EXIT": 200,
+          "IF": 1472,
+          "PERFORM_VARYING": 108,
+          "PERFORM_UNTIL": 140,
+          "ELSE": 266,
+          "GOBACK": 10,
+          "EVALUATE": 160,
+          "WHEN": 356,
+          "CONTINUE": 33
+        }
+      },
+      "arithmetic": {
+        "total": 330,
+        "files_using": 21,
+        "constructs": {
+          "DIVIDE": 13,
+          "COMPUTE": 146,
+          "ADD": 116,
+          "SUBTRACT": 50,
+          "MULTIPLY": 5
+        }
+      },
+      "data_advanced": {
+        "total": 1958,
+        "files_using": 68,
+        "constructs": {
+          "PIC_X": 250,
+          "PIC_S9": 24,
+          "USAGE_COMP_5": 149,
+          "PIC_9": 260,
+          "OCCURS": 217,
+          "REDEFINES": 60,
+          "USAGE_POINTER": 997,
+          "FILLER": 1
+        }
+      },
+      "io_file": {
+        "total": 402,
+        "files_using": 2,
+        "constructs": {
+          "START": 267,
+          "FD": 3,
+          "SELECT": 3,
+          "ASSIGN": 11,
+          "OPEN_INPUT": 8,
+          "OPEN_OUTPUT": 5,
+          "READ": 16,
+          "WRITE": 21,
+          "CLOSE": 51,
+          "AT_END": 14,
+          "LINE_SEQUENTIAL": 3
+        }
+      },
+      "string_ops": {
+        "total": 2894,
+        "files_using": 6,
+        "constructs": {
+          "REFERENCE_MOD": 29,
+          "STRING": 1803,
+          "DELIMITED_BY": 1035,
+          "UNSTRING": 13,
+          "INSPECT": 7,
+          "INSPECT_REPLACING": 7
+        }
+      },
+      "tables_search": {
+        "total": 60,
+        "files_using": 2,
+        "constructs": {
+          "SEARCH": 44,
+          "SET": 9,
+          "INITIALIZE": 7
+        }
+      },
+      "subprograms": {
+        "total": 416,
+        "files_using": 10,
+        "constructs": {
+          "CALL": 277,
+          "USING": 95,
+          "BY_VALUE": 12,
+          "BY_REFERENCE": 7,
+          "GIVING": 11,
+          "RECURSIVE": 14
+        }
+      },
+      "copy_preproc": {
+        "total": 51,
+        "files_using": 6,
+        "constructs": {
+          "COPY": 44,
+          "REPLACING": 7
+        }
+      },
+      "intrinsics": {
+        "total": 1124,
+        "files_using": 14,
+        "constructs": {
+          "FUNCTION": 571,
+          "FUNCTION_TRIM": 521,
+          "FUNCTION_MOD": 8,
+          "FUNCTION_NUMVAL": 11,
+          "FUNCTION_UPPER": 4,
+          "FUNCTION_LENGTH": 9
+        }
+      },
+      "misc": {
+        "total": 283,
+        "files_using": 68,
+        "constructs": {
+          "DISPLAY": 252,
+          "ACCEPT": 31
+        }
+      }
+    },
+    "mastery_score": 60,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.MULTIPLY",
+      "arithmetic.SUBTRACT",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.GOBACK",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "copy_preproc.REPLACING",
+      "data_advanced.FILLER",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_X",
+      "data_advanced.REDEFINES",
+      "data_advanced.USAGE_COMP_5",
+      "data_advanced.USAGE_POINTER",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_LENGTH",
+      "intrinsics.FUNCTION_MOD",
+      "intrinsics.FUNCTION_NUMVAL",
+      "intrinsics.FUNCTION_TRIM",
+      "intrinsics.FUNCTION_UPPER",
+      "io_file.ASSIGN",
+      "io_file.AT_END",
+      "io_file.CLOSE",
+      "io_file.FD",
+      "io_file.LINE_SEQUENTIAL",
+      "io_file.OPEN_INPUT",
+      "io_file.OPEN_OUTPUT",
+      "io_file.READ",
+      "io_file.SELECT",
+      "io_file.START",
+      "io_file.WRITE",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.INSPECT",
+      "string_ops.INSPECT_REPLACING",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.STRING",
+      "string_ops.UNSTRING",
+      "subprograms.BY_REFERENCE",
+      "subprograms.BY_VALUE",
+      "subprograms.CALL",
+      "subprograms.GIVING",
+      "subprograms.RECURSIVE",
+      "subprograms.USING",
+      "tables_search.INITIALIZE",
+      "tables_search.SEARCH",
+      "tables_search.SET"
+    ],
+    "categories_exercised": 10
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/tests/chess/phase2_perft_ref.cob",
+      "total_lines": 24,
+      "code_lines": 19,
+      "comment_lines": 0,
+      "blank_lines": 5,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 5,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 2,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_S9": 3,
+          "USAGE_COMP_5": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 2,
+          "USING": 2
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {
+          "FUNCTION": 2,
+          "FUNCTION_TRIM": 2
+        },
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/tests/chess/phase3_search_ref.cob",
+      "total_lines": 60,
+      "code_lines": 53,
+      "comment_lines": 0,
+      "blank_lines": 7,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 4,
+      "data_items": 10,
+      "statements": {
+        "PERFORM": 2,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 8,
+        "MOVE": 8,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 10,
+        "GO TO": 0,
+        "EXIT": 2,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 2,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "EXIT": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 3,
+          "PIC_S9": 5,
+          "USAGE_COMP_5": 5
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {
+          "SEARCH": 2
+        },
+        "subprograms": {
+          "CALL": 8,
+          "USING": 8
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {
+          "FUNCTION": 8,
+          "FUNCTION_TRIM": 8
+        },
+        "misc": {
+          "DISPLAY": 10
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/tests/chess/phase1_fen_ref.cob",
+      "total_lines": 47,
+      "code_lines": 42,
+      "comment_lines": 0,
+      "blank_lines": 5,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 15,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 15,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_S9": 1,
+          "USAGE_COMP_5": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {
+          "FUNCTION": 15,
+          "FUNCTION_TRIM": 15
+        },
+        "misc": {
+          "DISPLAY": 15
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/tests/chess/phase3_direct_ref.cob",
+      "total_lines": 136,
+      "code_lines": 123,
+      "comment_lines": 0,
+      "blank_lines": 13,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 12,
+      "data_items": 12,
+      "statements": {
+        "PERFORM": 16,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 12,
+        "MOVE": 43,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 12,
+        "GO TO": 0,
+        "EXIT": 6,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "PERFORM": 18,
+          "PERFORM_VARYING": 2,
+          "PERFORM_UNTIL": 2,
+          "EXIT": 6,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_S9": 9,
+          "USAGE_COMP_5": 9
+        },
+        "io_file": {
+          "START": 1
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 12,
+          "USING": 12
+        },
+        "copy_preproc": {
+          "COPY": 2
+        },
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_TRIM": 1
+        },
+        "misc": {
+          "DISPLAY": 12
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/collatz.cob",
+      "total_lines": 25,
+      "code_lines": 20,
+      "comment_lines": 3,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 2,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 1,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "ELSE": 1,
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "DIVIDE": 1,
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_MOD": 1
+        },
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/gcd.cob",
+      "total_lines": 20,
+      "code_lines": 18,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 2,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_MOD": 1
+        },
+        "misc": {
+          "DISPLAY": 2,
+          "ACCEPT": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/primes.cob",
+      "total_lines": 31,
+      "code_lines": 25,
+      "comment_lines": 4,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 2,
+        "IF": 2,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 3,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 2,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 3,
+          "PERFORM": 3,
+          "PERFORM_UNTIL": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 2,
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_MOD": 1
+        },
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/smallwidth.cob",
+      "total_lines": 36,
+      "code_lines": 25,
+      "comment_lines": 9,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 4,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 4,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 4,
+      "capabilities": {
+        "control_flow": {
+          "IF": 4,
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 7
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/constprop.cob",
+      "total_lines": 18,
+      "code_lines": 15,
+      "comment_lines": 1,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 5
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/strength.cob",
+      "total_lines": 16,
+      "code_lines": 13,
+      "comment_lines": 1,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/lcg.cob",
+      "total_lines": 19,
+      "code_lines": 15,
+      "comment_lines": 2,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 2
+        },
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_MOD": 1
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/deadstore.cob",
+      "total_lines": 20,
+      "code_lines": 16,
+      "comment_lines": 2,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 3,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 3
+        },
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/boolchain.cob",
+      "total_lines": 22,
+      "code_lines": 18,
+      "comment_lines": 2,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 1,
+          "ELSE": 1,
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 1,
+          "SUBTRACT": 1
+        },
+        "data_advanced": {
+          "PIC_9": 5
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/constfold.cob",
+      "total_lines": 18,
+      "code_lines": 14,
+      "comment_lines": 2,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/opt/loopcanon.cob",
+      "total_lines": 22,
+      "code_lines": 18,
+      "comment_lines": 2,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 2,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 3,
+          "PERFORM_UNTIL": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 1,
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 5
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/multiline_move_alpha.cob",
+      "total_lines": 13,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 1
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/else_if_repeated_end_if.cob",
+      "total_lines": 17,
+      "code_lines": 16,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 3,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 4,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 3,
+          "ELSE": 3,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 4
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/qualified_of.cob",
+      "total_lines": 19,
+      "code_lines": 17,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 7,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 3,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 4,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_occurs_accept.cob",
+      "total_lines": 14,
+      "code_lines": 14,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/call_indexed_value.cob",
+      "total_lines": 16,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 1,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 3,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 3,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "BY_VALUE": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/copybook_consts.cob",
+      "total_lines": 12,
+      "code_lines": 10,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "GOBACK": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/evaluate_value.cob",
+      "total_lines": 16,
+      "code_lines": 15,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "EVALUATE": 1,
+          "WHEN": 3,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/move_function_trim.cob",
+      "total_lines": 12,
+      "code_lines": 10,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_TRIM": 1
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/evaluate_true.cob",
+      "total_lines": 16,
+      "code_lines": 15,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "EVALUATE": 1,
+          "WHEN": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/picx_move_display.cob",
+      "total_lines": 13,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/evaluate_inline.cob",
+      "total_lines": 15,
+      "code_lines": 14,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 3,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "EVALUATE": 1,
+          "WHEN": 3,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/numval_indexed.cob",
+      "total_lines": 15,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 4,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 2,
+          "OCCURS": 1,
+          "USAGE_COMP_5": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_NUMVAL": 1
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/alpha_compare.cob",
+      "total_lines": 14,
+      "code_lines": 12,
+      "comment_lines": 2,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 2,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_move_packed.cob",
+      "total_lines": 15,
+      "code_lines": 15,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 4,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_move.cob",
+      "total_lines": 17,
+      "code_lines": 17,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 6,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/perform_varying.cob",
+      "total_lines": 14,
+      "code_lines": 13,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 1,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 1
+        },
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/entry_before_paragraph.cob",
+      "total_lines": 15,
+      "code_lines": 12,
+      "comment_lines": 0,
+      "blank_lines": 3,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 2,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 1,
+          "GOBACK": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_accept.cob",
+      "total_lines": 12,
+      "code_lines": 12,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/string_into_trim.cob",
+      "total_lines": 18,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 1,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 3
+        },
+        "io_file": {},
+        "string_ops": {
+          "STRING": 2,
+          "DELIMITED_BY": 3
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2,
+          "FUNCTION_TRIM": 2
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/call_alpha_ref.cob",
+      "total_lines": 11,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "BY_REFERENCE": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/perform_forever.cob",
+      "total_lines": 14,
+      "code_lines": 12,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 1,
+      "statements": {
+        "PERFORM": 2,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 1,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "PERFORM": 3,
+          "EXIT": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 1
+        },
+        "data_advanced": {
+          "PIC_9": 1,
+          "USAGE_COMP_5": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/else_if_chain.cob",
+      "total_lines": 17,
+      "code_lines": 16,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 3,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 4,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 3,
+          "ELSE": 3,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 4
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/perform_paragraph_until.cob",
+      "total_lines": 13,
+      "code_lines": 12,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 2,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 1,
+          "PERFORM_UNTIL": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_occurs_children.cob",
+      "total_lines": 19,
+      "code_lines": 19,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 5,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/function_sqrt.cob",
+      "total_lines": 11,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/redefines_refmod.cob",
+      "total_lines": 16,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 1,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 3,
+          "PIC_9": 1,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 1
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/accept_line_alpha.cob",
+      "total_lines": 13,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 1,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "ELSE": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/redefines_numeric_view.cob",
+      "total_lines": 12,
+      "code_lines": 12,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/compute_indexed_target.cob",
+      "total_lines": 14,
+      "code_lines": 14,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 2,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/picx_refmod.cob",
+      "total_lines": 14,
+      "code_lines": 14,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 1
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/move_numeric_to_picx.cob",
+      "total_lines": 12,
+      "code_lines": 10,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 1
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_occurs_value.cob",
+      "total_lines": 11,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_redefines_children.cob",
+      "total_lines": 19,
+      "code_lines": 19,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 4,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 4,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 2,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/redefines_alias.cob",
+      "total_lines": 11,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 2,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/call_ref.cob",
+      "total_lines": 11,
+      "code_lines": 11,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "BY_REFERENCE": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/occurs_alpha.cob",
+      "total_lines": 13,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/signed_comp5.cob",
+      "total_lines": 14,
+      "code_lines": 12,
+      "comment_lines": 2,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "SUBTRACT": 1
+        },
+        "data_advanced": {
+          "PIC_9": 1,
+          "PIC_S9": 1,
+          "USAGE_COMP_5": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/paragraphs.cob",
+      "total_lines": 14,
+      "code_lines": 13,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 2,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 2,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 3
+        },
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/multiline_if.cob",
+      "total_lines": 17,
+      "code_lines": 16,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 1,
+          "ELSE": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 3
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/display_trim_trailing.cob",
+      "total_lines": 10,
+      "code_lines": 8,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_TRIM": 1
+        },
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_fields.cob",
+      "total_lines": 13,
+      "code_lines": 12,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_display.cob",
+      "total_lines": 12,
+      "code_lines": 11,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/call_value.cob",
+      "total_lines": 13,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "BY_VALUE": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/continue_stmt.cob",
+      "total_lines": 12,
+      "code_lines": 11,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 1,
+          "CONTINUE": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/redefines_accept.cob",
+      "total_lines": 13,
+      "code_lines": 13,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/redefines_text_view.cob",
+      "total_lines": 14,
+      "code_lines": 14,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 2,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 1,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/multiline_call.cob",
+      "total_lines": 16,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 1,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "BY_VALUE": 2
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/move_index_expr.cob",
+      "total_lines": 14,
+      "code_lines": 14,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 3,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 3,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/group_redefines_group_move.cob",
+      "total_lines": 17,
+      "code_lines": 17,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 2,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/occurs_numeric.cob",
+      "total_lines": 15,
+      "code_lines": 15,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 3,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 3,
+          "OCCURS": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/accept_arguments.cob",
+      "total_lines": 21,
+      "code_lines": 19,
+      "comment_lines": 0,
+      "blank_lines": 2,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 0,
+      "data_items": 3,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 2,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 3,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 4,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 2,
+          "PIC_9": 1,
+          "USAGE_COMP_5": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 3,
+          "ACCEPT": 3
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/multiline_compute.cob",
+      "total_lines": 16,
+      "code_lines": 16,
+      "comment_lines": 0,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 1,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_9": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/examples/generic/copybooks/mini_consts.cpy",
+      "total_lines": 6,
+      "code_lines": 5,
+      "comment_lines": 0,
+      "blank_lines": 1,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 5,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_9": 2
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex/src/minicobc.cob",
+      "total_lines": 11908,
+      "code_lines": 10535,
+      "comment_lines": 687,
+      "blank_lines": 686,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 3,
+      "paragraphs": 186,
+      "data_items": 93,
+      "statements": {
+        "PERFORM": 1339,
+        "IF": 900,
+        "EVALUATE": 40,
+        "CALL": 39,
+        "MOVE": 2321,
+        "COMPUTE": 125,
+        "READ": 13,
+        "WRITE": 9,
+        "OPEN": 22,
+        "CLOSE": 11,
+        "ACCEPT": 30,
+        "DISPLAY": 13,
+        "GO TO": 0,
+        "EXIT": 189,
+        "STOP": 8,
+        "SET": 0,
+        "ADD": 105,
+        "SUBTRACT": 48,
+        "MULTIPLY": 5,
+        "DIVIDE": 10,
+        "STRING": 1017,
+        "UNSTRING": 12,
+        "INSPECT": 7,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 396,
+      "capabilities": {
+        "control_flow": {
+          "IF": 1442,
+          "ELSE": 256,
+          "EVALUATE": 157,
+          "WHEN": 348,
+          "PERFORM": 1399,
+          "PERFORM_VARYING": 105,
+          "PERFORM_UNTIL": 123,
+          "EXIT": 191,
+          "CONTINUE": 32,
+          "STOP_RUN": 4,
+          "GOBACK": 8
+        },
+        "arithmetic": {
+          "ADD": 107,
+          "SUBTRACT": 48,
+          "MULTIPLY": 5,
+          "DIVIDE": 12,
+          "COMPUTE": 128
+        },
+        "data_advanced": {
+          "PIC_X": 203,
+          "PIC_9": 135,
+          "PIC_S9": 5,
+          "OCCURS": 207,
+          "REDEFINES": 53,
+          "USAGE_COMP_5": 126,
+          "USAGE_POINTER": 997,
+          "FILLER": 1
+        },
+        "io_file": {
+          "FD": 3,
+          "SELECT": 3,
+          "ASSIGN": 11,
+          "OPEN_INPUT": 8,
+          "OPEN_OUTPUT": 5,
+          "READ": 16,
+          "WRITE": 21,
+          "START": 266,
+          "CLOSE": 51,
+          "AT_END": 14,
+          "LINE_SEQUENTIAL": 3
+        },
+        "string_ops": {
+          "STRING": 1801,
+          "UNSTRING": 13,
+          "INSPECT": 7,
+          "INSPECT_REPLACING": 7,
+          "REFERENCE_MOD": 25,
+          "DELIMITED_BY": 1032
+        },
+        "tables_search": {
+          "SEARCH": 42,
+          "SET": 9,
+          "INITIALIZE": 7
+        },
+        "subprograms": {
+          "CALL": 249,
+          "USING": 67,
+          "GIVING": 11,
+          "BY_REFERENCE": 5,
+          "BY_VALUE": 8,
+          "RECURSIVE": 14
+        },
+        "copy_preproc": {
+          "COPY": 38,
+          "REPLACING": 7
+        },
+        "intrinsics": {
+          "FUNCTION": 535,
+          "FUNCTION_NUMVAL": 10,
+          "FUNCTION_TRIM": 491,
+          "FUNCTION_UPPER": 4,
+          "FUNCTION_MOD": 4,
+          "FUNCTION_LENGTH": 9
+        },
+        "misc": {
+          "DISPLAY": 117,
+          "ACCEPT": 22
+        }
+      }
+    }
+  ]
+}

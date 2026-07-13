@@ -1,0 +1,32 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compress-cobolcc",
+  "has_git": true,
+  "commits": 1,
+  "commit_log": [
+    {
+      "sha": "f0fe4e9697e3963629314b50aeeec6a0df599a55",
+      "date": "2026-04-17T11:45:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial cobpack implementation: MVP0 + MVP1 + trust suite"
+    }
+  ],
+  "first_commit": "2026-04-17T11:45:45+02:00",
+  "last_commit": "2026-04-17T11:45:45+02:00",
+  "authors": {
+    "Mathieu Acher": 1
+  },
+  "churn": {
+    "files_changed_total": 23,
+    "insertions_total": 3239,
+    "deletions_total": 0,
+    "per_commit": [
+      {
+        "sha": "f0fe4e9697e3963629314b50aeeec6a0df599a55",
+        "date": "2026-04-17T11:45:45+02:00",
+        "files": 23,
+        "ins": 3239,
+        "del": 0
+      }
+    ]
+  }
+}

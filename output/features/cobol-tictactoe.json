@@ -1,0 +1,534 @@
+{
+  "project": "cobol-tictactoe",
+  "spec_backlog": [
+    {
+      "id": "F-01",
+      "title": "**Iterative DFS with backtracking** (non-recursive, stack-free). Uses DEPTH counter + NEXT-TRY array to simulate call stack. Chosen because COBOL lacks recursion support in standard usage.",
+      "evidence": "Agent-decided",
+      "phase": "Step 1: Game Counter (`game15.cob` v1)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-02",
+      "title": "**Ownership model**. OWNER-TABLE array (9 entries, values 0/1/2) tracks which player holds each number. Serves as both game state and win-check input.",
+      "evidence": "Agent-decided",
+      "phase": "Step 1: Game Counter (`game15.cob` v1)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-03",
+      "title": "**Player alternation via depth parity**. `DIVIDE DEPTH BY 2 GIVING QUOT REMAINDER RMDR`; odd depth = P1, even = P2. Avoids storing a separate turn variable.",
+      "evidence": "Agent-decided",
+      "phase": "Step 1: Game Counter (`game15.cob` v1)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-04",
+      "title": "**Win detection via hardcoded triples**. All 8 winning triples encoded as a 24-char string `\"159168249258267348357456\"` with REDEFINES overlay for structured access (T1/T2/T3 per triple).",
+      "evidence": "Agent-decided",
+      "phase": "Step 1: Game Counter (`game15.cob` v1)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-05",
+      "title": "**Formatted result display**. Leading-zero suppression via `PIC Z(7)9`. Separate counters for P1 wins, P2 wins, draws.",
+      "evidence": "Agent-decided",
+      "phase": "Step 1: Game Counter (`game15.cob` v1)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-06",
+      "title": "**Command-line flag parsing**. `ACCEPT CMD-ARG FROM COMMAND-LINE`; compares against `\"--unique\"` to set UNIQUE-MODE flag.",
+      "evidence": "Agent-decided (flag name + mechanism)",
+      "phase": "Step 2: Symmetry Deduplication (`game15.cob` v2)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-07",
+      "title": "**D4 symmetry table (magic square permutations)**. 8 rows of 9 digits each, stored as FILLER PIC X(9) values with REDEFINES for indexed access. Each row maps number N to its image under one of the 8 symmetries (identity, 90CW, 180, 270CW, flipH, flipV, main diagonal, anti-diagonal).",
+      "evidence": "Agent-decided",
+      "phase": "Step 2: Symmetry Deduplication (`game15.cob` v2)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-08",
+      "title": "**Canonical form checking**. For each completed game, compares the move sequence against all 8 symmetric images lexicographically. Counts the game only if it is the smallest (canonical) representative of its equivalence class. Early termination on first smaller image found.",
+      "evidence": "Agent-decided",
+      "phase": "Step 2: Symmetry Deduplication (`game15.cob` v2)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-09",
+      "title": "**Dual counter system**. Separate U-P1-WINS, U-P2-WINS, U-DRAWS counters for unique games, alongside the original total counters. Both are always computed; unique results displayed only when `--unique` is active.",
+      "evidence": "Agent-decided",
+      "phase": "Step 2: Symmetry Deduplication (`game15.cob` v2)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-10",
+      "title": "**Two-pass program architecture**. Pass 1 computes minimax values for all positions; Pass 2 traverses and prints the tree. Separation allows the tree printer to query precomputed values without re-solving.",
+      "evidence": "Agent-decided",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-11",
+      "title": "**Iterative minimax algorithm**. P1 (odd depth) maximizes, P2 (even depth) minimizes. Values: 1=P2 wins, 2=Draw, 3=P1 wins. Best-value tracking per depth level via BEST-VAL array.",
+      "evidence": "Agent-decided",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-12",
+      "title": "**Position memoization via base-3 hashing**. Each board state maps to a unique key in [0, 19682] using `sum(OWNER(i) * 3^(i-1))`. MEMO-TABLE stores the minimax value for each position. Avoids re-evaluating transpositions.",
+      "evidence": "Agent-decided",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-13",
+      "title": "**Optimal move filtering (COLLECT-OPTIMAL)**. At each node, tries all available moves, evaluates each via memo lookup or direct win/draw check, and partitions into optimal (value = parent value) vs. suboptimal.",
+      "evidence": "Agent-decided",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-14",
+      "title": "**ASCII tree rendering with proper connectors**. `\\",
+      "evidence": "--` for intermediate siblings, `+--` for last sibling. IS-LAST array tracks per-depth whether the current node is the last child, controlling prefix continuation lines (`\\",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-15",
+      "title": "**Depth-limited display**. `--depth N` flag parsed via UNSTRING into two tokens. Nodes beyond MAX-DEPTH are printed with `...` marker instead of expanding children.",
+      "evidence": "Agent-decided (mechanism); explicitly requested (concept)",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-16",
+      "title": "**Node value annotations**. Each node labeled `[Draw]`, `[P1 wins]`, or `[P2 wins]`. Terminal nodes marked with `*`.",
+      "evidence": "Agent-decided",
+      "phase": "Step 3: Optimal Play Tree (`game15tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-17",
+      "title": "**Move classification (optimal vs. bad)**. COLLECT-OPTIMAL extended to partition available moves into two lists: OPT-NUMS (safe/optimal) and BAD-NUMS (lead to worse position).",
+      "evidence": "Explicitly requested (concept); agent-decided (mechanism)",
+      "phase": "Step 4: Avoid Annotations (`game15tree.cob` enhancement)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-18",
+      "title": "**Avoid line rendering**. PRINT-AVOID paragraph builds `avoid: 1, 3, 7, 9` lines with proper tree-prefix alignment. Displayed before the optimal move branches at each decision point.",
+      "evidence": "Agent-decided (format)",
+      "phase": "Step 4: Avoid Annotations (`game15tree.cob` enhancement)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-19",
+      "title": "**DISP-DIGIT intermediary for safe numeric display**. CUR-NUM (PIC 99, two digits) cannot be directly moved to a single-character output field without truncation to the wrong digit. DISP-DIGIT (PIC 9) is a dedicated one-digit variable: CUR-NUM is moved to DISP-DIGIT (numeric truncation keeps the units digit), then DISP-DIGIT is moved to the output line.",
+      "evidence": "Agent-decided (fix for self-detected bug)",
+      "phase": "Step 5: Bug Fixes (during Steps 3 and 4)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-20",
+      "title": "**CHOSEN(DEPTH)-based undo instead of CUR-NUM**. COLLECT-OPTIMAL's inner loop overwrites CUR-NUM (needed because CHECK-WIN reads it). The calling paragraph's undo operation must not use CUR-NUM after COLLECT-OPTIMAL returns. Fix: use `OWNER(CHOSEN(DEPTH))` which stores the actual chosen move and is never overwritten by inner loops.",
+      "evidence": "Agent-decided (fix for self-detected bug)",
+      "phase": "Step 5: Bug Fixes (during Steps 3 and 4)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-21",
+      "title": "**Display-layer adaptation without logic change**. Internal representation stays as integers 1-9 for computational efficiency. Output formatting changed to show `\"0.0X\"` (e.g., `\"P1:0.05\"`) by inserting a fixed `\"0.0\"` prefix before the digit.",
+      "evidence": "Agent-decided (approach)",
+      "phase": "Step 6: Game of 0.15 Adaptation (`game015.cob`, `game015tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-22",
+      "title": "**Wider tree indentation for longer labels**. Tree connectors use 5-char spacing (`\\",
+      "evidence": "`, `+--- `) instead of 4-char, accommodating the wider `\"0.0X\"` move labels.",
+      "phase": "Step 6: Game of 0.15 Adaptation (`game015.cob`, `game015tree.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-23",
+      "title": "**Two-argument CLI with UNSTRING parsing**. First argument = target sum, second (optional) = max number. UNSTRING splits by spaces into ARG1/ARG2, converted via FUNCTION NUMVAL.",
+      "evidence": "Agent-decided (mechanism)",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-24",
+      "title": "**Dynamic winning triple generation**. Nested loops over all pairs (a, b) where a < b, computes c = target - a - b, checks c > b and c <= max. Stores in TRIPLE-TABLE (up to 84 entries).",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-25",
+      "title": "**Parameterized DFS engine**. OWNER-TABLE, NEXT-TRY-TABLE, and MOVE-TABLE all sized to 15 (max allowed). DFS-STEP uses MAX-NUM instead of hardcoded 9. CHECK-WIN iterates over NUM-TRIPLES (dynamic) instead of hardcoded 8.",
+      "evidence": "Agent-decided (generalization)",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-26",
+      "title": "**Auto-derivation of max-number**. When second argument is omitted, computes `MAX-NUM = TARGET-SUM - 3`, capped to [3, 15]. Heuristic ensures the number pool is large enough for meaningful play.",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-27",
+      "title": "**Input validation with error messages**. Three checks: max-number > 15 (array bounds), max-number < 3 (too few numbers), target-sum < 6 (minimum triple is 1+2+3=6). Each prints an error and does STOP RUN.",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-28",
+      "title": "**Usage message**. Displayed when no arguments given. Shows syntax, parameter descriptions, and three examples.",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-29",
+      "title": "**Rules display with game character commentary**. After listing winning triples, prints qualitative observations: \"No winning triples exist!\" / \"Few winning triples: games tend to end in draws\" / \"Many winning triples: games tend to end quickly.\"",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-30",
+      "title": "**Classic Game of 15 detection**. When TARGET-SUM=15 and MAX-NUM=9, prints a note about the tic-tac-toe isomorphism via the magic square.",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-31",
+      "title": "**Enumeration guard for large games**. If MAX-NUM > 9, skips DFS (too many permutations) and prints a message instead of hanging.",
+      "evidence": "Agent-decided",
+      "phase": "Step 7: Variant Generator (`gameN.cob`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 31,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "PASS 1 (Extraction): reconstruct an ex-post backlog and replay package for reproducibility."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "PASS 2 (Interpretation): characterize coding strategies + outcomes/quality, including interaction-demand analysis and (if present) COBOL capability indicators."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "I will NOT provide transcripts proactively."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "You must analyze the repo as-is (git history may be minimal or absent)."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Claude session histories are typically available under: ~/.claude/"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Your analysis must be evidence-based and reproducible."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Do NOT invent features, decisions, commands, or outcomes."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Every claim must have evidence pointers from: repo files, git commits (if any), ~/.claude session logs, and any commands/logs you executed."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "If you infer, label it explicitly as INFERRED and justify why."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Redact secrets (tokens/keys) if encountered."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "[R:path:lines] repo file references with line ranges when possible"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "[G:commit <hash>] git commit references"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "[T:session <id/filename>:msg_###] transcript references (or timestamp range if that\u2019s how logs are structured)"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "[L:run_<n>] for outputs of build/test/run commands you executed"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "You may ask clarification questions ONLY at defined checkpoints (CP1\u2013CP3 below)."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Each checkpoint: ask at most 5 targeted questions, each one must include:"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "If I don\u2019t answer, proceed with best-effort and mark uncertainty clearly."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Determine repo root, project name, primary language(s), entry points, build system, test framework, CI configs."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Collect git metadata if available: branch, HEAD, remote URL."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Search ~/.claude for sessions referencing:"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "this repo path, OR repo name, OR git remote URL, OR distinctive filenames in the repo."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "If multiple sessions match, pick the most relevant one(s) using explicit criteria (e.g., most recent + strongest repo-path match)."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "If no session is found, proceed with repo-only analysis and explicitly state this limitation."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "Produce a chronological milestone list with evidence pointers (transcript preferred; else git; else repo structure clues)."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "feature request, bugfix request, constraints, acceptance criteria, scenarios, refactor request, doc/tooling/test request, scope change."
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "UI-ID, evidence pointer [T:...]"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "short quote (<= 25 words) or paraphrase + pointer"
+    },
+    {
+      "ts": "2026-03-19T10:11:43.964000+00:00",
+      "item": "category (FeatureRequest | BugFixRequest | Constraint | AcceptanceCriteria"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Game of 15: A combinatorial game isomorphic to Tic-Tac-Toe via the 3x3 magic square"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Iterative DFS with backtracking (non-recursive COBOL implementation)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Ownership model for game state tracking"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Player alternation via depth parity (odd=P1, even=P2)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Hardcoded winning triples with REDEFINES overlay for structured access"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "D4 dihedral group symmetries (8 symmetries of the magic square)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Canonical form checking for game deduplication"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Minimax algorithm with iterative implementation"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Base-3 position key hashing for memoization (3^9 = 19,683 positions)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Two-pass architecture (computation pass + output pass)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "ASCII tree rendering with tree connectors and indentation"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Move classification (optimal vs. bad/losing moves)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Parameterized variant generator with dynamic triple generation"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "COBOL flat variable scope and its implications for bug patterns"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "GnuCOBOL 3.2.0 toolchain"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "game15.cob (252 lines)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "game15tree.cob (558 lines)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "game015.cob (242 lines)"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-04-07T07:22:39.136000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "First: Compute the number of possible games in the Game of 15 (two players alternate picking numbers 1-9, win with three summing to 15)"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Second: Add a `--unique` flag to compute games without symmetry duplicates (D4 dihedral group of the magic square)"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Third: Generate an ASCII tree of optimal play (minimax) showing what to play after any sequence of moves, with `--depth N` flag"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Fourth: Simplify the tree by showing (1) moves to AVOID (you'd lose) and (2) moves you CAN play (safe choices)"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Fifth: Adapt both counting and tree programs for \"Game of 0.15\" (numbers 0.01-0.09, sum to 0.15) \u2014 mathematically identical, display-only changes"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Sixth (interrupted): Create a generator that \"invents\" variants of the game by changing N (the target sum), deriving appropriate number sets, and recapping the rules"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Game of 15 is isomorphic to tic-tac-toe via the 3x3 magic square (2 7 6 / 9 5 1 / 4 3 8)"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Iterative DFS with explicit stack (no recursion) for game tree enumeration"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "8 winning triples: {1,5,9}, {1,6,8}, {2,4,9}, {2,5,8}, {2,6,7}, {3,4,8}, {3,5,7}, {4,5,6}"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Dihedral group D4 (8 symmetries) for deduplication via canonical form checking"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Minimax with memoization using base-3 position encoding (3^9 = 19,683 entries)"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "ASCII tree rendering with IS-LAST prefix tracking for proper `|---`/`+---` connectors"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "COBOL fixed-format conventions (columns 7-72), PIC types, REDEFINES for data overlay"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "GnuCOBOL 3.2.0 on macOS (darwin), compiled with `cobc -x -o <name> <name>.cob`"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-tictactoe/game15.cob`"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-tictactoe/game15tree.cob`"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-tictactoe/game015.cob`"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-tictactoe/game015tree.cob`"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-13T07:35:02.695000+00:00",
+      "item": "Files and Code Sections:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "e4968ec570",
+      "date": "2026-04-09",
+      "subject": "Add algorithm-agnostic replay prompts for step-by-step reproduction"
+    },
+    {
+      "sha": "4ae3129ad1",
+      "date": "2026-03-19",
+      "subject": "removal history"
+    },
+    {
+      "sha": "e37dfc24cb",
+      "date": "2026-03-19",
+      "subject": "backlog feature"
+    },
+    {
+      "sha": "e351c4bc5c",
+      "date": "2026-03-19",
+      "subject": "analysis"
+    },
+    {
+      "sha": "dc71e86cc0",
+      "date": "2026-03-19",
+      "subject": "Add Game of 15 COBOL programs: counter, optimal play tree, and variant generator"
+    }
+  ],
+  "total_features_proxy": 101
+}

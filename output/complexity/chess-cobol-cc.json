@@ -1,0 +1,300 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/chess-cobol-cc",
+  "aggregate": {
+    "num_files": 1,
+    "total_lines": 3460,
+    "code_lines": 2920,
+    "comment_lines": 366,
+    "sections": 2,
+    "paragraphs": 81,
+    "data_items": 701,
+    "max_nesting_any_file": 10,
+    "statements": {
+      "PERFORM": 170,
+      "IF": 279,
+      "EVALUATE": 14,
+      "CALL": 0,
+      "MOVE": 535,
+      "COMPUTE": 86,
+      "READ": 0,
+      "WRITE": 0,
+      "OPEN": 0,
+      "CLOSE": 0,
+      "ACCEPT": 4,
+      "DISPLAY": 9,
+      "GO TO": 0,
+      "EXIT": 18,
+      "STOP": 1,
+      "SET": 0,
+      "ADD": 58,
+      "SUBTRACT": 27,
+      "MULTIPLY": 0,
+      "DIVIDE": 6,
+      "STRING": 0,
+      "UNSTRING": 0,
+      "INSPECT": 4,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 1,
+      "ENVIRONMENT": 1,
+      "DATA": 1,
+      "PROCEDURE": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "chess-engine.cob",
+        "code_lines": 2920
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 1020,
+        "files_using": 1,
+        "constructs": {
+          "IF": 557,
+          "ELSE": 59,
+          "EVALUATE": 31,
+          "WHEN": 73,
+          "PERFORM": 209,
+          "PERFORM_VARYING": 28,
+          "PERFORM_UNTIL": 38,
+          "EXIT": 18,
+          "CONTINUE": 6,
+          "STOP_RUN": 1
+        }
+      },
+      "arithmetic": {
+        "total": 206,
+        "files_using": 1,
+        "constructs": {
+          "ADD": 87,
+          "SUBTRACT": 27,
+          "DIVIDE": 6,
+          "COMPUTE": 86
+        }
+      },
+      "data_advanced": {
+        "total": 1107,
+        "files_using": 1,
+        "constructs": {
+          "PIC_X": 44,
+          "PIC_9": 144,
+          "PIC_S9": 468,
+          "OCCURS": 23,
+          "REDEFINES": 9,
+          "LEVEL_88": 3,
+          "FILLER": 416
+        }
+      },
+      "io_file": {
+        "total": 7,
+        "files_using": 1,
+        "constructs": {
+          "START": 7
+        }
+      },
+      "string_ops": {
+        "total": 27,
+        "files_using": 1,
+        "constructs": {
+          "STRING": 6,
+          "INSPECT": 4,
+          "INSPECT_TALLYING": 4,
+          "REFERENCE_MOD": 13
+        }
+      },
+      "tables_search": {
+        "total": 82,
+        "files_using": 1,
+        "constructs": {
+          "SEARCH": 8,
+          "SORT": 69,
+          "INITIALIZE": 5
+        }
+      },
+      "subprograms": {
+        "total": 7,
+        "files_using": 1,
+        "constructs": {
+          "GIVING": 6,
+          "RECURSIVE": 1
+        }
+      },
+      "copy_preproc": {
+        "total": 3,
+        "files_using": 1,
+        "constructs": {
+          "COPY": 3
+        }
+      },
+      "intrinsics": {
+        "total": 37,
+        "files_using": 1,
+        "constructs": {
+          "FUNCTION": 29,
+          "FUNCTION_NUMVAL": 6,
+          "FUNCTION_TRIM": 1,
+          "FUNCTION_MOD": 1
+        }
+      },
+      "misc": {
+        "total": 13,
+        "files_using": 1,
+        "constructs": {
+          "DISPLAY": 9,
+          "ACCEPT": 4
+        }
+      }
+    },
+    "mastery_score": 38,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.SUBTRACT",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "data_advanced.FILLER",
+      "data_advanced.LEVEL_88",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_X",
+      "data_advanced.REDEFINES",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_MOD",
+      "intrinsics.FUNCTION_NUMVAL",
+      "intrinsics.FUNCTION_TRIM",
+      "io_file.START",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.INSPECT",
+      "string_ops.INSPECT_TALLYING",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.STRING",
+      "subprograms.GIVING",
+      "subprograms.RECURSIVE",
+      "tables_search.INITIALIZE",
+      "tables_search.SEARCH",
+      "tables_search.SORT"
+    ],
+    "categories_exercised": 10
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "total_lines": 3460,
+      "code_lines": 2920,
+      "comment_lines": 366,
+      "blank_lines": 174,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 2,
+      "paragraphs": 81,
+      "data_items": 701,
+      "statements": {
+        "PERFORM": 170,
+        "IF": 279,
+        "EVALUATE": 14,
+        "CALL": 0,
+        "MOVE": 535,
+        "COMPUTE": 86,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 4,
+        "DISPLAY": 9,
+        "GO TO": 0,
+        "EXIT": 18,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 58,
+        "SUBTRACT": 27,
+        "MULTIPLY": 0,
+        "DIVIDE": 6,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 4,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 10,
+      "capabilities": {
+        "control_flow": {
+          "IF": 557,
+          "ELSE": 59,
+          "EVALUATE": 31,
+          "WHEN": 73,
+          "PERFORM": 209,
+          "PERFORM_VARYING": 28,
+          "PERFORM_UNTIL": 38,
+          "EXIT": 18,
+          "CONTINUE": 6,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 87,
+          "SUBTRACT": 27,
+          "DIVIDE": 6,
+          "COMPUTE": 86
+        },
+        "data_advanced": {
+          "PIC_X": 44,
+          "PIC_9": 144,
+          "PIC_S9": 468,
+          "OCCURS": 23,
+          "REDEFINES": 9,
+          "LEVEL_88": 3,
+          "FILLER": 416
+        },
+        "io_file": {
+          "START": 7
+        },
+        "string_ops": {
+          "STRING": 6,
+          "INSPECT": 4,
+          "INSPECT_TALLYING": 4,
+          "REFERENCE_MOD": 13
+        },
+        "tables_search": {
+          "SEARCH": 8,
+          "SORT": 69,
+          "INITIALIZE": 5
+        },
+        "subprograms": {
+          "GIVING": 6,
+          "RECURSIVE": 1
+        },
+        "copy_preproc": {
+          "COPY": 3
+        },
+        "intrinsics": {
+          "FUNCTION": 29,
+          "FUNCTION_NUMVAL": 6,
+          "FUNCTION_TRIM": 1,
+          "FUNCTION_MOD": 1
+        },
+        "misc": {
+          "DISPLAY": 9,
+          "ACCEPT": 4
+        }
+      }
+    }
+  ]
+}

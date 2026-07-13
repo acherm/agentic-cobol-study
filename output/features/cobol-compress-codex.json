@@ -1,0 +1,815 @@
+{
+  "project": "cobol-compress-codex",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "Toolchain Validation & Binary I/O Experiment",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "Schema Parser Subprogram",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "Main CLI & CPC v0 Container (compress/decompress/info, NONE codec)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "Build & Test Scripts",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Test Fixtures (schemas + data)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "Bug Fix: ORD/CHAR 1-Based Offset",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "Bug Fix: Nested PERFORM Loop Index Collision",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "RLESP Codec (encode + decode + AUTO selection)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "Schema Codec Extension",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "Bug Fix: RLESP Pending Space Corruption",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "Bug Fix: Synthetic Gap Field RLESP Safety",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "Bug Fix: PAYLOAD_OFFSET Header Size",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "Trust Library (`trust_lib.py`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "Determinism Proof-by-Test (`trust_determinism.py`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "Randomized Round-Trip Testing (`trust_randomized.py`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "Corruption/Fuzz Testing (`trust_fuzz.py`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "CRC32 Reference Implementation (`trust_crc32.py`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "TRUST.md Documentation",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "PASS 1 (Extraction): reconstruct (i) a USER-DRIVEN Feature Backlog, (ii) an AGENT-CENTRIC Specification Backlog (step-wise), plus Prompt Ledger + Replay Package + Repo Stats, and WRITE:"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "README.md (must reference SPECIFICATION_BACKLOG.md)"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "PASS 2 (Interpretation): characterize strategies, outcomes/quality, interaction demand; correlate with lightweight metrics."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "I will NOT provide transcripts proactively."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "You must analyze the repo as-is (git history may be minimal/absent)."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Codex stores local state under CODEX_HOME (defaults to ~/.codex)."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "$CODEX_HOME/sessions/**.jsonl (session event streams)"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "$CODEX_HOME/history.jsonl (if history persistence is enabled)"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "other logs/caches under CODEX_HOME as available"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Prefer session evidence from these artifacts; fall back to repo-only when unavailable."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Do NOT invent features, decisions, commands, or outcomes."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Every claim must be traceable to evidence from: repo files, git commits (if any), CODEX_HOME session artifacts, and run/test logs you executed."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "If you infer anything, label it INFERRED and justify why."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Redact secrets (tokens/keys) if encountered in repo or logs."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Keep quotes short (<= 25 words). Prefer pointers."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "[R:path:lines] repo file references (include line ranges when possible)"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "[G:commit <hash>] git commit references"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "[T:session <id/filename>:event_###] session-log references (or timestamp ranges)"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "[L:run_<n>] outputs of build/test/run commands you executed"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "[S:stats_run_<n>] outputs of repo statistics commands"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Do NOT list them in the Feature Backlog."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "If explicitly requested by the user for reproducibility, list them in a separate section:"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Specification Backlog (agent-centric changes) and/or"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "PASS 2 as \u201cAgent-Initiated / Internal Decisions\u201d."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "why it blocks the analysis,"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "what artifact would resolve it,"
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "a \u201cDefault if unanswered\u201d assumption."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "repo root, primary language(s), entry points, build system, test framework, CI configs."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "git metadata if present: branch, HEAD, remotes."
+    },
+    {
+      "ts": "2026-03-19T15:50:12.336000+00:00",
+      "item": "Identify project rules that may affect behavior:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "toolchain mastery in COBOL (multi-file build, binary-safe I/O),"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "schema parsing,"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "container serialization/deserialization,"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "round-trip correctness,"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`--in input.dat`: binary file with `N` records of exactly `RECORD_LEN` bytes"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Validation: file size must be a multiple of `RECORD_LEN`, else error."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`RECORD_LEN=<integer>`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`FIELD <NAME> <OFFSET> <LENGTH> <TYPE>`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`TYPE` in `{X, 9}` but MVP0 treats both as raw bytes."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "No overlap."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Within bounds."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Gaps allowed."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`--out output.cpc`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`--out restored.dat` which must match original input bytes exactly."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "parse schema"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "validate input size and compute `RECORD_COUNT`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "write `.cpc` container with:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "header + field descriptors"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "payloads for each field using `NONE` codec only:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "original size, container size, ratio"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "compression time + throughput"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "read container"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "validate header (magic/version)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "reconstruct records by reading each field payload and placing bytes at offsets"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "output must be byte-identical"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "decompression time + throughput"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "record length, record count"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "list fields: name, offset, length, type, codec (=NONE), payload size"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`0` success"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`1` invalid args/schema"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`2` I/O error"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`3` corrupt container / invalid header"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`4` format error (payload length mismatch etc.)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "MAGIC: 8 bytes ASCII `COBPACK\\0`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "VERSION: uint32 = 0"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "RECORD_LEN: uint32"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "RECORD_COUNT: uint64"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "FIELD_COUNT: uint32"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "NAME_LEN: uint16"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "NAME bytes (UTF-8)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "OFFSET: uint32"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "LENGTH: uint32"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "TYPE: uint8 (0=X, 1=9)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "CODEC: uint8 (0=NONE)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "PAYLOAD_OFFSET: uint64"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "PAYLOAD_SIZE: uint64"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "payload bytes of length `RECORD_COUNT * LENGTH`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "each payload size must equal `RECORD_COUNT * LENGTH`, else error."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Must compile with `cobc` (GNUCobol) on Linux."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Provide:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`build.sh` \u2192 builds `./cobpack`"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`run_tests.sh` \u2192 runs tests and exits non-zero on failure"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`small.dat` with `RECORD_LEN=16`, e.g., 5 records with visible patterns."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "records where fields contain many `0x20` spaces."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "include bytes across 0..255 to ensure binary-safe behavior."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "build"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "for each dataset:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "compress \u2192 decompress"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "`cmp` input vs output (byte-for-byte)"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "negative tests:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "schema overlap should fail"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "input file size not multiple of RECORD_LEN should fail"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "bad magic/version should fail (corrupt the"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "**Package** a fixed-length record file into a `.cpc` container (field-wise / columnar layout) using only the `NONE` codec (no compression)."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "**Unpack** that `.cpc` back into the original file **byte-identical**."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "Provide `info` about the container."
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "**Small deterministic**:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "**Spaces-heavy**:"
+    },
+    {
+      "ts": "2026-03-12T20:18:25.863000+00:00",
+      "item": "**Random bytes**:"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`FIELD <NAME> <OFFSET> <LENGTH> <TYPE> [CODEC=<NONE|RLESP>]`"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "CLI `--codec NONE|RLESP|AUTO`"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Precedence:"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "CODEC may be 0 (NONE) or 1 (RLESP)"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "PAYLOAD_SIZE becomes variable for RLESP"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`tag` (1 byte)"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`0x00` = literal block"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`0x01` = space-run block"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "otherwise invalid (error)"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`MIN_RUN = 4` (fixed)"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Scan input left\u2192right."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "When a run of spaces length `r >= MIN_RUN`, emit a space-run block."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Otherwise include bytes in literal blocks."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Literal blocks may be merged up to a max size:"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "`MAX_LIT = 65535` (since len uint16)"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Reconstruct exactly expected output length."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "If decoded length != expected length \u2192 error."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "invalid tag"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "truncated payload"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "decoded length mismatch"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "all MVP0 tests still pass"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "RLESP tests pass"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "AUTO selection deterministic and correct"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Prioritize **MVP0** first and make tests green."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Only then implement MVP1."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Keep code modular: separate schema parsing, container IO, codecs, and record reconstruction."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Ensure binary-safe file IO (don\u2019t treat data as text; no line-based reads for record data)."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Determinism matters: avoid using time-based seeds or unordered iterations."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "per-field `CODEC=...` in schema"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "CLI `--codec` if not AUTO"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "AUTO: choose RLESP only for TYPE=X fields when it reduces size; else NONE"
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "A dataset where RLESP should win clearly (lots of spaces)."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "A dataset where RLESP should not be used in AUTO (random bytes)."
+    },
+    {
+      "ts": "2026-03-12T20:40:04.299000+00:00",
+      "item": "Corruption tests:"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`FIELD <NAME> <OFFSET> <LENGTH> <TYPE> [CODEC=<NONE|RLESP>]`"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "CLI `--codec NONE|RLESP|AUTO`"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Precedence:"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "CODEC may be 0 (NONE) or 1 (RLESP)"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "PAYLOAD_SIZE becomes variable for RLESP"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`tag` (1 byte)"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`0x00` = literal block"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`0x01` = space-run block"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "otherwise invalid (error)"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`MIN_RUN = 4` (fixed)"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Scan input left\u2192right."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "When a run of spaces length `r >= MIN_RUN`, emit a space-run block."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Otherwise include bytes in literal blocks."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Literal blocks may be merged up to a max size:"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "`MAX_LIT = 65535` (since len uint16)"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Reconstruct exactly expected output length."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "If decoded length != expected length \u2192 error."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "invalid tag"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "truncated payload"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "decoded length mismatch"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "all MVP0 tests still pass"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "RLESP tests pass"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "AUTO selection deterministic and correct"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Prioritize **MVP0** first and make tests green."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Only then implement MVP1."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Keep code modular: separate schema parsing, container IO, codecs, and record reconstruction."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Ensure binary-safe file IO (don\u2019t treat data as text; no line-based reads for record data)."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Determinism matters: avoid using time-based seeds or unordered iterations."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "per-field `CODEC=...` in schema"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "CLI `--codec` if not AUTO"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "AUTO: choose RLESP only for TYPE=X fields when it reduces size; else NONE"
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "A dataset where RLESP should win clearly (lots of spaces)."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "A dataset where RLESP should not be used in AUTO (random bytes)."
+    },
+    {
+      "ts": "2026-03-12T20:40:17.271000+00:00",
+      "item": "Corruption tests:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "f478e7fbfa",
+      "date": "2026-03-23",
+      "subject": "Initial import: COBPACK MVP1 with trust suite"
+    }
+  ],
+  "total_features_proxy": 186
+}

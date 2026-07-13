@@ -1,0 +1,276 @@
+{
+  "project": "game15-cobol-codex",
+  "spec_backlog": [
+    {
+      "id": "SB-01",
+      "title": "**Iterative DFS with explicit stack**. Single `PERFORM UNTIL DONE=1` driven by `SEARCH-DEPTH` counter + `NEXT-CANDIDATE(depth)` array. Chosen explicitly \"to avoid relying on compiler-specific recursion behavior\" `[T:event_022]`.",
+      "evidence": "Agent-initiated (architecture)",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-02",
+      "title": "**Ownership model + move history + per-depth next-candidate**. `OWNER(9)` holds 0/1/2, `MOVE-NUMBER(9)` records chosen moves, `NEXT-CANDIDATE(9)` holds the next value to try per depth.",
+      "evidence": "Agent-initiated (data layout)",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-03",
+      "title": "**Pre-tabulated player schedule**. `PLAYER-AT-DEPTH(1..9)` explicitly set to `1,2,1,2,1,2,1,2,1` rather than derived modulo.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-04",
+      "title": "**Hard-coded tic-tac-toe lines, not magic triples**. Win check is 8 triples but expressed as direct cell triples `{1,5,9},{1,6,8},{2,4,9},{2,5,8},{2,6,7},{3,4,8},{3,5,7},{4,5,6}`, one `IF` per triple. (These are the 8 tic-tac-toe lines *after* the magic-square mapping is applied, so equivalent to the magic-triple set.)",
+      "evidence": "Agent-initiated",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-05",
+      "title": "**Stop-on-win termination rule**. Once `HAS-WON = 1` the branch is recorded and the chosen number is un-owned, rather than completing the remaining picks. Makes the reported total 255,168.",
+      "evidence": "Agent-initiated (semantics)",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-06",
+      "title": "**Formatted reporting with `PIC Z,ZZZ,ZZZ,ZZZ,ZZZ,ZZ9`**. Group-separated numeric edit for the three win/draw/total lines.",
+      "evidence": "Agent-initiated (format)",
+      "phase": "Step 1 \u2014 Game counter `game15.cob` (commit `29cbcaa`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-07",
+      "title": "**CLI flag parsing via INSPECT TALLYING**. Reads `COMMAND-LINE-TEXT`, wraps with sentinel spaces, counts occurrences of literal `\" --unique \"` to set `UNIQUE-MODE`.",
+      "evidence": "Agent-initiated (mechanism)",
+      "phase": "Step 2a \u2014 Symmetry deduplication (same commit `c41b9b5`, first sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-08",
+      "title": "**D4 symmetry table as number permutations (8 x 9)**. Eight rows of `SYMMETRY-VALUE(sym, n)` mapping number `n` under each square symmetry, stored via individual `MOVE` statements (no REDEFINES / no string literal).",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2a \u2014 Symmetry deduplication (same commit `c41b9b5`, first sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-09",
+      "title": "**Canonical sequence via min-over-orbit**. Keeps a `BEST-MOVE(9)` array; iterates 7 non-identity symmetries, remaps the move list into `TEST-MOVE`, compares lexicographically, swaps in `TEST-MOVE` whenever it is smaller.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2a \u2014 Symmetry deduplication (same commit `c41b9b5`, first sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-10",
+      "title": "**Factorial-rank canonical hash \u2192 986,409-entry bitmap**. Each canonical sequence of length `L` is ranked to an integer in `[0, 9!)` using falling-factorial weights and `LENGTH-OFFSET(L)` start-indices. A `SEEN-CANONICAL PIC X OCCURS 986409` array marks already-counted equivalence classes (`\"Y\"` or SPACE).",
+      "evidence": "Agent-initiated (approach)",
+      "phase": "Step 2a \u2014 Symmetry deduplication (same commit `c41b9b5`, first sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-11",
+      "title": "**Dual counter system**. Four additional `UNIQUE-*` counters incremented only when the canonical sequence is seen for the first time. Always computed; the unique section of the report is gated by `UNIQUE-MODE`.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2a \u2014 Symmetry deduplication (same commit `c41b9b5`, first sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-12",
+      "title": "**Base-3 state encoding over all 19,683 boards**. Each of the 3^9 `OWNER`-triplets is mapped to a unique integer `STATE-ID \u2208 [1, 19683]` using `POWER3(1..9) = 1,3,9,\u2026,6561`. `STATE-VALID(19683)` and `STATE-OUTCOME(19683)` are full tables, not a transposition cache.",
+      "evidence": "Agent-initiated (architecture)",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-13",
+      "title": "**Bottom-up retrograde analysis**. Outer loop `FILLED-TARGET` from 9 down to 0; for each state at that fill level decides validity + outcome by looking up child states (already solved at depth `filled+1`). Guarantees children are ready before the parent.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-14",
+      "title": "**State validity filter**. A board is valid iff piece counts are consistent (`p1 \u2208 {p2, p2+1}`), not both players have a winning line, and the player who allegedly just moved is the one who won if a win exists. Used to prune ~70% of the 19683 encodings.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-15",
+      "title": "**Minimax folded into retrograde solve**. `STORE-STATE-OUTCOME` resolves terminal states directly, else picks best-over-children using `BEST-OUTCOME` with early exit when optimum (`1` for P1, `2` for P2) is reached.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-16",
+      "title": "**Per-level node stack for iterative tree printing**. Fixed-size (depth 10) stack with `NODE-MOVE / NODE-STATE-ID / NODE-OUTCOME / NODE-CHILD-LIST(depth,9) / NODE-BAD-LIST(depth,9) / NODE-NEXT-CHILD / NODE-LAST`. All tree walking is iterative \u2014 no `CALL \u2026 RECURSIVE`.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-17",
+      "title": "**Optimal-child filter tied to parent value**. Only children whose `STATE-OUTCOME` equals the parent's `NODE-OUTCOME` are expanded; others are set aside (anticipates SB-20).",
+      "evidence": "Agent-initiated",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-18",
+      "title": "**ASCII connectors assembled into `PIC X(120)` line buffer**. `\\",
+      "evidence": "-- / +-- ` leader + per-level `\\",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-19",
+      "title": "**`--depth N` option with numeric argument validation**. `UNSTRING \u2026 DELIMITED BY ALL SPACE` into 8 token slots; rejects non-numeric, caps at 9; `DISPLAY-ELLIPSIS` emits `...` for pruned sub-trees.",
+      "evidence": "Agent-initiated (mechanism); user-requested (behaviour)",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-01",
+      "title": "Bug fix: **`FILLED-TARGET` underflow loop**. First attempt declared the counter `PIC 99` (unsigned); the `UNTIL FILLED-TARGET < 0` condition never fired and the solver hung. Agent self-diagnosed from a stalling run, changed to `PIC S99`.",
+      "evidence": "Agent-initiated (self-detected)",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-02",
+      "title": "Bug fix: **OWNER array stale after solver phase**. `BUILD-OUTCOME-TABLE` leaves `OWNER` holding the last decoded board, so the tree-print phase was rendering from a non-empty root. Fix: explicit reset loop at the top of `DISPLAY-OPTIMAL-TREE`.",
+      "evidence": "Agent-initiated (self-detected)",
+      "phase": "Step 2b \u2014 Optimal play tree `game15_tree.cob` (same commit `c41b9b5`, second sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-20",
+      "title": "**Move classification into safe vs bad buckets**. Same pass as SB-17: children with value == parent go to `NODE-CHILD-MOVE`, others go to `NODE-BAD-MOVE`. Buckets kept per level on the stack.",
+      "evidence": "User-requested (concept); agent-initiated (mechanism)",
+      "phase": "Step 2c \u2014 Avoid annotations (same commit `c41b9b5`, third sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-21",
+      "title": "**`avoid:` line rendered at child-level prefix**. `DISPLAY-AVOID-LINE` builds `avoid: n1, n2, \u2026` at the same prefix depth as the optimal children (`PRINT-LEVEL = ACTIVE-LEVEL + 1`). Emitted before the child branches; skipped when `NODE-BAD-COUNT = 0`.",
+      "evidence": "Agent-initiated (format)",
+      "phase": "Step 2c \u2014 Avoid annotations (same commit `c41b9b5`, third sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-03",
+      "title": "Bug fix: **avoid-line indentation reused a stale prefix depth**. Rendered column was one level too shallow. Fix: compute `PRINT-LEVEL` explicitly for each call; run `BUILD-CHILD-PREFIX` with that fresh value.",
+      "evidence": "Agent-initiated (self-detected)",
+      "phase": "Step 2c \u2014 Avoid annotations (same commit `c41b9b5`, third sub-step)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-22",
+      "title": "**File duplication then display-only diff** (`cp game15.cob game015.cob; cp game15_tree.cob game015tree.cob`). Explicit agent plan: \"the search, symmetry, minimax, and avoid logic will stay byte-for-byte aligned\".",
+      "evidence": "Agent-initiated (approach)",
+      "phase": "Step 3 \u2014 Game of 0.15 variants (commit `f9c2eb1`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-23",
+      "title": "**`MOVE-LABEL(9)` lookup for decimal rendering in the tree variant**. `PIC X(4) OCCURS 9` pre-filled with `\"0.01\" \u2026 \"0.09\"`. Tree node strings and avoid lines use `MOVE-LABEL(NODE-MOVE(level))` instead of raw digit.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 3 \u2014 Game of 0.15 variants (commit `f9c2eb1`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-24",
+      "title": "**Target-sum banner text `\"Target sum: 0.15\"`** in both variants. Single-line cosmetic additions in `REPORT-RESULTS` (counter) and `DISPLAY-ROOT` (tree).",
+      "evidence": "Agent-initiated",
+      "phase": "Step 3 \u2014 Game of 0.15 variants (commit `f9c2eb1`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-25",
+      "title": "**Internal integers preserved**. Owner / symmetry / state-id / minimax logic untouched \u2014 0.15 \u2261 15 by factor-of-100. Both variants use the same 986,409 bitmap and 19,683 state table.",
+      "evidence": "Agent-initiated (decision)",
+      "phase": "Step 3 \u2014 Game of 0.15 variants (commit `f9c2eb1`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-26",
+      "title": "**Two-argument CLI with strict numeric validation**. `UNSTRING \u2026 INTO ARG-TOKEN(1..4)`, extra tokens rejected, per-character digit check, `NUMVAL` conversion.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-27",
+      "title": "**Runtime winning-triple generation**. Nested `a < b < c, a + b + c = target, c \u2264 max-number, c > b`; stores up to 84 triples in `TRIPLE-A/B/C`.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-28",
+      "title": "**Parameterised DFS over `MAX-NUMBER` and `STORED-TRIPLE-COUNT`**. Engine shape identical to SB-01 but with loop bounds read from data; win check iterates stored triples instead of hard-coded lines.",
+      "evidence": "Agent-initiated (generalisation)",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-29",
+      "title": "**Auto-default `max-number = target-sum - 3`** (clamped to `[3, 999]`). Agent's stated justification: \"values above that cannot appear in any distinct winning triple\". `(default, capped at 999)` badge shown when capped.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-30",
+      "title": "**Enumeration guard `MAX-NUMBER <= 9`**. When larger, triples are still listed but the DFS is skipped with an explanatory message, so the program never hangs on combinatorial blow-up.",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-31",
+      "title": "**Number-pool line-wrapping display**. `DISPLAY-NUMBER-POOL` wraps the pool at 12 entries per line using `FUNCTION MOD(TABLE-IDX, 12) = 0`. Post-validation addition noted in the session as \"actual pool listing\".",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-32",
+      "title": "**Usage message + explicit default / cap explanation**. `DISPLAY-USAGE` run when `ARGUMENT-ERROR = 1` (triggered by empty or malformed args).",
+      "evidence": "Agent-initiated",
+      "phase": "Step 4 \u2014 Generalised Game of N `gameN.cob` (commit `ce67d51`)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 3,
+  "readme_features": [],
+  "prompt_subtasks": [],
+  "commit_subjects": [
+    {
+      "sha": "ce67d51325",
+      "date": "2026-04-16",
+      "subject": "Add generalized Game of N program"
+    },
+    {
+      "sha": "f9c2eb18f0",
+      "date": "2026-04-16",
+      "subject": "Add Game of 0.15 programs"
+    },
+    {
+      "sha": "c41b9b5e54",
+      "date": "2026-04-16",
+      "subject": "Add unique counts and optimal play tree"
+    },
+    {
+      "sha": "29cbcaa73a",
+      "date": "2026-04-16",
+      "subject": "Add Game of 15 enumerator"
+    }
+  ],
+  "total_features_proxy": 35
+}

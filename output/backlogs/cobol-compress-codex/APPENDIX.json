@@ -1,0 +1,370 @@
+{
+  "session_metadata": {
+    "codex_home": "~/.codex",
+    "session_file": "~/.codex/sessions/2026/03/12/rollout-2026-03-12T21-17-16-019ce3b2-4167-7af2-b5eb-a080d8e1980c.jsonl",
+    "session_id": "019ce3b2-4167-7af2-b5eb-a080d8e1980c",
+    "commit_hash": null,
+    "git_initialized": false,
+    "session_start": "2026-03-12T20:17:16.160Z",
+    "session_end": "2026-03-12T21:04:32Z",
+    "duration_minutes": 47,
+    "model": "gpt-5.4",
+    "model_provider": "openai",
+    "effort": "xhigh",
+    "context_window": 258400,
+    "total_tokens": 15928262,
+    "turns": 3,
+    "tool_calls": 146,
+    "originator": "Codex Desktop (VSCode)",
+    "cli_version": "0.108.0-alpha.12"
+  },
+  "user_instruction_index": [
+    {
+      "id": "UI-001",
+      "timestamp": "2026-03-12T20:18:25Z",
+      "category": ["FeatureRequest", "AcceptanceCriteria", "Tooling", "TestRequest"],
+      "strength": "Explicit imperative",
+      "target": ["Code", "Tests", "Build", "Data"],
+      "summary": "COBPACK MVP0 Specification: compress/decompress/info CLI, CPC v0 container, schema parsing, build.sh, run_tests.sh, test datasets, acceptance criteria",
+      "mapped_bl": ["BL-001", "BL-002", "BL-003", "BL-004", "BL-005", "BL-006"]
+    },
+    {
+      "id": "UI-002",
+      "timestamp": "2026-03-12T20:40:17Z",
+      "category": ["FeatureRequest", "AcceptanceCriteria", "TestRequest"],
+      "strength": "Explicit imperative",
+      "target": ["Code", "Tests"],
+      "summary": "COBPACK MVP1 Specification: RLESP codec, per-field/CLI/AUTO codec selection, new tests",
+      "mapped_bl": ["BL-007", "BL-008"]
+    },
+    {
+      "id": "UI-003",
+      "timestamp": "2026-03-12T20:53:18Z",
+      "category": ["TestRequest", "Documentation"],
+      "strength": "Explicit imperative",
+      "target": ["Tests", "Docs"],
+      "summary": "Trust suite: determinism, randomized, fuzz, CRC32, TRUST.md, time budget",
+      "mapped_bl": ["BL-009"]
+    }
+  ],
+  "project_constraints_index": [
+    {
+      "id": "PC-001",
+      "source": "~/.codex/config.toml",
+      "type": "tooling",
+      "summary": "model=gpt-5.4, personality=pragmatic, effort=xhigh"
+    },
+    {
+      "id": "PC-002",
+      "source": "session base_instructions",
+      "type": "style",
+      "summary": "Pragmatic personality, concise communication, apply_patch for edits"
+    },
+    {
+      "id": "PC-003",
+      "source": "session sandbox_policy",
+      "type": "safety",
+      "summary": "workspace-write sandbox, no network access"
+    }
+  ],
+  "prompt_ledger": [
+    {
+      "id": "PL-ROOT",
+      "timestamp": "2026-03-12T20:18:25Z",
+      "type": "initial",
+      "linked_ui": ["UI-001"],
+      "linked_bl": ["BL-001", "BL-002", "BL-003", "BL-004", "BL-005", "BL-006"],
+      "raw_summary": "COBPACK MVP0 Specification (~2000 words): CPC v0 format, schema, CLI, build, tests, acceptance criteria",
+      "canonical": "Build a GNUCobol CLI tool 'cobpack' with compress/decompress/info subcommands. CPC v0 container: 8-byte magic, uint32 version=0, uint32 record_len, uint64 record_count, uint32 field_count, field descriptors, columnar payloads. Schema: RECORD_LEN=N, FIELD NAME OFFSET LENGTH TYPE. Gaps preserved via synthetic fields. NONE codec only. Exit codes 0-4. Provide build.sh, run_tests.sh, test datasets, negative tests. Round-trip byte-identical, deterministic."
+    },
+    {
+      "id": "PL-002",
+      "timestamp": "2026-03-12T20:40:17Z",
+      "type": "extension",
+      "linked_ui": ["UI-002"],
+      "linked_bl": ["BL-007", "BL-008"],
+      "raw_summary": "COBPACK MVP1 Specification (~800 words): RLESP codec, schema CODEC=, CLI --codec, AUTO selection, new tests",
+      "canonical": "Extend cobpack with RLESP codec: tag 0x00=literal (uint16 len + bytes), tag 0x01=space-run (uint16 run_len). MIN_RUN=4, MAX_LIT=65535. Schema: optional CODEC=NONE|RLESP. CLI: --codec NONE|RLESP|AUTO. AUTO picks RLESP for type=X when size reduces. Tests: RLESP-win, RLESP-lose, corruption. All MVP0 tests still pass."
+    },
+    {
+      "id": "PL-003",
+      "timestamp": "2026-03-12T20:53:18Z",
+      "type": "extension",
+      "linked_ui": ["UI-003"],
+      "linked_bl": ["BL-009"],
+      "raw_summary": "Trust suite request (~50 words): determinism, randomized, fuzz, CRC32, TRUST.md, time budget",
+      "canonical": "Add TRUST.md and trust test suite: (a) determinism proof-by-test, (b) randomized round-trip with seeded schemas/data, (c) corruption/fuzz (no crash/hang), (d) CRC32 reference. Automated via run_tests.sh with time budget."
+    }
+  ],
+  "feature_backlog": [
+    {
+      "id": "BL-001",
+      "title": "CPC v0 container: compress/decompress/info with NONE codec",
+      "type": "Feature",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:src/cobpack.cob:1-1493", "L:run_1"]
+    },
+    {
+      "id": "BL-002",
+      "title": "Schema parsing with gap synthesis",
+      "type": "Feature",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:src/cobpack_schema.cob:1-528"]
+    },
+    {
+      "id": "BL-003",
+      "title": "CLI with exit codes 0-4",
+      "type": "Feature",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:src/cobpack.cob:28-33", "R:run_tests.sh:123-175"]
+    },
+    {
+      "id": "BL-004",
+      "title": "Empty input file (0 records) support",
+      "type": "Feature",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:tests/data/empty.dat", "R:run_tests.sh:96"]
+    },
+    {
+      "id": "BL-005",
+      "title": "build.sh + run_tests.sh",
+      "type": "Tooling",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:build.sh:1-4", "R:run_tests.sh:1-186"]
+    },
+    {
+      "id": "BL-006",
+      "title": "Test datasets and negative tests",
+      "type": "Test",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "dod": "Yes",
+      "evidence": ["R:tests/schema/", "R:tests/data/", "R:run_tests.sh:93-175"]
+    },
+    {
+      "id": "BL-007",
+      "title": "RLESP codec with per-field/CLI/AUTO selection",
+      "type": "Feature",
+      "source_ui": ["UI-002"],
+      "source_pl": ["PL-002"],
+      "dod": "Yes",
+      "evidence": ["R:src/cobpack.cob:569-902", "R:src/cobpack.cob:1189-1317"]
+    },
+    {
+      "id": "BL-008",
+      "title": "MVP1 test extensions (RLESP round-trip, corruption)",
+      "type": "Test",
+      "source_ui": ["UI-002"],
+      "source_pl": ["PL-002"],
+      "dod": "Yes",
+      "evidence": ["R:run_tests.sh:98-175"]
+    },
+    {
+      "id": "BL-009",
+      "title": "Trust suite: determinism, randomized, fuzz, CRC32, TRUST.md",
+      "type": "Test/Documentation",
+      "source_ui": ["UI-003"],
+      "source_pl": ["PL-003"],
+      "dod": "Yes",
+      "evidence": ["R:tests/trust_*.py", "R:TRUST.md", "R:run_tests.sh:177-183", "L:run_1"]
+    }
+  ],
+  "specification_backlog": [
+    {"id": "SB-001", "title": "Toolchain Validation & Binary I/O Experiment", "category": "Tooling", "provenance": "Prerequisite", "related_bl": []},
+    {"id": "SB-002", "title": "Schema Parser Subprogram", "category": "Capability", "provenance": "User-driven", "related_bl": ["BL-001"]},
+    {"id": "SB-003", "title": "Main CLI & CPC v0 Container", "category": "Capability", "provenance": "User-driven", "related_bl": ["BL-001", "BL-002", "BL-003", "BL-004"]},
+    {"id": "SB-004", "title": "Build & Test Scripts", "category": "Tooling", "provenance": "User-driven", "related_bl": ["BL-005"]},
+    {"id": "SB-005", "title": "Test Fixtures", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-006"]},
+    {"id": "SB-006", "title": "Bug Fix: ORD/CHAR 1-Based Offset", "category": "Quality/Hardening", "provenance": "Agent-initiated", "related_bl": ["BL-001"]},
+    {"id": "SB-007", "title": "Bug Fix: Nested PERFORM Loop Index Collision", "category": "Quality/Hardening", "provenance": "Agent-initiated", "related_bl": ["BL-001"]},
+    {"id": "SB-008", "title": "RLESP Codec (encode + decode + AUTO)", "category": "Capability", "provenance": "User-driven", "related_bl": ["BL-007", "BL-008"]},
+    {"id": "SB-009", "title": "Schema Codec Extension", "category": "Capability", "provenance": "User-driven", "related_bl": ["BL-007"]},
+    {"id": "SB-010", "title": "Bug Fix: RLESP Pending Space Corruption", "category": "Quality/Hardening", "provenance": "Agent-initiated", "related_bl": ["BL-007"]},
+    {"id": "SB-011", "title": "Bug Fix: Synthetic Gap Field RLESP Safety", "category": "Quality/Hardening", "provenance": "Agent-initiated", "related_bl": ["BL-007"]},
+    {"id": "SB-012", "title": "Bug Fix: PAYLOAD_OFFSET Header Size", "category": "Quality/Hardening", "provenance": "Agent-initiated", "related_bl": ["BL-001"]},
+    {"id": "SB-013", "title": "Trust Library (trust_lib.py)", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-009"]},
+    {"id": "SB-014", "title": "Determinism Proof-by-Test", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-009"]},
+    {"id": "SB-015", "title": "Randomized Round-Trip Testing", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-009"]},
+    {"id": "SB-016", "title": "Corruption/Fuzz Testing", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-009"]},
+    {"id": "SB-017", "title": "CRC32 Reference Implementation", "category": "Test/Validation", "provenance": "User-driven", "related_bl": ["BL-009"]},
+    {"id": "SB-018", "title": "TRUST.md Documentation", "category": "Documentation", "provenance": "User-driven", "related_bl": ["BL-009"]}
+  ],
+  "replay_plan": {
+    "steps": [
+      {
+        "order": 1,
+        "bl_items": ["BL-001", "BL-002", "BL-003", "BL-004", "BL-005", "BL-006"],
+        "prompt": "PL-ROOT canonical",
+        "preconditions": "Empty directory, GNUCobol installed, Python 3.10+",
+        "validation": "./run_tests.sh exits 0"
+      },
+      {
+        "order": 2,
+        "bl_items": ["BL-007", "BL-008"],
+        "prompt": "PL-002 canonical",
+        "preconditions": "MVP0 passing",
+        "validation": "./run_tests.sh exits 0 with RLESP tests"
+      },
+      {
+        "order": 3,
+        "bl_items": ["BL-009"],
+        "prompt": "PL-003 canonical",
+        "preconditions": "MVP1 passing",
+        "validation": "./run_tests.sh exits 0, trust metrics printed"
+      }
+    ]
+  },
+  "repo_stats": {
+    "total_files": 23,
+    "total_directories": 5,
+    "language_breakdown": {
+      "cobol": {"files": 2, "loc": 2021},
+      "python": {"files": 5, "loc": 774},
+      "shell": {"files": 2, "loc": 190},
+      "markdown": {"files": 1, "loc": 120},
+      "schema": {"files": 7, "lines": 24},
+      "data": {"files": 6, "bytes": 1466}
+    },
+    "program_kind": {
+      "production": {"files": 2, "loc": 2021},
+      "tests": {"files": 5, "loc": 774},
+      "build_tooling": {"files": 2, "loc": 190},
+      "docs": {"files": 1, "loc": 120},
+      "config": {"files": 0, "loc": 0},
+      "data_examples": {"files": 13, "lines_or_bytes": "24 lines + 1466 bytes"}
+    },
+    "total_loc": 3105,
+    "exclusions": ["__pycache__/", "cobpack (binary)"]
+  },
+  "rq_coverage_matrix": {
+    "RQ1_strategies": {"sources": ["session commentary", "tool calls"], "indicators": ["strategy code sequences"], "section": "B2-B4"},
+    "RQ2_outcomes": {"sources": ["test results", "code review"], "indicators": ["rubric scores", "bug count"], "section": "B5-B6"},
+    "RQ3_factors": {"sources": ["bug timeline", "recovery actions"], "indicators": ["claims FOR/AGAINST"], "section": "B8"},
+    "RQ4_reproducibility": {"sources": ["replay package", "missing artifacts"], "indicators": ["checklist completeness"], "section": "B9"},
+    "RQ5_interaction": {"sources": ["UII", "prompt count"], "indicators": ["UI distribution", "clarification cycles"], "section": "B7"}
+  },
+  "strategy_codebook": {
+    "PLAN": "Agent states intended approach before acting",
+    "SCAF": "Creating project structure, build scripts, test fixtures",
+    "INCR": "Write code then compile for feedback",
+    "RETR": "Investigating unfamiliar APIs/runtime behavior",
+    "DBG": "Diagnosing runtime failures via targeted tests",
+    "TEST": "Running test suite or individual tests",
+    "REFA": "Restructuring without behavior change",
+    "TOOL": "Using system tools for investigation (lldb, xxd, nm)",
+    "VERIFY": "Confirming correctness after fix",
+    "RISK": "Proactive safety measures"
+  },
+  "episodes": {
+    "turn_1": ["RETR", "RETR", "PLAN", "SCAF", "INCR", "DBG", "DBG", "DBG", "TEST", "VERIFY"],
+    "turn_2": ["PLAN", "INCR", "DBG", "SCAF", "TEST", "DBG", "TEST"],
+    "turn_3": ["RETR", "SCAF", "TEST", "DBG", "DBG", "DBG", "SCAF", "TEST", "VERIFY"]
+  },
+  "strategy_annotations": {
+    "BL-001_006": {
+      "sequence": ["RETR", "RETR", "PLAN", "SCAF", "INCR", "DBG", "DBG", "DBG", "TEST", "VERIFY"],
+      "dbg_loops": 3,
+      "build_test_runs": 11,
+      "blocking_points": ["GNUCobol -O2 crash", "1-based ORD/CHAR"],
+      "recovery": ["Removed -O2", "Added +1/-1 adjustments"]
+    },
+    "BL-007_008": {
+      "sequence": ["PLAN", "INCR", "DBG", "SCAF", "TEST", "DBG", "TEST"],
+      "dbg_loops": 2,
+      "build_test_runs": 7,
+      "blocking_points": ["Metadata offset validation"],
+      "recovery": ["Fixed header size calculation"]
+    },
+    "BL-009": {
+      "sequence": ["RETR", "SCAF", "TEST", "DBG", "DBG", "DBG", "SCAF", "TEST", "VERIFY"],
+      "dbg_loops": 3,
+      "build_test_runs": 8,
+      "blocking_points": ["RLESP pending-space bug", "Gap field RLESP safety", "Header offset"],
+      "recovery": ["Byte-level trace and fix", "Force NONE on synthetic fields", "Correct header size constant"]
+    }
+  },
+  "rubric_scores": {
+    "BL-001": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 1, "Q6": 2, "confidence": "High"},
+    "BL-002": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 1, "Q6": 2, "confidence": "High"},
+    "BL-003": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    "BL-004": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    "BL-005": {"Q1": 2, "Q2": 2, "Q3": "NA", "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    "BL-006": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    "BL-007": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 1, "Q6": 2, "confidence": "High"},
+    "BL-008": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    "BL-009": {"Q1": 2, "Q2": 2, "Q3": 2, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"}
+  },
+  "interaction_metrics": {
+    "total_user_prompts": 3,
+    "total_bl_items": 9,
+    "clarification_cycles": 0,
+    "scope_changes": 0,
+    "avg_bl_per_prompt": 3.0,
+    "instruction_strength": {"explicit_imperative": 3, "suggestion": 0, "question": 0}
+  },
+  "cobol_panel": {
+    "compile_status": "clean",
+    "runtime_status": "stable",
+    "loc": 2021,
+    "idioms": ["PERFORM VARYING", "EVALUATE", "CALL subprogram", "FUNCTION ORD/CHAR", "COMP/COMP-5", "level-78", "dynamic file assignment"],
+    "toolchain": "cobc (GNUCobol 3.x), free-format, -x executable",
+    "limitations": ["1 MiB output buffer", "-O2 disabled", "multi-pass input reading"],
+    "bugs_found_and_fixed": 6
+  },
+  "process_tracing_claims": [
+    {
+      "claim": "Exhaustive upfront specification reduces interaction rounds",
+      "evidence_for": ["3 turns, 0 clarifications", "specs contained byte-level format details"],
+      "evidence_against": [],
+      "judgment": "Strongly supported"
+    },
+    {
+      "claim": "Toolchain research prevents cascading errors",
+      "evidence_for": ["Binary I/O experiment prevented text-mode bugs", "ORD/CHAR testing caught 1-based indexing"],
+      "evidence_against": ["-O2 crash not caught by research"],
+      "judgment": "Supported with caveats"
+    },
+    {
+      "claim": "Randomized testing discovers real bugs that scripted tests miss",
+      "evidence_for": ["Turn 3 randomized suite exposed 3 production bugs missed by Turn 1-2 scripted tests"],
+      "evidence_against": [],
+      "judgment": "Strongly supported"
+    },
+    {
+      "claim": "Agent-initiated hardening stays evidence-driven",
+      "evidence_for": ["All 6 fixes triggered by observed test failures"],
+      "evidence_against": [],
+      "judgment": "Strongly supported"
+    },
+    {
+      "claim": "Single-session COBOL development viable for ~2000 LOC",
+      "evidence_for": ["Complete tested implementation in 47 minutes"],
+      "evidence_against": ["1 MiB limit is environment workaround", "-O2 removal"],
+      "judgment": "Supported with environment caveats"
+    }
+  ],
+  "threats_to_validity": [
+    "Agent reasoning tokens encrypted; strategy analysis from observable actions only",
+    "No git history; step boundaries are approximate",
+    "Single session; no evidence for multi-session or ambiguous-spec scenarios",
+    "Platform specificity (macOS arm64 vs spec targeting Linux)",
+    "Sandbox restrictions may have influenced implementation choices",
+    "Token counts include heavy caching; actual novel processing is lower"
+  ],
+  "open_questions": {
+    "CP1": [],
+    "CP2": [],
+    "CP3": [],
+    "defaults_used": "No questions were needed; all evidence was sufficient for analysis"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "session_metadata": {
+    "project": "game15-cobol-codex",
+    "project_root": "/Users/mathieuacher/SANDBOX/game15-cobol-codex",
+    "agent": "codex-cli",
+    "cli_version": "0.119.0-alpha.11",
+    "model": "gpt-5.4",
+    "session_id": "019d95b1-8660-75c2-8a6b-44dfbafc0a19",
+    "rollout_path": "~/.codex/sessions/2026/04/16/rollout-2026-04-16T11-48-52-019d95b1-8660-75c2-8a6b-44dfbafc0a19.jsonl",
+    "normalised_turns": "output/turns/game15-cobol-codex__Codex__019d95b1-8660-75c2-8a6b-44dfbafc0a19.jsonl",
+    "window_utc": ["2026-04-16T09:49:03Z", "2026-04-16T13:26:26Z"],
+    "wall_clock_minutes": 217,
+    "turn_totals": {
+      "developer_text": 1,
+      "user_prompt": 12,
+      "assistant_reasoning": 97,
+      "assistant_text": 77,
+      "assistant_tool_use": 173,
+      "tool_result_tool_output": 173,
+      "total": 533
+    },
+    "replay_pack_source": "output/backlogs/cobol-tictactoe/REPLAY_PROMPTS.md",
+    "sibling_project": "cobol-tictactoe",
+    "sibling_agent": "claude-code"
+  },
+  "user_instruction_index": [
+    {"id": "UI-00", "ts_event": "event_001", "category": "Meta/process",    "strength": "Constraint-only",    "target": "env",          "maps_to": []},
+    {"id": "UI-01", "ts_event": "event_002", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "Code",        "maps_to": ["BL-01"]},
+    {"id": "UI-02", "ts_event": "event_040", "category": "Tooling",         "strength": "Explicit imperative","target": "Repo",        "maps_to": ["OP-01"]},
+    {"id": "UI-03", "ts_event": "event_061", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "Code+UX",     "maps_to": ["BL-02"]},
+    {"id": "UI-04", "ts_event": "event_089", "category": "Tooling",         "strength": "Explicit imperative","target": "Repo",        "maps_to": ["OP-02"]},
+    {"id": "UI-05", "ts_event": "event_096", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "Code+UX",     "maps_to": ["BL-03"]},
+    {"id": "UI-06", "ts_event": "event_243", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "UX",          "maps_to": ["BL-04"]},
+    {"id": "UI-07", "ts_event": "event_316", "category": "Tooling",         "strength": "Explicit imperative","target": "Repo",        "maps_to": ["OP-03"]},
+    {"id": "UI-08", "ts_event": "event_344", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "Code+UX",     "maps_to": ["BL-05"]},
+    {"id": "UI-09", "ts_event": "event_394", "category": "Tooling",         "strength": "Explicit imperative","target": "Repo",        "maps_to": ["OP-04"]},
+    {"id": "UI-10", "ts_event": "event_420", "category": "FeatureRequest",  "strength": "Explicit imperative","target": "Code+UX",     "maps_to": ["BL-06"]},
+    {"id": "UI-11", "ts_event": "event_502", "category": "Tooling",         "strength": "Explicit imperative","target": "Repo",        "maps_to": ["OP-05"]}
+  ],
+  "project_constraints_index": [
+    {"id": "PC-01", "source": ".gitignore", "type": "repo policy", "summary": "ignore compiled binaries game15 and game15_tree", "impact": "no behavioural impact"},
+    {"id": "PC-02", "source": "session_meta.base_instructions", "type": "tooling", "summary": "Codex default base instructions (workspace-write sandbox, shell approvals)", "impact": "enforces Python/shell escalation discipline"}
+  ],
+  "prompt_ledger": [
+    {"id": "PL-ROOT", "ts_event": "event_002", "links_ui": ["UI-01"], "links_bl": ["BL-01"], "raw_len": 482, "source": "replay-pack Step 1"},
+    {"id": "PL-02",   "ts_event": "event_061", "links_ui": ["UI-03"], "links_bl": ["BL-02"], "raw_len": 612, "source": "replay-pack Step 2"},
+    {"id": "PL-03",   "ts_event": "event_096", "links_ui": ["UI-05"], "links_bl": ["BL-03"], "raw_len": 828, "source": "replay-pack Step 3"},
+    {"id": "PL-04",   "ts_event": "event_243", "links_ui": ["UI-06"], "links_bl": ["BL-04"], "raw_len": 826, "source": "replay-pack Step 4"},
+    {"id": "PL-05",   "ts_event": "event_344", "links_ui": ["UI-08"], "links_bl": ["BL-05"], "raw_len": 772, "source": "replay-pack Step 5"},
+    {"id": "PL-06",   "ts_event": "event_420", "links_ui": ["UI-10"], "links_bl": ["BL-06"], "raw_len": 782, "source": "replay-pack Step 6"}
+  ],
+  "feature_backlog": [
+    {"id": "BL-01", "title": "Game of 15 game counter",             "type": "Feature", "ui": ["UI-01"], "pl": ["PL-ROOT"], "commit": "29cbcaa", "dod": "Yes"},
+    {"id": "BL-02", "title": "--unique symmetry dedup flag",        "type": "Feature", "ui": ["UI-03"], "pl": ["PL-02"],   "commit": "c41b9b5", "dod": "Yes"},
+    {"id": "BL-03", "title": "Optimal play tree renderer",          "type": "Feature", "ui": ["UI-05"], "pl": ["PL-03"],   "commit": "c41b9b5", "dod": "Yes"},
+    {"id": "BL-04", "title": "avoid: annotations in tree",          "type": "Feature", "ui": ["UI-06"], "pl": ["PL-04"],   "commit": "c41b9b5", "dod": "Yes"},
+    {"id": "BL-05", "title": "Game of 0.15 counter+tree variants",  "type": "Feature", "ui": ["UI-08"], "pl": ["PL-05"],   "commit": "f9c2eb1", "dod": "Yes"},
+    {"id": "BL-06", "title": "Game of N generalised program",       "type": "Feature", "ui": ["UI-10"], "pl": ["PL-06"],   "commit": "ce67d51", "dod": "Yes"}
+  ],
+  "reproducibility_ops": [
+    {"id": "OP-01", "ui": "UI-02", "commit": "29cbcaa"},
+    {"id": "OP-02", "ui": "UI-04", "commit": "c41b9b5"},
+    {"id": "OP-03", "ui": "UI-07", "commit": "c41b9b5 (bundled with OP-02)"},
+    {"id": "OP-04", "ui": "UI-09", "commit": "f9c2eb1"},
+    {"id": "OP-05", "ui": "UI-11", "commit": "ce67d51"}
+  ],
+  "specification_backlog_summary": {
+    "total_sb": 32,
+    "user_driven_sb": 6,
+    "agent_initiated_sb": 26,
+    "bug_fixes": [
+      {"id": "F-01", "title": "FILLED-TARGET PIC 99 → S99 underflow fix", "evidence": "T:event_164"},
+      {"id": "F-02", "title": "OWNER reset before tree display",         "evidence": "T:event_205"},
+      {"id": "F-03", "title": "avoid-line prefix depth fix",               "evidence": "T:event_276"}
+    ],
+    "per_bl_sb_ids": {
+      "BL-01": ["SB-01","SB-02","SB-03","SB-04","SB-05","SB-06"],
+      "BL-02": ["SB-07","SB-08","SB-09","SB-10","SB-11"],
+      "BL-03": ["SB-12","SB-13","SB-14","SB-15","SB-16","SB-17","SB-18","SB-19"],
+      "BL-04": ["SB-20","SB-21"],
+      "BL-05": ["SB-22","SB-23","SB-24","SB-25"],
+      "BL-06": ["SB-26","SB-27","SB-28","SB-29","SB-30","SB-31","SB-32"]
+    }
+  },
+  "replay_plan": {
+    "canonical_prompts_file": "output/backlogs/cobol-tictactoe/REPLAY_PROMPTS.md",
+    "preconditions": ["GnuCOBOL cobc in PATH"],
+    "per_bl_commands": {
+      "BL-01": ["cobc -x -free game15.cob", "./game15"],
+      "BL-02": ["cobc -x -free game15.cob", "./game15 --unique"],
+      "BL-03": ["cobc -x -free game15_tree.cob -o game15_tree", "./game15_tree --depth 2"],
+      "BL-04": ["./game15_tree --depth 3 | head"],
+      "BL-05": ["cobc -x -free game015.cob -o game015", "cobc -x -free game015tree.cob -o game015tree", "./game015 --unique", "./game015tree --depth 2"],
+      "BL-06": ["cobc -x -free gameN.cob -o gameN", "./gameN 15 9", "./gameN 15", "./gameN"]
+    },
+    "oracles": {
+      "BL-01": "Player 1 wins 131184 / Player 2 wins 77904 / Draws 46080 / Total games 255168",
+      "BL-02": "Unique P1 16398 / P2 9738 / Draws 5760 / Total 31896",
+      "BL-03": "Full tree root outcome = [Draw]; 12,134 total lines for uncapped run",
+      "BL-04": "After P1:1 the avoid set is {2,3,4,7}",
+      "BL-05": "game015 counts identical to game15; tree uses labels '0.0X'",
+      "BL-06": "./gameN 15 9 prints 8 winning triples and 255168 total games"
+    }
+  },
+  "repo_stats": {
+    "languages": {"GnuCOBOL": {"files": 5, "loc": 2822}},
+    "per_file_loc": {
+      "game15.cob": 500,
+      "game15_tree.cob": 671,
+      "game015.cob": 501,
+      "game015tree.cob": 685,
+      "gameN.cob": 465
+    },
+    "other_artifacts": {".gitignore": 2, "compiled_binaries": 2, "readme": 0, "tests": 0, "makefile": 0, "ci": 0},
+    "commits_on_main_branch": 4,
+    "branch": "codex/game15"
+  },
+  "rq_coverage_matrix": {
+    "RQ1_strategies": {"sources": ["session log"], "indicators": ["strategy_code_counts_per_BL"], "sections": ["B2","B4"]},
+    "RQ2_outcomes":   {"sources": ["binary_outputs","commit_contents"], "indicators": ["oracle_match","bug_count"], "sections": ["B5","B6"]},
+    "RQ3_factors":    {"sources": ["tool_use+assistant_text"], "indicators": ["FOR/AGAINST claims"], "sections": ["B8"]},
+    "RQ4_interaction":{"sources": ["UII","PL"], "indicators": ["UI/BL ratio","clarifications","scope churn"], "sections": ["B7"]},
+    "RQ5_reproducibility":{"sources": ["repo","replay_pack","session"],"indicators": ["canonical_prompt→oracle"],"sections": ["A4","B5"]}
+  },
+  "strategy_codebook": ["PLAN","SCAF","INCR","RETR","DBG","TEST","REFA","TOOL","PROMPT","RISK","VERIFY"],
+  "episodes": {
+    "macro_phases": ["bootstrap","feature-growth","stabilisation","variant","generalisation"],
+    "meso_episodes_per_bl": 1,
+    "micro_tool_use_total": 173,
+    "tool_kind_counts": {"cobc": 20, "run_binary": 49, "read_source": 35, "apply_patch": 15, "git": 28, "misc": 26}
+  },
+  "strategy_annotations": {
+    "BL-01": {"sequence": ["PLAN","SCAF","TEST","VERIFY"], "builds": 1, "runs": 1, "dbg_loops": 0},
+    "BL-02": {"sequence": ["PLAN","RISK","INCR","TEST","VERIFY"], "builds": 1, "runs": 2, "dbg_loops": 0},
+    "BL-03": {"sequence": ["PLAN","RISK","SCAF","DBG","DBG","TEST","VERIFY"], "builds": 5, "runs": 7, "dbg_loops": 2},
+    "BL-04": {"sequence": ["PLAN","INCR","DBG","TEST","VERIFY"], "builds": 3, "runs": 7, "dbg_loops": 1},
+    "BL-05": {"sequence": ["PROMPT","SCAF","INCR","TEST"], "builds": 2, "runs": 3, "dbg_loops": 0},
+    "BL-06": {"sequence": ["PLAN","SCAF","TEST","INCR","TEST","VERIFY"], "builds": 3, "runs": 6, "dbg_loops": 1}
+  },
+  "rubric_scores": {
+    "BL-01": {"Q1":2,"Q2":2,"Q3":1,"Q4":1,"Q5":2,"Q6":2,"confidence":"High"},
+    "BL-02": {"Q1":2,"Q2":2,"Q3":1,"Q4":1,"Q5":1,"Q6":2,"confidence":"High"},
+    "BL-03": {"Q1":2,"Q2":2,"Q3":2,"Q4":2,"Q5":2,"Q6":2,"confidence":"High"},
+    "BL-04": {"Q1":2,"Q2":2,"Q3":2,"Q4":2,"Q5":2,"Q6":2,"confidence":"High"},
+    "BL-05": {"Q1":2,"Q2":2,"Q3":1,"Q4":2,"Q5":2,"Q6":2,"confidence":"High"},
+    "BL-06": {"Q1":2,"Q2":2,"Q3":1,"Q4":2,"Q5":2,"Q6":1,"confidence":"Medium"}
+  },
+  "interaction_metrics": {
+    "user_prompts_total": 12,
+    "feature_prompts": 6,
+    "tooling_prompts": 5,
+    "meta_prompts": 1,
+    "clarifications": 0,
+    "scope_churn": 0,
+    "ui_per_bl_ratio": 1.0
+  },
+  "cobol_panel": {
+    "toolchain": "GnuCOBOL (cobc -x -free)",
+    "compile_clean_first_try": true,
+    "compile_runs_total": 20,
+    "recursion_used": false,
+    "idioms": ["OCCURS", "PERFORM VARYING UNTIL", "STRING WITH POINTER", "INSPECT TALLYING", "FUNCTION TRIM/NUMVAL/MOD", "EXIT PARAGRAPH", "SOURCE FORMAT FREE"],
+    "signature_architecture": ["iterative DFS with explicit per-depth stack (SB-01)", "factorial-rank canonical hash into 986409-byte bitmap (SB-10)", "bottom-up retrograde solve over all 19683 base-3 states (SB-12/13)", "depth-10 node-stack tree printer (SB-16)"]
+  },
+  "process_tracing_claims": [
+    {"claim": "Codex prefers fill-whole-state-space over lazy memoization", "verdict": "supported"},
+    {"claim": "Codex systematically avoids CALL RECURSIVE", "verdict": "supported"},
+    {"claim": "Codex self-diagnoses bugs in under 5 minutes", "verdict": "supported (3/3 bugs)"},
+    {"claim": "Stale /tmp binary anti-pattern recurs", "verdict": "supported (3 occurrences)"}
+  ],
+  "threats_to_validity": [
+    "n=1 session and agent",
+    "oracles derive from the CC sibling: latent CC bug would hide in both",
+    "no run-time measurements captured",
+    "gameN extended oracles (12 8, 10 7) not validated in-session"
+  ],
+  "open_questions_with_defaults": [
+    {"q": "Does the 986,409-entry bitmap fit within GnuCOBOL default runtime limits?", "default": "yes — observed run completed in reasonable time with --unique"},
+    {"q": "Does `./game15 --unique` match bitwise with the CC sibling's output?", "default": "same counts verified; not bitwise compared"}
+  ],
+  "cross_agent_diff_vs_claude_code": {
+    "same_file_set": true,
+    "files_with_name_diff": [{"codex": "game15_tree.cob", "claude_code": "game15tree.cob"}],
+    "codex_total_loc_delta_pct": 40,
+    "codex_architectural_preferences": ["eager retrograde solve", "factorial-rank bitmap for dedup", "direct tic-tac-toe lines (no magic-triple string)", "MOVE-LABEL lookup for 0.15"],
+    "replay_pack_controlled": ["scope", "BL boundaries", "oracles", "file set"],
+    "replay_pack_did_not_homogenise": ["data structures", "memory vs compute tradeoffs", "commentary depth", "indent widths"]
+  }
+}

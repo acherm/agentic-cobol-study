@@ -1,0 +1,1400 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+  "aggregate": {
+    "num_files": 16,
+    "total_lines": 3988,
+    "code_lines": 3359,
+    "comment_lines": 117,
+    "sections": 30,
+    "paragraphs": 70,
+    "data_items": 610,
+    "max_nesting_any_file": 6,
+    "statements": {
+      "PERFORM": 182,
+      "IF": 439,
+      "EVALUATE": 22,
+      "CALL": 56,
+      "MOVE": 859,
+      "COMPUTE": 209,
+      "READ": 0,
+      "WRITE": 0,
+      "OPEN": 0,
+      "CLOSE": 0,
+      "ACCEPT": 7,
+      "DISPLAY": 9,
+      "GO TO": 1,
+      "EXIT": 82,
+      "STOP": 6,
+      "SET": 0,
+      "ADD": 79,
+      "SUBTRACT": 52,
+      "MULTIPLY": 0,
+      "DIVIDE": 35,
+      "STRING": 1,
+      "UNSTRING": 2,
+      "INSPECT": 0,
+      "SEARCH": 5,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 14,
+      "DATA": 14,
+      "PROCEDURE": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "src/search.cob",
+        "code_lines": 1147
+      },
+      {
+        "file": "src/makemove.cob",
+        "code_lines": 501
+      },
+      {
+        "file": "src/movegen.cob",
+        "code_lines": 418
+      },
+      {
+        "file": "src/eval.cob",
+        "code_lines": 328
+      },
+      {
+        "file": "src/main.cob",
+        "code_lines": 321
+      },
+      {
+        "file": "src/fen.cob",
+        "code_lines": 224
+      },
+      {
+        "file": "src/attack.cob",
+        "code_lines": 139
+      },
+      {
+        "file": "src/perft.cob",
+        "code_lines": 55
+      },
+      {
+        "file": "src/uci.cob",
+        "code_lines": 48
+      },
+      {
+        "file": "copybooks/constants.cpy",
+        "code_lines": 38
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 1640,
+        "files_using": 11,
+        "constructs": {
+          "IF": 878,
+          "ELSE": 98,
+          "EVALUATE": 44,
+          "WHEN": 141,
+          "PERFORM": 237,
+          "PERFORM_VARYING": 44,
+          "PERFORM_UNTIL": 53,
+          "EXIT": 82,
+          "CONTINUE": 8,
+          "GOBACK": 50,
+          "STOP_RUN": 5
+        }
+      },
+      "arithmetic": {
+        "total": 460,
+        "files_using": 10,
+        "constructs": {
+          "ADD": 158,
+          "SUBTRACT": 52,
+          "COMPUTE": 215,
+          "DIVIDE": 35
+        }
+      },
+      "data_advanced": {
+        "total": 1040,
+        "files_using": 15,
+        "constructs": {
+          "PIC_S9": 487,
+          "OCCURS": 25,
+          "USAGE_COMP_5": 489,
+          "PIC_X": 31,
+          "PIC_9": 8
+        }
+      },
+      "io_file": {
+        "total": 24,
+        "files_using": 3,
+        "constructs": {
+          "START": 11,
+          "READ": 13
+        }
+      },
+      "string_ops": {
+        "total": 45,
+        "files_using": 4,
+        "constructs": {
+          "UNSTRING": 4,
+          "REFERENCE_MOD": 26,
+          "DELIMITED_BY": 13,
+          "STRING": 2
+        }
+      },
+      "tables_search": {
+        "total": 17,
+        "files_using": 2,
+        "constructs": {
+          "SEARCH": 9,
+          "SET": 8
+        }
+      },
+      "subprograms": {
+        "total": 197,
+        "files_using": 11,
+        "constructs": {
+          "CALL": 77,
+          "LINKAGE_SECTION": 13,
+          "USING": 69,
+          "RECURSIVE": 3,
+          "GIVING": 35
+        }
+      },
+      "copy_preproc": {
+        "total": 34,
+        "files_using": 10,
+        "constructs": {
+          "COPY": 34
+        }
+      },
+      "intrinsics": {
+        "total": 205,
+        "files_using": 9,
+        "constructs": {
+          "FUNCTION": 109,
+          "FUNCTION_NUMVAL": 13,
+          "FUNCTION_MOD": 60,
+          "FUNCTION_TRIM": 23
+        }
+      },
+      "misc": {
+        "total": 16,
+        "files_using": 3,
+        "constructs": {
+          "ACCEPT": 7,
+          "DISPLAY": 9
+        }
+      }
+    },
+    "mastery_score": 40,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.SUBTRACT",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.GOBACK",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_X",
+      "data_advanced.USAGE_COMP_5",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_MOD",
+      "intrinsics.FUNCTION_NUMVAL",
+      "intrinsics.FUNCTION_TRIM",
+      "io_file.READ",
+      "io_file.START",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.STRING",
+      "string_ops.UNSTRING",
+      "subprograms.CALL",
+      "subprograms.GIVING",
+      "subprograms.LINKAGE_SECTION",
+      "subprograms.RECURSIVE",
+      "subprograms.USING",
+      "tables_search.SEARCH",
+      "tables_search.SET"
+    ],
+    "categories_exercised": 10
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/types.cpy",
+      "total_lines": 41,
+      "code_lines": 36,
+      "comment_lines": 3,
+      "blank_lines": 2,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 36,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_S9": 28,
+          "OCCURS": 4,
+          "USAGE_COMP_5": 28
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/searchstate.cpy",
+      "total_lines": 29,
+      "code_lines": 28,
+      "comment_lines": 1,
+      "blank_lines": 0,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 28,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_S9": 23,
+          "OCCURS": 4,
+          "USAGE_COMP_5": 23
+        },
+        "io_file": {
+          "START": 1
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/constants.cpy",
+      "total_lines": 45,
+      "code_lines": 38,
+      "comment_lines": 0,
+      "blank_lines": 7,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 38,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {},
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/offsets.cpy",
+      "total_lines": 6,
+      "code_lines": 5,
+      "comment_lines": 0,
+      "blank_lines": 1,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 5,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_S9": 4,
+          "OCCURS": 4,
+          "USAGE_COMP_5": 4
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/hash.cpy",
+      "total_lines": 13,
+      "code_lines": 11,
+      "comment_lines": 1,
+      "blank_lines": 1,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 0,
+      "data_items": 11,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 0,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {},
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_S9": 6,
+          "OCCURS": 4,
+          "USAGE_COMP_5": 6
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/fen.cob",
+      "total_lines": 265,
+      "code_lines": 224,
+      "comment_lines": 5,
+      "blank_lines": 36,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 5,
+      "data_items": 26,
+      "statements": {
+        "PERFORM": 16,
+        "IF": 23,
+        "EVALUATE": 4,
+        "CALL": 1,
+        "MOVE": 57,
+        "COMPUTE": 11,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 5,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 11,
+        "SUBTRACT": 7,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 46,
+          "ELSE": 2,
+          "EVALUATE": 8,
+          "WHEN": 30,
+          "PERFORM": 25,
+          "PERFORM_VARYING": 7,
+          "PERFORM_UNTIL": 9,
+          "EXIT": 5,
+          "CONTINUE": 2,
+          "GOBACK": 8
+        },
+        "arithmetic": {
+          "ADD": 11,
+          "SUBTRACT": 7,
+          "COMPUTE": 13
+        },
+        "data_advanced": {
+          "PIC_X": 9,
+          "PIC_S9": 17,
+          "USAGE_COMP_5": 17
+        },
+        "io_file": {},
+        "string_ops": {
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 10,
+          "DELIMITED_BY": 1
+        },
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 1,
+          "LINKAGE_SECTION": 1,
+          "USING": 2
+        },
+        "copy_preproc": {
+          "COPY": 3
+        },
+        "intrinsics": {
+          "FUNCTION": 7,
+          "FUNCTION_NUMVAL": 4,
+          "FUNCTION_MOD": 3
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/perft.cob",
+      "total_lines": 66,
+      "code_lines": 55,
+      "comment_lines": 0,
+      "blank_lines": 11,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 3,
+      "paragraphs": 1,
+      "data_items": 22,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 2,
+        "EVALUATE": 0,
+        "CALL": 4,
+        "MOVE": 9,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 4,
+          "PERFORM": 2,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 1,
+          "GOBACK": 2
+        },
+        "arithmetic": {
+          "ADD": 1,
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_S9": 19,
+          "OCCURS": 1,
+          "USAGE_COMP_5": 19
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 4,
+          "LINKAGE_SECTION": 1,
+          "USING": 5,
+          "RECURSIVE": 1
+        },
+        "copy_preproc": {
+          "COPY": 2
+        },
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/board.cob",
+      "total_lines": 30,
+      "code_lines": 23,
+      "comment_lines": 0,
+      "blank_lines": 7,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 1,
+      "data_items": 1,
+      "statements": {
+        "PERFORM": 1,
+        "IF": 0,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 10,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 0,
+      "capabilities": {
+        "control_flow": {
+          "PERFORM": 2,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 1,
+          "GOBACK": 1
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_S9": 1,
+          "USAGE_COMP_5": 1
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1
+        },
+        "copy_preproc": {
+          "COPY": 2
+        },
+        "intrinsics": {},
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/attack.cob",
+      "total_lines": 164,
+      "code_lines": 139,
+      "comment_lines": 5,
+      "blank_lines": 20,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 4,
+      "data_items": 9,
+      "statements": {
+        "PERFORM": 13,
+        "IF": 29,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 42,
+        "COMPUTE": 16,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 5,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 58,
+          "ELSE": 5,
+          "PERFORM": 19,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 6,
+          "EXIT": 5,
+          "GOBACK": 8
+        },
+        "arithmetic": {
+          "COMPUTE": 16
+        },
+        "data_advanced": {
+          "PIC_S9": 9,
+          "USAGE_COMP_5": 9
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1
+        },
+        "copy_preproc": {
+          "COPY": 3
+        },
+        "intrinsics": {
+          "FUNCTION": 6,
+          "FUNCTION_MOD": 6
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/makemove.cob",
+      "total_lines": 615,
+      "code_lines": 501,
+      "comment_lines": 27,
+      "blank_lines": 87,
+      "divisions": {
+        "IDENTIFICATION": 2,
+        "DATA": 2
+      },
+      "sections": 4,
+      "paragraphs": 15,
+      "data_items": 55,
+      "statements": {
+        "PERFORM": 29,
+        "IF": 90,
+        "EVALUATE": 2,
+        "CALL": 2,
+        "MOVE": 119,
+        "COMPUTE": 31,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 14,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 16,
+        "SUBTRACT": 17,
+        "MULTIPLY": 0,
+        "DIVIDE": 11,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 4,
+      "capabilities": {
+        "control_flow": {
+          "IF": 180,
+          "ELSE": 22,
+          "EVALUATE": 4,
+          "WHEN": 10,
+          "PERFORM": 33,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 4,
+          "EXIT": 14,
+          "GOBACK": 3
+        },
+        "arithmetic": {
+          "ADD": 16,
+          "SUBTRACT": 17,
+          "DIVIDE": 11,
+          "COMPUTE": 31
+        },
+        "data_advanced": {
+          "PIC_S9": 55,
+          "USAGE_COMP_5": 55
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 2,
+          "LINKAGE_SECTION": 2,
+          "USING": 4,
+          "GIVING": 11
+        },
+        "copy_preproc": {
+          "COPY": 5
+        },
+        "intrinsics": {
+          "FUNCTION": 14,
+          "FUNCTION_MOD": 14
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/movegen.cob",
+      "total_lines": 472,
+      "code_lines": 418,
+      "comment_lines": 10,
+      "blank_lines": 44,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 18,
+      "data_items": 19,
+      "statements": {
+        "PERFORM": 57,
+        "IF": 59,
+        "EVALUATE": 1,
+        "CALL": 10,
+        "MOVE": 98,
+        "COMPUTE": 25,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 18,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 1,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 5,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 118,
+          "ELSE": 15,
+          "EVALUATE": 2,
+          "WHEN": 7,
+          "PERFORM": 65,
+          "PERFORM_VARYING": 7,
+          "PERFORM_UNTIL": 8,
+          "EXIT": 18,
+          "CONTINUE": 1,
+          "GOBACK": 1
+        },
+        "arithmetic": {
+          "ADD": 80,
+          "DIVIDE": 5,
+          "COMPUTE": 25
+        },
+        "data_advanced": {
+          "PIC_S9": 19,
+          "USAGE_COMP_5": 19
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "CALL": 10,
+          "LINKAGE_SECTION": 1,
+          "USING": 11,
+          "GIVING": 5
+        },
+        "copy_preproc": {
+          "COPY": 3
+        },
+        "intrinsics": {
+          "FUNCTION": 11,
+          "FUNCTION_MOD": 11
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/time.cob",
+      "total_lines": 49,
+      "code_lines": 37,
+      "comment_lines": 0,
+      "blank_lines": 12,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 1,
+      "data_items": 11,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 1,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 8,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 2,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 2,
+          "GOBACK": 1
+        },
+        "arithmetic": {
+          "COMPUTE": 1
+        },
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_9": 6,
+          "PIC_S9": 4,
+          "USAGE_COMP_5": 4
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 4
+        },
+        "tables_search": {},
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1
+        },
+        "misc": {
+          "ACCEPT": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/uci.cob",
+      "total_lines": 62,
+      "code_lines": 48,
+      "comment_lines": 0,
+      "blank_lines": 14,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 1,
+      "data_items": 15,
+      "statements": {
+        "PERFORM": 0,
+        "IF": 2,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 15,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 2,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 4,
+          "EVALUATE": 2,
+          "WHEN": 5,
+          "GOBACK": 2
+        },
+        "arithmetic": {
+          "DIVIDE": 2,
+          "COMPUTE": 2
+        },
+        "data_advanced": {
+          "PIC_X": 3,
+          "PIC_S9": 11,
+          "USAGE_COMP_5": 11
+        },
+        "io_file": {},
+        "string_ops": {
+          "REFERENCE_MOD": 10
+        },
+        "tables_search": {},
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1,
+          "GIVING": 2
+        },
+        "copy_preproc": {
+          "COPY": 1
+        },
+        "intrinsics": {
+          "FUNCTION": 2,
+          "FUNCTION_MOD": 2
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/eval.cob",
+      "total_lines": 387,
+      "code_lines": 328,
+      "comment_lines": 21,
+      "blank_lines": 38,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1
+      },
+      "sections": 2,
+      "paragraphs": 1,
+      "data_items": 40,
+      "statements": {
+        "PERFORM": 5,
+        "IF": 62,
+        "EVALUATE": 2,
+        "CALL": 0,
+        "MOVE": 67,
+        "COMPUTE": 52,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 23,
+        "SUBTRACT": 20,
+        "MULTIPLY": 0,
+        "DIVIDE": 4,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 124,
+          "ELSE": 26,
+          "EVALUATE": 4,
+          "WHEN": 12,
+          "PERFORM": 10,
+          "PERFORM_VARYING": 5,
+          "PERFORM_UNTIL": 5,
+          "GOBACK": 1
+        },
+        "arithmetic": {
+          "ADD": 23,
+          "SUBTRACT": 20,
+          "DIVIDE": 4,
+          "COMPUTE": 52
+        },
+        "data_advanced": {
+          "PIC_S9": 40,
+          "OCCURS": 4,
+          "USAGE_COMP_5": 40
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1,
+          "GIVING": 4
+        },
+        "copy_preproc": {
+          "COPY": 2
+        },
+        "intrinsics": {
+          "FUNCTION": 24,
+          "FUNCTION_MOD": 12
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/main.cob",
+      "total_lines": 382,
+      "code_lines": 321,
+      "comment_lines": 5,
+      "blank_lines": 56,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 6,
+      "data_items": 54,
+      "statements": {
+        "PERFORM": 28,
+        "IF": 41,
+        "EVALUATE": 2,
+        "CALL": 14,
+        "MOVE": 70,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 5,
+        "DISPLAY": 8,
+        "GO TO": 1,
+        "EXIT": 22,
+        "STOP": 6,
+        "SET": 0,
+        "ADD": 3,
+        "SUBTRACT": 2,
+        "MULTIPLY": 0,
+        "DIVIDE": 2,
+        "STRING": 1,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 3,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 82,
+          "ELSE": 3,
+          "EVALUATE": 4,
+          "WHEN": 16,
+          "PERFORM": 36,
+          "PERFORM_VARYING": 2,
+          "PERFORM_UNTIL": 6,
+          "EXIT": 22,
+          "CONTINUE": 4,
+          "STOP_RUN": 5
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "SUBTRACT": 2,
+          "DIVIDE": 2,
+          "COMPUTE": 6
+        },
+        "data_advanced": {
+          "PIC_X": 17,
+          "PIC_9": 2,
+          "PIC_S9": 33,
+          "OCCURS": 1,
+          "USAGE_COMP_5": 35
+        },
+        "io_file": {
+          "READ": 13,
+          "START": 2
+        },
+        "string_ops": {
+          "STRING": 2,
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 2,
+          "DELIMITED_BY": 12
+        },
+        "tables_search": {
+          "SEARCH": 3,
+          "SET": 8
+        },
+        "subprograms": {
+          "CALL": 14,
+          "USING": 14,
+          "GIVING": 2
+        },
+        "copy_preproc": {
+          "COPY": 2
+        },
+        "intrinsics": {
+          "FUNCTION": 28,
+          "FUNCTION_NUMVAL": 9,
+          "FUNCTION_TRIM": 19
+        },
+        "misc": {
+          "DISPLAY": 8,
+          "ACCEPT": 5
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/COBOL-chess/src/search.cob",
+      "total_lines": 1362,
+      "code_lines": 1147,
+      "comment_lines": 39,
+      "blank_lines": 176,
+      "divisions": {
+        "IDENTIFICATION": 3,
+        "DATA": 3
+      },
+      "sections": 8,
+      "paragraphs": 17,
+      "data_items": 240,
+      "statements": {
+        "PERFORM": 32,
+        "IF": 130,
+        "EVALUATE": 10,
+        "CALL": 25,
+        "MOVE": 364,
+        "COMPUTE": 68,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 18,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 24,
+        "SUBTRACT": 6,
+        "MULTIPLY": 0,
+        "DIVIDE": 11,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 2,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 260,
+          "ELSE": 25,
+          "EVALUATE": 20,
+          "WHEN": 61,
+          "PERFORM": 45,
+          "PERFORM_VARYING": 13,
+          "PERFORM_UNTIL": 13,
+          "EXIT": 18,
+          "CONTINUE": 1,
+          "GOBACK": 23
+        },
+        "arithmetic": {
+          "ADD": 24,
+          "SUBTRACT": 6,
+          "DIVIDE": 11,
+          "COMPUTE": 68
+        },
+        "data_advanced": {
+          "PIC_X": 1,
+          "PIC_S9": 218,
+          "OCCURS": 3,
+          "USAGE_COMP_5": 218
+        },
+        "io_file": {
+          "START": 8
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SEARCH": 6
+        },
+        "subprograms": {
+          "CALL": 46,
+          "LINKAGE_SECTION": 3,
+          "USING": 28,
+          "GIVING": 11,
+          "RECURSIVE": 2
+        },
+        "copy_preproc": {
+          "COPY": 11
+        },
+        "intrinsics": {
+          "FUNCTION": 16,
+          "FUNCTION_TRIM": 4,
+          "FUNCTION_MOD": 12
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    }
+  ]
+}

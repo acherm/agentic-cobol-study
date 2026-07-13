@@ -1,0 +1,188 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compiler-codex",
+  "has_git": true,
+  "commits": 13,
+  "commit_log": [
+    {
+      "sha": "1b72b9c9fafffdb4754be51e46982daae0926fc9",
+      "date": "2026-04-03T16:39:01+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix else-if chain closure handling"
+    },
+    {
+      "sha": "a05a8a47d0d1cbbcb95c98534bfd3c6c80044a06",
+      "date": "2026-04-03T13:57:54+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add cutechess Elo match tooling"
+    },
+    {
+      "sha": "1b0ca6f91f9d8878926f2cd8b72ce5be85a44b77",
+      "date": "2026-04-03T07:27:41+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add chess tournament benchmarking"
+    },
+    {
+      "sha": "ab7f7d052e2534ffe06e015eac61a427ec65bff1",
+      "date": "2026-04-02T19:24:03+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix chess search equivalence and document validation"
+    },
+    {
+      "sha": "a8aeb459d1a6f7bf431608b42df0a2dc469c6a29",
+      "date": "2026-04-02T10:56:55+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Advance generic chess engine support"
+    },
+    {
+      "sha": "3147785e79c78ad3b3bdb188ac9ad74e75c2d1d0",
+      "date": "2026-03-31T07:28:24+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Advance generic chess support and validation"
+    },
+    {
+      "sha": "bdff7bb413b19ddd8ef16c41f609d1384550d9b0",
+      "date": "2026-03-30T18:43:32+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Target gameN with the generic front end"
+    },
+    {
+      "sha": "b9b2c6ef635c3d9bf155167d354ef51035913937",
+      "date": "2026-03-30T13:41:11+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refine README attribution and links"
+    },
+    {
+      "sha": "226a25457d2c06c511877f4e8db7d98136cdacd7",
+      "date": "2026-03-30T13:35:38+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Update README validation summary"
+    },
+    {
+      "sha": "a012861169359eaede343d104cd6c542d62e9ff2",
+      "date": "2026-03-30T13:26:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Expand generic front end and DOOM support"
+    },
+    {
+      "sha": "1b6242ba1b6580278dbb1f01be0a94be6ac52f2f",
+      "date": "2026-03-30T06:44:40+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add optimization, bootstrap, and chess status tooling"
+    },
+    {
+      "sha": "8d41ff3b8b203de2ca1578887606e5af396eada9",
+      "date": "2026-03-29T20:11:35+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Extend MiniCOBC validation and benchmarking"
+    },
+    {
+      "sha": "7758f781a3e18e8b733437faaf90b715a845da94",
+      "date": "2026-03-29T18:42:09+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial commit"
+    }
+  ],
+  "first_commit": "2026-03-29T18:42:09+02:00",
+  "last_commit": "2026-04-03T16:39:01+02:00",
+  "authors": {
+    "Mathieu Acher": 13
+  },
+  "churn": {
+    "files_changed_total": 302,
+    "insertions_total": 162592,
+    "deletions_total": 74567,
+    "per_commit": [
+      {
+        "sha": "1b72b9c9fafffdb4754be51e46982daae0926fc9",
+        "date": "2026-04-03T16:39:01+02:00",
+        "files": 6,
+        "ins": 72,
+        "del": 9
+      },
+      {
+        "sha": "a05a8a47d0d1cbbcb95c98534bfd3c6c80044a06",
+        "date": "2026-04-03T13:57:54+02:00",
+        "files": 9,
+        "ins": 777,
+        "del": 16
+      },
+      {
+        "sha": "1b0ca6f91f9d8878926f2cd8b72ce5be85a44b77",
+        "date": "2026-04-03T07:27:41+02:00",
+        "files": 8,
+        "ins": 1858,
+        "del": 12
+      },
+      {
+        "sha": "ab7f7d052e2534ffe06e015eac61a427ec65bff1",
+        "date": "2026-04-02T19:24:03+02:00",
+        "files": 15,
+        "ins": 21007,
+        "del": 18106
+      },
+      {
+        "sha": "a8aeb459d1a6f7bf431608b42df0a2dc469c6a29",
+        "date": "2026-04-02T10:56:55+02:00",
+        "files": 24,
+        "ins": 27062,
+        "del": 20581
+      },
+      {
+        "sha": "3147785e79c78ad3b3bdb188ac9ad74e75c2d1d0",
+        "date": "2026-03-31T07:28:24+02:00",
+        "files": 32,
+        "ins": 27474,
+        "del": 16030
+      },
+      {
+        "sha": "bdff7bb413b19ddd8ef16c41f609d1384550d9b0",
+        "date": "2026-03-30T18:43:32+02:00",
+        "files": 8,
+        "ins": 22017,
+        "del": 12508
+      },
+      {
+        "sha": "b9b2c6ef635c3d9bf155167d354ef51035913937",
+        "date": "2026-03-30T13:41:11+02:00",
+        "files": 1,
+        "ins": 11,
+        "del": 9
+      },
+      {
+        "sha": "226a25457d2c06c511877f4e8db7d98136cdacd7",
+        "date": "2026-03-30T13:35:38+02:00",
+        "files": 1,
+        "ins": 13,
+        "del": 1
+      },
+      {
+        "sha": "a012861169359eaede343d104cd6c542d62e9ff2",
+        "date": "2026-03-30T13:26:45+02:00",
+        "files": 91,
+        "ins": 24967,
+        "del": 4560
+      },
+      {
+        "sha": "1b6242ba1b6580278dbb1f01be0a94be6ac52f2f",
+        "date": "2026-03-30T06:44:40+02:00",
+        "files": 68,
+        "ins": 28297,
+        "del": 2653
+      },
+      {
+        "sha": "8d41ff3b8b203de2ca1578887606e5af396eada9",
+        "date": "2026-03-29T20:11:35+02:00",
+        "files": 22,
+        "ins": 6862,
+        "del": 82
+      },
+      {
+        "sha": "7758f781a3e18e8b733437faaf90b715a845da94",
+        "date": "2026-03-29T18:42:09+02:00",
+        "files": 17,
+        "ins": 2175,
+        "del": 0
+      }
+    ]
+  }
+}

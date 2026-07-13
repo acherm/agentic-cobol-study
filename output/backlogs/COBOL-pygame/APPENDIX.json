@@ -1,0 +1,472 @@
+{
+  "session_metadata": {
+    "codex_home": "~/.codex",
+    "session_file": "~/.codex/sessions/2026/02/09/rollout-2026-02-09T10-40-22-019c41c6-066e-7fc2-80fc-df9d9c702a1e.jsonl",
+    "session_id": "019c41c6-066e-7fc2-80fc-df9d9c702a1e",
+    "thread_name": "Add pygame framework for COBOL",
+    "commit_hash": null,
+    "git_initialized": false,
+    "session_start": "2026-02-09T09:40:22.773Z",
+    "session_end": "2026-02-09T10:41:45.440Z",
+    "duration_minutes": 61,
+    "model": "gpt-5.2",
+    "model_provider": "openai",
+    "cli_version": "0.98.0",
+    "originator": "Codex Desktop",
+    "total_tokens": 1150014,
+    "total_events": 271,
+    "cwd": "/Users/mathieuacher/SANDBOX/COBOL-pygame"
+  },
+  "user_instruction_index": [
+    {
+      "id": "UI-001",
+      "evidence": "[T:session 019c41c6:event_007]",
+      "text": "Write a pygame framework for COBOL (using GNUcobol)",
+      "category": "FeatureRequest",
+      "strength": "Explicit imperative",
+      "target_surface": "Code, Build",
+      "mapped_bl": ["BL-001"]
+    },
+    {
+      "id": "UI-002",
+      "evidence": "[T:session 019c41c6:event_136]",
+      "text": "Terminal paste: make run -> libcob: error: module 'cpg_init' not found",
+      "category": "BugFixRequest",
+      "strength": "Explicit imperative",
+      "target_surface": "Code, Build",
+      "mapped_bl": ["BL-002"]
+    },
+    {
+      "id": "UI-003",
+      "evidence": "[T:session 019c41c6:event_196]",
+      "text": "write a Flappy bird in COBOL now, thanks to the new framework.",
+      "category": "FeatureRequest",
+      "strength": "Explicit imperative",
+      "target_surface": "Code, Build",
+      "mapped_bl": ["BL-003"]
+    }
+  ],
+  "project_constraints_index": [
+    {
+      "id": "PC-001",
+      "evidence": "[R:~/.codex/config.toml:1]",
+      "constraint": "Model: gpt-5.2, personality: pragmatic, reasoning: xhigh",
+      "type": "tooling",
+      "impact": "Affects agent behavior and verbosity"
+    },
+    {
+      "id": "PC-002",
+      "evidence": "[T:session 019c41c6:event_001]",
+      "constraint": "Sandbox: workspace-write, no network access",
+      "type": "safety",
+      "impact": "Agent cannot fetch dependencies or access web"
+    },
+    {
+      "id": "PC-003",
+      "evidence": "[R:~/.codex/AGENTS.md]",
+      "constraint": "Empty AGENTS.md - no project-specific instructions",
+      "type": "repo policy",
+      "impact": "No additional constraints"
+    }
+  ],
+  "prompt_ledger": [
+    {
+      "id": "PL-ROOT",
+      "evidence": "[T:session 019c41c6:event_007]",
+      "raw": "Write a pygame framework for COBOL (using GNUcobol)",
+      "canonical": "Create a minimal 'pygame-like' graphical framework for GnuCOBOL programs, built on SDL2. Provide: a C static library (cpg_* prefix) with functions for init/quit, window+renderer creation, draw primitives (line, rect, filled rect), event polling (keyboard, mouse, quit), timing (delay, ticks), and BMP texture support. Include a COBOL copybook mapping SDL2 event types and keycodes to COBOL level-78 constants. Include a bouncing-rectangle example program. Provide a Makefile that builds both the C library and the COBOL example. Target macOS with GnuCOBOL 3.2+ and SDL2.",
+      "linked_ui": ["UI-001"],
+      "linked_bl": ["BL-001"]
+    },
+    {
+      "id": "PL-002",
+      "evidence": "[T:session 019c41c6:event_136]",
+      "raw": "make run terminal output showing libcob: error: module 'cpg_init' not found",
+      "canonical": "Fix runtime libcob: error: module 'cpg_init' not found by adding -fstatic-call to GnuCOBOL compilation flags.",
+      "linked_ui": ["UI-002"],
+      "linked_bl": ["BL-002"]
+    },
+    {
+      "id": "PL-003",
+      "evidence": "[T:session 019c41c6:event_196]",
+      "raw": "write a Flappy bird in COBOL now, thanks to the new framework.",
+      "canonical": "Using the cpg_* framework, implement a Flappy Bird clone in COBOL (examples/flappy.cob) with: gravity-based bird physics, scrolling pipes with randomized gap positions, AABB collision detection, score display in window title, game over / restart on Space, and ~60 FPS frame-rate limiting. Add make run-flappy target.",
+      "linked_ui": ["UI-003"],
+      "linked_bl": ["BL-003"]
+    }
+  ],
+  "feature_backlog": [
+    {
+      "id": "BL-001",
+      "title": "Minimal pygame-like SDL2 Framework for COBOL",
+      "type": "Feature",
+      "source_ui": ["UI-001"],
+      "source_pl": ["PL-ROOT"],
+      "acceptance_criteria": {
+        "explicit": "pygame framework for COBOL using GNUcobol",
+        "inferred": ["Must compile with cobc", "Must provide init/quit/draw/events/timing", "Must include working example"]
+      },
+      "implementation_summary": "C static library (src/cpg.c, src/cpg.h) wrapping SDL2; COBOL copybook (cobol/cpg.cpy); bouncing-rectangle demo (examples/hello.cob); Makefile; README",
+      "evidence": ["[T:event_069]", "[R:src/cpg.c:1-367]", "[R:src/cpg.h:1-55]", "[R:cobol/cpg.cpy:1-40]", "[R:examples/hello.cob:1-106]"],
+      "validation": "make clean && make exits 0",
+      "dod": "Partial",
+      "dod_justification": "Builds successfully but runtime not verified by agent"
+    },
+    {
+      "id": "BL-002",
+      "title": "Fix Runtime Module Lookup Error (-fstatic-call)",
+      "type": "Bugfix",
+      "source_ui": ["UI-002"],
+      "source_pl": ["PL-002"],
+      "acceptance_criteria": {
+        "explicit": "libcob: error: module 'cpg_init' not found",
+        "inferred": ["make run should execute without module-not-found error"]
+      },
+      "implementation_summary": "Added COBFLAGS = -free -fstatic-call to Makefile; added Makefile as build prerequisite; added README note",
+      "evidence": ["[T:event_156]", "[T:event_168]", "[T:event_175]", "[R:Makefile:14]"],
+      "validation": "Rebuild succeeded",
+      "dod": "Yes",
+      "dod_justification": "Root cause identified and fixed; user implicitly confirmed by proceeding"
+    },
+    {
+      "id": "BL-003",
+      "title": "Flappy Bird Game Example",
+      "type": "Feature",
+      "source_ui": ["UI-003"],
+      "source_pl": ["PL-003"],
+      "acceptance_criteria": {
+        "explicit": "write a Flappy bird in COBOL",
+        "inferred": ["Must use cpg_* framework", "Must be playable", "Must build with make"]
+      },
+      "implementation_summary": "examples/flappy.cob (346 lines) with bird physics, pipe scrolling, collision detection, scoring, game over/restart; Makefile targets; README update",
+      "evidence": ["[T:event_214]", "[T:event_224]", "[T:event_256]", "[R:examples/flappy.cob:1-346]"],
+      "validation": "make exits 0",
+      "dod": "Partial",
+      "dod_justification": "Builds successfully but runtime not verified by agent"
+    }
+  ],
+  "specification_backlog": [
+    {
+      "id": "SB-001",
+      "step_label": "EP-session-start",
+      "title": "Environment Discovery & Toolchain Validation",
+      "category": "Tooling",
+      "provenance": "Prerequisite",
+      "related_bl": [],
+      "related_ui": [],
+      "specification": "Confirmed empty repo, verified GnuCOBOL 3.2.0 and SDL2 2.32.8 availability"
+    },
+    {
+      "id": "SB-002",
+      "step_label": "EP-design",
+      "title": "API Design (pygame-like C API)",
+      "category": "Capability",
+      "provenance": "User-driven",
+      "related_bl": ["BL-001"],
+      "related_ui": ["UI-001"],
+      "specification": "Designed cpg_* C API surface: 17 functions covering init/quit, window, drawing, events, timing, textures"
+    },
+    {
+      "id": "SB-003",
+      "step_label": "EP-scaffold",
+      "title": "Scaffold Project (all source files)",
+      "category": "Capability",
+      "provenance": "User-driven",
+      "related_bl": ["BL-001"],
+      "related_ui": ["UI-001"],
+      "specification": "Created 7 files: src/cpg.c, src/cpg.h, cobol/cpg.cpy, examples/hello.cob, Makefile, README.md, .gitignore"
+    },
+    {
+      "id": "SB-004",
+      "step_label": "EP-build-fix-1",
+      "title": "First Build & COBOL Data Type Fix",
+      "category": "Quality/Hardening",
+      "provenance": "Agent-initiated",
+      "related_bl": ["BL-001"],
+      "related_ui": [],
+      "specification": "Fixed BINARY-LONG to COMP-5 for GnuCOBOL 3.2 compatibility"
+    },
+    {
+      "id": "SB-005",
+      "step_label": "EP-bugfix",
+      "title": "Fix Runtime Module Lookup (-fstatic-call)",
+      "category": "Quality/Hardening",
+      "provenance": "User-driven",
+      "related_bl": ["BL-002"],
+      "related_ui": ["UI-002"],
+      "specification": "Added -fstatic-call to COBFLAGS for static CALL resolution"
+    },
+    {
+      "id": "SB-006",
+      "step_label": "EP-bugfix",
+      "title": "Makefile Hardening (Prerequisite Tracking)",
+      "category": "Quality/Hardening",
+      "provenance": "Agent-initiated",
+      "related_bl": ["BL-002"],
+      "related_ui": [],
+      "specification": "Added Makefile as prerequisite to all build targets"
+    },
+    {
+      "id": "SB-007",
+      "step_label": "EP-bugfix",
+      "title": "README Update (Static Call Note)",
+      "category": "Documentation",
+      "provenance": "Agent-initiated",
+      "related_bl": ["BL-002"],
+      "related_ui": [],
+      "specification": "Added note explaining -fstatic-call and module-not-found error"
+    },
+    {
+      "id": "SB-008",
+      "step_label": "EP-flappy",
+      "title": "Flappy Bird Game Implementation",
+      "category": "Capability",
+      "provenance": "User-driven",
+      "related_bl": ["BL-003"],
+      "related_ui": ["UI-003"],
+      "specification": "346-line Flappy Bird with physics, collisions, scoring, state machine"
+    },
+    {
+      "id": "SB-009",
+      "step_label": "EP-flappy",
+      "title": "Extend Makefile for Flappy",
+      "category": "Tooling",
+      "provenance": "User-driven",
+      "related_bl": ["BL-003"],
+      "related_ui": ["UI-003"],
+      "specification": "Added FLAPPY_EXE, run-flappy target, build rule"
+    },
+    {
+      "id": "SB-010",
+      "step_label": "EP-flappy-fix",
+      "title": "Fix Flappy Bird Rendering Bug",
+      "category": "Quality/Hardening",
+      "provenance": "Agent-initiated",
+      "related_bl": ["BL-003"],
+      "related_ui": [],
+      "specification": "Fixed pipe rendering logic to properly compute top/bottom pipe heights"
+    },
+    {
+      "id": "SB-011",
+      "step_label": "EP-flappy-docs",
+      "title": "Update README for Flappy Bird",
+      "category": "Documentation",
+      "provenance": "Agent-initiated",
+      "related_bl": ["BL-003"],
+      "related_ui": [],
+      "specification": "Added make run-flappy instructions to README"
+    }
+  ],
+  "replay_plan": [
+    {
+      "bl_id": "BL-001",
+      "preconditions": "Empty dir, GnuCOBOL >= 3.2, SDL2 dev libs, C compiler",
+      "raw_prompt": "Write a pygame framework for COBOL (using GNUcobol)",
+      "expected_outputs": ["src/cpg.c", "src/cpg.h", "cobol/cpg.cpy", "examples/hello.cob", "Makefile", "README.md", ".gitignore"],
+      "validate": "make clean && make (exit 0)"
+    },
+    {
+      "bl_id": "BL-002",
+      "preconditions": "BL-001 complete",
+      "raw_prompt": "paste: make run -> libcob: error: module 'cpg_init' not found",
+      "expected_outputs": ["Makefile updated with -fstatic-call"],
+      "validate": "make clean && make && make run"
+    },
+    {
+      "bl_id": "BL-003",
+      "preconditions": "BL-001 + BL-002 complete",
+      "raw_prompt": "write a Flappy bird in COBOL now, thanks to the new framework.",
+      "expected_outputs": ["examples/flappy.cob", "Makefile updated", "README.md updated"],
+      "validate": "make clean && make (exit 0), make run-flappy"
+    }
+  ],
+  "repo_stats": {
+    "total_files": 8,
+    "total_directories": 5,
+    "total_loc": 1031,
+    "language_breakdown": {
+      "C": {"files": 2, "loc": 422},
+      "COBOL": {"files": 3, "loc": 492},
+      "Make": {"files": 1, "loc": 47},
+      "Markdown": {"files": 1, "loc": 56},
+      "Config": {"files": 1, "loc": 14}
+    },
+    "program_kind": {
+      "production_library": {"files": 3, "loc": 462},
+      "examples_demos": {"files": 2, "loc": 452},
+      "build_tooling": {"files": 1, "loc": 47},
+      "documentation": {"files": 1, "loc": 56},
+      "config": {"files": 1, "loc": 14}
+    },
+    "build_artifacts": ["build/cpg.o", "build/libcpg.a", "build/hello", "build/flappy"],
+    "exclusions": ["build/", ".DS_Store"]
+  },
+  "rq_coverage_matrix": {
+    "RQ1_strategies": {
+      "sources": ["session reasoning traces", "function calls", "plan updates"],
+      "indicators": "strategy codes applied to episodes",
+      "output_sections": ["B2", "B3", "B4"]
+    },
+    "RQ2_outcomes": {
+      "sources": ["build outputs", "file contents", "session end state"],
+      "indicators": "rubric scores per BL",
+      "output_sections": ["B5", "B6"]
+    },
+    "RQ3_factors": {
+      "sources": ["build failures", "fix patterns", "reasoning quality"],
+      "indicators": "claims FOR/AGAINST",
+      "output_sections": ["B8"]
+    },
+    "RQ4_reproducibility": {
+      "sources": ["prompt ledger", "replay package", "checkpoint data"],
+      "indicators": "completeness checklist",
+      "output_sections": ["B9"]
+    },
+    "RQ5_interaction": {
+      "sources": ["UI count", "prompt categories", "clarification cycles"],
+      "indicators": "metrics per BL",
+      "output_sections": ["B7"]
+    }
+  },
+  "strategy_codebook": {
+    "PLAN": "Agent creates/updates explicit plan with steps and status",
+    "SCAF": "Agent scaffolds project structure (dirs, files, configs)",
+    "INCR": "Incremental development: build-test-fix-rebuild",
+    "RETR": "Agent retrieves/reads existing state before acting",
+    "DBG": "Debug: investigate failure root cause via tool inspection",
+    "TEST": "Build/compile verification",
+    "TOOL": "Toolchain/environment probing",
+    "PROMPT": "Agent interprets/extends user prompt with domain knowledge",
+    "VERIFY": "Post-action verification of correctness"
+  },
+  "episodes": [
+    {"id": "EP-BL001-01", "bl": "BL-001", "label": "Environment Discovery", "strategies": ["RETR", "TOOL"], "phase": "bootstrap"},
+    {"id": "EP-BL001-02", "bl": "BL-001", "label": "API Design", "strategies": ["PROMPT", "PLAN"], "phase": "bootstrap"},
+    {"id": "EP-BL001-03", "bl": "BL-001", "label": "File Scaffold", "strategies": ["SCAF"], "phase": "bootstrap"},
+    {"id": "EP-BL001-04", "bl": "BL-001", "label": "Build-Fix Cycle", "strategies": ["TEST", "DBG", "INCR", "TEST"], "phase": "bootstrap"},
+    {"id": "EP-BL001-05", "bl": "BL-001", "label": "Delivery", "strategies": ["VERIFY"], "phase": "bootstrap"},
+    {"id": "EP-BL002-01", "bl": "BL-002", "label": "Bug Investigation", "strategies": ["DBG", "PROMPT"], "phase": "stabilization"},
+    {"id": "EP-BL002-02", "bl": "BL-002", "label": "Fix & Harden", "strategies": ["INCR", "TEST"], "phase": "stabilization"},
+    {"id": "EP-BL003-01", "bl": "BL-003", "label": "Game Design", "strategies": ["PROMPT"], "phase": "feature-growth"},
+    {"id": "EP-BL003-02", "bl": "BL-003", "label": "Implementation", "strategies": ["SCAF", "INCR", "TEST", "DBG", "INCR", "TEST"], "phase": "feature-growth"},
+    {"id": "EP-BL003-03", "bl": "BL-003", "label": "Documentation & Delivery", "strategies": ["SCAF", "VERIFY"], "phase": "feature-growth"}
+  ],
+  "strategy_annotations": {
+    "BL-001": {
+      "sequence": ["RETR", "TOOL", "PROMPT", "PLAN", "SCAF", "TEST", "DBG", "INCR", "TEST", "VERIFY"],
+      "dbg_loops": 1,
+      "build_runs": 2,
+      "build_failures": 1,
+      "blocking_points": ["BINARY-LONG not recognized by GnuCOBOL 3.2"],
+      "recovery": "Switched to COMP-5"
+    },
+    "BL-002": {
+      "sequence": ["DBG", "PROMPT", "INCR", "TEST", "VERIFY"],
+      "dbg_loops": 1,
+      "build_runs": 2,
+      "build_failures": 1,
+      "blocking_points": ["Dynamic CALL semantics in GnuCOBOL"],
+      "recovery": "Added -fstatic-call flag"
+    },
+    "BL-003": {
+      "sequence": ["PROMPT", "PLAN", "SCAF", "INCR", "TEST", "DBG", "INCR", "TEST", "VERIFY"],
+      "dbg_loops": 1,
+      "build_runs": 3,
+      "build_failures": 1,
+      "blocking_points": ["COBOL compile error in pipe rendering"],
+      "recovery": "Patched variable computation in rendering"
+    }
+  },
+  "rubric_scores": {
+    "BL-001": {
+      "Q1_correctness": {"score": 2, "confidence": "Med"},
+      "Q2_build": {"score": 2, "confidence": "High"},
+      "Q3_test_rigor": {"score": 0, "confidence": "High"},
+      "Q4_robustness": {"score": 2, "confidence": "Med"},
+      "Q5_maintainability": {"score": 2, "confidence": "Med"},
+      "Q6_reproducibility": {"score": 1, "confidence": "Med"}
+    },
+    "BL-002": {
+      "Q1_correctness": {"score": 2, "confidence": "High"},
+      "Q2_build": {"score": 2, "confidence": "High"},
+      "Q3_test_rigor": {"score": 0, "confidence": "High"},
+      "Q4_robustness": {"score": 1, "confidence": "Med"},
+      "Q5_maintainability": {"score": 2, "confidence": "High"},
+      "Q6_reproducibility": {"score": 2, "confidence": "High"}
+    },
+    "BL-003": {
+      "Q1_correctness": {"score": 1, "confidence": "Low"},
+      "Q2_build": {"score": 2, "confidence": "High"},
+      "Q3_test_rigor": {"score": 0, "confidence": "High"},
+      "Q4_robustness": {"score": 1, "confidence": "Med"},
+      "Q5_maintainability": {"score": 1, "confidence": "Med"},
+      "Q6_reproducibility": {"score": 1, "confidence": "Med"}
+    }
+  },
+  "interaction_metrics": {
+    "total_user_prompts": 3,
+    "categories": {"FeatureRequest": 2, "BugFixRequest": 1},
+    "strength": {"explicit_imperative": 2, "implicit_imperative": 1},
+    "clarification_cycles": 0,
+    "scope_changes": 0,
+    "ui_density_per_bl": {"BL-001": 1, "BL-002": 1, "BL-003": 1},
+    "response_time_minutes": {"BL-001": 9, "BL-002": 3, "BL-003": 4}
+  },
+  "cobol_panel": {
+    "compile_status": "Pass",
+    "runtime_status": "INFERRED: works (user proceeded after BL-002 fix)",
+    "cobol_version": "GnuCOBOL 3.2.0",
+    "format": "free",
+    "idioms_used": ["PERFORM UNTIL", "COPY copybook", "level-88 conditions", "COMP-5", "BY VALUE/BY REFERENCE", "FUNCTION RANDOM", "STRING...INTO", "FUNCTION TRIM"],
+    "c_interop": "CALL with USING BY REFERENCE/BY VALUE, RETURNING",
+    "data_type_evolution": "BINARY-LONG (failed) -> COMP-5 (success)",
+    "linking": "-fstatic-call (required for C function resolution)"
+  },
+  "process_tracing_claims": [
+    {
+      "id": "C1",
+      "claim": "Single-prompt scaffolding was effective",
+      "evidence_for": ["7-file project from 7-word prompt", "20+ reasoning traces showing deep domain consideration"],
+      "evidence_against": ["First build failed (BINARY-LONG)"],
+      "judgment": "Supported"
+    },
+    {
+      "id": "C2",
+      "claim": "Bug diagnosis was efficient",
+      "evidence_for": ["Root cause in 1 investigation step", "Fix included hardening and documentation"],
+      "evidence_against": [],
+      "judgment": "Strongly supported"
+    },
+    {
+      "id": "C3",
+      "claim": "Complex game from minimal prompt",
+      "evidence_for": ["346-line game from 12-word prompt", "7 subsystems designed in 8 reasoning traces"],
+      "evidence_against": ["Runtime unverified"],
+      "judgment": "Partially supported"
+    },
+    {
+      "id": "C4",
+      "claim": "Absence of testing is a quality gap",
+      "evidence_for": ["No test framework", "All validation build-only"],
+      "evidence_against": ["Graphical testing is non-trivial"],
+      "judgment": "Supported"
+    }
+  ],
+  "threats_to_validity": [
+    "No git history - provenance relies on session JSONL",
+    "No runtime evidence - quality claims rely on compilation only",
+    "Single 61-minute session - limited generalizability",
+    "Encrypted reasoning content inaccessible",
+    "No user feedback on BL-003 - DoD unconfirmed"
+  ],
+  "open_questions": {
+    "CP1": [],
+    "CP2": [],
+    "CP3": [],
+    "defaults_used": [
+      "Assumed repo was created entirely within this session (empty dir at start)",
+      "Assumed user acceptance of BL-002 based on proceeding to BL-003",
+      "No runtime validation oracle available - scored Q1 based on code inspection"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "project": "cobol-doom-codex",
+  "spec_backlog": [],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [],
+  "commit_subjects": [
+    {
+      "sha": "02f13a1ea6",
+      "date": "2026-04-18",
+      "subject": "Add demo launcher and SDL polish"
+    },
+    {
+      "sha": "9fbcff207b",
+      "date": "2026-04-18",
+      "subject": "Split COBOL core into copybooks"
+    },
+    {
+      "sha": "76758985db",
+      "date": "2026-04-18",
+      "subject": "Refactor COBOL game core structure"
+    },
+    {
+      "sha": "eee50f8318",
+      "date": "2026-04-18",
+      "subject": "Add multi-level campaign and start menu"
+    },
+    {
+      "sha": "fd84dc9fbc",
+      "date": "2026-04-18",
+      "subject": "Add pickups weapons and HUD"
+    },
+    {
+      "sha": "866fe4d1b7",
+      "date": "2026-04-17",
+      "subject": "Add enemies and combat systems"
+    },
+    {
+      "sha": "4219ca2459",
+      "date": "2026-04-17",
+      "subject": "Move raycasting core back into COBOL"
+    },
+    {
+      "sha": "6c516b8c5a",
+      "date": "2026-04-17",
+      "subject": "Add helper-backed visual raycaster"
+    },
+    {
+      "sha": "ec5133ee93",
+      "date": "2026-04-17",
+      "subject": "Fix terminal grid alignment"
+    },
+    {
+      "sha": "8127df8d76",
+      "date": "2026-04-17",
+      "subject": "Add terminal COBOL grid walker"
+    }
+  ],
+  "total_features_proxy": 0
+}

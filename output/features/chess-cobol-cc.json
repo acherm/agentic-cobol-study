@@ -1,0 +1,770 @@
+{
+  "project": "chess-cobol-cc",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "EP-bootstrap",
+      "evidence": "Environment discovery (GNU COBOL 3.2.0 + cutechess-cli + Stockfish)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "EP-bootstrap",
+      "evidence": "Phased plan proposed (4 phases, Elo targets 200\u21921200+)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "EP-P1",
+      "evidence": "UCI skeleton: `ACCEPT \u2026 FROM CONSOLE` + command dispatch (`uci`, `isready`, `position`, `go`, `quit`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "EP-P1",
+      "evidence": "8\u00d78 board + starting position + FEN parser + UCI move application",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "EP-P1",
+      "evidence": "Pseudo-legal move generation for all piece types + castling legality + king-safety filter",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "EP-P1",
+      "evidence": "Random-move output (Phase-1 Elo baseline)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "EP-P1",
+      "evidence": "**Bug fix:** input buffer overflow \u2192 widened `WS-INPUT-LINE` to `PIC X(8192)`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "EP-P1",
+      "evidence": "**Bug fix:** FEN column overflow (`PIC 9` wrapped) \u2192 widened to `PIC 9(2)`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "EP-P2",
+      "evidence": "Material + piece-square-table evaluation (P=100, N=320, B=330, R=500, Q=900, K=20000)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "EP-P2",
+      "evidence": "1-ply `SEARCH-BEST-MOVE` (pick move with best eval)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "EP-P3",
+      "evidence": "Explicit-stack negamax alpha-beta (COBOL lacks convenient recursion)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "EP-P3",
+      "evidence": "Per-ply state arrays (`WS-PLY-DATA(12)`) + `SEARCH-MAKE/UNMAKE-MOVE` wrappers",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "EP-P3",
+      "evidence": "`go depth N` UCI parameter parsing + default depth reduced to 3",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "EP-P3",
+      "evidence": "First Stockfish match `vs SF 1320`, 10-game run",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "EP-P4",
+      "evidence": "Iterative deepening loop in `UCI-CMD-GO`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "EP-P4",
+      "evidence": "Time management: parse `wtime/btime/movestogo`, formula `time/(movestogo+1)/10`, cap 10\u2013500 cs",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "EP-P4",
+      "evidence": "MVV-LVA capture ordering + selection sort",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "EP-P4",
+      "evidence": "**Bug fix:** root-move corruption across iterations (regenerate legal moves each iteration)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-019",
+      "title": "EP-P4b",
+      "evidence": "Quiescence search (captures-only + stand-pat + checkmate guard)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "EP-P4b",
+      "evidence": "2 killer moves per ply + `STORE-KILLER-MOVE` on beta cutoff",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "EP-P4b",
+      "evidence": "Node-count telemetry + 512-node time-check granularity",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "EP-P4c",
+      "evidence": "Broadened opponent calibration run vs SF 1600",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "EP-P4d",
+      "evidence": "Delta pruning in quiescence (per-move + big-delta at stand-pat)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "EP-P4d",
+      "evidence": "History heuristic (flat 4096-entry table, depth\u00b2 increments)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "EP-P4d",
+      "evidence": "Aspiration windows (\u00b150 cp), full re-search on fail",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-026",
+      "title": "EP-P4d",
+      "evidence": "**Toolchain fix:** `-O2` hang \u21d2 mandatory `COB_CFLAGS=-O2 -fwrapv \u2026`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-027",
+      "title": "EP-P4d",
+      "evidence": "**Revert:** reverse-futility pruning (extra eval cost > savings)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "EP-P4d",
+      "evidence": "**Regression fix:** time-mgmt formula reverted to `time/(movestogo+2)/10`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-029",
+      "title": "EP-v1",
+      "evidence": "First named binary snapshot (`chess-engine-v1`) post time-mgmt fix",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "EP-v1",
+      "evidence": "Multi-level calibration: `vs SF 1320 85%`, `vs SF 1500 52.5%` \u21d2 ~1517 Elo",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "EP-v2",
+      "evidence": "Bishop-pair bonus (+50 cp both-bishops)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "EP-v2",
+      "evidence": "Rook on open/semi-open file (+25 / +15 cp) with inline pawn-file tracking",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-033",
+      "title": "EP-v2",
+      "evidence": "**Revert:** check-extension at first qsearch ply (search explosion)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-034",
+      "title": "EP-v2",
+      "evidence": "v2 match vs SF 1500 = 65.0% \u21d2 ~1608 Elo",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-035",
+      "title": "EP-v3",
+      "evidence": "Pawn-structure eval: doubled (-15), isolated (-20), passed (tapered +10..+90)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-036",
+      "title": "EP-v3",
+      "evidence": "Late Move Reductions with re-search-on-fail-high (state machine 0/1/2)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-037",
+      "title": "EP-v3",
+      "evidence": "**Revert:** futility pruning (interaction with LMR-modified MAX-PLY)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-038",
+      "title": "EP-v3",
+      "evidence": "**Regression fix:** aggressive `time/movestogo` \u2192 7 forfeits \u2192 restored buffer + soft-time check (4\u00d7 last-iteration)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-039",
+      "title": "EP-v3",
+      "evidence": "v3b match vs SF 1500 = 67.5% \u21d2 ~1627 Elo",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-040",
+      "title": "EP-v3",
+      "evidence": "**Memory notes written**: `project_elo_progress.md`, `feedback_time_management.md`, `feedback_overhead_sensitivity.md`, `MEMORY.md`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-041",
+      "title": "EP-P6",
+      "evidence": "Endgame king PST + tapered eval wired into eval loop",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-042",
+      "title": "EP-P6",
+      "evidence": "**Revert:** tapered king eval \u2014 8/20 (40%) match regression",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-043",
+      "title": "EP-P6",
+      "evidence": "**Revert:** horizon check extensions \u2014 9/20 (45%) regression (per-node overhead)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-044",
+      "title": "EP-v4",
+      "evidence": "PV move ordering at root (best move from previous iter gets score 20 000)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-045",
+      "title": "EP-v4",
+      "evidence": "**Persistent** killer + history tables across iterative-deepening iterations",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-046",
+      "title": "EP-v4",
+      "evidence": "v4 match vs SF 1500 = 14/20 (70.0%) \u21d2 ~1647 Elo (best single run)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-047",
+      "title": "EP-P8",
+      "evidence": "**Revert:** endgame king correction via phase-switch (phase counting cost too high)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-048",
+      "title": "EP-v4b",
+      "evidence": "Aggressive LMR R=2 for move-index \u2265 7",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-049",
+      "title": "EP-v4b",
+      "evidence": "v4b match vs SF 1500 = 13.5/20 (67.5%), LOS 94.6%",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-050",
+      "title": "EP-Elo",
+      "evidence": "Multi-level Elo triangulation: SF 1400 80%, SF 1500 70%, SF 1600 55%, SF 1700 30%",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-051",
+      "title": "EP-Elo",
+      "evidence": "Final refined Elo report: weighted ~1621, realistic **~1630 Elo** (100 games)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Phase 1: Board + UCI + random moves (~200-400 Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Phase 2: Material evaluation + 1-ply search (~600-800 Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Phase 3: Alpha-beta + depth 3-4 + PSTs (~1000-1200 Elo) \ud83d\udd27 IN PROGRESS"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Phase 4: Iterative deepening + time management (~1200+ Elo)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "GNU COBOL 3.2.0 (fixed-format source, `>>SOURCE FORMAT IS FIXED`)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "UCI (Universal Chess Interface) protocol for engine communication"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "cutechess-cli for automated engine testing and Elo estimation"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Stockfish 18 as opponent (with UCI_LimitStrength/UCI_Elo=1320)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "8x8 board representation with character piece encoding (uppercase=white, lowercase=black, space=empty)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "FEN (Forsyth-Edwards Notation) parsing for position setup"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Pseudo-legal move generation with legal move filtering (make/unmake + king safety)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Piece-square tables (PST) for positional evaluation"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Negamax with alpha-beta pruning using an explicit stack (since COBOL lacks convenient recursion)"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Per-ply data structures indexed by search depth for the explicit stack approach"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "**`/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob`** \u2014 The entire chess engine in a single COBOL source file"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-12T21:52:03.414000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 1: Board + UCI + random moves (~200-400 Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 2: Material evaluation + 1-ply search (~600-800 Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 3: Alpha-beta + depth 3-4 + PSTs (~1000-1200 Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 4: Iterative deepening + time management (~1200+ Elo) \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 4b: Quiescence search + killer moves \u2705 COMPLETE"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Phase 4c: Further Elo improvements \ud83d\udd27 IN PROGRESS"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "GNU COBOL 3.2.0 (fixed-format source, `>>SOURCE FORMAT IS FIXED`)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "UCI (Universal Chess Interface) protocol for engine communication"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "cutechess-cli for automated engine testing and Elo estimation"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Stockfish 18 as opponent (with UCI_LimitStrength/UCI_Elo)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "8x8 board representation with character piece encoding (uppercase=white, lowercase=black, space=empty)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "FEN parsing for position setup"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Pseudo-legal move generation with legal move filtering (make/unmake + king safety)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Piece-square tables (PST) for positional evaluation"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Negamax with alpha-beta pruning using explicit stack (COBOL lacks convenient recursion)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Per-ply data structures indexed by search depth"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Iterative deepening with time management"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "MVV-LVA (Most Valuable Victim - Least Valuable Attacker) move ordering"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Quiescence search with stand-pat evaluation"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Killer move heuristic (2 killers per ply)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Delta pruning concept (not yet implemented)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Late move reductions concept (not yet implemented)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "**`/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob`** \u2014 The entire chess engine in a single COBOL source file (~1800+ lines)"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-16T19:53:40.742000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 1: Board + UCI + random moves (~200-400 Elo) \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 2: Material evaluation + 1-ply search (~600-800 Elo) \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 3: Alpha-beta + depth 3-4 + PSTs (~1000-1200 Elo) \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 4: Iterative deepening + time management (~1200+ Elo) \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 4b: Quiescence search + killer moves \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 4c: Further Elo improvements (tested at ~1548 Elo vs SF 1320) \u2705"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Phase 4d: Current \u2014 implementing delta pruning, history heuristic, aspiration windows \ud83d\udd27 IN PROGRESS"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "GNU COBOL 3.2.0 (fixed-format source, `>>SOURCE FORMAT IS FIXED`)"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "UCI (Universal Chess Interface) protocol for engine communication"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "cutechess-cli for automated testing against Stockfish with UCI_LimitStrength"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Explicit stack-based alpha-beta search (COBOL's recursion is inconvenient)"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Per-ply data structures indexed by search depth (20 plies max)"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Quiescence search with stand-pat evaluation and capture-only move generation"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "MVV-LVA (Most Valuable Victim - Least Valuable Attacker) move ordering"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Killer move heuristic (2 killers per ply)"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "**New in this session:**"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "**Critical compilation discovery:** `cobc -x -O2` causes engine to hang before reaching MAIN-PROGRAM (compiler bug with -fwrapv being the fix). Must use custom CFLAGS."
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "COBOL runtime overhead (~0.27ms/node) is the bottleneck regardless of optimization level"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "**`/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob`** \u2014 The entire chess engine (~2000+ lines after changes)"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-20T15:26:43.305000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "GNU COBOL 3.2.0 chess engine with UCI protocol"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "cutechess-cli for automated testing against Stockfish with UCI_LimitStrength"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Compilation requires: `COB_CFLAGS=\"-O2 -fwrapv -I/opt/homebrew/Cellar/gmp/6.3.0/include -I/opt/homebrew/Cellar/gnucobol/3.2_1/include\" cobc -x -o chess-engine chess-engine.cob`"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "`-fwrapv` is critical to avoid a GNU COBOL compiler bug that causes hangs with -O2"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "COBOL runtime overhead (~0.27ms/node) is the bottleneck regardless of optimization level"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Bishop pair bonus evaluation (+50cp for having both bishops)"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Rook on open file (+25cp) / semi-open file (+15cp) evaluation"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Pawn file tracking for rook file openness detection"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Check extension (attempted and removed \u2014 causes search explosion)"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Iterative deepening with aspiration windows, alpha-beta search, quiescence search with delta pruning"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Time management formula: `WS-WTIME-MS / (WS-MOVESTOGO + 2) / 10`"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Time control for matches: `tc=40/60` (40 moves in 60 seconds)"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "**`/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob`** \u2014 The entire chess engine (~2100+ lines)"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-21T00:30:36.742000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "GNU COBOL 3.2.0 chess engine with UCI protocol"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "cutechess-cli for automated testing against Stockfish with UCI_LimitStrength"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Compilation: `COB_CFLAGS=\"-O2 -fwrapv -I/opt/homebrew/Cellar/gmp/6.3.0/include -I/opt/homebrew/Cellar/gnucobol/3.2_1/include\" cobc -x -o chess-engine chess-engine.cob`"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "`-fwrapv` critical to avoid GNU COBOL compiler bug causing hangs with -O2"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "COBOL runtime overhead: ~0.23ms/node \u2014 the fundamental bottleneck"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Time control for matches: `tc=40/60` (40 moves in 60 seconds)"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Time management formula: `WS-WTIME-MS / (WS-MOVESTOGO + 2) / 10`"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Late Move Reductions (LMR): reduce search depth for late quiet moves, re-search on fail-high"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Soft time management: between iterations, don't start next depth if `elapsed + 4 * last_iteration_time > time_limit`"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Pawn structure evaluation: doubled/isolated/passed pawn detection"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Tapered evaluation: blending middlegame and endgame piece-square tables based on game phase"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Iterative deepening with aspiration windows, alpha-beta, quiescence with delta pruning"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Stack-based (non-recursive) search with explicit WS-PLY management and per-ply data arrays (max 20 plies)"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "**`/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob`** \u2014 The entire chess engine (now ~3100+ lines)"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-03-23T14:55:34.502000+00:00",
+      "item": "Files and Code Sections:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "95aa4b3c6e",
+      "date": "2026-05-04",
+      "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+    }
+  ],
+  "total_features_proxy": 115
+}

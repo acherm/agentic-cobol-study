@@ -1,0 +1,32 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/COBOL-pygame",
+  "has_git": true,
+  "commits": 1,
+  "commit_log": [
+    {
+      "sha": "b2095a1ce046cb654bff9e072c96e1ce4d2b11d9",
+      "date": "2026-03-19T17:21:35+01:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial commit: pygame-like SDL2 framework for COBOL + Flappy Bird"
+    }
+  ],
+  "first_commit": "2026-03-19T17:21:35+01:00",
+  "last_commit": "2026-03-19T17:21:35+01:00",
+  "authors": {
+    "Mathieu Acher": 1
+  },
+  "churn": {
+    "files_changed_total": 11,
+    "insertions_total": 2222,
+    "deletions_total": 0,
+    "per_commit": [
+      {
+        "sha": "b2095a1ce046cb654bff9e072c96e1ce4d2b11d9",
+        "date": "2026-03-19T17:21:35+01:00",
+        "files": 11,
+        "ins": 2222,
+        "del": 0
+      }
+    ]
+  }
+}

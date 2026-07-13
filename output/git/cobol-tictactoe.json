@@ -1,0 +1,84 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-tictactoe",
+  "has_git": true,
+  "commits": 5,
+  "commit_log": [
+    {
+      "sha": "e4968ec5707f321d3879d7792cd048c5541e49bd",
+      "date": "2026-04-09T11:39:43+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add algorithm-agnostic replay prompts for step-by-step reproduction"
+    },
+    {
+      "sha": "4ae3129ad1f5b6a81cb28c075864781891c0e7a1",
+      "date": "2026-03-19T16:31:55+01:00",
+      "author": "Mathieu Acher",
+      "subject": "removal history"
+    },
+    {
+      "sha": "e37dfc24cba10a1e5dd3229c4bcdd561e6fd5224",
+      "date": "2026-03-19T16:29:26+01:00",
+      "author": "Mathieu Acher",
+      "subject": "backlog feature"
+    },
+    {
+      "sha": "e351c4bc5c480ea451c7766d6f15457bfcbaf106",
+      "date": "2026-03-19T11:51:34+01:00",
+      "author": "Mathieu Acher",
+      "subject": "analysis"
+    },
+    {
+      "sha": "dc71e86cc09f230a0f088b411efefd8f98e93890",
+      "date": "2026-03-19T10:40:17+01:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Game of 15 COBOL programs: counter, optimal play tree, and variant generator"
+    }
+  ],
+  "first_commit": "2026-03-19T10:40:17+01:00",
+  "last_commit": "2026-04-09T11:39:43+02:00",
+  "authors": {
+    "Mathieu Acher": 5
+  },
+  "churn": {
+    "files_changed_total": 13,
+    "insertions_total": 4896,
+    "deletions_total": 2542,
+    "per_commit": [
+      {
+        "sha": "e4968ec5707f321d3879d7792cd048c5541e49bd",
+        "date": "2026-04-09T11:39:43+02:00",
+        "files": 2,
+        "ins": 145,
+        "del": 1
+      },
+      {
+        "sha": "4ae3129ad1f5b6a81cb28c075864781891c0e7a1",
+        "date": "2026-03-19T16:31:55+01:00",
+        "files": 1,
+        "ins": 0,
+        "del": 2541
+      },
+      {
+        "sha": "e37dfc24cba10a1e5dd3229c4bcdd561e6fd5224",
+        "date": "2026-03-19T16:29:26+01:00",
+        "files": 3,
+        "ins": 2641,
+        "del": 0
+      },
+      {
+        "sha": "e351c4bc5c480ea451c7766d6f15457bfcbaf106",
+        "date": "2026-03-19T11:51:34+01:00",
+        "files": 1,
+        "ins": 186,
+        "del": 0
+      },
+      {
+        "sha": "dc71e86cc09f230a0f088b411efefd8f98e93890",
+        "date": "2026-03-19T10:40:17+01:00",
+        "files": 6,
+        "ins": 1924,
+        "del": 0
+      }
+    ]
+  }
+}

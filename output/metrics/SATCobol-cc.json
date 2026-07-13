@@ -1,0 +1,2936 @@
+{
+  "project": "SATCobol-cc",
+  "project_root": "/Users/mathieuacher/SANDBOX/SATCobol-cc",
+  "domain_files": [],
+  "inventory": {
+    "root": "/Users/mathieuacher/SANDBOX/SATCobol-cc",
+    "total_files": 2832,
+    "total_bytes": 28156364,
+    "by_lang": {
+      "Makefile": {
+        "files": 1,
+        "loc": 18,
+        "bytes": 297
+      },
+      "Shell": {
+        "files": 4,
+        "loc": 719,
+        "bytes": 21286
+      },
+      "COBOL": {
+        "files": 13,
+        "loc": 1675,
+        "bytes": 65724
+      }
+    },
+    "cobol_files": [
+      {
+        "path": "src/cobsat.cob",
+        "loc": 83,
+        "bytes": 2825
+      },
+      {
+        "path": "src/copy/propagate-data.cpy",
+        "loc": 105,
+        "bytes": 5135
+      },
+      {
+        "path": "src/copy/io-files.cpy",
+        "loc": 7,
+        "bytes": 353
+      },
+      {
+        "path": "src/copy/cnf-data.cpy",
+        "loc": 92,
+        "bytes": 4072
+      },
+      {
+        "path": "src/copy/parser-data.cpy",
+        "loc": 24,
+        "bytes": 931
+      },
+      {
+        "path": "src/copy/propagate.cpy",
+        "loc": 430,
+        "bytes": 17954
+      },
+      {
+        "path": "src/copy/io.cpy",
+        "loc": 152,
+        "bytes": 5689
+      },
+      {
+        "path": "src/copy/cnf.cpy",
+        "loc": 189,
+        "bytes": 7883
+      },
+      {
+        "path": "src/copy/search-data.cpy",
+        "loc": 9,
+        "bytes": 478
+      },
+      {
+        "path": "src/copy/search.cpy",
+        "loc": 139,
+        "bytes": 5096
+      },
+      {
+        "path": "src/copy/io-data.cpy",
+        "loc": 31,
+        "bytes": 1185
+      },
+      {
+        "path": "src/copy/io-fd.cpy",
+        "loc": 10,
+        "bytes": 372
+      },
+      {
+        "path": "src/copy/parser.cpy",
+        "loc": 404,
+        "bytes": 13751
+      }
+    ]
+  },
+  "complexity": {
+    "root": "/Users/mathieuacher/SANDBOX/SATCobol-cc",
+    "aggregate": {
+      "num_files": 13,
+      "total_lines": 1675,
+      "code_lines": 1347,
+      "comment_lines": 232,
+      "sections": 3,
+      "paragraphs": 94,
+      "data_items": 159,
+      "max_nesting_any_file": 3,
+      "statements": {
+        "PERFORM": 121,
+        "IF": 123,
+        "EVALUATE": 10,
+        "CALL": 0,
+        "MOVE": 306,
+        "COMPUTE": 32,
+        "READ": 2,
+        "WRITE": 0,
+        "OPEN": 4,
+        "CLOSE": 2,
+        "ACCEPT": 3,
+        "DISPLAY": 39,
+        "GO TO": 0,
+        "EXIT": 45,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 47,
+        "SUBTRACT": 6,
+        "MULTIPLY": 1,
+        "DIVIDE": 2,
+        "STRING": 2,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 1,
+        "SORT": 0
+      },
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "top_files_by_code_lines": [
+        {
+          "file": "src/copy/parser.cpy",
+          "code_lines": 371
+        },
+        {
+          "file": "src/copy/propagate.cpy",
+          "code_lines": 325
+        },
+        {
+          "file": "src/copy/cnf.cpy",
+          "code_lines": 150
+        },
+        {
+          "file": "src/copy/io.cpy",
+          "code_lines": 143
+        },
+        {
+          "file": "src/copy/search.cpy",
+          "code_lines": 104
+        },
+        {
+          "file": "src/cobsat.cob",
+          "code_lines": 73
+        },
+        {
+          "file": "src/copy/propagate-data.cpy",
+          "code_lines": 65
+        },
+        {
+          "file": "src/copy/cnf-data.cpy",
+          "code_lines": 54
+        },
+        {
+          "file": "src/copy/io-data.cpy",
+          "code_lines": 24
+        },
+        {
+          "file": "src/copy/parser-data.cpy",
+          "code_lines": 19
+        }
+      ],
+      "capabilities": {
+        "control_flow": {
+          "total": 638,
+          "files_using": 7,
+          "constructs": {
+            "IF": 246,
+            "ELSE": 52,
+            "EVALUATE": 20,
+            "WHEN": 32,
+            "PERFORM": 155,
+            "EXIT": 75,
+            "STOP_RUN": 1,
+            "PERFORM_VARYING": 17,
+            "PERFORM_UNTIL": 35,
+            "CONTINUE": 5
+          }
+        },
+        "arithmetic": {
+          "total": 99,
+          "files_using": 5,
+          "constructs": {
+            "ADD": 54,
+            "SUBTRACT": 6,
+            "MULTIPLY": 1,
+            "COMPUTE": 36,
+            "DIVIDE": 2
+          }
+        },
+        "data_advanced": {
+          "total": 222,
+          "files_using": 6,
+          "constructs": {
+            "PIC_X": 34,
+            "PIC_9": 90,
+            "PIC_S9": 12,
+            "OCCURS": 19,
+            "USAGE_COMP_5": 67
+          }
+        },
+        "io_file": {
+          "total": 63,
+          "files_using": 9,
+          "constructs": {
+            "READ": 17,
+            "ASSIGN": 18,
+            "SELECT": 2,
+            "LINE_SEQUENTIAL": 2,
+            "START": 12,
+            "FD": 2,
+            "OPEN_INPUT": 2,
+            "CLOSE": 6,
+            "AT_END": 2
+          }
+        },
+        "string_ops": {
+          "total": 13,
+          "files_using": 2,
+          "constructs": {
+            "REFERENCE_MOD": 5,
+            "STRING": 4,
+            "DELIMITED_BY": 4
+          }
+        },
+        "tables_search": {
+          "total": 5,
+          "files_using": 3,
+          "constructs": {
+            "SEARCH": 2,
+            "SET": 2,
+            "INITIALIZE": 1
+          }
+        },
+        "subprograms": {
+          "total": 0,
+          "files_using": 0,
+          "constructs": {}
+        },
+        "copy_preproc": {
+          "total": 12,
+          "files_using": 1,
+          "constructs": {
+            "COPY": 12
+          }
+        },
+        "intrinsics": {
+          "total": 42,
+          "files_using": 3,
+          "constructs": {
+            "FUNCTION": 23,
+            "FUNCTION_MOD": 2,
+            "FUNCTION_TRIM": 17
+          }
+        },
+        "misc": {
+          "total": 42,
+          "files_using": 5,
+          "constructs": {
+            "DISPLAY": 39,
+            "ACCEPT": 3
+          }
+        }
+      },
+      "mastery_score": 41,
+      "mastery_constructs": [
+        "arithmetic.ADD",
+        "arithmetic.COMPUTE",
+        "arithmetic.DIVIDE",
+        "arithmetic.MULTIPLY",
+        "arithmetic.SUBTRACT",
+        "control_flow.CONTINUE",
+        "control_flow.ELSE",
+        "control_flow.EVALUATE",
+        "control_flow.EXIT",
+        "control_flow.IF",
+        "control_flow.PERFORM",
+        "control_flow.PERFORM_UNTIL",
+        "control_flow.PERFORM_VARYING",
+        "control_flow.STOP_RUN",
+        "control_flow.WHEN",
+        "copy_preproc.COPY",
+        "data_advanced.OCCURS",
+        "data_advanced.PIC_9",
+        "data_advanced.PIC_S9",
+        "data_advanced.PIC_X",
+        "data_advanced.USAGE_COMP_5",
+        "intrinsics.FUNCTION",
+        "intrinsics.FUNCTION_MOD",
+        "intrinsics.FUNCTION_TRIM",
+        "io_file.ASSIGN",
+        "io_file.AT_END",
+        "io_file.CLOSE",
+        "io_file.FD",
+        "io_file.LINE_SEQUENTIAL",
+        "io_file.OPEN_INPUT",
+        "io_file.READ",
+        "io_file.SELECT",
+        "io_file.START",
+        "misc.ACCEPT",
+        "misc.DISPLAY",
+        "string_ops.DELIMITED_BY",
+        "string_ops.REFERENCE_MOD",
+        "string_ops.STRING",
+        "tables_search.INITIALIZE",
+        "tables_search.SEARCH",
+        "tables_search.SET"
+      ],
+      "categories_exercised": 9
+    },
+    "per_file": [
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob",
+        "total_lines": 83,
+        "code_lines": 73,
+        "comment_lines": 3,
+        "blank_lines": 7,
+        "divisions": {
+          "IDENTIFICATION": 1,
+          "ENVIRONMENT": 1,
+          "DATA": 1,
+          "PROCEDURE": 1
+        },
+        "sections": 3,
+        "paragraphs": 2,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 5,
+          "IF": 4,
+          "EVALUATE": 1,
+          "CALL": 0,
+          "MOVE": 8,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 6,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 1,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 1,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 8,
+            "ELSE": 3,
+            "EVALUATE": 2,
+            "WHEN": 4,
+            "PERFORM": 5,
+            "EXIT": 6,
+            "STOP_RUN": 1
+          },
+          "arithmetic": {},
+          "data_advanced": {},
+          "io_file": {
+            "READ": 1
+          },
+          "string_ops": {},
+          "tables_search": {
+            "SEARCH": 2
+          },
+          "subprograms": {},
+          "copy_preproc": {
+            "COPY": 12
+          },
+          "intrinsics": {},
+          "misc": {
+            "DISPLAY": 6
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/propagate-data.cpy",
+        "total_lines": 105,
+        "code_lines": 65,
+        "comment_lines": 32,
+        "blank_lines": 8,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 65,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 7,
+            "PIC_9": 43,
+            "PIC_S9": 7,
+            "OCCURS": 7,
+            "USAGE_COMP_5": 41
+          },
+          "io_file": {
+            "ASSIGN": 4
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/io-files.cpy",
+        "total_lines": 7,
+        "code_lines": 6,
+        "comment_lines": 1,
+        "blank_lines": 0,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {},
+          "io_file": {
+            "SELECT": 2,
+            "ASSIGN": 2,
+            "LINE_SEQUENTIAL": 2
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/cnf-data.cpy",
+        "total_lines": 92,
+        "code_lines": 54,
+        "comment_lines": 26,
+        "blank_lines": 12,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 44,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 2,
+            "PIC_9": 25,
+            "PIC_S9": 4,
+            "OCCURS": 12,
+            "USAGE_COMP_5": 22
+          },
+          "io_file": {
+            "START": 2
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/parser-data.cpy",
+        "total_lines": 24,
+        "code_lines": 19,
+        "comment_lines": 2,
+        "blank_lines": 3,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 19,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 9,
+            "PIC_9": 8,
+            "PIC_S9": 1
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/propagate.cpy",
+        "total_lines": 430,
+        "code_lines": 325,
+        "comment_lines": 88,
+        "blank_lines": 17,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 27,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 26,
+          "IF": 37,
+          "EVALUATE": 3,
+          "CALL": 0,
+          "MOVE": 107,
+          "COMPUTE": 17,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 8,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 10,
+          "SUBTRACT": 5,
+          "MULTIPLY": 1,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 74,
+            "ELSE": 22,
+            "EVALUATE": 6,
+            "WHEN": 9,
+            "PERFORM": 38,
+            "PERFORM_VARYING": 4,
+            "PERFORM_UNTIL": 12,
+            "EXIT": 8
+          },
+          "arithmetic": {
+            "ADD": 13,
+            "SUBTRACT": 5,
+            "MULTIPLY": 1,
+            "COMPUTE": 19
+          },
+          "data_advanced": {},
+          "io_file": {
+            "ASSIGN": 2,
+            "START": 3
+          },
+          "string_ops": {},
+          "tables_search": {
+            "SET": 2
+          },
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {
+            "FUNCTION": 1,
+            "FUNCTION_MOD": 1
+          },
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/io.cpy",
+        "total_lines": 152,
+        "code_lines": 143,
+        "comment_lines": 2,
+        "blank_lines": 7,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 13,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 7,
+          "IF": 14,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 36,
+          "COMPUTE": 4,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 3,
+          "DISPLAY": 15,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 13,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 1,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 28,
+            "ELSE": 7,
+            "PERFORM": 12,
+            "PERFORM_VARYING": 4,
+            "PERFORM_UNTIL": 5,
+            "EXIT": 1
+          },
+          "arithmetic": {
+            "ADD": 13,
+            "DIVIDE": 1,
+            "COMPUTE": 4
+          },
+          "data_advanced": {},
+          "io_file": {
+            "ASSIGN": 1,
+            "READ": 1
+          },
+          "string_ops": {
+            "REFERENCE_MOD": 2
+          },
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {
+            "FUNCTION": 9,
+            "FUNCTION_TRIM": 8,
+            "FUNCTION_MOD": 1
+          },
+          "misc": {
+            "DISPLAY": 15,
+            "ACCEPT": 3
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/cnf.cpy",
+        "total_lines": 189,
+        "code_lines": 150,
+        "comment_lines": 32,
+        "blank_lines": 7,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 12,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 11,
+          "IF": 13,
+          "EVALUATE": 1,
+          "CALL": 0,
+          "MOVE": 51,
+          "COMPUTE": 6,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 3,
+          "GO TO": 0,
+          "EXIT": 4,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 9,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 1,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 2,
+        "capabilities": {
+          "control_flow": {
+            "IF": 26,
+            "ELSE": 6,
+            "EVALUATE": 2,
+            "WHEN": 3,
+            "PERFORM": 18,
+            "PERFORM_VARYING": 6,
+            "PERFORM_UNTIL": 7,
+            "EXIT": 7
+          },
+          "arithmetic": {
+            "ADD": 12,
+            "DIVIDE": 1,
+            "COMPUTE": 8
+          },
+          "data_advanced": {},
+          "io_file": {
+            "ASSIGN": 2,
+            "START": 7
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {
+            "DISPLAY": 3
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/search-data.cpy",
+        "total_lines": 9,
+        "code_lines": 5,
+        "comment_lines": 4,
+        "blank_lines": 0,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 5,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 2,
+            "PIC_9": 3,
+            "USAGE_COMP_5": 3
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/search.cpy",
+        "total_lines": 139,
+        "code_lines": 104,
+        "comment_lines": 29,
+        "blank_lines": 6,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 11,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 21,
+          "IF": 12,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 30,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 3,
+          "GO TO": 0,
+          "EXIT": 3,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 3,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 24,
+            "ELSE": 6,
+            "PERFORM": 25,
+            "PERFORM_VARYING": 2,
+            "PERFORM_UNTIL": 3,
+            "EXIT": 5
+          },
+          "arithmetic": {
+            "ADD": 4
+          },
+          "data_advanced": {},
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {
+            "INITIALIZE": 1
+          },
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {
+            "DISPLAY": 3
+          }
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/io-data.cpy",
+        "total_lines": 31,
+        "code_lines": 24,
+        "comment_lines": 2,
+        "blank_lines": 5,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 24,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {
+            "EXIT": 1
+          },
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 12,
+            "PIC_9": 11,
+            "USAGE_COMP_5": 1
+          },
+          "io_file": {},
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/io-fd.cpy",
+        "total_lines": 10,
+        "code_lines": 8,
+        "comment_lines": 1,
+        "blank_lines": 1,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 0,
+        "data_items": 2,
+        "statements": {
+          "PERFORM": 0,
+          "IF": 0,
+          "EVALUATE": 0,
+          "CALL": 0,
+          "MOVE": 0,
+          "COMPUTE": 0,
+          "READ": 0,
+          "WRITE": 0,
+          "OPEN": 0,
+          "CLOSE": 0,
+          "ACCEPT": 0,
+          "DISPLAY": 0,
+          "GO TO": 0,
+          "EXIT": 0,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 0,
+          "SUBTRACT": 0,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 0,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 0,
+        "capabilities": {
+          "control_flow": {},
+          "arithmetic": {},
+          "data_advanced": {
+            "PIC_X": 2
+          },
+          "io_file": {
+            "FD": 2
+          },
+          "string_ops": {},
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {},
+          "misc": {}
+        }
+      },
+      {
+        "path": "/Users/mathieuacher/SANDBOX/SATCobol-cc/src/copy/parser.cpy",
+        "total_lines": 404,
+        "code_lines": 371,
+        "comment_lines": 10,
+        "blank_lines": 23,
+        "divisions": {},
+        "sections": 0,
+        "paragraphs": 29,
+        "data_items": 0,
+        "statements": {
+          "PERFORM": 51,
+          "IF": 43,
+          "EVALUATE": 5,
+          "CALL": 0,
+          "MOVE": 74,
+          "COMPUTE": 5,
+          "READ": 2,
+          "WRITE": 0,
+          "OPEN": 4,
+          "CLOSE": 2,
+          "ACCEPT": 0,
+          "DISPLAY": 12,
+          "GO TO": 0,
+          "EXIT": 30,
+          "STOP": 0,
+          "SET": 0,
+          "ADD": 12,
+          "SUBTRACT": 1,
+          "MULTIPLY": 0,
+          "DIVIDE": 0,
+          "STRING": 2,
+          "UNSTRING": 0,
+          "INSPECT": 0,
+          "SEARCH": 0,
+          "SORT": 0
+        },
+        "max_nesting": 3,
+        "capabilities": {
+          "control_flow": {
+            "IF": 86,
+            "ELSE": 8,
+            "EVALUATE": 10,
+            "WHEN": 16,
+            "PERFORM": 57,
+            "PERFORM_VARYING": 1,
+            "PERFORM_UNTIL": 8,
+            "EXIT": 47,
+            "CONTINUE": 5
+          },
+          "arithmetic": {
+            "ADD": 12,
+            "SUBTRACT": 1,
+            "COMPUTE": 5
+          },
+          "data_advanced": {},
+          "io_file": {
+            "ASSIGN": 7,
+            "OPEN_INPUT": 2,
+            "READ": 15,
+            "CLOSE": 6,
+            "AT_END": 2
+          },
+          "string_ops": {
+            "STRING": 4,
+            "REFERENCE_MOD": 3,
+            "DELIMITED_BY": 4
+          },
+          "tables_search": {},
+          "subprograms": {},
+          "copy_preproc": {},
+          "intrinsics": {
+            "FUNCTION": 13,
+            "FUNCTION_TRIM": 9
+          },
+          "misc": {
+            "DISPLAY": 12
+          }
+        }
+      }
+    ]
+  },
+  "git": {
+    "root": "/Users/mathieuacher/SANDBOX/SATCobol-cc",
+    "has_git": true,
+    "commits": 10,
+    "commit_log": [
+      {
+        "sha": "6404f111ffae4649bae4c82c9e6a29b072152a73",
+        "date": "2026-04-17T12:52:14+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Conflict-driven clause learning (CDCL) with first-UIP + backjump"
+      },
+      {
+        "sha": "c3b2a7c527a0538f66e8d19095fa150a4e3a2e3e",
+        "date": "2026-04-16T12:03:48+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Phase saving, VSIDS-lite, JW branching, Luby restarts"
+      },
+      {
+        "sha": "57de05d273b2c0e2fd6c5542cd0f3e2eb778fdfb",
+        "date": "2026-04-16T10:34:03+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Pass SAT4J's acceptance test suite"
+      },
+      {
+        "sha": "a121b45cae8e3f0345b0678c33023f97296e7a0d",
+        "date": "2026-04-16T06:44:12+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Add scripts/crosscheck_minisat.sh to cross-verify against minisat"
+      },
+      {
+        "sha": "de35d40e715b2b91452063ad7d93f3404b928909",
+        "date": "2026-04-15T18:47:09+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Two-watched literals + occurrence branching; perf script; larger benchmarks"
+      },
+      {
+        "sha": "b2d83241214b00c946b94bea142be2defb61223d",
+        "date": "2026-04-15T17:52:34+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Refactor cobsat into per-module copybooks (io, parser, cnf, propagate, search)"
+      },
+      {
+        "sha": "bdea674016292de4fb24605fcff57800ccc02345",
+        "date": "2026-04-15T17:27:17+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Add baseline DPLL solver (--solve) with unit propagation"
+      },
+      {
+        "sha": "88e8e997abcc9a5ee988b7d0d0f450bb45bf4454",
+        "date": "2026-04-15T16:24:43+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Treat SATLIB '%' line as end-of-data; ship uf75/uuf75 benchmarks"
+      },
+      {
+        "sha": "3fc5cdd2fa289a8204da10a7fc74119d1d490529",
+        "date": "2026-04-15T15:54:00+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Add --check-model mode for evaluating CNF assignments"
+      },
+      {
+        "sha": "049f4b5a93e8e9cec6d0f39e87e18206e0f09b87",
+        "date": "2026-04-15T14:54:45+02:00",
+        "author": "Mathieu Acher",
+        "subject": "Initial COBOL DIMACS CNF parser with --parse mode"
+      }
+    ],
+    "first_commit": "2026-04-15T14:54:45+02:00",
+    "last_commit": "2026-04-17T12:52:14+02:00",
+    "authors": {
+      "Mathieu Acher": 10
+    },
+    "churn": {
+      "files_changed_total": 258,
+      "insertions_total": 795633,
+      "deletions_total": 1141,
+      "per_commit": [
+        {
+          "sha": "6404f111ffae4649bae4c82c9e6a29b072152a73",
+          "date": "2026-04-17T12:52:14+02:00",
+          "files": 5,
+          "ins": 353,
+          "del": 108
+        },
+        {
+          "sha": "c3b2a7c527a0538f66e8d19095fa150a4e3a2e3e",
+          "date": "2026-04-16T12:03:48+02:00",
+          "files": 6,
+          "ins": 210,
+          "del": 70
+        },
+        {
+          "sha": "57de05d273b2c0e2fd6c5542cd0f3e2eb778fdfb",
+          "date": "2026-04-16T10:34:03+02:00",
+          "files": 182,
+          "ins": 792073,
+          "del": 4
+        },
+        {
+          "sha": "a121b45cae8e3f0345b0678c33023f97296e7a0d",
+          "date": "2026-04-16T06:44:12+02:00",
+          "files": 2,
+          "ins": 181,
+          "del": 0
+        },
+        {
+          "sha": "de35d40e715b2b91452063ad7d93f3404b928909",
+          "date": "2026-04-15T18:47:09+02:00",
+          "files": 13,
+          "ins": 490,
+          "del": 68
+        },
+        {
+          "sha": "b2d83241214b00c946b94bea142be2defb61223d",
+          "date": "2026-04-15T17:52:34+02:00",
+          "files": 14,
+          "ins": 903,
+          "del": 855
+        },
+        {
+          "sha": "bdea674016292de4fb24605fcff57800ccc02345",
+          "date": "2026-04-15T17:27:17+02:00",
+          "files": 9,
+          "ins": 443,
+          "del": 18
+        },
+        {
+          "sha": "88e8e997abcc9a5ee988b7d0d0f450bb45bf4454",
+          "date": "2026-04-15T16:24:43+02:00",
+          "files": 4,
+          "ins": 5,
+          "del": 1
+        },
+        {
+          "sha": "3fc5cdd2fa289a8204da10a7fc74119d1d490529",
+          "date": "2026-04-15T15:54:00+02:00",
+          "files": 11,
+          "ins": 314,
+          "del": 17
+        },
+        {
+          "sha": "049f4b5a93e8e9cec6d0f39e87e18206e0f09b87",
+          "date": "2026-04-15T14:54:45+02:00",
+          "files": 12,
+          "ins": 661,
+          "del": 0
+        }
+      ]
+    }
+  },
+  "sessions": [
+    {
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "all_models": {
+        "claude-opus-4-6": 645,
+        "<synthetic>": 2
+      },
+      "version": "2.1.109",
+      "session_id": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+      "project_dir": "-Users-mathieuacher-SANDBOX-SATCobol-cc",
+      "file": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-SATCobol-cc/9f10dfb5-e448-463b-bffe-21fa2006c9ae.jsonl",
+      "file_size": 3495853,
+      "n_lines": 1322,
+      "start": "2026-04-15T12:20:02.902000+00:00",
+      "end": "2026-04-17T11:01:50.473000+00:00",
+      "duration_s": 168107,
+      "user_turns": 31,
+      "assistant_turns": 647,
+      "tool_calls_total": 360,
+      "tool_breakdown": {
+        "Bash": 210,
+        "Write": 58,
+        "Edit": 67,
+        "Read": 24,
+        "ToolSearch": 1
+      },
+      "input_tokens": 977,
+      "output_tokens": 984752,
+      "cache_read_tokens": 168569731,
+      "cache_creation_tokens": 7843062,
+      "reasoning_tokens": 0,
+      "cost_usd": 473.7831,
+      "first_user_prompt": "Implement a robust DIMACS CNF parser in COBOL: supports c comments, p cnf <vars> <clauses>, arbitrary whitespace, multiple lines per clause, and 0 clause terminators.\nAdd a parser-only mode: ./cobsat --parse file.cnf prints a normalized representation (vars, clauses, literals).\nAdd unit tests under tests/ that cover: empty lines, CRLF line endings, trailing spaces, many spaces, comment lines between tokens.",
+      "assistant_text_chars": 26403,
+      "role": "dev"
+    }
+  ],
+  "n_dev_sessions": 1,
+  "excluded_sessions": {
+    "n_analyst": 0,
+    "n_empty": 0,
+    "analyst_cost_usd": 0,
+    "analyst_tool_calls": 0,
+    "note": "analyst/empty sessions are excluded from every aggregate in this file (cost, tokens, tool calls, active time, prompts, span, difficulty signals)"
+  },
+  "span_days": 1,
+  "active_time": {
+    "total_active_s": 4446,
+    "total_wall_gap_s": 11141,
+    "by_se_task_s": {
+      "understanding": 943,
+      "build": 2642,
+      "feature": 493,
+      "bug_fix": 5,
+      "plan": 50,
+      "test": 108,
+      "unknown": 205
+    }
+  },
+  "tokens": {
+    "in": 977,
+    "out": 984752,
+    "cache_read": 168569731,
+    "cache_create": 7843062,
+    "reasoning": 0
+  },
+  "cost_usd": 473.78,
+  "tool_calls_total": 360,
+  "wall_duration_s": 168107,
+  "user_prompts": {
+    "count": 8,
+    "avg_len": 169.8,
+    "max_len": 410,
+    "total_chars": 1358,
+    "activity_breakdown": {
+      "test": 5,
+      "implement": 1,
+      "other": 2
+    },
+    "intent_breakdown": {
+      "initial-spec": 1,
+      "clarify": 3,
+      "review-ask": 4
+    },
+    "first_prompt": "Implement a robust DIMACS CNF parser in COBOL: supports c comments, p cnf <vars> <clauses>, arbitrary whitespace, multiple lines per clause, and 0 clause terminators.\nAdd a parser-only mode: ./cobsat --parse file.cnf prints a normalized representation (vars, clauses, literals).\nAdd unit tests under tests/ that cover: empty lines, CRLF line endings, trailing spaces, many spaces, comment lines between tokens."
+  },
+  "tool_use": {
+    "total": 115,
+    "by_tool": {
+      "Bash": 54,
+      "Write": 29,
+      "Edit": 28,
+      "Read": 4
+    },
+    "by_se_task": {
+      "understanding": 20,
+      "build": 22,
+      "feature": 56,
+      "bug_fix": 1,
+      "test": 6,
+      "plan": 10
+    }
+  },
+  "errors": {
+    "tool_outputs": 115,
+    "tool_output_errors": 2,
+    "error_rate": 0.017,
+    "error_tags": {
+      "cc": 2,
+      "cobc": 1
+    }
+  },
+  "difficulty_signals": {
+    "active_hours": 1.24,
+    "span_days": 1,
+    "user_prompts": 8,
+    "redirect_bug_prompts": 0,
+    "tool_calls": 360,
+    "n_turns": 316,
+    "error_events": 2,
+    "error_rate": 0.017,
+    "fix_cycles": 1,
+    "fix_time_share": 0.001,
+    "tool_calls_per_prompt": 45.0,
+    "user_interventions_per_hr": 6.48
+  },
+  "features": {
+    "project": "SATCobol-cc",
+    "spec_backlog": [
+      {
+        "id": "SB-001",
+        "title": "`049f4b5`",
+        "evidence": "DIMACS CNF parser in free-format COBOL (`--parse`)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-002",
+        "title": "`049f4b5`",
+        "evidence": "`./cobsat --parse file.cnf` normalised output mode",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-003",
+        "title": "`049f4b5`",
+        "evidence": "`Makefile` + `cobsat` binary at repo root (no wrapper)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-004",
+        "title": "`049f4b5`",
+        "evidence": "Parser edge-case tests (empty / crlf / trailing / many / interleaved / multiline)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-005",
+        "title": "`049f4b5`",
+        "evidence": "Initial commit on default branch",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-006",
+        "title": "`3fc5cdd`",
+        "evidence": "`--check-model file.cnf model.txt` mode",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-007",
+        "title": "`3fc5cdd`",
+        "evidence": "Per-fixture sat / unsat / partial `.model` fixtures (9 files)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-008",
+        "title": "`3fc5cdd`",
+        "evidence": "Per-clause failure error format (`UNSAT clause N: \u2026`)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-009",
+        "title": "`88e8e99`",
+        "evidence": "SATLIB `%` end-of-data trailer tolerance in parser",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-010",
+        "title": "`88e8e99`",
+        "evidence": "Ship `uf75-325.tar.gz` + `uuf75-325.tar.gz` under `tests/`",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-011",
+        "title": "`88e8e99`",
+        "evidence": "200-instance uf75/uuf75 sweep via `--parse` (SAT/UNSAT-agnostic)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-012",
+        "title": "`bdea674`",
+        "evidence": "Baseline DPLL solver (`--solve`, unit-prop + chrono backtrack)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-013",
+        "title": "`bdea674`",
+        "evidence": "`s SATISFIABLE` / `v \u2026 0` / `s UNSATISFIABLE` solver I/O",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-014",
+        "title": "`bdea674`",
+        "evidence": "Solve fixtures (unit_chain, contradiction, xor3, xor3_unsat, php*)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-015",
+        "title": "`bdea674`",
+        "evidence": "Iterative DPLL with explicit trail `(var, kind)` entries",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-016",
+        "title": "`bdea674`",
+        "evidence": "`--check-model` self-validation on every SAT model",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-017",
+        "title": "(post-`bdea674`)",
+        "evidence": "uf75/uuf75 200-instance solve soundness (session-attested)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-018",
+        "title": "`b2d8324`",
+        "evidence": "Split 920-line monolith into 12 copybooks under `src/copy/`",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-019",
+        "title": "`b2d8324`",
+        "evidence": "Separate `*-data.cpy` (data) vs `*.cpy` (logic) per module",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-020",
+        "title": "`b2d8324`",
+        "evidence": "`-I src/copy` include path in `Makefile`",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-021",
+        "title": "`de35d40`",
+        "evidence": "Two-watched-literals unit propagation",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-022",
+        "title": "`de35d40`",
+        "evidence": "Occurrence-count branching heuristic",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-023",
+        "title": "`de35d40`",
+        "evidence": "`tests/perf.sh` regression-tripwire harness",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-024",
+        "title": "`de35d40`",
+        "evidence": "Larger bench archives (uf100/uuf100/uf125/uuf125/uf150/uuf150)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-025",
+        "title": "`a121b45`",
+        "evidence": "`scripts/crosscheck_minisat.sh` vs MiniSat",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-026",
+        "title": "`a121b45`",
+        "evidence": "Repro capture on mismatch \u2192 `tests/crosscheck_failures/<name>/`",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-027",
+        "title": "`a121b45`",
+        "evidence": "Strip SATLIB `%` trailer before feeding MiniSat",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-028",
+        "title": "(post-`a121b45`)",
+        "evidence": "2400-instance sweep (uf/uuf \u00d7 {100,125,150})",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-029",
+        "title": "`57de05d`",
+        "evidence": "SAT4J acceptance suite translated to DIMACS (113 fixtures)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-030",
+        "title": "`57de05d`",
+        "evidence": "`tests/sat4j/expected.tbl` SAT/UNSAT verdict table",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-031",
+        "title": "`57de05d`",
+        "evidence": "`tests/run_sat4j_tests.sh` runner with timeout + skip handling",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-032",
+        "title": "`57de05d`",
+        "evidence": "Parser lenience: accept missing trailing `0` (SAT4J-style)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-033",
+        "title": "`57de05d`",
+        "evidence": "94 pass / 0 fail / 19 skip result on SAT4J suite (attested)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-034",
+        "title": "`c3b2a7c`",
+        "evidence": "Phase saving (`WS-PHASE(v)` reused across backtracks/restarts)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-035",
+        "title": "`c3b2a7c`",
+        "evidence": "VSIDS-lite activity scoring (`WS-ACT(v)`, decay on conflict)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-036",
+        "title": "`c3b2a7c`",
+        "evidence": "Jeroslow-Wang (JW) initial activity seeding",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-037",
+        "title": "`c3b2a7c`",
+        "evidence": "Luby restart sequence with large base (restarts-as-fail-safe)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-038",
+        "title": "`c3b2a7c`",
+        "evidence": "SAT4J suite regression: 94 \u2192 111 pass (19 \u2192 2 skip)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-039",
+        "title": "(post-`c3b2a7c`)",
+        "evidence": "2400-instance cobsat-vs-minisat benchmark (1.9\u00d7 ratio)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-040",
+        "title": "`EP-POST-1` (uncommitted)",
+        "evidence": "CDCL core: first-UIP + non-chronological backjump + learnt DB",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-041",
+        "title": "`EP-POST-1` (uncommitted)",
+        "evidence": "33/33 unit tests + smokes pass on CDCL build (attested)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-042",
+        "title": "`EP-POST-1` (incomplete)",
+        "evidence": "Final CDCL benchmark launched, **not completed** (session truncated)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-017",
+        "title": "(post)",
+        "evidence": "BL-005 (UI-007)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-028",
+        "title": "(post)",
+        "evidence": "BL-009 (UI-012)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-039",
+        "title": "(post)",
+        "evidence": "BL-012 (UI-016)",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-001",
+        "title": "DIMACS CNF parser (free-format COBOL)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-002",
+        "title": "`--parse` mode",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-003",
+        "title": "Build infrastructure",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-004",
+        "title": "Parser edge-case test harness",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-005",
+        "title": "Initial commit",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-006",
+        "title": "`--check-model` mode",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-007",
+        "title": "Model fixtures",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-008",
+        "title": "Per-clause failure error format",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-009",
+        "title": "SATLIB `%` end-marker tolerance",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-010",
+        "title": "Ship uf75/uuf75 archives",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-011",
+        "title": "200-instance parser sweep",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-012",
+        "title": "Baseline DPLL solver (`--solve`)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-013",
+        "title": "Solver I/O",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-014",
+        "title": "Solve fixtures",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-015",
+        "title": "Iterative (non-recursive) DPLL",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-016",
+        "title": "`--check-model` on every SAT model",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-017",
+        "title": "uf75/uuf75 solve soundness",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-018",
+        "title": "Refactor into copybooks",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-019",
+        "title": "Data/logic split",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-020",
+        "title": "Include path",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-021",
+        "title": "Watched literals",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-022",
+        "title": "Occurrence-count branching",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-023",
+        "title": "Perf harness",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-024",
+        "title": "Larger bench archives",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-025",
+        "title": "MiniSat cross-checker",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-026",
+        "title": "Repro capture",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-027",
+        "title": "SATLIB `%` trailer stripped for MiniSat",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-028",
+        "title": "2400-instance sweep",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-029",
+        "title": "SAT4J fixtures",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-030",
+        "title": "Expected-verdicts table",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-031",
+        "title": "SAT4J runner",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-032",
+        "title": "Parser lenience for SAT4J files",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-033",
+        "title": "SAT4J result (pre-heuristic)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-034",
+        "title": "Phase saving",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-035",
+        "title": "VSIDS-lite",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-036",
+        "title": "JW initial seeding",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-037",
+        "title": "Luby restarts with large base",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-038",
+        "title": "SAT4J result (post-heuristic)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-039",
+        "title": "cobsat-vs-minisat benchmark (2 400 instances)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-040",
+        "title": "CDCL core (UNCOMMITTED)",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-041",
+        "title": "CDCL unit tests attested",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      },
+      {
+        "id": "SB-042",
+        "title": "Final CDCL benchmark \u2014 NOT DELIVERED",
+        "evidence": "",
+        "phase": null,
+        "source": "SPECIFICATION_BACKLOG.md"
+      }
+    ],
+    "delivered_from_backlog": 0,
+    "readme_features": [],
+    "prompt_subtasks": [],
+    "commit_subjects": [
+      {
+        "sha": "6404f111ff",
+        "date": "2026-04-17",
+        "subject": "Conflict-driven clause learning (CDCL) with first-UIP + backjump"
+      },
+      {
+        "sha": "c3b2a7c527",
+        "date": "2026-04-16",
+        "subject": "Phase saving, VSIDS-lite, JW branching, Luby restarts"
+      },
+      {
+        "sha": "57de05d273",
+        "date": "2026-04-16",
+        "subject": "Pass SAT4J's acceptance test suite"
+      },
+      {
+        "sha": "a121b45cae",
+        "date": "2026-04-16",
+        "subject": "Add scripts/crosscheck_minisat.sh to cross-verify against minisat"
+      },
+      {
+        "sha": "de35d40e71",
+        "date": "2026-04-15",
+        "subject": "Two-watched literals + occurrence branching; perf script; larger benchmarks"
+      },
+      {
+        "sha": "b2d8324121",
+        "date": "2026-04-15",
+        "subject": "Refactor cobsat into per-module copybooks (io, parser, cnf, propagate, search)"
+      },
+      {
+        "sha": "bdea674016",
+        "date": "2026-04-15",
+        "subject": "Add baseline DPLL solver (--solve) with unit propagation"
+      },
+      {
+        "sha": "88e8e997ab",
+        "date": "2026-04-15",
+        "subject": "Treat SATLIB '%' line as end-of-data; ship uf75/uuf75 benchmarks"
+      },
+      {
+        "sha": "3fc5cdd2fa",
+        "date": "2026-04-15",
+        "subject": "Add --check-model mode for evaluating CNF assignments"
+      },
+      {
+        "sha": "049f4b5a93",
+        "date": "2026-04-15",
+        "subject": "Initial COBOL DIMACS CNF parser with --parse mode"
+      }
+    ],
+    "total_features_proxy": 57
+  },
+  "story_excerpts": {},
+  "timeline_sample": {
+    "first_events": [
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 0,
+        "ts": "2026-04-15T12:20:04.313000+00:00",
+        "gap_s": 0,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 410,
+        "preview": "Implement a robust DIMACS CNF parser in COBOL: supports c comments, p cnf <vars> <clauses>, arbitrary whitespace, multiple lines per clause, and 0 clause terminators.\nAdd a parser-only mode: ./cobsat --parse file.cnf prints a normalized representation (vars, clauses, literals).\nAdd unit tests under tests/ that cover: empty lines, CRLF line endings, trailing spaces, many spaces, comment lines between tokens.",
+        "activity": "test",
+        "se_task": "test"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 2,
+        "ts": "2026-04-15T12:20:12.217000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 110,
+        "preview": "{\"command\": \"ls -la /Users/mathieuacher/SANDBOX/SATCobol-cc/\", \"description\": \"List repository root contents\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 5,
+        "ts": "2026-04-15T12:20:18.078000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 104,
+        "preview": "{\"command\": \"which cobc && cobc --version 2>&1 | head -5\", \"description\": \"Check GnuCOBOL availability\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 9,
+        "ts": "2026-04-15T12:32:07.753000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 259,
+        "preview": "{\"command\": \"mkdir -p /Users/mathieuacher/SANDBOX/SATCobol-cc/src /Users/mathieuacher/SANDBOX/SATCobol-cc/tests /Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures /Users/mathieuacher/SANDBOX/SATCobol-cc/build\", \"description\": \"Create project directories\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 11,
+        "ts": "2026-04-15T12:36:09.282000+00:00",
+        "gap_s": 67,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 2000,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob\", \"content\": \"       IDENTIFICATION DIVISION.\\n       PROGRAM-ID. COBSAT.\\n\\n       ENVIRONMENT DIVISION.\\n       INPUT-OUTPUT SECTION.\\n       FILE-CONTROL.\\n           SELECT CNF-FILE ASSIGN TO WS-CNF-PATH\\n               ORGANIZATION IS LINE SEQUENTIAL\\n               FILE STATUS  IS WS-FILE-STATUS.\\n\\n       DATA DIVISION.\\n       FILE SECTION.\\n       FD  CNF-FILE\\n           RECORD IS VARYING IN SIZE FROM 1 TO 4096 CHARACTERS\\n               DEPENDING ON WS-LINE-LEN.\\n       01  CNF-RECORD      PIC X(4096).\\n\\n       WORKING-STORAGE SECTION.\\n       01  WS-CNF-PATH         PIC X(1024).\\n       01  WS-FILE-STATUS      PIC XX.\\n       01  WS-LINE-LEN         PIC 9(5).\\n       01  WS-ARG              PIC X(1024).\\n       01  WS-MODE             PIC X(16).\\n       01  WS-ARGC             PIC 9(4).\\n       01  WS-I                PIC 9(5).\\n       01  WS-J                PIC 9(5).\\n       01  WS-C                PIC X.\\n       01  WS-LINE             PIC X(4096).\\n       01  WS-LINE-LEN-EFF     PIC 9(5).\\n       01  WS-LINE-NO          PIC 9(9) VALUE 0.\\n\\n       01  WS-HEADER-SEEN      PIC X VALUE 'N'.\\n       01  WS-DECL-VARS        PIC 9(9) VALUE 0.\\n       01  WS-DECL-CLAUSES     PIC 9(9) VALUE 0.\\n\\n       01  WS-TOKEN            PIC X(64).\\n       01  WS-TOKEN-LEN        PIC 9(3).\\n       01  WS-TOKEN-VAL        PIC S9(9) VALUE 0.\\n       01  WS-TOKEN-NEG        PIC X.\\n       01  WS-TOKEN-NUMERIC    PIC X.\\n\\n       01  WS-HEADER-FIELDS.\\n           05 WS-HF-P          PIC X(16).\\n           05 WS-HF-CNF        PIC X(16).\\n\\n       01  WS-CLAUSE-COUNT     PIC 9(9) VALUE 0.\\n       01  WS-LITERAL-COUNT    PIC 9(9) VALUE 0.\\n       01  WS-CLAUSE-OPEN      PIC X VALUE 'N'.\\n       01  WS-MAX-VAR-SEEN     PIC 9(9) VALUE 0.\\n       01  WS-ABS-VAL          PIC 9(9) VALUE 0.\\n\\n       01  WS-OUT-LINE         PIC X(200).\\n       01  WS-OUT-NUM          PIC Z(8)9.\\n       01  WS-OUT-SNUM         PI",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 14,
+        "ts": "2026-04-15T12:37:21.230000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 105,
+        "preview": "Let me revise the COBOL source \u2014 the buffer-append logic had issues and I want cleaner output of clauses.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 15,
+        "ts": "2026-04-15T12:38:27.917000+00:00",
+        "gap_s": 66,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 2000,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob\", \"content\": \"       IDENTIFICATION DIVISION.\\n       PROGRAM-ID. COBSAT.\\n\\n       ENVIRONMENT DIVISION.\\n       INPUT-OUTPUT SECTION.\\n       FILE-CONTROL.\\n           SELECT CNF-FILE ASSIGN TO WS-CNF-PATH\\n               ORGANIZATION IS LINE SEQUENTIAL\\n               FILE STATUS  IS WS-FILE-STATUS.\\n\\n       DATA DIVISION.\\n       FILE SECTION.\\n       FD  CNF-FILE\\n           RECORD IS VARYING IN SIZE FROM 1 TO 4096 CHARACTERS\\n               DEPENDING ON WS-LINE-LEN.\\n       01  CNF-RECORD      PIC X(4096).\\n\\n       WORKING-STORAGE SECTION.\\n       01  WS-CNF-PATH         PIC X(1024).\\n       01  WS-FILE-STATUS      PIC XX.\\n       01  WS-LINE-LEN         PIC 9(5).\\n       01  WS-ARG              PIC X(1024).\\n       01  WS-MODE             PIC X(16).\\n       01  WS-ARGC             PIC 9(4).\\n\\n       01  WS-I                PIC 9(5).\\n       01  WS-J                PIC 9(5).\\n       01  WS-K                PIC 9(5).\\n       01  WS-C                PIC X.\\n       01  WS-LINE             PIC X(4096).\\n       01  WS-LINE-LEN-EFF     PIC 9(5).\\n       01  WS-LINE-NO          PIC 9(9) VALUE 0.\\n\\n       01  WS-HEADER-SEEN      PIC X VALUE 'N'.\\n       01  WS-DECL-VARS        PIC 9(9) VALUE 0.\\n       01  WS-DECL-CLAUSES     PIC 9(9) VALUE 0.\\n\\n       01  WS-TOKEN            PIC X(64).\\n       01  WS-TOKEN-LEN        PIC 9(3).\\n       01  WS-TOKEN-VAL        PIC S9(9) VALUE 0.\\n       01  WS-TOKEN-NEG        PIC X.\\n       01  WS-TOKEN-NUMERIC    PIC X.\\n\\n       01  WS-HEADER-FIELDS.\\n           05 WS-HF-P          PIC X(16).\\n           05 WS-HF-CNF        PIC X(16).\\n\\n       01  WS-CLAUSE-COUNT     PIC 9(9) VALUE 0.\\n       01  WS-LITERAL-COUNT    PIC 9(9) VALUE 0.\\n       01  WS-CLAUSE-OPEN      PIC X VALUE 'N'.\\n       01  WS-MAX-VAR-SEEN     PIC 9(9) VALUE 0.\\n       01  WS-ABS-VAL          PIC 9(9) VALUE 0.\\n\\n       01  WS-OUT-NUM          PIC Z(8)9.\\n       01  WS-OUT-SNUM         PI",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 17,
+        "ts": "2026-04-15T12:38:31.953000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 109,
+        "preview": "{\"command\": \"cobc -x -o build/cobsat src/cobsat.cob 2>&1 | head -80\", \"description\": \"Compile COBOL program\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 20,
+        "ts": "2026-04-15T12:40:26.950000+00:00",
+        "gap_s": 5,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Edit",
+        "activity": "implement",
+        "text_len": 1362,
+        "preview": "{\"replace_all\": false, \"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob\", \"old_string\": \"       PROCEDURE DIVISION.\\n       MAIN-PARA.\\n           PERFORM READ-ARGS\\n           IF WS-MODE NOT = '--parse'\\n               DISPLAY 'usage: cobsat --parse <file.cnf>'\\n                   UPON SYSERR\\n               MOVE 2 TO WS-EXIT-CODE\\n               GO TO MAIN-EXIT\\n           END-IF\\n           IF WS-CNF-PATH = SPACES\\n               DISPLAY 'error: missing CNF file path'\\n                   UPON SYSERR\\n               MOVE 2 TO WS-EXIT-CODE\\n               GO TO MAIN-EXIT\\n           END-IF\\n           PERFORM PARSE-FILE\\n       MAIN-EXIT.\\n           MOVE WS-EXIT-CODE TO RETURN-CODE\\n           STOP RUN.\", \"new_string\": \"       PROCEDURE DIVISION.\\n       MAIN-PARA.\\n           PERFORM READ-ARGS\\n           IF WS-MODE NOT = '--parse'\\n               DISPLAY 'usage: cobsat --parse <file.cnf>'\\n                   UPON SYSERR\\n               MOVE 2 TO WS-EXIT-CODE\\n           ELSE\\n               IF WS-CNF-PATH = SPACES\\n                   DISPLAY 'error: missing CNF file path'\\n                       UPON SYSERR\\n                   MOVE 2 TO WS-EXIT-CODE\\n               ELSE\\n                   PERFORM PARSE-FILE\\n               END-IF\\n           END-IF\\n           MOVE WS-EXIT-CODE TO RETURN-CODE\\n           STOP RUN.\"}",
+        "se_task": "bug_fix"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 22,
+        "ts": "2026-04-15T12:40:29.153000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 97,
+        "preview": "{\"command\": \"cobc -x -o build/cobsat src/cobsat.cob 2>&1 | head -80\", \"description\": \"Recompile\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 25,
+        "ts": "2026-04-15T12:40:34.570000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 105,
+        "preview": "Compilation succeeded. Now creating the Makefile, wrapper binary location, test fixtures and test runner.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 26,
+        "ts": "2026-04-15T12:40:37.001000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 332,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/Makefile\", \"content\": \"COBC      ?= cobc\\nCOBFLAGS  ?= -x -Wall -O2\\nSRC       := src/cobsat.cob\\nBIN       := cobsat\\n\\n.PHONY: all clean test\\n\\nall: $(BIN)\\n\\n$(BIN): $(SRC)\\n\\t$(COBC) $(COBFLAGS) -o $@ $<\\n\\ntest: $(BIN)\\n\\t@tests/run_tests.sh\\n\\nclean:\\n\\trm -f $(BIN)\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 28,
+        "ts": "2026-04-15T12:40:39.138000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 92,
+        "preview": "{\"command\": \"make 2>&1 && ls -la cobsat\", \"description\": \"Build cobsat binary at repo root\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 30,
+        "ts": "2026-04-15T12:40:43.580000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 51,
+        "preview": "Now test fixtures covering the required edge cases:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 31,
+        "ts": "2026-04-15T12:40:45.013000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 162,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/simple.cnf\", \"content\": \"c basic DIMACS file\\nc two clauses\\np cnf 3 2\\n1 -2 3 0\\n-1 2 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 33,
+        "ts": "2026-04-15T12:40:47.861000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 188,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/empty_lines.cnf\", \"content\": \"c leading blank line follows\\n\\nc another comment\\n\\np cnf 2 2\\n\\n1 2 0\\n\\n-1 -2 0\\n\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 35,
+        "ts": "2026-04-15T12:40:51.056000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 197,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/many_spaces.cnf\", \"content\": \"c lots   of   whitespace\\np   cnf   4   3\\n   1     2    -3     0\\n\\t-1\\t-2\\t4\\t0\\n2   -4   0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 37,
+        "ts": "2026-04-15T12:40:56.708000+00:00",
+        "gap_s": 5,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 165,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/trailing_spaces.cnf\", \"content\": \"c trailing spaces after tokens\\np cnf 2 2\\n1 2 0\\n-1 -2 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 40,
+        "ts": "2026-04-15T12:41:01.330000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 241,
+        "preview": "{\"command\": \"printf 'c header with trailing spaces   \\\\np cnf 3 2   \\\\n1 -2 3 0   \\\\n-1 2 0    \\\\n' > tests/fixtures/trailing_spaces.cnf && od -c tests/fixtures/trailing_spaces.cnf | head -5\", \"description\": \"Create trailing-spaces fixture\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 42,
+        "ts": "2026-04-15T12:41:04.025000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 192,
+        "preview": "{\"command\": \"printf 'c CRLF fixture\\\\r\\\\np cnf 3 2\\\\r\\\\n1 -2 3 0\\\\r\\\\n-1 2 0\\\\r\\\\n' > tests/fixtures/crlf.cnf && od -c tests/fixtures/crlf.cnf | head -5\", \"description\": \"Create CRLF fixture\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 44,
+        "ts": "2026-04-15T12:41:06.955000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 177,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/multiline.cnf\", \"content\": \"c clauses span multiple lines\\np cnf 5 2\\n1 2\\n  3 4\\n  -5 0\\n-1 -2\\n  -3 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 46,
+        "ts": "2026-04-15T12:41:10.073000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 272,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/interleaved_comments.cnf\", \"content\": \"c heading\\np cnf 3 3\\nc comment between header and clauses\\n1 2 0\\nc comment between clauses\\n-1 3 0\\nc another interleaved comment\\n2 -3 0\\nc trailing comment\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 49,
+        "ts": "2026-04-15T12:41:18.812000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 299,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/comment_between_tokens.cnf\", \"content\": \"c comment appears between literals of a clause\\np cnf 4 2\\n1 2\\nc this comment sits between tokens of the first clause\\n  3 4 0\\n-1\\nc another interleaved comment mid-clause\\n  -2 -3 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 51,
+        "ts": "2026-04-15T12:41:20.890000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 63,
+        "preview": "Now let me test each fixture manually to verify correct output:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 52,
+        "ts": "2026-04-15T12:41:22.124000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 167,
+        "preview": "{\"command\": \"for f in tests/fixtures/*.cnf; do echo \\\"=== $f ===\\\"; ./cobsat --parse \\\"$f\\\"; echo \\\"exit=$?\\\"; done\", \"description\": \"Run parser against each fixture\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 55,
+        "ts": "2026-04-15T12:41:54.555000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "test",
+        "text_len": 118,
+        "preview": "{\"command\": \"./cobsat --parse tests/fixtures/simple.cnf | od -c | head -5\", \"description\": \"Inspect raw output bytes\"}",
+        "se_task": "test"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 59,
+        "ts": "2026-04-15T12:42:13.179000+00:00",
+        "gap_s": -3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 93,
+        "preview": "NUL bytes from reading past the edited-numeric field. Fixing loop bounds and the sign format:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 60,
+        "ts": "2026-04-15T12:42:17.160000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Edit",
+        "activity": "implement",
+        "text_len": 467,
+        "preview": "{\"replace_all\": false, \"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob\", \"old_string\": \"       01  WS-OUT-NUM          PIC Z(8)9.\\n       01  WS-OUT-SNUM         PIC -(9)9.\\n       01  WS-LIT-STR          PIC X(11).\\n       01  WS-LIT-LEN          PIC 9(3).\", \"new_string\": \"       01  WS-OUT-NUM          PIC Z(8)9.\\n       01  WS-OUT-SNUM         PIC -9(9).\\n       01  WS-LIT-STR          PIC X(10).\\n       01  WS-LIT-LEN          PIC 9(3).\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 61,
+        "ts": "2026-04-15T12:42:23.186000+00:00",
+        "gap_s": 6,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Edit",
+        "activity": "implement",
+        "text_len": 965,
+        "preview": "{\"replace_all\": false, \"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/src/cobsat.cob\", \"old_string\": \"       APPEND-LIT-TO-BUF.\\n           MOVE WS-TOKEN-VAL TO WS-OUT-SNUM\\n           MOVE 0 TO WS-LIT-LEN\\n           PERFORM VARYING WS-K FROM 1 BY 1 UNTIL WS-K > 11\\n               IF WS-OUT-SNUM(WS-K:1) NOT = SPACE\\n                   ADD 1 TO WS-LIT-LEN\\n                   MOVE WS-OUT-SNUM(WS-K:1)\\n                       TO WS-LIT-STR(WS-LIT-LEN:1)\\n               END-IF\\n           END-PERFORM\", \"new_string\": \"       APPEND-LIT-TO-BUF.\\n           MOVE WS-TOKEN-VAL TO WS-OUT-SNUM\\n           MOVE SPACES TO WS-LIT-STR\\n           MOVE 0 TO WS-LIT-LEN\\n           PERFORM VARYING WS-K FROM 1 BY 1 UNTIL WS-K > 10\\n               IF WS-OUT-SNUM(WS-K:1) NOT = SPACE\\n                   ADD 1 TO WS-LIT-LEN\\n                   MOVE WS-OUT-SNUM(WS-K:1)\\n                       TO WS-LIT-STR(WS-LIT-LEN:1)\\n               END-IF\\n           END-PERFORM\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 63,
+        "ts": "2026-04-15T12:42:27.147000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 135,
+        "preview": "{\"command\": \"make 2>&1 && ./cobsat --parse tests/fixtures/simple.cnf | od -c | head -5\", \"description\": \"Rebuild and re-inspect bytes\"}",
+        "se_task": "build"
+      }
+    ],
+    "last_events": [
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 266,
+        "ts": "2026-04-15T14:34:12.946000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 226,
+        "preview": "{\"command\": \"make 2>&1 | head && ./cobsat --solve tests/fixtures/simple.cnf > /tmp/m.out && ./cobsat --check-model tests/fixtures/simple.cnf /tmp/m.out; echo \\\"rc=$?\\\"\", \"description\": \"Rebuild and test full pipeline with &&\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 268,
+        "ts": "2026-04-15T14:35:41.362000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 56,
+        "preview": "Now create UNSAT and pigeonhole/xor fixtures and verify:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 269,
+        "ts": "2026-04-15T14:35:43.750000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 209,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/unit_chain.cnf\", \"content\": \"c forces var1 then var2 then var3 by unit propagation\\nc (1) (-1 2) (-2 3)\\np cnf 3 3\\n1 0\\n-1 2 0\\n-2 3 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 271,
+        "ts": "2026-04-15T14:35:47.188000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 158,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/contradiction.cnf\", \"content\": \"c trivially unsat: x and not x\\np cnf 1 2\\n1 0\\n-1 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 273,
+        "ts": "2026-04-15T14:35:53.844000+00:00",
+        "gap_s": 6,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 454,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/xor3.cnf\", \"content\": \"c x1 XOR x2 XOR x3 = 1 expressed in CNF\\nc truth table: parity of (x1,x2,x3) is odd\\nc forbidden assignments: 000, 011, 101, 110 (even parity)\\nc clause for each forbidden: negation of that assignment\\nc (000): x1 v x2 v x3\\nc (011): x1 v -x2 v -x3\\nc (101): -x1 v x2 v -x3\\nc (110): -x1 v -x2 v x3\\np cnf 3 4\\n 1  2  3 0\\n 1 -2 -3 0\\n-1  2 -3 0\\n-1 -2  3 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 275,
+        "ts": "2026-04-15T14:35:58.666000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 311,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/xor3_unsat.cnf\", \"content\": \"c x1 XOR x2 XOR x3 = 1 AND x1 XOR x2 XOR x3 = 0 -> UNSAT\\nc all 8 forbidden, no satisfying assignment\\np cnf 3 8\\n 1  2  3 0\\n 1 -2 -3 0\\n-1  2 -3 0\\n-1 -2  3 0\\n-1 -2 -3 0\\n-1  2  3 0\\n 1 -2  3 0\\n 1  2 -3 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 278,
+        "ts": "2026-04-15T14:36:10.778000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 452,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/php3_2.cnf\", \"content\": \"c pigeonhole principle PHP(3,2): 3 pigeons, 2 holes -> UNSAT\\nc var x_{i,j} = pigeon i goes to hole j; var index = (i-1)*2 + j\\nc x11=1 x12=2 x21=3 x22=4 x31=5 x32=6\\nc each pigeon must go somewhere\\nc no two pigeons share a hole (3 pairs * 2 holes = 6 clauses)\\np cnf 6 9\\n 1  2 0\\n 3  4 0\\n 5  6 0\\n-1 -3 0\\n-1 -5 0\\n-3 -5 0\\n-2 -4 0\\n-2 -6 0\\n-4 -6 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 281,
+        "ts": "2026-04-15T14:36:22.605000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 436,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/php4_3.cnf\", \"content\": \"c pigeonhole PHP(4,3): 4 pigeons, 3 holes -> UNSAT\\nc var x_{i,j} = (i-1)*3 + j  for i in 1..4, j in 1..3\\np cnf 12 22\\n 1  2  3 0\\n 4  5  6 0\\n 7  8  9 0\\n10 11 12 0\\n-1 -4 0\\n-1 -7 0\\n-1 -10 0\\n-4 -7 0\\n-4 -10 0\\n-7 -10 0\\n-2 -5 0\\n-2 -8 0\\n-2 -11 0\\n-5 -8 0\\n-5 -11 0\\n-8 -11 0\\n-3 -6 0\\n-3 -9 0\\n-3 -12 0\\n-6 -9 0\\n-6 -12 0\\n-9 -12 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 283,
+        "ts": "2026-04-15T14:36:26.691000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Write",
+        "activity": "implement",
+        "text_len": 264,
+        "preview": "{\"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/fixtures/php2_3.cnf\", \"content\": \"c pigeonhole PHP(2,3): 2 pigeons, 3 holes -> SAT\\nc var x_{i,j} = (i-1)*3 + j  for i in 1..2, j in 1..3\\np cnf 6 5\\n 1  2  3 0\\n 4  5  6 0\\n-1 -4 0\\n-2 -5 0\\n-3 -6 0\\n\"}",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 285,
+        "ts": "2026-04-15T14:36:30.509000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 36,
+        "preview": "Now smoke test all the new fixtures:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 286,
+        "ts": "2026-04-15T14:36:34.682000+00:00",
+        "gap_s": 4,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 725,
+        "preview": "{\"command\": \"for f in tests/fixtures/unit_chain.cnf tests/fixtures/contradiction.cnf tests/fixtures/xor3.cnf tests/fixtures/xor3_unsat.cnf tests/fixtures/php3_2.cnf tests/fixtures/php4_3.cnf tests/fixtures/php2_3.cnf tests/fixtures/simple.cnf tests/fixtures/multiline.cnf tests/fixtures/many_spaces.cnf tests/fixtures/empty_lines.cnf; do\\n    echo \\\"=== $(basename $f) ===\\\"\\n    ./cobsat --solve \\\"$f\\\" > /tmp/m.out\\n    head -1 /tmp/m.out\\n    if head -1 /tmp/m.out | grep -q SATISFIABLE; then\\n        ./cobsat --check-model \\\"$f\\\" /tmp/m.out > /tmp/c.out 2>&1\\n        rc=$?\\n        head -1 /tmp/c.out\\n        echo \\\"check rc=$rc\\\"\\n    fi\\ndone\", \"description\": \"Run solver and verify SAT outputs against check-model\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 288,
+        "ts": "2026-04-15T15:00:22.135000+00:00",
+        "gap_s": 7,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 164,
+        "preview": "API Error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Internal server error\"},\"request_id\":\"req_011Ca5kq38saePu8aMAH2e8g\"} \u00b7 check status.claude.com",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 289,
+        "ts": "2026-04-15T15:03:35.184000+00:00",
+        "gap_s": 193,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 14,
+        "preview": "retry/continue",
+        "activity": "other",
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 291,
+        "ts": "2026-04-15T15:03:55.119000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 251,
+        "preview": "All cases behave correctly. The \"check rc=1\" lines after UNSAT are a benign grep substring match \u2014 check-model runs against a model file that contains only \"s UNSATISFIABLE\" (no v-line), so it correctly reports UNSAT. Let me also try a uf75 benchmark:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 292,
+        "ts": "2026-04-15T15:03:56.942000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 249,
+        "preview": "{\"command\": \"f=tests/bench/ai/hoos/Shortcuts/UF75.325.100/uf75-01.cnf\\ntime ./cobsat --solve \\\"$f\\\" > /tmp/m.out\\nhead -3 /tmp/m.out\\n./cobsat --check-model \\\"$f\\\" /tmp/m.out | head -3\\necho \\\"check-rc=$?\\\"\", \"description\": \"Solve a uf75 benchmark\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 294,
+        "ts": "2026-04-15T15:08:36.315000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 92,
+        "preview": "Solver finds a model in 15ms and check-model verifies it. Quick batch check on all 100 uf75:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 295,
+        "ts": "2026-04-15T15:08:39.481000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 610,
+        "preview": "{\"command\": \"ok=0; bad=0; uns=0\\nfor f in tests/bench/ai/hoos/Shortcuts/UF75.325.100/*.cnf; do\\n    ./cobsat --solve \\\"$f\\\" > /tmp/m.out\\n    if head -1 /tmp/m.out | grep -qx 's SATISFIABLE'; then\\n        if ./cobsat --check-model \\\"$f\\\" /tmp/m.out >/dev/null 2>&1; then\\n            ok=$((ok+1))\\n        else\\n            bad=$((bad+1)); echo \\\"MODEL FAILED: $f\\\"\\n        fi\\n    else\\n        uns=$((uns+1)); echo \\\"REPORTED UNSAT: $f\\\"\\n    fi\\ndone\\necho \\\"uf75: sat-and-verified=$ok bad-model=$bad reported-unsat=$uns (expected sat=100)\\\"\", \"description\": \"Solve all 100 uf75, verify with check-model\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 297,
+        "ts": "2026-04-15T15:10:39.862000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 66,
+        "preview": "100/100 uf75 solved and verified. Now uuf75 (should all be UNSAT):",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 298,
+        "ts": "2026-04-15T15:10:41.750000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "research",
+        "text_len": 395,
+        "preview": "{\"command\": \"sat=0; uns=0\\ntime for f in tests/bench/UUF75.325.100/*.cnf; do\\n    ./cobsat --solve \\\"$f\\\" > /tmp/m.out\\n    if head -1 /tmp/m.out | grep -qx 's UNSATISFIABLE'; then\\n        uns=$((uns+1))\\n    else\\n        sat=$((sat+1)); echo \\\"REPORTED SAT (should be UNSAT): $f\\\"\\n    fi\\ndone\\necho \\\"uuf75: unsat=$uns sat=$sat (expected unsat=100)\\\"\", \"description\": \"Solve all 100 uuf75\"}",
+        "se_task": "understanding"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 300,
+        "ts": "2026-04-15T15:12:55.249000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 90,
+        "preview": "100/100 uuf75 correctly proven UNSAT. Now extend the test runner with formal solver tests:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 302,
+        "ts": "2026-04-15T15:13:08.680000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Edit",
+        "activity": "implement",
+        "text_len": 2000,
+        "preview": "{\"replace_all\": false, \"file_path\": \"/Users/mathieuacher/SANDBOX/SATCobol-cc/tests/run_tests.sh\", \"old_string\": \"# Negative case: missing file should exit non-zero.\", \"new_string\": \"# --solve: known SAT instances, then verify the produced model.\\nrun_solve_sat() {\\n    local name=\\\"$1\\\"\\n    local cnf=\\\"$2\\\"\\n    local out_file\\n    out_file=\\\"$(mktemp -t cobsat-model.XXXXXX)\\\"\\n    \\\"$BIN\\\" --solve \\\"$cnf\\\" >\\\"$out_file\\\" 2>/dev/null\\n    local first\\n    first=\\\"$(head -1 \\\"$out_file\\\")\\\"\\n    if [ \\\"$first\\\" != \\\"s SATISFIABLE\\\" ]; then\\n        fail=$((fail+1))\\n        failures+=(\\\"$name: solver did not report SATISFIABLE (got: $first)\\\")\\n        echo \\\"FAIL $name (got: $first)\\\"\\n        rm -f \\\"$out_file\\\"\\n        return\\n    fi\\n    if \\\"$BIN\\\" --check-model \\\"$cnf\\\" \\\"$out_file\\\" >/dev/null 2>&1; then\\n        pass=$((pass+1))\\n        echo \\\"ok   $name\\\"\\n    else\\n        fail=$((fail+1))\\n        failures+=(\\\"$name: model rejected by --check-model\\\")\\n        echo \\\"FAIL $name (model rejected)\\\"\\n        cat \\\"$out_file\\\" | sed 's/^/     /'\\n    fi\\n    rm -f \\\"$out_file\\\"\\n}\\n\\n# --solve: known UNSAT instances must report s UNSATISFIABLE.\\nrun_solve_unsat() {\\n    local name=\\\"$1\\\"\\n    local cnf=\\\"$2\\\"\\n    local out\\n    out=\\\"$(\\\"$BIN\\\" --solve \\\"$cnf\\\" 2>/dev/null)\\\"\\n    local first\\n    first=\\\"$(printf '%s\\\\n' \\\"$out\\\" | head -1)\\\"\\n    if [ \\\"$first\\\" = \\\"s UNSATISFIABLE\\\" ]; then\\n        pass=$((pass+1))\\n        echo \\\"ok   $name\\\"\\n    else\\n        fail=$((fail+1))\\n        failures+=(\\\"$name: expected UNSATISFIABLE, got: $first\\\")\\n        echo \\\"FAIL $name (got: $first)\\\"\\n    fi\\n}\\n\\nrun_solve_sat   \\\"solve-simple-sat\\\"        \\\"$FIXT/simple.cnf\\\"\\nrun_solve_sat   \\\"solve-multiline-sat\\\"     \\\"$FIXT/multiline.cnf\\\"\\nrun_solve_sat   \\\"solve-many-spaces-sat\\\"   \\\"$FIXT/many_spaces.cnf\\\"\\nrun_solve_sat   \\\"solve-empty-lines-sat\\\"   \\\"$FIXT/empty_lines.cnf\\\"\\nrun_solve_sat   \\\"solve-unit-chain\\\"        \\\"$FIXT/unit_chain.cnf\\\"\\nrun_solve_",
+        "se_task": "feature"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 303,
+        "ts": "2026-04-15T15:13:11.237000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "build",
+        "text_len": 78,
+        "preview": "{\"command\": \"make test 2>&1 | tail -30\", \"description\": \"Run full test suite\"}",
+        "se_task": "build"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 305,
+        "ts": "2026-04-15T15:15:40.313000+00:00",
+        "gap_s": 2,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 77,
+        "preview": "All 33 tests pass (8 parser, 11 check-model, 11 solver, 3 usage). Committing:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 306,
+        "ts": "2026-04-15T15:15:42.064000+00:00",
+        "gap_s": 1,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "meta",
+        "text_len": 317,
+        "preview": "{\"command\": \"git add src/cobsat.cob tests/run_tests.sh tests/fixtures/unit_chain.cnf tests/fixtures/contradiction.cnf tests/fixtures/xor3.cnf tests/fixtures/xor3_unsat.cnf tests/fixtures/php2_3.cnf tests/fixtures/php3_2.cnf tests/fixtures/php4_3.cnf && git status\", \"description\": \"Stage solver changes and fixtures\"}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 308,
+        "ts": "2026-04-15T15:15:57.232000+00:00",
+        "gap_s": 15,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "meta",
+        "text_len": 1337,
+        "preview": "{\"command\": \"git commit -m \\\"$(cat <<'EOF'\\nAdd baseline DPLL solver (--solve) with unit propagation\\n\\nIterative DPLL: clauses stored CSR-style in working storage, per-variable\\nstate table (unassigned / true / false), and an explicit trail of\\n(var, kind) entries where kind is D (decision-first-try), F (decision-\\nflipped), or P (propagated). The loop unit-propagates to fixpoint, then\\neither picks an unassigned variable to decide on, declares SAT when\\nnothing is left, or backtracks on conflict by unwinding the trail to the\\nnearest non-flipped decision and flipping it. UNSAT when the trail empties.\\n\\nOutput follows DIMACS solution format: \\\"s SATISFIABLE\\\" plus one or more\\n\\\"v <lits> 0\\\" lines (wrapped at ~70 chars), or \\\"s UNSATISFIABLE\\\". Exit\\ncode is 0 in both cases so the SAT model can be piped to --check-model\\nin a normal && shell chain.\\n\\nTests cover small SAT (unit-chain, xor3, PHP(2,3) plus the existing\\nparser fixtures) and small UNSAT (contradiction, xor3 with all parities\\nforbidden, PHP(3,2), PHP(4,3)). Each SAT test verifies the produced\\nmodel with --check-model. Verified end-to-end on the uf75-325 (100/100\\nSAT) and uuf75-325 (100/100 UNSAT) benchmarks.\\n\\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>\\nEOF\\n)\\\" && git log --oneline\", \"description\": \"Commit DPLL solver\"}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 310,
+        "ts": "2026-04-15T15:27:24.114000+00:00",
+        "gap_s": 7,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 742,
+        "preview": "Committed `bdea674`.\n\n**Summary of `--solve`:**\n- Iterative DPLL with unit propagation; backtracking via a trail of `D`/`F`/`P` (decision / flipped-decision / propagated) entries.\n- Variable picker: smallest-index unassigned (no fancy heuristics).\n- Output: `s SATISFIABLE` + wrapped `v <lits> 0` lines, or `s UNSATISFIABLE`. Exit 0 in both cases so `--solve \u2026 && --check-model \u2026` works.\n\n**Test results:**\n- 33 unit tests pass (8 parser, 11 check-model, 11 solver, 3 usage).\n- New solver fixtures: `unit_chain`, `contradiction`, `xor3`, `xor3_unsat`, `php2_3` (SAT), `php3_2` and `php4_3` (UNSAT).\n- Benchmark validation: **100/100 uf75-325 solved + verified by check-model**, **100/100 uuf75-325 proven UNSAT**, full uf75 set runs in ~1.5s.",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 311,
+        "ts": "2026-04-15T15:27:36.247000+00:00",
+        "gap_s": 12,
+        "role": "user",
+        "kind": "prompt",
+        "text_len": 13,
+        "preview": "please commit",
+        "activity": "other",
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 312,
+        "ts": "2026-04-15T15:27:44.651000+00:00",
+        "gap_s": 8,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 74,
+        "preview": "Already committed in the previous step (`bdea674`). Nothing new to commit:",
+        "activity": null,
+        "se_task": "unknown"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 313,
+        "ts": "2026-04-15T15:27:45.474000+00:00",
+        "gap_s": 0,
+        "role": "assistant",
+        "kind": "tool_use",
+        "tool": "Bash",
+        "activity": "meta",
+        "text_len": 91,
+        "preview": "{\"command\": \"git status && git log --oneline\", \"description\": \"Confirm clean tree and log\"}",
+        "se_task": "plan"
+      },
+      {
+        "agent": "cc",
+        "session": "9f10dfb5-e448-463b-bffe-21fa2006c9ae",
+        "i": 315,
+        "ts": "2026-04-15T15:27:49.101000+00:00",
+        "gap_s": 3,
+        "role": "assistant",
+        "kind": "text",
+        "text_len": 82,
+        "preview": "Tree is clean. Latest commit is `bdea674` (DPLL solver with all 33 tests passing).",
+        "activity": null,
+        "se_task": "unknown"
+      }
+    ]
+  },
+  "turn_files": [
+    "output/turns/SATCobol-cc__Claude Code__9f10dfb5-e448-463b-bffe-21fa2006c9ae.jsonl"
+  ],
+  "n_turns": 316
+}

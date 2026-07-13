@@ -1,0 +1,277 @@
+{
+  "schema_version": "post-session-analyst/1.0",
+  "project": "cobol-compiler-cc",
+  "project_root_readonly": "/Users/mathieuacher/SANDBOX/cobol-compiler-cc",
+  "analysis_dir": "/Users/mathieuacher/SANDBOX/cobol-meta-analysis/output/backlogs/cobol-compiler-cc",
+  "analyst_date": "2026-04-15",
+  "session_metadata": [
+    {
+      "id": "625f1b9f-c4c4-41ca-ad54-354184c6cf34",
+      "agent": "Claude Code",
+      "cli_version": "2.1.87",
+      "model": "claude-opus-4-6",
+      "window_start": "2026-03-29T15:55:27Z",
+      "window_end": "2026-04-10T05:45:00Z",
+      "raw_path": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-cobol-compiler-cc/625f1b9f-c4c4-41ca-ad54-354184c6cf34.jsonl",
+      "raw_size_mb_approx": 230,
+      "turn_extract_path": "/Users/mathieuacher/SANDBOX/cobol-meta-analysis/output/turns/cobol-compiler-cc__Claude Code__625f1b9f-c4c4-41ca-ad54-354184c6cf34.jsonl",
+      "turn_event_count": 10199,
+      "role": "primary"
+    },
+    {
+      "id": "18eb3ca2-89a4-40b1-972e-76eb5b635a15",
+      "agent": "Claude Code",
+      "cli_version": "2.1.87",
+      "model": null,
+      "window_start": "2026-03-30T08:54:26Z",
+      "window_end": "2026-03-30T08:54:29Z",
+      "turn_event_count": 6,
+      "role": "noop (plugin listing + exit)"
+    },
+    {
+      "id": "de76ffeb-b934-4945-92f5-22a43c5b8641",
+      "agent": "Claude Code",
+      "cli_version": "2.1.92",
+      "model": "claude-opus-4-6",
+      "window_start": "2026-04-05T21:30:43Z",
+      "window_end": "2026-04-05T22:01:37Z",
+      "turn_event_count": 26,
+      "role": "build-flag follow-up"
+    }
+  ],
+
+  "user_instruction_index": [
+    {"id": "UI-001", "category": "FeatureRequest", "strength": "Explicit imperative", "target": "Code", "quote": "Write a COBOL compiler in COBOL. Demonstrate that you can run some (non-trivial) COBOL programs thanks to the written compiler.", "pointer": "T:625f1b9f:i=0", "bl": ["BL-001", "BL-003"]},
+    {"id": "UI-002", "category": "FeatureRequest", "strength": "Explicit imperative", "target": "Code", "paraphrase": "Compile/run all COBOL programs at github.com/acherm/agentic-cobol-game15tictactoe (commit 4ae3129)", "pointer": "T:625f1b9f:i=348", "bl": ["BL-002"]},
+    {"id": "UI-003", "category": "FeatureRequest", "strength": "Explicit imperative", "target": "Code", "paraphrase": "Interpreter too slow; write a COBOL-to-C compiler; reuse interpreter infra", "pointer": "T:625f1b9f:i=783", "bl": ["BL-003"]},
+    {"id": "UI-004", "category": "Documentation", "strength": "Explicit imperative", "target": "Docs", "paraphrase": "Git commit + README documenting features, architecture, results", "pointer": "T:625f1b9f:i=755", "bl": ["BL-006", "BL-001"]},
+    {"id": "UI-005", "category": "Scenario", "strength": "Explicit imperative", "target": "Code", "paraphrase": "Build COBOL-DOOM doom.cob at commit 18ce52b", "pointer": "T:625f1b9f:i=1030", "bl": ["BL-004"]},
+    {"id": "UI-006", "category": "FeatureRequest", "strength": "Explicit imperative", "target": "Code", "paraphrase": "Compile cobochess chess engine (commit faf0f16) using minicobc", "pointer": "T:625f1b9f:i=1687", "bl": ["BL-005"]},
+    {"id": "UI-007", "category": "Question/Clarification", "strength": "Question", "target": "Runtime behavior", "paraphrase": "Is the compiler working on game15? Performance vs GnuCOBOL?", "pointer": "T:625f1b9f:i=920", "bl": ["BL-002", "BL-007"]},
+    {"id": "UI-008", "category": "Tooling/Build", "strength": "Explicit imperative", "target": "Build/CI", "paraphrase": "Design a performance benchmark: build + exec time, GnuCOBOL vs cobolcc; consider -O2", "pointer": "T:625f1b9f:i=6147", "bl": ["BL-007"]},
+    {"id": "UI-009", "category": "TestRequest", "strength": "Explicit imperative", "target": "Runtime behavior", "paraphrase": "Organise cutechess-cli tournament cobolcc vs GnuCOBOL; make perft work; run longer time budget", "pointer": "T:625f1b9f:i=8124,8882,9333", "bl": ["BL-005", "BL-008"]},
+    {"id": "UI-010", "category": "BugFixRequest", "strength": "Explicit imperative", "multiplicity": 11, "target": "Code", "paraphrase": "let's adress remaining errors / fix remaining issues (repeated ~11 times across BL-005)", "pointer": "T:625f1b9f:i=2508,2751,2971,3186,3363,3703,3863,3980,4120,4171,4894,4933,5001,5188,6945", "bl": ["BL-005"]},
+    {"id": "UI-011", "category": "Question/Clarification", "strength": "Question", "target": "Runtime behavior", "paraphrase": "How to run the compiled DOOM?", "pointer": "T:625f1b9f:i=1571", "bl": ["BL-004"]},
+    {"id": "UI-012", "category": "BugFixRequest", "strength": "Explicit imperative", "target": "Runtime behavior", "paraphrase": "DOOM is very slow; WASD/Arrows keys not working", "pointer": "T:625f1b9f:i=1576,1640", "bl": ["BL-004"]},
+    {"id": "UI-013", "category": "Constraint", "strength": "Constraint-only", "target": "Code", "paraphrase": "Merging into a single file is tempting, but a strong design decision; delay it.", "pointer": "T:625f1b9f:i=1721", "bl": ["BL-005"]},
+    {"id": "UI-014", "category": "Question/Clarification", "strength": "Question", "target": "Build/CI", "paraphrase": "Investigate claims that -free and -O2 are wrong/broken; how to fix strip issue? retry with -O2?", "pointer": "T:de76ffeb:i=0,i=9,i=11", "bl": ["BL-009"]}
+  ],
+
+  "project_constraints_index": [
+    {"id": "PC-001", "type": "repo policy", "pointer": "R:/Users/mathieuacher/SANDBOX/cobol-compiler-cc/.gitignore", "note": "Excludes cobolint, cobolcc, *_cc, *_ref, tests/*.c, agentic-cobol-game15tictactoe/*.c, test-*.cob (scratch), test_*, *.bak*, game15native", "impact": "Generated C and scratch COBOL not tracked; replay must regenerate them."},
+    {"id": "PC-002", "type": "tooling", "pointer": "R:/Users/mathieuacher/SANDBOX/cobol-compiler-cc/.claude/settings.local.json", "note": "Permission allow-list includes Bash(cobc:*), specific timeout/run combinations, COB_CFLAGS overrides", "impact": "Replay env should grant equivalent permissions; no AGENTS.md present."}
+  ],
+
+  "prompt_ledger": [
+    {"id": "PL-ROOT", "session": "625f1b9f", "ts": "2026-03-29T15:55:27Z", "raw": "Write a COBOL compiler in COBOL. Demonstrate that you can run some (non-trivial) COBOL programs thanks to the written compiler.", "ui": ["UI-001"], "bl": ["BL-001", "BL-003"]},
+    {"id": "PL-001", "session": "625f1b9f", "ts": "2026-03-31T12:20:22Z", "paraphrase": "Stop running. Good milestone. Git commit with a README documenting features/architecture/interpreter/results.", "ui": ["UI-004"], "bl": ["BL-001", "BL-006"]},
+    {"id": "PL-002", "session": "625f1b9f", "ts": "2026-03-30T03:25:26Z", "paraphrase": "Compile/run all COBOL programs at github.com/acherm/agentic-cobol-game15tictactoe (commit 4ae3129)", "ui": ["UI-002"], "bl": ["BL-002"]},
+    {"id": "PL-003", "session": "625f1b9f", "ts": "2026-03-31T12:26:40Z", "raw": "An interpreter approach is way too long and not optimal at all, with huge overhead. Please write a compiler (eg COBOL-to-C) instead. Reuse as much as possible your interpreter infrastructure", "ui": ["UI-003"], "bl": ["BL-003"]},
+    {"id": "PL-004", "session": "625f1b9f", "ts": "2026-04-03T11:24:52Z", "paraphrase": "Consider github.com/acherm/agentic-cobol-doom (commit 18ce52b) and build doom.cob", "ui": ["UI-005"], "bl": ["BL-004"]},
+    {"id": "PL-005", "session": "625f1b9f", "ts": "2026-04-03T13:37:47Z", "raw": "how to run this compiled DOOM?", "ui": ["UI-011"], "bl": ["BL-004"]},
+    {"id": "PL-006", "session": "625f1b9f", "ts": "2026-04-03T13:45:06Z", "paraphrase": "DOOM is slow; arrows not working; tried again, same issues", "ui": ["UI-012"], "bl": ["BL-004"]},
+    {"id": "PL-007", "session": "625f1b9f", "ts": "2026-04-03T14:44:08Z", "paraphrase": "Compile COBOL chess engine (commit faf0f16) using minicobc", "ui": ["UI-006"], "bl": ["BL-005"]},
+    {"id": "PL-008", "session": "625f1b9f", "ts": "2026-04-03T15:15:50Z", "raw": "I agree it's significant... merging everything into a single file is tempting, but sounds like a strong design decision that could be delayed", "ui": ["UI-013"], "bl": ["BL-005"]},
+    {"id": "PL-009", "session": "625f1b9f", "ts": "2026-04-03T10:38:07Z", "raw": "is the compiler working on agentic-cobol-game15tictactoe/ ? what's the performance compared to GNU Cobol?", "ui": ["UI-007"], "bl": ["BL-002", "BL-007"]},
+    {"id": "PL-010..PL-020", "session": "625f1b9f", "paraphrase": "Eleven near-identical 'let's adress remaining errors / please adress all remaining errors / fix remaining issues' prompts.", "pointer": "T:625f1b9f:i=2508,2751,2971,3186,3363,3703,3863,3980,4120,4171,4894", "ui": ["UI-010"], "bl": ["BL-005"]},
+    {"id": "PL-021", "session": "625f1b9f", "ts": "2026-04-05T07:11:19Z", "raw": "please fix errors related to fen.cob", "ui": ["UI-010"], "bl": ["BL-005"]},
+    {"id": "PL-022", "session": "625f1b9f", "ts": "2026-04-05T08:14:30Z", "paraphrase": "Before further investigating errors, document what can be compiled so far; then re-focus on chess", "ui": ["UI-004", "UI-010"], "bl": ["BL-006", "BL-005"]},
+    {"id": "PL-023", "session": "625f1b9f", "ts": "2026-04-05T21:26:12Z", "raw": "building without -02 and -free is kind of concerning, but I guess fully linking is the next step", "ui": ["UI-013"], "bl": ["BL-005"]},
+    {"id": "PL-024", "session": "625f1b9f", "ts": "2026-04-05T21:52:58Z", "raw": "please fix this bug about the conditional translation", "ui": ["UI-010"], "bl": ["BL-005"]},
+    {"id": "PL-025", "session": "625f1b9f", "ts": "2026-04-05T22:08:55Z", "paraphrase": "Design a performance benchmark (build + exec, GnuCOBOL vs cobolcc); now consider -O2 since binutils is fixed", "ui": ["UI-008"], "bl": ["BL-007"]},
+    {"id": "PL-026", "session": "625f1b9f", "ts": "2026-04-05T22:19:11Z", "paraphrase": "Chess engine should build with GnuCOBOL; chess perft is an excellent benchmark — make it work", "ui": ["UI-009"], "bl": ["BL-005", "BL-008"]},
+    {"id": "PL-027", "session": "625f1b9f", "ts": "2026-04-07T12:19:56Z", "paraphrase": "Organise cutechess-cli tournament between GnuCOBOL- and cobolcc-built engines; is GnuCOBOL using -O2?", "ui": ["UI-009"], "bl": ["BL-008"]},
+    {"id": "PL-028", "session": "625f1b9f", "ts": "2026-04-08T22:06:13Z", "raw": "run a tournament with large time budget to see real end-to-end games", "ui": ["UI-009"], "bl": ["BL-008"]},
+    {"id": "PL-029", "session": "625f1b9f", "ts": "2026-04-10T04:39:46Z", "raw": "please commit and document this current limitation, also write-up current status of the compiler wrt chess and in general", "ui": ["UI-004"], "bl": ["BL-006"]},
+    {"id": "PL-030", "session": "de76ffeb", "ts": "2026-04-05T21:30:43Z", "paraphrase": "On -free and -O2: user asserts both are wrong/buggy — investigate the claims", "ui": ["UI-014"], "bl": ["BL-009"]},
+    {"id": "PL-031", "session": "de76ffeb", "ts": "2026-04-05T21:50:50Z", "raw": "how to fix the strip issue?", "ui": ["UI-014"], "bl": ["BL-009"]},
+    {"id": "PL-032", "session": "de76ffeb", "ts": "2026-04-05T22:00:48Z", "raw": "I have fixed some stuff... can you try again -O2?", "ui": ["UI-014"], "bl": ["BL-009"]}
+  ],
+  "prompt_ledger_canonical_root": "Write a COBOL compiler in COBOL, compiled with GnuCOBOL. Provide a test suite of at least 5 non-trivial COBOL programs (factorial, FizzBuzz, primes, Game of 15 / tic-tac-toe DFS) and demonstrate they run correctly. A transpiler to C is acceptable; reuse a shared front-end (lexer/preprocessor/parser/symbol-table) between the compiler and any reference interpreter. Commit the result with a README documenting supported features, architecture, and test results.",
+
+  "feature_backlog": [
+    {"id": "BL-001", "title": "Self-hosted COBOL interpreter + 9-program test suite", "type": "Feature", "ui": ["UI-001"], "pl": ["PL-ROOT"], "dod": "Yes", "evidence": ["T:625f1b9f:i=744 regression outputs match", "R:/Users/mathieuacher/SANDBOX/cobol-compiler-cc/cobolint.cob (4462 lines)", "G:commit 0eae806"], "sb": ["SB-001", "SB-002", "SB-004", "SB-005"]},
+    {"id": "BL-002", "title": "Run the 5 game15-family programs from agentic-cobol-game15tictactoe", "type": "Feature", "ui": ["UI-002"], "pl": ["PL-002", "PL-009"], "dod": "Partial-on-interpreter/Yes-on-compiler", "evidence": ["T:625f1b9f:i=740 full game15 interpreter timed out at 2h17m", "R:README.md:209-221 all 5 correct via compiler"], "sb": ["SB-003", "SB-007"]},
+    {"id": "BL-003", "title": "Write COBOL-to-C compiler (cobolcc), reusing interpreter infra", "type": "Feature", "ui": ["UI-003"], "pl": ["PL-003"], "dod": "Yes", "evidence": ["G:commit 7cc9b7d first cobolcc.cob", "R:cobolcc.cob (11,044 lines final)"], "sb": ["SB-006"]},
+    {"id": "BL-004", "title": "Compile COBOL-DOOM via cobolcc", "type": "Feature", "ui": ["UI-005", "UI-012"], "pl": ["PL-004", "PL-005", "PL-006"], "dod": "Partial (compiles+links+renders; input/speed issues unresolved in-session)", "evidence": ["G:commit 1321b32 +free-format/COMP-5/CALL C", "R:README.md:283 doom.cob entry"], "sb": ["SB-008", "SB-009"]},
+    {"id": "BL-005", "title": "Compile cobochess engine (11 COBOL files, 3,854 LOC)", "type": "Feature", "ui": ["UI-006", "UI-010"], "pl": ["PL-007", "PL-010..PL-020", "PL-021", "PL-023", "PL-024"], "dod": "Yes (all 11 files compile, perft d5=4,865,609)", "evidence": ["G:commits e643e3d..f289f1c (~45 commits)", "T:625f1b9f:i=8058,i=8122 perft correct", "R:README.md:286-338"], "sb": ["SB-010"," SB-011", "SB-012", "SB-013", "SB-014", "SB-015", "SB-016", "SB-018", "SB-019", "SB-020", "SB-021", "SB-022", "SB-024", "SB-025", "SB-026", "SB-027", "SB-028", "SB-029", "SB-030"]},
+    {"id": "BL-006", "title": "Maintain README documenting supported features, architecture, status", "type": "Documentation", "ui": ["UI-004"], "pl": ["PL-001", "PL-022", "PL-029"], "dod": "Yes", "evidence": ["G:commits 0eae806, 52b5d90, a578b0a", "R:/Users/mathieuacher/SANDBOX/cobol-compiler-cc/README.md (456 lines)"], "sb": ["SB-005", "SB-017", "SB-031"]},
+    {"id": "BL-007", "title": "Performance benchmark (build + exec GnuCOBOL vs cobolcc)", "type": "Tooling", "ui": ["UI-008"], "pl": ["PL-025"], "dod": "Yes", "evidence": ["G:commit 16102a9 benchmark.sh +339 LOC", "R:/Users/mathieuacher/SANDBOX/cobol-compiler-cc/benchmark.sh (332 lines)", "R:README.md:225-245 perf tables"], "sb": ["SB-023"]},
+    {"id": "BL-008", "title": "Chess tournament via cutechess-cli (cobolcc vs GnuCOBOL)", "type": "Test", "ui": ["UI-009"], "pl": ["PL-026", "PL-027", "PL-028"], "dod": "Yes (20 games / all checkmate / cobolcc 3 — gnucobol 17)", "evidence": ["T:625f1b9f:i=10114 summary", "T:625f1b9f:i=10119 PGN with clock comments", "R:README.md:310-338 tournament table"], "sb": ["SB-028", "SB-029", "SB-030"]},
+    {"id": "BL-009", "title": "Investigate -free / -O2 build-flag claims", "type": "Question/Research", "ui": ["UI-014"], "pl": ["PL-030", "PL-031", "PL-032"], "dod": "Yes (root cause isolated to GNU binutils strip on PATH)", "evidence": ["T:de76ffeb:i=5,6,24"], "sb": ["SB-032"]}
+  ],
+
+  "specification_backlog": [
+    {"id": "SB-001", "step": "INFERRED 0", "title": "Bootstrap project + interpreter-first choice", "category": "Planning", "provenance": "User-driven", "bl": ["BL-001"]},
+    {"id": "SB-002", "step": "INFERRED 1", "title": "Interpreter correctness on 9 tests + game15 4..8", "category": "Test/Validation", "provenance": "User-driven", "bl": ["BL-001"]},
+    {"id": "SB-003", "step": "INFERRED 1b", "title": "Full game15 interpreter run (2h17m timeout) — motivation for compiler pivot", "category": "Behavior/Test", "provenance": "User-driven", "bl": ["BL-002"]},
+    {"id": "SB-004", "step": "G:0eae806", "title": "Initial commit: interpreter + tests + first README", "category": "Tooling", "provenance": "User-driven", "bl": ["BL-001", "BL-006"]},
+    {"id": "SB-005", "step": "G:0eae806", "title": "Interpreter README documentation", "category": "Documentation", "provenance": "User-driven", "bl": ["BL-006"]},
+    {"id": "SB-006", "step": "G:7cc9b7d", "title": "cobolcc v1 (COBOL-to-C) — 5 game tests pass", "category": "Capability", "provenance": "User-driven", "bl": ["BL-003"]},
+    {"id": "SB-007", "step": "post-G:7cc9b7d", "title": "cobolcc verified on game15 / game015 (0.01s, 20x speedup)", "category": "Test/Validation", "provenance": "User-driven", "bl": ["BL-002", "BL-003"]},
+    {"id": "SB-008", "step": "G:1321b32", "title": "Free-format + COMP-5 + CALL to C — support DOOM and chess seeds", "category": "Capability", "provenance": "User-driven", "bl": ["BL-004", "BL-005"]},
+    {"id": "SB-009", "step": "within G:1321b32", "title": "COBOL-DOOM compiles+links end-to-end", "category": "Capability/Test", "provenance": "User-driven", "bl": ["BL-004"]},
+    {"id": "SB-010", "step": "G:e643e3d", "title": "COPY path resolution + LINKAGE locals + parameter naming", "category": "Capability/Behavior", "provenance": "User-driven", "bl": ["BL-005"]},
+    {"id": "SB-011", "step": "G:fef9782", "title": "Inline IF, PERFORM FOREVER, EXIT PARAGRAPH/PERFORM, FUNCTION MOD", "category": "Capability", "provenance": "Required-prereq", "bl": ["BL-005"]},
+    {"id": "SB-012", "step": "G:d505af4", "title": "FUNCTION handling, group-name macros, MOVE token spacing", "category": "Capability/Bugfix", "provenance": "Agent-initiated+Required-prereq", "bl": ["BL-005"]},
+    {"id": "SB-013", "step": "G:d46c4a2", "title": "EVALUATE TRUE / on-string / char switch / multi-target MOVE", "category": "Capability", "provenance": "Required-prereq", "bl": ["BL-005"]},
+    {"id": "SB-014", "step": "G:1efb319", "title": "CALL group passing + filter bad constant macros + extern void", "category": "Bugfix", "provenance": "Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-015", "step": "G:740b7d7", "title": "LINKAGE as file-scope static (later reworked in SB-024)", "category": "Refactor/Behavior", "provenance": "Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-016", "step": "G:ef00bab..G:cfb79b3 (29 commits)", "title": "Iterative chess-idiom support: individual files compile", "category": "Bugfix+Capability", "provenance": "User-driven+Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-017", "step": "G:52b5d90", "title": "README: comprehensive compilation status + feature docs", "category": "Documentation", "provenance": "User-driven", "bl": ["BL-006"]},
+    {"id": "SB-018", "step": "G:57d5f3a,G:583e40d", "title": "Buffer resizing, symbol table 200→400→800, strcmp scoping", "category": "Quality/Hardening", "provenance": "Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-019", "step": "G:4a2cbbd,G:fd60ea6,G:f9212b5", "title": "LOW-VALUES/SPACES→INITIALIZE, paren in conditions, XCAL extern scan", "category": "Capability/Bugfix", "provenance": "Required-prereq+Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-020", "step": "G:9346303,G:22df96b,G:9f7440e,G:875c2fd", "title": "STRING FUNCTION TRIM, OCCURS string arrays, main.cob compiles", "category": "Capability", "provenance": "Required-prereq", "bl": ["BL-005"]},
+    {"id": "SB-021", "step": "G:fb46bb7", "title": "Multi-program COBOL file support — chess engine compiles+links+runs", "category": "Capability", "provenance": "User-driven+Required-prereq", "bl": ["BL-005"]},
+    {"id": "SB-022", "step": "G:e5dff13", "title": "EVALUATE TRUE condition translation; ACCEPT FROM ARGUMENT-NUMBER/VALUE", "category": "Bugfix/Capability", "provenance": "User-driven", "bl": ["BL-005"]},
+    {"id": "SB-023", "step": "G:16102a9,G:129f8c2", "title": "benchmark.sh + empty-main fix + whitespace-tolerant diff", "category": "Tooling/Test", "provenance": "User-driven", "bl": ["BL-007"]},
+    {"id": "SB-024", "step": "G:5ac6763,G:967f425", "title": "LINKAGE scalar/string copy-in/out, group BY REFERENCE, clean extern globals", "category": "Capability/Refactor", "provenance": "User-driven", "bl": ["BL-005", "BL-008"]},
+    {"id": "SB-025", "step": "G:579bbc1", "title": "CALL USING group detection; non-static only for groups passed in CALL", "category": "Refactor", "provenance": "Agent-initiated", "bl": ["BL-005"]},
+    {"id": "SB-026", "step": "G:06942ae", "title": "RECURSIVE program support: stack-allocated WS local structs (PERFT works)", "category": "Capability", "provenance": "User-driven", "bl": ["BL-005"]},
+    {"id": "SB-027", "step": "G:358678e,G:13163f5", "title": "Chess perft correct to depth 5 (4,865,609) after MAKEMOVE legality fix", "category": "Test/Validation+Bugfix", "provenance": "User-driven", "bl": ["BL-005", "BL-008"]},
+    {"id": "SB-028", "step": "G:cc1932b", "title": "RECURSIVE frame-pointer struct (Approach E) — ALPHABETA/QUIESCE with paragraphs", "category": "Capability", "provenance": "User-driven", "bl": ["BL-005", "BL-008"]},
+    {"id": "SB-029", "step": "G:4ac6bd2,G:610bd6d", "title": "Runtime self-copy guard for LINKAGE group copy-in/out", "category": "Quality/Hardening", "provenance": "Agent-initiated", "bl": ["BL-005", "BL-008"]},
+    {"id": "SB-030", "step": "G:f289f1c", "title": "CU-GRP struct wrapping for cross-file CALL USING groups (final compiler fix)", "category": "Capability/Refactor", "provenance": "User-driven", "bl": ["BL-005", "BL-008"]},
+    {"id": "SB-031", "step": "G:a578b0a", "title": "README rewrite: chess engine working, EXTERNAL limitation, tournament 20 games", "category": "Documentation", "provenance": "User-driven", "bl": ["BL-006", "BL-008"]},
+    {"id": "SB-032", "step": "session de76ffeb", "title": "Investigate -free / -O2 claims — GNU binutils strip identified as root cause", "category": "Research/Documentation", "provenance": "User-driven", "bl": ["BL-009"]}
+  ],
+
+  "replay_plan": {
+    "preconditions": {"os": "macOS or Linux", "tools": ["GnuCOBOL 3.2+", "gcc", "optional cutechess-cli"], "env_note": "On macOS ARM64, ensure /usr/bin/strip precedes Homebrew binutils strip in PATH before using -O2"},
+    "checkpoints_git": ["0eae806 interpreter", "7cc9b7d cobolcc v1", "1321b32 DOOM+chess seeds", "fb46bb7 multi-program", "cc1932b Approach-E frame pointer", "a578b0a final README"],
+    "steps": [
+      "cobc -x -O -o cobolcc cobolcc.cob",
+      "cobc -x -O -o cobolint cobolint.cob",
+      "./cobolcc tests/test1-hello.cob && gcc -O2 -lm -o hello tests/test1-hello.c && ./hello",
+      "./benchmark.sh",
+      "Clone agentic-chessengine-cobol-codex at faf0f16; ./cobolcc src/*.cob; apply 7 main.c patches; gcc -O2 -o cobochess *.c; ./cobochess (UCI)"
+    ]
+  },
+
+  "repo_stats": {
+    "run_id": "stats_run_1",
+    "method": "wc -l per file; .gitignore exclusions applied to the COBOL-production vs scratch classification",
+    "files_total": 65,
+    "by_language_loc": {"COBOL_production": 15506, "COBOL_tests": 768, "COBOL_games": 1919, "COBOL_scratch_gitignored": 814, "C_generated_gitignored": 3068, "shell_build": 332, "markdown_docs_project_readme": 456},
+    "key_entry_points": ["cobolcc.cob", "cobolint.cob", "tests/test[1-9]-*.cob", "benchmark.sh"]
+  },
+
+  "rq_coverage_matrix": [
+    {"rq": "Strategies used", "sources": ["session turns", "SB commit cadence", "git commit messages"], "indicators": ["PLAN/SCAF/INCR/DBG/TEST/RETR frequency", "episode sequences"], "sections": ["strategy_codebook", "strategy_annotations"]},
+    {"rq": "Per-BL outcome quality", "sources": ["cobc/gcc outputs", "perft numeric match", "tournament record", "README"], "indicators": ["Rubric Q1..Q6"], "sections": ["rubric_scores"]},
+    {"rq": "Success/failure factors", "sources": ["reported blockers", "reverts", "rework"], "indicators": ["FOR/AGAINST claims"], "sections": ["process_tracing_claims"]},
+    {"rq": "Reproducibility", "sources": ["PL ledger", "replay prompts", "repo state", "commits"], "indicators": ["replay checklist"], "sections": ["replay_plan", "threats_to_validity"]},
+    {"rq": "COBOL quality", "sources": ["feature tables", "manual patches", "known limitations"], "indicators": ["panel"], "sections": ["cobol_panel"]},
+    {"rq": "Interaction demand", "sources": ["PL/UI counts", "UI density per BL"], "indicators": ["UI distributions", "scope churn"], "sections": ["interaction_metrics"]}
+  ],
+
+  "strategy_codebook": {
+    "PLAN": {"def": "Agent opens an explicit plan step before editing", "example": "T:625f1b9f:i=8655 Plan subagent for RECURSIVE+paragraphs"},
+    "SCAF": {"def": "Bulk scaffolding via a single Agent/Write call", "example": "T:625f1b9f:i=786 'Build COBOL-to-C compiler' 2KB subagent prompt"},
+    "INCR": {"def": "Iterative edit/bash cycles producing small diffs", "example": "29 commits between SB-016 start and SB-020"},
+    "RETR": {"def": "Re-read state after compaction / session reset", "example": "T:i=5266 auto-summary continuation; T:i=9474 second compaction"},
+    "DBG": {"def": "Error->edit->rebuild loop", "example": "SB-027 depth-2 perft 450->400 investigation"},
+    "TEST": {"def": "Run compiled binary to verify output", "example": "T:625f1b9f:i=744 full regression tests 1..9"},
+    "REFA": {"def": "Refactor without new capability", "example": "G:740b7d7 (-125 LOC, LINKAGE static)"},
+    "TOOL": {"def": "External tooling invocation", "example": "cutechess-cli for tournament in SB-028/SB-030 validation"},
+    "PROMPT": {"def": "Highly-structured subagent prompt", "example": "i=786 (2KB), i=8655 (2KB)"},
+    "RISK": {"def": "Recognise risky change; gate or document", "example": "G:ac97b02 'Revert ... (caused regressions)'; README Known-Limitation EXTERNAL"},
+    "VERIFY": {"def": "Cross-check vs reference (GnuCOBOL)", "example": "perft depth5 = 4,865,609 vs reference at T:i=8058,8122"}
+  },
+
+  "episodes_macro_phases": [
+    {"phase": "Bootstrap (interpreter + tests)", "episodes": ["EP-BL001-01"], "range": "2026-03-29 -> 2026-03-31"},
+    {"phase": "Feature growth 1 (compiler pivot)", "episodes": ["EP-BL003-01..03"], "range": "2026-03-31 -> 2026-04-03"},
+    {"phase": "Feature growth 2 (DOOM)", "episodes": ["EP-BL004-01..03"], "range": "2026-04-03"},
+    {"phase": "Feature growth 3 (chess compile)", "episodes": ["EP-BL005-01..17"], "range": "2026-04-03 -> 2026-04-05"},
+    {"phase": "Stabilisation (multi-program + linking)", "episodes": ["EP-BL005-18..20"], "range": "2026-04-05 -> 2026-04-06"},
+    {"phase": "Hardening (RECURSIVE / Approach E / tournament)", "episodes": ["EP-BL005-21..24", "EP-BL008-01..03"], "range": "2026-04-07 -> 2026-04-10"},
+    {"phase": "Diagnostic sidebar (build flags)", "episodes": ["EP-BL009-01..03"], "range": "2026-04-05 (de76ffeb)"}
+  ],
+
+  "strategy_annotations_per_bl": {
+    "BL-001": {"strategies_ordered": ["SCAF", "INCR", "TEST", "VERIFY"], "dbg_loops_approx": 5, "reverts": 0},
+    "BL-002": {"strategies_ordered": ["TEST", "RISK"], "dbg_loops_approx": 0, "reverts": 0, "note": "N=9 accepted as unverified on interpreter"},
+    "BL-003": {"strategies_ordered": ["PLAN", "PROMPT", "SCAF", "INCR", "TEST", "VERIFY"], "dbg_loops_approx": 10, "reverts": 0},
+    "BL-004": {"strategies_ordered": ["INCR", "DBG", "TEST"], "dbg_loops_approx": 6, "reverts": 0, "note": "Runtime input/speed issues unresolved"},
+    "BL-005": {"strategies_ordered": ["PLAN", "INCR", "DBG", "RISK", "VERIFY"], "dbg_loops_approx": 30, "reverts": 2, "reverts_hashes": ["ac97b02", "ca6220f"]},
+    "BL-006": {"strategies_ordered": ["INCR"], "dbg_loops_approx": 0, "reverts": 0},
+    "BL-007": {"strategies_ordered": ["SCAF", "INCR", "VERIFY"], "dbg_loops_approx": 1, "reverts": 0},
+    "BL-008": {"strategies_ordered": ["TOOL", "VERIFY", "INCR"], "dbg_loops_approx": 0, "reverts": 0},
+    "BL-009": {"strategies_ordered": ["PROMPT", "DBG", "VERIFY"], "dbg_loops_approx": 2, "reverts": 0}
+  },
+
+  "rubric_scores": [
+    {"bl": "BL-001", "Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 1, "Q6": 2, "confidence": "High"},
+    {"bl": "BL-002", "Q1": 2, "Q2": 2, "Q3": 1, "Q4": 1, "Q5": 1, "Q6": 2, "confidence": "High"},
+    {"bl": "BL-003", "Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 1, "Q6": 2, "confidence": "High"},
+    {"bl": "BL-004", "Q1": 1, "Q2": 2, "Q3": 1, "Q4": 1, "Q5": 1, "Q6": 1, "confidence": "Medium"},
+    {"bl": "BL-005", "Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 1, "Q6": 1, "confidence": "High"},
+    {"bl": "BL-006", "Q1": 2, "Q2": null, "Q3": null, "Q4": 2, "Q5": 2, "Q6": 2, "confidence": "High"},
+    {"bl": "BL-007", "Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 2, "Q6": 2, "confidence": "High"},
+    {"bl": "BL-008", "Q1": 2, "Q2": 2, "Q3": 2, "Q4": 1, "Q5": 2, "Q6": 1, "confidence": "High"},
+    {"bl": "BL-009", "Q1": 2, "Q2": null, "Q3": 2, "Q4": 2, "Q5": null, "Q6": 2, "confidence": "High"}
+  ],
+
+  "interaction_metrics": {
+    "human_prompts_main_session_deduplicated": 33,
+    "human_prompts_session_de76ffeb": 3,
+    "total_human_prompts_for_pl_ledger": 36,
+    "ui_category_distribution": {"FeatureRequest": 4, "BugFixRequest_aggregated_UI010": 1, "Scenario": 1, "Constraint": 2, "AcceptanceCriteria_embedded_in_UI009": 1, "Tooling_Build": 1, "Documentation": 1, "Question_Clarification": 3},
+    "ui_density_per_bl_topk": {"BL-005": 15, "BL-006": 3, "BL-008": 3, "BL-009": 3, "BL-004": 3, "BL-001": 2, "BL-002": 2, "BL-003": 2, "BL-007": 1},
+    "scope_churn_events": [
+      {"event": "Interpreter -> Compiler pivot", "pl": "PL-003", "days_into_project": 3},
+      {"event": "LINKAGE static -> extern globals refactor", "sb_from": "SB-015", "sb_to": "SB-024"}
+    ],
+    "clarification_cycles": 2,
+    "compaction_events": [{"pointer": "T:625f1b9f:i=5266"}, {"pointer": "T:625f1b9f:i=9474"}]
+  },
+
+  "cobol_panel": {
+    "compile_run_status": {
+      "working_via_cobolcc": ["test1-hello..test9-game15-8 (9 programs)", "game15.cob", "game015.cob", "game15tree.cob", "game015tree.cob", "gameN.cob", "doom.cob (1363 LOC)", "cobochess 11 files (3854 LOC)"],
+      "interpreter_only": ["same tests; game15 N=9 exceeds practical runtime on interpreter"]
+    },
+    "supported_features_summary": ["Data: PIC 9/X/S9V9/Z, 78-level, COMP-5, OCCURS 1D+2D, REDEFINES, VALUE, FILLER, COPY, LINKAGE, LOCAL-STORAGE, RECURSIVE", "Procedure: DISPLAY/MOVE/arith/COMPUTE, IF/ELSE, EVALUATE (TRUE/int/char/string), PERFORM (VARYING/UNTIL/para/FOREVER), CALL to C and COBOL, GOBACK/EXIT PARAGRAPH/EXIT PERFORM, ACCEPT/ACCEPT FROM DATE/TIME/ARGUMENT-*, STRING, UNSTRING, INITIALIZE", "Intrinsics: MOD, ABS, SQRT, NUMVAL, TRIM, INTEGER-OF-DATE", "Formats: fixed and free"],
+    "known_limitations": ["EXTERNAL storage (static per TU, breaks chess TT)", "PERFORM THRU", "File I/O (READ/WRITE/OPEN/CLOSE)", "GO TO", "Level-88 conditions", "INSPECT in generated code", "STRING DELIMITED BY 'x' (only DELIMITED SIZE)"],
+    "manual_patches_required_for_chess_main": ["GO UNSTRING: replace single-token with C for-loop tokenizer", "fgets EOF NULL check", "IN_LINE space-padding post-fgets", "Remove zero-depth/zero-time SEARCH calls that hang", "cob_trim alternating buffers for reentrant calls", "setbuf(stdout, NULL) for UCI", "TIMEUTIL replaced with gettimeofday()"]
+  },
+
+  "process_tracing_claims": [
+    {"id": "C1", "claim": "The interpreter-first decision was a productive detour", "for": ["Shared front-end reused by cobolcc (SB-006 commit reuses lexer/parser/symbol-table)", "PL-003 explicitly says 'reuse as much as possible'"], "against": ["3 days of interpreter work; full N=9 game15 never ran"], "judgment": "Net positive — amortised investment"},
+    {"id": "C2", "claim": "'Address remaining errors' is a high-leverage prompt for large porting tasks", "for": ["~11 uses drove BL-005 from 6 errors to full link over ~36h at ~1-2 commits per prompt"], "against": ["DOOM follow-ups 'still the same issues' did NOT converge — error signals too vague"], "judgment": "Supported with scope caveats"},
+    {"id": "C3", "claim": "Approach E (frame pointer + struct + #define) was the right RECURSIVE-plus-paragraphs design", "for": ["Plan subagent compared A/B/C/E; E is standard-C, ~150 LOC; ships in one commit (SB-028); fixes ALPHABETA+QUIESCE"], "against": ["7 manual main.c patches still needed"], "judgment": "Supported"},
+    {"id": "C4", "claim": "EXTERNAL limitation (not search logic) explains the 3-17 tournament scoreline", "for": ["README quantifies cobolcc depth-7 383,173 nodes vs gnucobol 70,689 nodes — 5x search inflation from absent TT cutoffs; cobolcc ~8x faster per node from gcc -O2"], "against": ["Not re-verified here; relies on agent's analysis"], "judgment": "Plausible, High confidence from evidence"}
+  ],
+
+  "threats_to_validity": [
+    "Evidence is self-reported by the agent; tournament PGNs and benchmark tables not re-executed in meta-analysis.",
+    "Compact turn extract truncates long messages at 2KB; full-text re-extraction could surface additional user asks.",
+    "Commit hashes cited from in-session git log outputs (Bash restricted here); internally consistent across multiple quotes.",
+    "BL-004 DoD marked Partial based on user complaints; later session might have resolved DOOM — not present here.",
+    "BL-009 fix verified only for trivial DISPLAY 'HELLO' at -O2, not re-verified for full cobolcc.cob build in this meta-analysis."
+  ],
+
+  "open_questions_and_defaults": [
+    {"q": "Did the user ever push to GitHub?", "default_applied": "No OP-### created (no explicit publish request in sessions)", "cp": "CP2"},
+    {"q": "Are DOOM runtime issues resolved in a later session?", "default_applied": "Unknown; BL-004 Partial", "cp": "CP2"},
+    {"q": "What are the exact acceptance criteria for the chess tournament (win rate target)?", "default_applied": "No Elo target stated; DoD satisfied by 'all 20 games end in checkmate, no crashes'", "cp": "CP3"}
+  ],
+
+  "recommendations": [
+    "R1: Make EXTERNAL emit non-static globals — single highest-leverage fix; likely flips tournament.",
+    "R2: Automate the 7 main.c post-transpilation patches inside cobolcc.",
+    "R3: Persist a canonical 'golden outputs' corpus to turn benchmark.sh into a regression test.",
+    "R4: Re-run full N=9 game15.cob on the interpreter with the final hardened build to close BL-002's interpreter-path DoD.",
+    "R5: For 'address remaining errors' cycles in future projects, add an automated error-parser subagent to pre-categorise errors."
+  ],
+
+  "counts_summary": {
+    "BL": 9,
+    "SB": 32,
+    "UI": 14,
+    "PL_unique_ids_including_root_and_grouped": 23,
+    "PL_individual_human_prompts_represented": 36,
+    "commits_observed_in_session": 60
+  }
+}

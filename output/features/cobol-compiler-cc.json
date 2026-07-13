@@ -1,0 +1,926 @@
+{
+  "project": "cobol-compiler-cc",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "Bootstrap project skeleton and decide on interpreter-first design",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "Interpreter correctness on 9 test programs + game15 subsets",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "Attempt full game15.cob via interpreter (timeout) \u2014 motivation for compiler pivot",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "Initial git commit (`0eae806`): interpreter + tests + first README",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Interpreter documentation (initial README)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "New `cobolcc.cob` \u2014 COBOL-to-C compiler v1 (5 game tests pass)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "`cobolcc` verified on game15 / game015 (0.01 s, 20\u00d7 speedup vs GnuCOBOL)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "Free-format support, COMP-5, CALL to external C \u2014 extend cobolcc for DOOM + chess",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "COBOL-DOOM compiles and links end-to-end (1,363 LOC free-format)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "COPY path resolution, LINKAGE locals, parameter naming (start of chess)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "Inline IF, PERFORM FOREVER, EXIT PARAGRAPH/PERFORM, FUNCTION MOD",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "FUNCTION handling, group-name macros, MOVE token spacing",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "EVALUATE TRUE / EVALUATE on strings / char switch / multi-target MOVE / FUNCTION in expressions",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "CALL group passing, filter bad constant macros, extern void fix",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "LINKAGE variables emitted as file-scope static (chess engine compilation)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "Case-preserving strings, GOBACK/EXIT paragraph, extern declarations, dedup \u2014 compile of individual chess files",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "README: comprehensive compilation status and feature documentation",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "Buffer resizing, symbol table 200 \u2192 400 \u2192 800 entries, strcmp scoping",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-019",
+      "title": "LOW-VALUES/SPACES\u2192GEN-INITIALIZE, paren handling in conditions, XCAL extern scan",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "STRING FUNCTION TRIM, OCCURS string arrays 1D/2D, main.cob compiles (10/11 \u2192 11/11 first compile pass)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "Multi-program COBOL file support \u2014 chess engine compiles + links + runs (first UCI)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "EVALUATE TRUE condition translation; ACCEPT FROM ARGUMENT-NUMBER/VALUE",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "`benchmark.sh` + empty-main fix (measure cobolcc vs GnuCOBOL)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "LINKAGE scalar/string copy-in/out, group BY REFERENCE \u2014 clean cross-file sharing",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "CALL USING group detection; non-static only for groups passed in CALL",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-026",
+      "title": "RECURSIVE program support: stack-allocated WS local structs (PERFT works)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-027",
+      "title": "Chess perft correct (depth 1 = 20, depth 5 = 4,865,609) after MAKEMOVE legality fix",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "RECURSIVE frame-pointer struct (Approach E): ALPHABETA / QUIESCE with paragraph functions",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-029",
+      "title": "Runtime self-copy guard for LINKAGE group copy-in/out",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "CU-GRP struct wrapping for cross-file CALL USING groups (final compiler fix)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "README rewrite: chess engine fully working, document EXTERNAL limitation, tournament results (20 games)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "Investigation of `-free` / `-O2` build-flag claims (follow-up session de76ffeb)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Initial request: Compile and run all COBOL programs from the acherm/agentic-cobol-game15tictactoe repository (specifically commits 4ae3129) using an existing COBOL interpreter"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Final intent: Build a COBOL-to-C compiler that produces native-speed binaries while reusing the existing parser front-end"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Self-hosted COBOL tools: Both interpreter and compiler written in COBOL itself, compiled with GnuCOBOL"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Three-phase architecture: Load/Preprocess \u2192 Parse \u2192 Execute (interpreter) or Compile to C (compiler)"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Symbol table: Stores 200 variables with type, value, array info"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Instruction table: Stores 2000 compiled instructions with opcodes and arguments"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Paragraph table: Tracks function definitions and line ranges"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Array storage: Uses packed character strings with calculated offsets for 1D, 2D, and nested subscripts"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "REDEFINES mechanism: Overlays storage between variables"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Expression evaluator: Shunting-yard algorithm for COMPUTE statements"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Condition evaluator: Recursive descent with compound AND/OR support"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Continuation line joining: Detects multi-line statements by keywords and operators"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Code generation: Maps COBOL statements to C equivalents, generates helper functions"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "cobolint.cob (4,462 lines)"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "cobolcc.cob (5,971 lines)"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "README.md"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": ".gitignore"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-04-03T08:11:39.693000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "The user's project is a self-hosted COBOL compiler (cobolcc.cob) and interpreter (cobolint.cob), both written in COBOL and compiled with GnuCOBOL."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Initial request was to compile Game of 15 programs, then pivot to building a COBOL-to-C compiler for performance."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Extended to compile COBOL-DOOM (free-format, C interop, 1,363 lines)."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Extended to compile cobochess chess engine (11 files, 3,854 lines COBOL) from https://github.com/acherm/agentic-chessengine-cobol-codex (commit faf0f163)."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "The user repeatedly asked to \"address remaining errors\" to get all 11 chess files compiling."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "The user asked to document compilation status in the README."
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "COBOL-to-C transpilation: cobolcc.cob (now ~8,500 lines) reads COBOL source and generates equivalent C code"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Fixed-format and free-format COBOL source handling with case-preserving string literals"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "COMP-5 binary types (PIC S9(9) COMP-5 \u2192 int, PIC S9(18) \u2192 long long)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "COPY preprocessing (inline copybook files with path resolution fallback)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "78-level constants \u2192 #define"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "LINKAGE SECTION / PROCEDURE DIVISION USING \u2192 function parameters"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "CALL \"func\" USING BY VALUE/REFERENCE \u2192 C function calls with extern declarations"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "EVALUATE TRUE \u2192 if/else chain; EVALUATE on strings \u2192 strcmp; EVALUATE on chars \u2192 switch with 'X'"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "FUNCTION intrinsics: MOD\u2192cob_mod, ABS\u2192abs, SQRT\u2192sqrt, NUMVAL\u2192atoi, TRIM\u2192cob_trim, INTEGER-OF-DATE\u2192cob_integer_of_date"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "OF qualifier stripping with subscript transfer (ML-FROM OF LS-MOVE-LIST(I) \u2192 ML_FROM[I])"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Multi-target MOVE (MOVE 0 TO A B C \u2192 separate assignments)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Inline IF (IF cond GOBACK END-IF on one line)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Period-aware continuation joining"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Smart hyphen\u2192underscore (preserves subtraction operators)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "2D subscript handling: comma merge in tokenizer, COMP-5 2D arrays"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Recursive FIX-STRING-COMPARISON with && || boundary scoping"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Multi-program COBOL files (SEARCH/ALPHABETA/QUIESCE in one file)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Symbol table overflow detection and sizing (200\u2192400\u2192800 entries)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "REDEFINES store system for string-based group overlays"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Buffer sizing: source lines (1500\u21923000), line width (256\u2192512), tokens (30\u219280), ARG fields (100\u2192256), conditions (500\u21921000)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-compiler-cc/cobolcc.cob` (~8,500 lines, 48+ commits)"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-compiler-cc/cobolint.cob` (4,462 lines) - The interpreter, unchanged"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-compiler-cc/README.md` - Updated with comprehensive compilation status"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/tmp/agentic-cobol-doom/doom.cob` (1,363 lines) - COBOL DOOM, compiles+links+runs"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/tmp/agentic-chess/src/*.cob` (11 files) - Chess engine source"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "`/tmp/agentic-chess/copybooks/*.cpy` (5 files) - Shared"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-04-05T17:42:51.045000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User's project is a self-hosted COBOL-to-C compiler (cobolcc.cob) and interpreter (cobolint.cob), both written in COBOL and compiled with GnuCOBOL"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User asked to compile the cobochess chess engine (11 COBOL source files, 3,854 lines) from https://github.com/acherm/agentic-chessengine-cobol-codex"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User asked to design a performance benchmark comparing GnuCOBOL vs cobolcc build/execution times"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User asked to organize a tournament using cutechess-cli between GnuCOBOL-compiled and cobolcc-compiled chess engines"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User repeatedly asked to \"address remaining errors\" to get the chess engine fully working"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User asked for a \"clean solution\" for cross-file variable sharing"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "User asked for a \"careful, in-depth plan\" for RECURSIVE programs with paragraph functions"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Most recently, user asked to \"fix the remaining issue\" blocking the tournament and to \"run a tournament with large time budget to see real end-to-end games\""
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "COBOL-to-C transpilation via cobolcc.cob (~10K+ lines COBOL compiler)"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "RECURSIVE COBOL programs: PERFT, ALPHABETA, QUIESCE need per-call WORKING-STORAGE"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Approach E (Global Frame Pointer + Struct): `struct _ws_ALPHABETA` with `static *_ws_ALPHABETA` pointer, `#define FIELD _ws_ALPHABETA->FIELD`"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "CU-GRP struct wrapping: groups passed in CALL USING get contiguous C structs for `_p` pointer copy-in/copy-out"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "LOCAL-STORAGE vs WORKING-STORAGE distinction: LOCAL-STORAGE goes in frame struct, WS stays as statics"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Runtime self-copy guard: `if ((void*)p_GROUP != GROUP)` skips copy when caller/callee share same static data"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Multi-program COBOL files: search.cob has SEARCH + ALPHABETA RECURSIVE + QUIESCE RECURSIVE"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "LINKAGE SECTION: BY REFERENCE semantics, callee operates on caller's data"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "GnuCOBOL's COB_CFLAGS defaults to `-pipe` (no optimization), cobolcc generates C that gcc -O2 optimizes"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Fixed-format COBOL (column 7 * comments), cobolcc.cob built without -free flag"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "cutechess-cli for chess engine tournaments"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/cobol-compiler-cc/cobolcc.cob` (~10,500+ lines)"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "`/tmp/agentic-chess/src/search.cob` (1,362 lines, 3 programs)"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "`/tmp/agentic-chess/src/main.cob` - UCI protocol, command parsing"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-04-09T08:54:25.884000+00:00",
+      "item": "Files and Code Sections:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "a578b0a1ec",
+      "date": "2026-04-10",
+      "subject": "Update README: chess engine fully working, document EXTERNAL limitation"
+    },
+    {
+      "sha": "f289f1c911",
+      "date": "2026-04-10",
+      "subject": "Fix CU-GRP struct wrapping for cross-file CALL USING groups"
+    },
+    {
+      "sha": "610bd6ddb0",
+      "date": "2026-04-09",
+      "subject": "Fix LINKAGE group passthrough and self-copy guard for copy-out"
+    },
+    {
+      "sha": "4ac6bd201c",
+      "date": "2026-04-08",
+      "subject": "Runtime self-copy guard for LINKAGE group copy-in/copy-out"
+    },
+    {
+      "sha": "cc1932b80d",
+      "date": "2026-04-08",
+      "subject": "RECURSIVE frame pointer (Approach E): ALPHABETA/QUIESCE search working"
+    },
+    {
+      "sha": "da3da4f9e0",
+      "date": "2026-04-07",
+      "subject": "Fix cob_trim variable comparison, ACCEPT FROM DATE/TIME, FIX-STRING trigger"
+    },
+    {
+      "sha": "8bcf4e4f26",
+      "date": "2026-04-07",
+      "subject": "Fix ALPHABETA/QUIESCE: RECURSIVE locals only for programs without paragraphs"
+    },
+    {
+      "sha": "13163f5472",
+      "date": "2026-04-07",
+      "subject": "Fix MAKEMOVE legality check: remove _saved_p redirect, perft now 100% correct"
+    },
+    {
+      "sha": "358678e468",
+      "date": "2026-04-07",
+      "subject": "Chess perft working: depth 1=20 (correct!), depth 2=450, depth 3=10687"
+    },
+    {
+      "sha": "06942ae254",
+      "date": "2026-04-06",
+      "subject": "RECURSIVE program support: stack-allocated WS local structs"
+    },
+    {
+      "sha": "579bbc10ac",
+      "date": "2026-04-06",
+      "subject": "CALL USING group detection: non-static only for groups passed in CALL"
+    },
+    {
+      "sha": "967f4251bc",
+      "date": "2026-04-06",
+      "subject": "Clean LINKAGE variable sharing: extern/global for cross-file linking"
+    },
+    {
+      "sha": "39a24eade3",
+      "date": "2026-04-06",
+      "subject": "Fix compound string comparisons, duplicate switch, >=/<= operators"
+    },
+    {
+      "sha": "93a21b6805",
+      "date": "2026-04-06",
+      "subject": "Benchmark: use -free for GnuCOBOL chess build"
+    },
+    {
+      "sha": "00758833a0",
+      "date": "2026-04-06",
+      "subject": "Fix ref-mod offset extraction, SPACE comparison, cob_trim, UNSTRING padding"
+    },
+    {
+      "sha": "95a758c0f8",
+      "date": "2026-04-06",
+      "subject": "Fix UNSTRING to handle all destination fields, not just 2"
+    },
+    {
+      "sha": "5ac6763d38",
+      "date": "2026-04-06",
+      "subject": "LINKAGE parameter passing: scalar/string copy-in/out, group BY REFERENCE"
+    },
+    {
+      "sha": "129f8c2ac8",
+      "date": "2026-04-06",
+      "subject": "Fix benchmark: whitespace-tolerant comparison, don't abort on diffs"
+    },
+    {
+      "sha": "16102a98f4",
+      "date": "2026-04-06",
+      "subject": "Fix empty main() for main programs, add benchmark script"
+    },
+    {
+      "sha": "e5dff13dac",
+      "date": "2026-04-06",
+      "subject": "Fix EVALUATE TRUE condition translation, ACCEPT FROM ARGUMENT-NUMBER/VALUE"
+    },
+    {
+      "sha": "fb46bb782a",
+      "date": "2026-04-05",
+      "subject": "Multi-program COBOL file support: chess engine now compiles, links, and runs"
+    },
+    {
+      "sha": "28f5e3b9e4",
+      "date": "2026-04-05",
+      "subject": "Fix search.cob: EXTCALL constant filter, DIVIDE OF, nested subscripts, const table 300"
+    },
+    {
+      "sha": "36dac42f3a",
+      "date": "2026-04-05",
+      "subject": "WIP on master: 875c2fd Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "6addd856e4",
+      "date": "2026-04-05",
+      "subject": "index on master: 875c2fd Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "875c2fd361",
+      "date": "2026-04-05",
+      "subject": "Line buffers 256\u2192512: main.cob now compiles! 10/11 at 0!"
+    },
+    {
+      "sha": "9f7440ef2c",
+      "date": "2026-04-05",
+      "subject": "String OCCURS 2D arrays, STRING target WS-STRING-DEST, token limit 80"
+    },
+    {
+      "sha": "22df96b33b",
+      "date": "2026-04-05",
+      "subject": "String OCCURS arrays, STRING target fix, group macro EXTCALL skip"
+    },
+    {
+      "sha": "9346303303",
+      "date": "2026-04-05",
+      "subject": "STRING FUNCTION TRIM, group macro EXTCALL skip, paren/operator fixes"
+    },
+    {
+      "sha": "f9212b5584",
+      "date": "2026-04-05",
+      "subject": "Paren handling in conditions, arithmetic operators: search 22\u21928"
+    },
+    {
+      "sha": "fd60ea60e3",
+      "date": "2026-04-05",
+      "subject": "XCAL instruction scan for missing externs, LOW-VALUES to group"
+    },
+    {
+      "sha": "4a2cbbd691",
+      "date": "2026-04-05",
+      "subject": "LOW-VALUES/SPACES to group \u2192 GEN-INITIALIZE, symbol table 800"
+    },
+    {
+      "sha": "583e40dbfe",
+      "date": "2026-04-05",
+      "subject": "Symbol table 400\u2192800: fixes search.cob variable corruption (162\u219235)"
+    },
+    {
+      "sha": "138affce47",
+      "date": "2026-04-05",
+      "subject": "Widen PIC fields, skip COMP-5 from REDEFINES, skip store-less macros"
+    },
+    {
+      "sha": "57d5f3a5ef",
+      "date": "2026-04-05",
+      "subject": "Buffer 1500\u21923000, symbol table 200\u2192400, strcmp scoping, SPACES group"
+    },
+    {
+      "sha": "328a072d86",
+      "date": "2026-04-05",
+      "subject": "Fix 2D subscript comma position: PIC 9 overflow, makemove now compiles"
+    },
+    {
+      "sha": "52b5d90b43",
+      "date": "2026-04-05",
+      "subject": "Update README: comprehensive compilation status and feature documentation"
+    },
+    {
+      "sha": "cfb79b33b8",
+      "date": "2026-04-05",
+      "subject": "Fix strcmp for compound OR conditions: fen.cob now compiles"
+    },
+    {
+      "sha": "9528b62121",
+      "date": "2026-04-05",
+      "subject": "COMP-5 2D array support: fen 4\u21921 errors, makemove 11\u21926"
+    },
+    {
+      "sha": "ac97b02c7c",
+      "date": "2026-04-05",
+      "subject": "Revert level-10 macro and STRING FUNCTION changes (caused regressions)"
+    },
+    {
+      "sha": "9f489a05a2",
+      "date": "2026-04-05",
+      "subject": "2D subscript tokenizer merge (single-pass, no hang)"
+    },
+    {
+      "sha": "ca6220f46e",
+      "date": "2026-04-04",
+      "subject": "Revert to simple 8:249 column extraction (no sequence numbers in chess)"
+    },
+    {
+      "sha": "ab95355f42",
+      "date": "2026-04-04",
+      "subject": "Smart column 73-80 sequence number stripping"
+    },
+    {
+      "sha": "a043a330c6",
+      "date": "2026-04-04",
+      "subject": "Fix paragraph emission for all programs, OCCURS 9(8), main body split"
+    },
+    {
+      "sha": "a6e8155376",
+      "date": "2026-04-04",
+      "subject": "2D subscript comma merge in COMPUTE, remove tokenizer merge (hung)"
+    },
+    {
+      "sha": "1b98f4b67f",
+      "date": "2026-04-04",
+      "subject": "Case-preserving strings in fixed-format, EVAL breaks, dedup stores"
+    },
+    {
+      "sha": "152fac3264",
+      "date": "2026-04-04",
+      "subject": "String EVALUATE, NUMVAL arg translation, char/string switch dispatch"
+    },
+    {
+      "sha": "728acbe3ec",
+      "date": "2026-04-04",
+      "subject": "Char switch, EXIT PARAGRAPH fix, REDEFINES dedup, TRIM in conditions"
+    },
+    {
+      "sha": "59359a5cf7",
+      "date": "2026-04-04",
+      "subject": "RETURN_CODE register, FUNCTION TRIM in conditions, cob_trim helper"
+    },
+    {
+      "sha": "510307c47d",
+      "date": "2026-04-04",
+      "subject": "Filter invalid extern declarations, fix search.cob constant noise"
+    },
+    {
+      "sha": "d2b12386d7",
+      "date": "2026-04-04",
+      "subject": "Literal BY REFERENCE, buffer increases: movegen.cob now compiles"
+    },
+    {
+      "sha": "219915b393",
+      "date": "2026-04-04",
+      "subject": "Transfer subscript from OF qualifier: perft.cob now compiles"
+    },
+    {
+      "sha": "2b1c634ece",
+      "date": "2026-04-04",
+      "subject": "Fix multi-parameter PROCEDURE DIVISION USING"
+    },
+    {
+      "sha": "412ed0f9ea",
+      "date": "2026-04-04",
+      "subject": "Fix group-name macro for LINKAGE descendants, GAME_STATE now available"
+    },
+    {
+      "sha": "e23b47eb8e",
+      "date": "2026-04-04",
+      "subject": "Smart hyphen\u2192underscore in TRANSLATE-NAME: eval.cob now compiles"
+    },
+    {
+      "sha": "3dc6a83aa7",
+      "date": "2026-04-04",
+      "subject": "FUNCTION ABS in COMPUTE, hyphen\u2192underscore in conditions, ref-mod fixes"
+    },
+    {
+      "sha": "8f03c07301",
+      "date": "2026-04-04",
+      "subject": "Fix ref-mod in TRANSLATE-EXPR-TOKEN, LOCAL-STORAGE, uci now compiles"
+    },
+    {
+      "sha": "5d051775f0",
+      "date": "2026-04-04",
+      "subject": "Strip END-IF from MOVE dests, widen column extraction, paragraph fix"
+    },
+    {
+      "sha": "d3d16e712d",
+      "date": "2026-04-04",
+      "subject": "Fix OF qualifier in MOVE destinations, preventing false multi-target split"
+    },
+    {
+      "sha": "b3c026e53b",
+      "date": "2026-04-04",
+      "subject": "Fix subprogram paragraph emission, FUNCTION ABS/INTEGER-OF-DATE"
+    },
+    {
+      "sha": "ac8b20e356",
+      "date": "2026-04-04",
+      "subject": "Period-aware continuation, FUNCTION INTEGER-OF-DATE, END-IF in MOVE"
+    },
+    {
+      "sha": "48bb34c7cb",
+      "date": "2026-04-04",
+      "subject": "OF in COMPUTE expressions, ref-mod in subscripts, ABS in conditions"
+    },
+    {
+      "sha": "98ba3e94de",
+      "date": "2026-04-04",
+      "subject": "Re-apply: case label translation, OF in conditions, FUNCTION ABS"
+    },
+    {
+      "sha": "59bd673a3b",
+      "date": "2026-04-04",
+      "subject": "Group-name macros for LINKAGE groups, skip duplicate variable declarations"
+    },
+    {
+      "sha": "e816dc0b72",
+      "date": "2026-04-04",
+      "subject": "Fix extern declarations: int for C functions, void for COBOL programs"
+    },
+    {
+      "sha": "ef00babebd",
+      "date": "2026-04-04",
+      "subject": "Fix GOBACK/EXIT as paragraph names, various chess engine fixes"
+    },
+    {
+      "sha": "740b7d725e",
+      "date": "2026-04-04",
+      "subject": "Emit LINKAGE variables as static (file-scope) for chess engine compilation"
+    },
+    {
+      "sha": "1efb31987f",
+      "date": "2026-04-04",
+      "subject": "Fix CALL group passing, filter bad constant macros, extern void"
+    },
+    {
+      "sha": "d46c4a2a72",
+      "date": "2026-04-04",
+      "subject": "EVALUATE TRUE if/else, OF operator, multi-target MOVE, FUNCTION in expressions"
+    },
+    {
+      "sha": "d505af41e5",
+      "date": "2026-04-04",
+      "subject": "Add FUNCTION handling, group-name macros, MOVE token spacing fix"
+    },
+    {
+      "sha": "fef9782cce",
+      "date": "2026-04-04",
+      "subject": "Add inline IF, PERFORM FOREVER, EXIT PARAGRAPH/PERFORM, FUNCTION MOD"
+    },
+    {
+      "sha": "e643e3ddde",
+      "date": "2026-04-04",
+      "subject": "Fix COPY path resolution, LINKAGE locals, parameter naming for chess engine"
+    },
+    {
+      "sha": "1321b32ee1",
+      "date": "2026-04-03",
+      "subject": "Extend cobolcc: free-format, COMP-5, CALL to C, DOOM + chess engine support"
+    },
+    {
+      "sha": "7cc9b7d361",
+      "date": "2026-03-31",
+      "subject": "Add COBOL-to-C compiler (cobolcc): all 5 game programs now compile and run"
+    },
+    {
+      "sha": "0eae806041",
+      "date": "2026-03-31",
+      "subject": "COBOLINT: A COBOL interpreter written in COBOL"
+    }
+  ],
+  "total_features_proxy": 112
+}

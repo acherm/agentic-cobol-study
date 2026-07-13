@@ -1,0 +1,464 @@
+{
+  "project": "cobol-jb",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "STEP-0",
+      "evidence": "COBOL payroll program skeleton (IDENTIFICATION/ENVIRONMENT/DATA/PROCEDURE divisions)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "STEP-0",
+      "evidence": "File I/O: `FD EMPLOYEE-FILE` + `FD PAYSLIP-FILE`, `OPEN INPUT/OUTPUT`, line-sequential records",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "STEP-0",
+      "evidence": "`PERFORM UNTIL` main processing loop over employee records",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "STEP-0",
+      "evidence": "`EVALUATE` branch applying category-based overtime bonus (A +20%, B +10%, C 0%)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "STEP-0",
+      "evidence": "`COMPUTE` arithmetic for gross salary = regular + overtime pay",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "STEP-0",
+      "evidence": "88-level condition names (`CATEGORY-A/B/C`, `END-OF-FILE`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "STEP-0",
+      "evidence": "Formatted payslip output record + header/separator lines",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "STEP-0",
+      "evidence": "End-of-job totals display (employees processed, total gross payroll)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "STEP-0",
+      "evidence": "Compile-error recovery: undefined `WS-*-FILE-STATUS` fields added after first `cobc` run exited 97",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "STEP-0",
+      "evidence": "Sample `employees_input.dat` authored (8 valid employee records across categories A/B/C)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "STEP-0",
+      "evidence": "Run validation: `./program` executes cleanly and produces `payslips_output.dat`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "STEP-0",
+      "evidence": "`README.md` initial authoring (project overview, build/run instructions, business logic table)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "STEP-0",
+      "evidence": "`.gitignore` created to exclude compiled binary `program` + OS artefacts",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "STEP-0",
+      "evidence": "Git repo initialised + initial commit `b4c6c66`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "STEP-1",
+      "evidence": "`WORKING-STORAGE` extended with social-contribution rate constants (`0.0730`, `0.0690`, `0.0240`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "STEP-1",
+      "evidence": "`COMPUTE` deductions (health, retirement, unemployment) + net salary = gross - total-deduction",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "STEP-1",
+      "evidence": "Payslip output record enriched (13+ fields inc. gross, 3 deductions, total deduction, net)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "STEP-1",
+      "evidence": "End-of-job totals extended: total net payroll alongside total gross",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-019",
+      "title": "STEP-1",
+      "evidence": "Re-compile + re-run validation (cleanly produces new payslips file)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "STEP-1",
+      "evidence": "`README.md` update (social-contributions table, new example payslip, extended fields table)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "STEP-1",
+      "evidence": "Git commit `a566a9e` (`README.md` + `program.cbl`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "STEP-2",
+      "evidence": "3rd `FD REJECT-FILE` assigned to `rejects_output.dat`, opened `OUTPUT`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "STEP-2",
+      "evidence": "Validation predicates with error codes `ERR-001\u2026ERR-004` (ID, hours, rate, category)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "STEP-2",
+      "evidence": "Reject writing: invalid records routed to reject file with original data + error code",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "STEP-2",
+      "evidence": "Guard: invalid records skip salary/deduction processing (preserves Step-0/1 math)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-026",
+      "title": "STEP-2",
+      "evidence": "End-of-job totals extended: `Employees Rejected` + `Errors Encountered` counters",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-027",
+      "title": "STEP-2",
+      "evidence": "Sample `employees_input.dat` regenerated to include 4 invalid rows exercising ERR-001\u2026004",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "STEP-2",
+      "evidence": "Re-compile + run validation (4 rejects observed on screen, reject file written)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-029",
+      "title": "STEP-2",
+      "evidence": "`.gitignore` amended (ignores additional runtime artefacts)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "STEP-2",
+      "evidence": "Git commit `704baa8` (`program.cbl` + `.gitignore` + `employees_input.dat`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "STEP-3",
+      "evidence": "`VERIFICATION_REPORT.md` authored: 27-criterion evaluation grid self-applied, 25/27 score",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "STEP-3",
+      "evidence": "Evidence-collection tool calls: `cobc` recompile, `wc -l`, `git log --oneline -- README.md`, `git show` to attribute criterion #27 failure",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-033",
+      "title": "STEP-3",
+      "evidence": "Git commit `71d46f1` (`VERIFICATION_REPORT.md`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "OP-001",
+      "title": "Init repo + initial commit",
+      "evidence": "UI-002 \"create a git and commit\"",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "OP-002",
+      "title": "Commit Step-1 changes (+ README)",
+      "evidence": "UI-004 \"please commit (incl. update of README)\"",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "OP-003",
+      "title": "Commit Step-2 changes",
+      "evidence": "UI-006 \"please commit\"",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "OP-004",
+      "title": "Commit verification report",
+      "evidence": "UI-008 \"please commit this report\"",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "OP-005",
+      "title": "Push fork + rebase onto `origin/main` (keep history)",
+      "evidence": "UI-009 (push) + UI-010 (main, not master) + UI-011 (keep history)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Target lines of code (LOC): 300 lines"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Number of files the program must handle: 2"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Target compiler: GnuCOBOL (cobc)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Compilation command: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "PERFORM (with VARYING or UNTIL loop)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "EVALUATE (multi-branch conditional logic)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "FILE SECTION with FD entries"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "COMPUTE (arithmetic expressions)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "88-level condition names"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "The program must be complete and self-contained (no external dependencies)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "All data is declared in the WORKING-STORAGE SECTION or FILE SECTION"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Copybooks are inlined in the program (no separate .cpy file)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "The program must compile without warnings or errors using GnuCOBOL"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "The .cbl file must be named program.cbl"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Do not use comments to reach the target line count."
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Use EVALUATE to apply overtime bonus if hours_worked > 35"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Category A: +20% bonus on overtime hours"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Category B: +10% bonus on overtime hours"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Category C: no overtime bonus"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Read employee records (ID, name, job category, hours worked, hourly rate)"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Calculate gross salary: hours_worked * hourly_rate"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Write one payslip record per employee to output file"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Display totals (total employees processed, total gross payroll) at end of job"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Think of the data structures that will represent employees and payslips"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Generate the program.cbl file"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Compile with: cobc -x -free -o program program.cbl"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "If compilation error -> fix and recompile"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Repeat until successful compilation with no errors"
+    },
+    {
+      "ts": "2026-04-03T14:45:44.440000+00:00",
+      "item": "Once compilation succeeds, run the backlog extractor skill to generate README.md"
+    },
+    {
+      "ts": "2026-04-03T15:34:37.220000+00:00",
+      "item": "Health insurance (Assurance maladie): 7.30% of gross salary"
+    },
+    {
+      "ts": "2026-04-03T15:34:37.220000+00:00",
+      "item": "Retirement contribution (Retraite): 6.90% of gross salary"
+    },
+    {
+      "ts": "2026-04-03T15:34:37.220000+00:00",
+      "item": "Unemployment insurance (Chomage): 2.40% of gross salary"
+    },
+    {
+      "ts": "2026-04-03T15:34:37.220000+00:00",
+      "item": "Total deduction = sum of the three contributions above"
+    },
+    {
+      "ts": "2026-04-03T15:34:37.220000+00:00",
+      "item": "Net salary = gross salary - total deduction"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "4b148bc1a9",
+      "date": "2026-04-03",
+      "subject": "Add verification report scoring 25/27 on case study reproduction"
+    },
+    {
+      "sha": "ca7cf7a768",
+      "date": "2026-04-03",
+      "subject": "Add input validation with reject file for invalid records"
+    },
+    {
+      "sha": "ad841ed6f2",
+      "date": "2026-04-03",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "cf26a128e7",
+      "date": "2026-04-03",
+      "subject": "Add COBOL payroll management system"
+    },
+    {
+      "sha": "71d46f1052",
+      "date": "2026-04-03",
+      "subject": "Add verification report scoring 25/27 on case study reproduction"
+    },
+    {
+      "sha": "704baa87c3",
+      "date": "2026-04-03",
+      "subject": "Add input validation with reject file for invalid records"
+    },
+    {
+      "sha": "a566a9ec77",
+      "date": "2026-04-03",
+      "subject": "Add social contribution deductions to payroll calculation"
+    },
+    {
+      "sha": "b4c6c665fe",
+      "date": "2026-04-03",
+      "subject": "Add COBOL payroll management system"
+    },
+    {
+      "sha": "22a3d0debe",
+      "date": "2026-04-02",
+      "subject": "add case-study-1  - COBOL payroll sample"
+    },
+    {
+      "sha": "0517d36443",
+      "date": "2026-04-02",
+      "subject": "Initial commit"
+    }
+  ],
+  "total_features_proxy": 43
+}

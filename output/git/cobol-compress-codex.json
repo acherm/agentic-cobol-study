@@ -1,0 +1,32 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compress-codex",
+  "has_git": true,
+  "commits": 1,
+  "commit_log": [
+    {
+      "sha": "f478e7fbfa3953089b4d402ba3aa2340b1dbd3ec",
+      "date": "2026-03-23T14:00:15+01:00",
+      "author": "Mathieu Acher",
+      "subject": "Initial import: COBPACK MVP1 with trust suite"
+    }
+  ],
+  "first_commit": "2026-03-23T14:00:15+01:00",
+  "last_commit": "2026-03-23T14:00:15+01:00",
+  "authors": {
+    "Mathieu Acher": 1
+  },
+  "churn": {
+    "files_changed_total": 28,
+    "insertions_total": 4318,
+    "deletions_total": 0,
+    "per_commit": [
+      {
+        "sha": "f478e7fbfa3953089b4d402ba3aa2340b1dbd3ec",
+        "date": "2026-03-23T14:00:15+01:00",
+        "files": 28,
+        "ins": 4318,
+        "del": 0
+      }
+    ]
+  }
+}

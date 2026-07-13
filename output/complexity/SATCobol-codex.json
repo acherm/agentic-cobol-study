@@ -1,0 +1,676 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/SATCobol-codex",
+  "aggregate": {
+    "num_files": 6,
+    "total_lines": 1934,
+    "code_lines": 1706,
+    "comment_lines": 5,
+    "sections": 3,
+    "paragraphs": 70,
+    "data_items": 22,
+    "max_nesting_any_file": 4,
+    "statements": {
+      "PERFORM": 146,
+      "IF": 147,
+      "EVALUATE": 10,
+      "CALL": 0,
+      "MOVE": 352,
+      "COMPUTE": 27,
+      "READ": 2,
+      "WRITE": 0,
+      "OPEN": 4,
+      "CLOSE": 2,
+      "ACCEPT": 7,
+      "DISPLAY": 49,
+      "GO TO": 0,
+      "EXIT": 78,
+      "STOP": 0,
+      "SET": 0,
+      "ADD": 23,
+      "SUBTRACT": 7,
+      "MULTIPLY": 1,
+      "DIVIDE": 2,
+      "STRING": 1,
+      "UNSTRING": 0,
+      "INSPECT": 2,
+      "SEARCH": 1,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 1,
+      "ENVIRONMENT": 1,
+      "DATA": 1,
+      "PROCEDURE": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "src/modules/parser.cpy",
+        "code_lines": 469
+      },
+      {
+        "file": "src/modules/search.cpy",
+        "code_lines": 377
+      },
+      {
+        "file": "src/modules/cnf.cpy",
+        "code_lines": 300
+      },
+      {
+        "file": "src/cobsat.cob",
+        "code_lines": 263
+      },
+      {
+        "file": "src/modules/propagate.cpy",
+        "code_lines": 193
+      },
+      {
+        "file": "src/modules/io.cpy",
+        "code_lines": 104
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 695,
+        "files_using": 6,
+        "constructs": {
+          "IF": 294,
+          "EVALUATE": 29,
+          "WHEN": 38,
+          "PERFORM": 178,
+          "EXIT": 78,
+          "GOBACK": 2,
+          "ELSE": 26,
+          "PERFORM_VARYING": 17,
+          "PERFORM_UNTIL": 29,
+          "CONTINUE": 4
+        }
+      },
+      "arithmetic": {
+        "total": 60,
+        "files_using": 5,
+        "constructs": {
+          "ADD": 23,
+          "COMPUTE": 27,
+          "SUBTRACT": 7,
+          "DIVIDE": 2,
+          "MULTIPLY": 1
+        }
+      },
+      "data_advanced": {
+        "total": 236,
+        "files_using": 1,
+        "constructs": {
+          "PIC_X": 38,
+          "PIC_9": 80,
+          "PIC_S9": 15,
+          "OCCURS": 22,
+          "USAGE_COMP_5": 81
+        }
+      },
+      "io_file": {
+        "total": 85,
+        "files_using": 6,
+        "constructs": {
+          "FD": 2,
+          "SELECT": 4,
+          "ASSIGN": 27,
+          "START": 37,
+          "LINE_SEQUENTIAL": 2,
+          "OPEN_INPUT": 3,
+          "READ": 4,
+          "CLOSE": 2,
+          "AT_END": 4
+        }
+      },
+      "string_ops": {
+        "total": 7,
+        "files_using": 2,
+        "constructs": {
+          "STRING": 2,
+          "DELIMITED_BY": 2,
+          "INSPECT": 2,
+          "REFERENCE_MOD": 1
+        }
+      },
+      "tables_search": {
+        "total": 29,
+        "files_using": 3,
+        "constructs": {
+          "SEARCH": 8,
+          "INITIALIZE": 21
+        }
+      },
+      "subprograms": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "copy_preproc": {
+        "total": 5,
+        "files_using": 1,
+        "constructs": {
+          "COPY": 5
+        }
+      },
+      "intrinsics": {
+        "total": 121,
+        "files_using": 6,
+        "constructs": {
+          "FUNCTION": 67,
+          "FUNCTION_TRIM": 52,
+          "FUNCTION_NUMVAL": 1,
+          "FUNCTION_LENGTH": 1
+        }
+      },
+      "misc": {
+        "total": 64,
+        "files_using": 6,
+        "constructs": {
+          "DISPLAY": 57,
+          "ACCEPT": 7
+        }
+      }
+    },
+    "mastery_score": 42,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.MULTIPLY",
+      "arithmetic.SUBTRACT",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.GOBACK",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.WHEN",
+      "copy_preproc.COPY",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_X",
+      "data_advanced.USAGE_COMP_5",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_LENGTH",
+      "intrinsics.FUNCTION_NUMVAL",
+      "intrinsics.FUNCTION_TRIM",
+      "io_file.ASSIGN",
+      "io_file.AT_END",
+      "io_file.CLOSE",
+      "io_file.FD",
+      "io_file.LINE_SEQUENTIAL",
+      "io_file.OPEN_INPUT",
+      "io_file.READ",
+      "io_file.SELECT",
+      "io_file.START",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.INSPECT",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.STRING",
+      "tables_search.INITIALIZE",
+      "tables_search.SEARCH"
+    ],
+    "categories_exercised": 9
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/cobsat.cob",
+      "total_lines": 280,
+      "code_lines": 263,
+      "comment_lines": 0,
+      "blank_lines": 17,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 3,
+      "paragraphs": 5,
+      "data_items": 22,
+      "statements": {
+        "PERFORM": 16,
+        "IF": 6,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 8,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 2,
+        "GO TO": 0,
+        "EXIT": 5,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 1,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 12,
+          "EVALUATE": 4,
+          "WHEN": 4,
+          "PERFORM": 16,
+          "EXIT": 5,
+          "GOBACK": 2
+        },
+        "arithmetic": {},
+        "data_advanced": {
+          "PIC_X": 38,
+          "PIC_9": 80,
+          "PIC_S9": 15,
+          "OCCURS": 22,
+          "USAGE_COMP_5": 81
+        },
+        "io_file": {
+          "FD": 2,
+          "SELECT": 2,
+          "ASSIGN": 4,
+          "START": 6,
+          "LINE_SEQUENTIAL": 2
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SEARCH": 2
+        },
+        "subprograms": {},
+        "copy_preproc": {
+          "COPY": 5
+        },
+        "intrinsics": {
+          "FUNCTION": 1,
+          "FUNCTION_TRIM": 1
+        },
+        "misc": {
+          "DISPLAY": 2
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/modules/propagate.cpy",
+      "total_lines": 222,
+      "code_lines": 193,
+      "comment_lines": 1,
+      "blank_lines": 28,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 6,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 12,
+        "IF": 21,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 66,
+        "COMPUTE": 1,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 1,
+        "GO TO": 0,
+        "EXIT": 7,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 3,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 42,
+          "ELSE": 8,
+          "EVALUATE": 5,
+          "WHEN": 4,
+          "PERFORM": 15,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 2,
+          "EXIT": 7
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "COMPUTE": 1
+        },
+        "data_advanced": {},
+        "io_file": {
+          "ASSIGN": 8,
+          "START": 1
+        },
+        "string_ops": {},
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2
+        },
+        "misc": {
+          "DISPLAY": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/modules/io.cpy",
+      "total_lines": 121,
+      "code_lines": 104,
+      "comment_lines": 1,
+      "blank_lines": 16,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 8,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 6,
+        "IF": 7,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 17,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 4,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 15,
+        "GO TO": 0,
+        "EXIT": 4,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 0,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 1,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 1,
+      "capabilities": {
+        "control_flow": {
+          "IF": 14,
+          "ELSE": 3,
+          "PERFORM": 7,
+          "PERFORM_VARYING": 1,
+          "PERFORM_UNTIL": 1,
+          "EXIT": 4
+        },
+        "arithmetic": {
+          "COMPUTE": 2
+        },
+        "data_advanced": {},
+        "io_file": {
+          "OPEN_INPUT": 3
+        },
+        "string_ops": {
+          "STRING": 2,
+          "DELIMITED_BY": 2
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 12,
+          "FUNCTION_TRIM": 12
+        },
+        "misc": {
+          "DISPLAY": 19
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/modules/cnf.cpy",
+      "total_lines": 334,
+      "code_lines": 300,
+      "comment_lines": 1,
+      "blank_lines": 33,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 12,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 15,
+        "IF": 24,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 89,
+        "COMPUTE": 10,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 8,
+        "GO TO": 0,
+        "EXIT": 7,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 8,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 2,
+      "capabilities": {
+        "control_flow": {
+          "IF": 48,
+          "ELSE": 8,
+          "EVALUATE": 4,
+          "WHEN": 4,
+          "PERFORM": 19,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 4,
+          "EXIT": 7
+        },
+        "arithmetic": {
+          "ADD": 8,
+          "COMPUTE": 10
+        },
+        "data_advanced": {},
+        "io_file": {
+          "ASSIGN": 4,
+          "START": 21
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SEARCH": 1,
+          "INITIALIZE": 21
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 8,
+          "FUNCTION_TRIM": 5
+        },
+        "misc": {
+          "DISPLAY": 8
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/modules/search.cpy",
+      "total_lines": 432,
+      "code_lines": 377,
+      "comment_lines": 1,
+      "blank_lines": 54,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 18,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 44,
+        "IF": 37,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 85,
+        "COMPUTE": 11,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 0,
+        "DISPLAY": 4,
+        "GO TO": 0,
+        "EXIT": 16,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 9,
+        "SUBTRACT": 7,
+        "MULTIPLY": 0,
+        "DIVIDE": 2,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 74,
+          "ELSE": 7,
+          "EVALUATE": 2,
+          "WHEN": 3,
+          "PERFORM": 60,
+          "PERFORM_VARYING": 9,
+          "PERFORM_UNTIL": 14,
+          "EXIT": 16
+        },
+        "arithmetic": {
+          "ADD": 9,
+          "SUBTRACT": 7,
+          "DIVIDE": 2,
+          "COMPUTE": 11
+        },
+        "data_advanced": {},
+        "io_file": {
+          "SELECT": 2,
+          "ASSIGN": 11,
+          "START": 6
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SEARCH": 5
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 6
+        },
+        "misc": {
+          "DISPLAY": 5
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/SATCobol-codex/src/modules/parser.cpy",
+      "total_lines": 545,
+      "code_lines": 469,
+      "comment_lines": 1,
+      "blank_lines": 75,
+      "divisions": {},
+      "sections": 0,
+      "paragraphs": 21,
+      "data_items": 0,
+      "statements": {
+        "PERFORM": 53,
+        "IF": 52,
+        "EVALUATE": 6,
+        "CALL": 0,
+        "MOVE": 87,
+        "COMPUTE": 3,
+        "READ": 2,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 2,
+        "ACCEPT": 7,
+        "DISPLAY": 19,
+        "GO TO": 0,
+        "EXIT": 39,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 3,
+        "SUBTRACT": 0,
+        "MULTIPLY": 1,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 2,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 4,
+      "capabilities": {
+        "control_flow": {
+          "IF": 104,
+          "EVALUATE": 14,
+          "WHEN": 23,
+          "PERFORM": 61,
+          "PERFORM_VARYING": 2,
+          "PERFORM_UNTIL": 8,
+          "EXIT": 39,
+          "CONTINUE": 4
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "MULTIPLY": 1,
+          "COMPUTE": 3
+        },
+        "data_advanced": {},
+        "io_file": {
+          "READ": 4,
+          "START": 3,
+          "CLOSE": 2,
+          "AT_END": 4
+        },
+        "string_ops": {
+          "INSPECT": 2,
+          "REFERENCE_MOD": 1
+        },
+        "tables_search": {},
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 38,
+          "FUNCTION_NUMVAL": 1,
+          "FUNCTION_TRIM": 34,
+          "FUNCTION_LENGTH": 1
+        },
+        "misc": {
+          "DISPLAY": 22,
+          "ACCEPT": 7
+        }
+      }
+    }
+  ]
+}

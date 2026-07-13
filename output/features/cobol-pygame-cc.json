@@ -1,0 +1,185 @@
+{
+  "project": "cobol-pygame-cc",
+  "spec_backlog": [],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "**Step 2**: Write an animated bouncing rectangle demo (`bounce.cob`) proving the framework works end-to-end at ~60fps with clean exit."
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "GnuCOBOL 3.2.0 (`cobc`) compiling free-format COBOL with `-fstatic-call` flag"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "SDL2 2.32.x as the graphics backend (built-in `SDL_LoadBMP` for BMP support, no extra deps)"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Singleton window/renderer pattern (COBOL never handles pointers)"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "COBOL-to-C interop: `CALL \"func\" USING BY VALUE / BY REFERENCE ... RETURNING var`"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "BINARY-LONG maps to C `int32_t` with no alignment padding"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "COBOL strings are space-padded PIC X(n), C side trims trailing spaces"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "GnuCOBOL's `-fstatic-call` flag generates direct C function calls instead of runtime dlsym lookups"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "GnuCOBOL generates `extern int funcname()` (K&R style) for ALL external functions, even void ones"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Level 78 constants in COBOL copybooks for symbolic event types and key codes"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Texture handle table: 1-based integer handles into a fixed 64-slot array"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "`pg_get_error` copies last error into COBOL buffer with space-padding"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Measure-and-sleep timing pattern for ~60fps"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "**`pygame_cobol.c`** - Core framework implementation (C/SDL2 wrapper)"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "**`pygame_cobol.cpy`** - COBOL copybook"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-07-08T12:42:24.272000+00:00",
+      "item": "Files and Code Sections:"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Portrait window (~480x640)"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Bird = colored rectangle at fixed horizontal position; gravity pulls down; Space, Up-arrow, or left mouse click flaps upward"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "3 pipes scrolling right-to-left at constant speed; each has a vertical gap; when pipe exits left edge, wraps to right with new randomized gap"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Ground strip at bottom that bird can crash into"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Collision detection: bird bounding box vs pipe segments (top/bottom) and ground \u2192 game over"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Score increments when bird passes a pipe; shown in window title (no in-window text needed)"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Game-over state: bird stops, input ignored for flap; Space/click resets to initial state with score 0"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "~60 FPS frame limiting"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Escape or window close exits cleanly"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Wire into build system: `make run-flappy`"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Must build from clean state with single `make` invocation"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "GnuCOBOL 3.2.0 (`cobc`) with `-x -free -fstatic-call` flags"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "SDL2 2.32.x as graphics backend on macOS ARM64"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "**CRITICAL**: All C functions MUST return `int` (not `void`) because GnuCOBOL's `-fstatic-call` emits `extern int name()` for ALL external symbols"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "A function call (DISPLAY, CALL, etc.) is needed before `PERFORM ... UNTIL` if preceded by PERFORM returns from paragraphs that used cob_intr_trim"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "BINARY-LONG maps to C `int32_t`; PIC X(n) strings passed BY REFERENCE with length BY VALUE"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Singleton window/renderer pattern (COBOL never handles pointers)"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "COBOL strings are space-padded; C side trims trailing spaces automatically"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "cobc compiles generated C at -O0 by default (no compiler optimization issues)"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Measure-and-sleep timing pattern for ~60fps (pg_get_ticks before/after frame, sleep remaining ms to hit 16ms target)"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Primary Request and Intent:"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Key Technical Concepts:"
+    },
+    {
+      "ts": "2026-07-08T14:35:48.507000+00:00",
+      "item": "Files and Code Sections:"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "b9482aa7f3",
+      "date": "2026-07-08",
+      "subject": "Add Flappy Bird clone and rewrite README for fresh users"
+    },
+    {
+      "sha": "95e7034e50",
+      "date": "2026-07-08",
+      "subject": "Add pygame-style graphics framework for GnuCOBOL"
+    }
+  ],
+  "total_features_proxy": 41
+}

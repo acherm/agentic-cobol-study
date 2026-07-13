@@ -1,0 +1,32 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/chess-cobol-cc",
+  "has_git": true,
+  "commits": 1,
+  "commit_log": [
+    {
+      "sha": "95aa4b3c6ee88bf17f840cbe1bc75cd2d12497da",
+      "date": "2026-05-04T12:30:24+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+    }
+  ],
+  "first_commit": "2026-05-04T12:30:24+02:00",
+  "last_commit": "2026-05-04T12:30:24+02:00",
+  "authors": {
+    "Mathieu Acher": 1
+  },
+  "churn": {
+    "files_changed_total": 48,
+    "insertions_total": 30912,
+    "deletions_total": 0,
+    "per_commit": [
+      {
+        "sha": "95aa4b3c6ee88bf17f840cbe1bc75cd2d12497da",
+        "date": "2026-05-04T12:30:24+02:00",
+        "files": 48,
+        "ins": 30912,
+        "del": 0
+      }
+    ]
+  }
+}

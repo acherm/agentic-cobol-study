@@ -1,0 +1,450 @@
+{
+  "COBOL-chess": {
+    "signals": {
+      "active_hours": 4.98,
+      "span_days": 38,
+      "user_prompts": 26,
+      "redirect_bug_prompts": 10,
+      "tool_calls": 1935,
+      "n_turns": 5640,
+      "error_events": 66,
+      "error_rate": 0.034,
+      "fix_cycles": 6,
+      "fix_time_share": 0.024,
+      "tool_calls_per_prompt": 74.4,
+      "user_interventions_per_hr": 5.22
+    },
+    "ranks": {
+      "active_hours": 13.0,
+      "span_days": 16.0,
+      "user_prompts": 12.0,
+      "redirect_bug_prompts": 14.0,
+      "error_rate": 8.0,
+      "fix_cycles": 13.0,
+      "fix_time_share": 9.0
+    },
+    "mean_rank": 12.14,
+    "index": 0.743,
+    "label": "High"
+  },
+  "COBOL-pygame": {
+    "signals": {
+      "active_hours": 0.07,
+      "span_days": 0,
+      "user_prompts": 3,
+      "redirect_bug_prompts": 1,
+      "tool_calls": 31,
+      "n_turns": 97,
+      "error_events": 3,
+      "error_rate": 0.097,
+      "fix_cycles": 3,
+      "fix_time_share": 0.051,
+      "tool_calls_per_prompt": 10.3,
+      "user_interventions_per_hr": 42.19
+    },
+    "ranks": {
+      "active_hours": 2.0,
+      "span_days": 3.5,
+      "user_prompts": 2.0,
+      "redirect_bug_prompts": 5.0,
+      "error_rate": 12.0,
+      "fix_cycles": 9.0,
+      "fix_time_share": 12.0
+    },
+    "mean_rank": 6.5,
+    "index": 0.367,
+    "label": "Medium"
+  },
+  "SATCobol-cc": {
+    "signals": {
+      "active_hours": 1.24,
+      "span_days": 1,
+      "user_prompts": 8,
+      "redirect_bug_prompts": 0,
+      "tool_calls": 360,
+      "n_turns": 316,
+      "error_events": 2,
+      "error_rate": 0.017,
+      "fix_cycles": 1,
+      "fix_time_share": 0.001,
+      "tool_calls_per_prompt": 45.0,
+      "user_interventions_per_hr": 6.48
+    },
+    "ranks": {
+      "active_hours": 7.0,
+      "span_days": 7.5,
+      "user_prompts": 3.0,
+      "redirect_bug_prompts": 2.0,
+      "error_rate": 4.0,
+      "fix_cycles": 4.5,
+      "fix_time_share": 3.5
+    },
+    "mean_rank": 4.5,
+    "index": 0.233,
+    "label": "Low"
+  },
+  "SATCobol-codex": {
+    "signals": {
+      "active_hours": 0.76,
+      "span_days": 0,
+      "user_prompts": 15,
+      "redirect_bug_prompts": 0,
+      "tool_calls": 508,
+      "n_turns": 620,
+      "error_events": 26,
+      "error_rate": 0.139,
+      "fix_cycles": 3,
+      "fix_time_share": 0.07,
+      "tool_calls_per_prompt": 33.9,
+      "user_interventions_per_hr": 19.64
+    },
+    "ranks": {
+      "active_hours": 5.0,
+      "span_days": 3.5,
+      "user_prompts": 7.0,
+      "redirect_bug_prompts": 2.0,
+      "error_rate": 13.0,
+      "fix_cycles": 9.0,
+      "fix_time_share": 13.5
+    },
+    "mean_rank": 7.57,
+    "index": 0.438,
+    "label": "Medium"
+  },
+  "chess-cobol-cc": {
+    "signals": {
+      "active_hours": 15.52,
+      "span_days": 17,
+      "user_prompts": 47,
+      "redirect_bug_prompts": 3,
+      "tool_calls": 1156,
+      "n_turns": 3023,
+      "error_events": 32,
+      "error_rate": 0.028,
+      "fix_cycles": 5,
+      "fix_time_share": 0.003,
+      "tool_calls_per_prompt": 24.6,
+      "user_interventions_per_hr": 3.03
+    },
+    "ranks": {
+      "active_hours": 15.0,
+      "span_days": 12.0,
+      "user_prompts": 14.0,
+      "redirect_bug_prompts": 7.5,
+      "error_rate": 5.0,
+      "fix_cycles": 11.5,
+      "fix_time_share": 6.0
+    },
+    "mean_rank": 10.14,
+    "index": 0.61,
+    "label": "High"
+  },
+  "cobol-compiler-cc": {
+    "signals": {
+      "active_hours": 32.51,
+      "span_days": 11,
+      "user_prompts": 98,
+      "redirect_bug_prompts": 14,
+      "tool_calls": 3740,
+      "n_turns": 10225,
+      "error_events": 325,
+      "error_rate": 0.087,
+      "fix_cycles": 42,
+      "fix_time_share": 0.032,
+      "tool_calls_per_prompt": 38.2,
+      "user_interventions_per_hr": 3.01
+    },
+    "ranks": {
+      "active_hours": 16.0,
+      "span_days": 11.0,
+      "user_prompts": 16.0,
+      "redirect_bug_prompts": 15.5,
+      "error_rate": 11.0,
+      "fix_cycles": 15.0,
+      "fix_time_share": 10.0
+    },
+    "mean_rank": 13.5,
+    "index": 0.833,
+    "label": "Very-High"
+  },
+  "cobol-compiler-codex": {
+    "signals": {
+      "active_hours": 10.97,
+      "span_days": 4,
+      "user_prompts": 97,
+      "redirect_bug_prompts": 5,
+      "tool_calls": 5370,
+      "n_turns": 15631,
+      "error_events": 1072,
+      "error_rate": 0.2,
+      "fix_cycles": 152,
+      "fix_time_share": 0.039,
+      "tool_calls_per_prompt": 55.4,
+      "user_interventions_per_hr": 8.84
+    },
+    "ranks": {
+      "active_hours": 14.0,
+      "span_days": 9.0,
+      "user_prompts": 15.0,
+      "redirect_bug_prompts": 11.0,
+      "error_rate": 16.0,
+      "fix_cycles": 16.0,
+      "fix_time_share": 11.0
+    },
+    "mean_rank": 13.14,
+    "index": 0.81,
+    "label": "Very-High"
+  },
+  "cobol-compress-cobolcc": {
+    "signals": {
+      "active_hours": 0.02,
+      "span_days": 1,
+      "user_prompts": 1,
+      "redirect_bug_prompts": 0,
+      "tool_calls": 136,
+      "n_turns": 4,
+      "error_events": 0,
+      "error_rate": 0.0,
+      "fix_cycles": 0,
+      "fix_time_share": 0.0,
+      "tool_calls_per_prompt": 136.0,
+      "user_interventions_per_hr": 58.06
+    },
+    "ranks": {
+      "active_hours": 1.0,
+      "span_days": 7.5,
+      "user_prompts": 1.0,
+      "redirect_bug_prompts": 2.0,
+      "error_rate": 1.0,
+      "fix_cycles": 1.5,
+      "fix_time_share": 1.5
+    },
+    "mean_rank": 2.21,
+    "index": 0.081,
+    "label": "Low"
+  },
+  "cobol-compress-codex": {
+    "signals": {
+      "active_hours": 0.92,
+      "span_days": 34,
+      "user_prompts": 10,
+      "redirect_bug_prompts": 3,
+      "tool_calls": 263,
+      "n_turns": 802,
+      "error_events": 38,
+      "error_rate": 0.144,
+      "fix_cycles": 5,
+      "fix_time_share": 0.004,
+      "tool_calls_per_prompt": 26.3,
+      "user_interventions_per_hr": 10.92
+    },
+    "ranks": {
+      "active_hours": 6.0,
+      "span_days": 15.0,
+      "user_prompts": 4.0,
+      "redirect_bug_prompts": 7.5,
+      "error_rate": 14.0,
+      "fix_cycles": 11.5,
+      "fix_time_share": 7.0
+    },
+    "mean_rank": 9.29,
+    "index": 0.552,
+    "label": "High"
+  },
+  "cobol-doom-cc": {
+    "signals": {
+      "active_hours": 3.24,
+      "span_days": 0,
+      "user_prompts": 20,
+      "redirect_bug_prompts": 4,
+      "tool_calls": 152,
+      "n_turns": 506,
+      "error_events": 1,
+      "error_rate": 0.007,
+      "fix_cycles": 1,
+      "fix_time_share": 0.007,
+      "tool_calls_per_prompt": 7.6,
+      "user_interventions_per_hr": 6.18
+    },
+    "ranks": {
+      "active_hours": 12.0,
+      "span_days": 3.5,
+      "user_prompts": 10.0,
+      "redirect_bug_prompts": 9.5,
+      "error_rate": 2.0,
+      "fix_cycles": 4.5,
+      "fix_time_share": 8.0
+    },
+    "mean_rank": 7.07,
+    "index": 0.405,
+    "label": "Medium"
+  },
+  "cobol-doom-codex": {
+    "signals": {
+      "active_hours": 2.03,
+      "span_days": 0,
+      "user_prompts": 32,
+      "redirect_bug_prompts": 4,
+      "tool_calls": 631,
+      "n_turns": 1920,
+      "error_events": 21,
+      "error_rate": 0.033,
+      "fix_cycles": 3,
+      "fix_time_share": 0.002,
+      "tool_calls_per_prompt": 19.7,
+      "user_interventions_per_hr": 15.78
+    },
+    "ranks": {
+      "active_hours": 9.0,
+      "span_days": 3.5,
+      "user_prompts": 13.0,
+      "redirect_bug_prompts": 9.5,
+      "error_rate": 6.5,
+      "fix_cycles": 9.0,
+      "fix_time_share": 5.0
+    },
+    "mean_rank": 7.93,
+    "index": 0.462,
+    "label": "Medium"
+  },
+  "cobol-jb-cc": {
+    "signals": {
+      "active_hours": 1.95,
+      "span_days": 26,
+      "user_prompts": 21,
+      "redirect_bug_prompts": 7,
+      "tool_calls": 136,
+      "n_turns": 415,
+      "error_events": 7,
+      "error_rate": 0.051,
+      "fix_cycles": 1,
+      "fix_time_share": 0.07,
+      "tool_calls_per_prompt": 6.5,
+      "user_interventions_per_hr": 10.75
+    },
+    "ranks": {
+      "active_hours": 8.0,
+      "span_days": 13.5,
+      "user_prompts": 11.0,
+      "redirect_bug_prompts": 13.0,
+      "error_rate": 10.0,
+      "fix_cycles": 4.5,
+      "fix_time_share": 13.5
+    },
+    "mean_rank": 10.5,
+    "index": 0.633,
+    "label": "High"
+  },
+  "cobol-jb-codex": {
+    "signals": {
+      "active_hours": 0.51,
+      "span_days": 26,
+      "user_prompts": 19,
+      "redirect_bug_prompts": 6,
+      "tool_calls": 199,
+      "n_turns": 638,
+      "error_events": 32,
+      "error_rate": 0.161,
+      "fix_cycles": 7,
+      "fix_time_share": 0.119,
+      "tool_calls_per_prompt": 10.5,
+      "user_interventions_per_hr": 37.15
+    },
+    "ranks": {
+      "active_hours": 3.0,
+      "span_days": 13.5,
+      "user_prompts": 9.0,
+      "redirect_bug_prompts": 12.0,
+      "error_rate": 15.0,
+      "fix_cycles": 14.0,
+      "fix_time_share": 16.0
+    },
+    "mean_rank": 11.79,
+    "index": 0.719,
+    "label": "High"
+  },
+  "cobol-pygame-cc": {
+    "signals": {
+      "active_hours": 2.11,
+      "span_days": 0,
+      "user_prompts": 17,
+      "redirect_bug_prompts": 14,
+      "tool_calls": 153,
+      "n_turns": 434,
+      "error_events": 5,
+      "error_rate": 0.033,
+      "fix_cycles": 2,
+      "fix_time_share": 0.078,
+      "tool_calls_per_prompt": 9.0,
+      "user_interventions_per_hr": 8.07
+    },
+    "ranks": {
+      "active_hours": 11.0,
+      "span_days": 3.5,
+      "user_prompts": 8.0,
+      "redirect_bug_prompts": 15.5,
+      "error_rate": 6.5,
+      "fix_cycles": 7.0,
+      "fix_time_share": 15.0
+    },
+    "mean_rank": 9.5,
+    "index": 0.567,
+    "label": "High"
+  },
+  "cobol-tictactoe": {
+    "signals": {
+      "active_hours": 2.07,
+      "span_days": 6,
+      "user_prompts": 12,
+      "redirect_bug_prompts": 1,
+      "tool_calls": 67,
+      "n_turns": 206,
+      "error_events": 1,
+      "error_rate": 0.015,
+      "fix_cycles": 0,
+      "fix_time_share": 0.0,
+      "tool_calls_per_prompt": 5.6,
+      "user_interventions_per_hr": 5.81
+    },
+    "ranks": {
+      "active_hours": 10.0,
+      "span_days": 10.0,
+      "user_prompts": 6.0,
+      "redirect_bug_prompts": 5.0,
+      "error_rate": 3.0,
+      "fix_cycles": 1.5,
+      "fix_time_share": 1.5
+    },
+    "mean_rank": 5.29,
+    "index": 0.286,
+    "label": "Medium"
+  },
+  "game15-cobol-codex": {
+    "signals": {
+      "active_hours": 0.55,
+      "span_days": 0,
+      "user_prompts": 11,
+      "redirect_bug_prompts": 1,
+      "tool_calls": 173,
+      "n_turns": 533,
+      "error_events": 6,
+      "error_rate": 0.035,
+      "fix_cycles": 1,
+      "fix_time_share": 0.001,
+      "tool_calls_per_prompt": 15.7,
+      "user_interventions_per_hr": 19.96
+    },
+    "ranks": {
+      "active_hours": 4.0,
+      "span_days": 3.5,
+      "user_prompts": 5.0,
+      "redirect_bug_prompts": 5.0,
+      "error_rate": 9.0,
+      "fix_cycles": 4.5,
+      "fix_time_share": 3.5
+    },
+    "mean_rank": 4.93,
+    "index": 0.262,
+    "label": "Medium"
+  }
+}

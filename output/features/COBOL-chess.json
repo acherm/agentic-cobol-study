@@ -1,0 +1,1687 @@
+{
+  "project": "COBOL-chess",
+  "spec_backlog": [
+    {
+      "id": "F-001",
+      "title": "Directory structure (`src/`, `copybooks/`, `tools/`, `tests/`, `openings/`, `bin/`, `results/`)",
+      "evidence": "repo layout",
+      "phase": "Phase 1: Project Scaffold",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-002",
+      "title": "Makefile with `cobc` build, `perft`, `uci-smoke`, `clean`, `rebuild` targets",
+      "evidence": "`Makefile:1\u2013105`",
+      "phase": "Phase 1: Project Scaffold",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-003",
+      "title": "`.gitignore` for binaries, results, caches",
+      "evidence": "`.gitignore`",
+      "phase": "Phase 1: Project Scaffold",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-004",
+      "title": "`README.md` with build/test/usage docs",
+      "evidence": "`README.md`",
+      "phase": "Phase 1: Project Scaffold",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-010",
+      "title": "0x88 mailbox board representation (128-element array, off-board detection via `MOD(sq,16) <= 7`)",
+      "evidence": "`copybooks/types.cpy:3\u20134`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-011",
+      "title": "Piece encoding (EMPTY=0, WP=1..BK=12), color constants (WHITE=0, BLACK=1)",
+      "evidence": "`copybooks/constants.cpy:5\u201317`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-012",
+      "title": "Castling bitmask encoding (WK=1, WQ=2, BK=4, BQ=8)",
+      "evidence": "`copybooks/constants.cpy:19\u201322`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-013",
+      "title": "Move flag bitmask (CAPTURE=1, EP=2, CASTLE=4, PROMOTION=8, PAWN-DOUBLE=16)",
+      "evidence": "`copybooks/constants.cpy:24\u201328`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-014",
+      "title": "Move record structure (from, to, promo, flags, score)",
+      "evidence": "`copybooks/types.cpy:26\u201331`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-015",
+      "title": "Move list (count + 256-entry array)",
+      "evidence": "`copybooks/types.cpy:33\u201335`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-016",
+      "title": "Game state structure: board, side, castling, EP sq, halfmove, fullmove, king sqs, ply, Zobrist key",
+      "evidence": "`copybooks/types.cpy:1\u201313`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-017",
+      "title": "Undo stack: 256-entry stack with captured/moved piece, castling, EP, halfmove, fullmove, king sq, key",
+      "evidence": "`copybooks/types.cpy:14\u201323`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-018",
+      "title": "Movement offset tables: knight (8), king (8), bishop (4), rook (4); runtime-initialized",
+      "evidence": "`copybooks/offsets.cpy:1\u20136`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-019",
+      "title": "Board initialization: clear all squares to EMPTY, reset state",
+      "evidence": "`src/board.cob:1\u201330`",
+      "phase": "Phase 2: Core Engine \u2014 Board & Data Model",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-020",
+      "title": "FEN string parsing via `UNSTRING ... DELIMITED BY SPACE` (6 fields)",
+      "evidence": "`src/fen.cob:49\u201351`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-021",
+      "title": "Piece placement: rank-by-rank traversal, char-to-piece mapping (12 types)",
+      "evidence": "`src/fen.cob:58\u201396`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-022",
+      "title": "Side-to-move parsing (`w`/`b`)",
+      "evidence": "`src/fen.cob:98\u2013108`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-023",
+      "title": "Castling rights parsing (`KQkq` \u2192 bitmask, `-` for none)",
+      "evidence": "`src/fen.cob:110\u2013127`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-024",
+      "title": "En passant square parsing (algebraic \u2192 0x88 index)",
+      "evidence": "`src/fen.cob:129\u2013156`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-025",
+      "title": "Halfmove/fullmove clock parsing via `NUMVAL`",
+      "evidence": "`src/fen.cob:158\u2013160`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-026",
+      "title": "King square detection during placement",
+      "evidence": "`src/fen.cob:88\u201393`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-027",
+      "title": "FEN validation with error status return",
+      "evidence": "`src/fen.cob:53\u201356, 77\u201384`",
+      "phase": "Phase 3: Core Engine \u2014 FEN Parsing",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-030",
+      "title": "Square-attacked-by-side query",
+      "evidence": "`src/attack.cob:1\u2013164`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-031",
+      "title": "Pawn attack detection (white/black pawn diagonal offsets)",
+      "evidence": "`src/attack.cob:65\u201395`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-032",
+      "title": "Knight attack detection (8 offsets)",
+      "evidence": "`src/attack.cob:97\u2013110`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-033",
+      "title": "King attack detection (8 offsets)",
+      "evidence": "`src/attack.cob:112\u2013125`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-034",
+      "title": "Bishop/queen diagonal ray attack detection",
+      "evidence": "`src/attack.cob:127\u2013142`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-035",
+      "title": "Rook/queen orthogonal ray attack detection",
+      "evidence": "`src/attack.cob:144\u2013159`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-036",
+      "title": "0x88 off-board check for ray/step moves",
+      "evidence": "`src/attack.cob:100, 115, 131, 148`",
+      "phase": "Phase 4: Core Engine \u2014 Attack Detection",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-040",
+      "title": "Full legal move generator (iterates 0x88 board, dispatches by piece)",
+      "evidence": "`src/movegen.cob:42\u201355`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-041",
+      "title": "White pawn single push (+16 to empty)",
+      "evidence": "`src/movegen.cob:104\u2013105, 123\u2013146`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-042",
+      "title": "Black pawn single push (-16 to empty)",
+      "evidence": "`src/movegen.cob:117\u2013118, 148\u2013171`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-043",
+      "title": "White pawn double push (+32 from rank 1, both squares empty)",
+      "evidence": "`src/movegen.cob:134\u2013141`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-044",
+      "title": "Black pawn double push (-32 from rank 6)",
+      "evidence": "`src/movegen.cob:159\u2013166`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-045",
+      "title": "Pawn captures (diagonal, enemy piece or EP square)",
+      "evidence": "`src/movegen.cob:96\u201399, 109\u2013112, 173\u2013217`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-046",
+      "title": "En passant capture (detect `TO-SQ = GS-EP-SQ`, flag EP+CAPTURE)",
+      "evidence": "`src/movegen.cob:175\u2013178, 198\u2013201`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-047",
+      "title": "Pawn promotion (all 4 pieces: Q/R/B/N) on push and capture",
+      "evidence": "`src/movegen.cob:415\u2013429`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-048",
+      "title": "Promotion pushes included in captures-only mode (quiescence)",
+      "evidence": "`src/movegen.cob:103, 116`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-049",
+      "title": "Knight moves (8 step offsets)",
+      "evidence": "`src/movegen.cob:219\u2013224, 443\u2013450`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-050",
+      "title": "Bishop moves (4 sliding directions)",
+      "evidence": "`src/movegen.cob:226\u2013231, 461\u2013464`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-051",
+      "title": "Rook moves (4 sliding directions)",
+      "evidence": "`src/movegen.cob:233\u2013238, 466\u2013469`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-052",
+      "title": "Queen moves (union of bishop + rook directions)",
+      "evidence": "`src/movegen.cob:240\u2013249`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-053",
+      "title": "King moves (8 step offsets)",
+      "evidence": "`src/movegen.cob:251\u2013255, 452\u2013459`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-054",
+      "title": "Sliding piece ray traversal (continue until off-board or blocked; capture blocker)",
+      "evidence": "`src/movegen.cob:290\u2013319`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-055",
+      "title": "Castling: White king-side (e1g1), queen-side (e1c1)",
+      "evidence": "`src/movegen.cob:328\u2013365`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-056",
+      "title": "Castling: Black king-side (e8g8), queen-side (e8c8)",
+      "evidence": "`src/movegen.cob:372\u2013409`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-057",
+      "title": "Castling legality: empty path, rook present, no attacked squares",
+      "evidence": "`src/movegen.cob:330\u2013345, 347\u2013365, 374\u2013389, 391\u2013409`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-058",
+      "title": "Castling suppressed in captures-only mode",
+      "evidence": "`src/movegen.cob:257\u2013259`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-059",
+      "title": "Captures-only mode for quiescence search",
+      "evidence": "`src/movegen.cob:267, 296`",
+      "phase": "Phase 5: Core Engine \u2014 Move Generation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-060",
+      "title": "Make move: save full undo state to stack",
+      "evidence": "`src/makemove.cob:73\u201385`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-061",
+      "title": "Flag decoding (bitmask \u2192 EP, CASTLE, PROMOTION, PAWN-DOUBLE)",
+      "evidence": "`src/makemove.cob:335\u2013345`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-062",
+      "title": "En passant execution: remove captured pawn behind target",
+      "evidence": "`src/makemove.cob:119\u2013136`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-063",
+      "title": "Castling rook movement (4 types: h1\u2192f1, a1\u2192d1, h8\u2192f8, a8\u2192d8)",
+      "evidence": "`src/makemove.cob:138\u2013171, 368\u2013397`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-064",
+      "title": "Promotion execution: replace pawn with promoted piece",
+      "evidence": "`src/makemove.cob:173\u2013221, 347\u2013366`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-065",
+      "title": "Castling rights update on king move",
+      "evidence": "`src/makemove.cob:399\u2013406, 445\u2013453`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-066",
+      "title": "Castling rights update on rook move/capture",
+      "evidence": "`src/makemove.cob:408\u2013442`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-067",
+      "title": "Halfmove clock: reset on pawn/capture, increment otherwise",
+      "evidence": "`src/makemove.cob:183\u2013196`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-068",
+      "title": "EP square set on double pawn push",
+      "evidence": "`src/makemove.cob:239\u2013246`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-069",
+      "title": "Fullmove increment after Black's move",
+      "evidence": "`src/makemove.cob:248\u2013251`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-070",
+      "title": "Side toggle + ply increment",
+      "evidence": "`src/makemove.cob:253\u2013255`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-071",
+      "title": "King square tracking",
+      "evidence": "`src/makemove.cob:228\u2013234`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-072",
+      "title": "Legality check: call ATTACK on own king; undo if in check",
+      "evidence": "`src/makemove.cob:280\u2013294`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-073",
+      "title": "Unmake move: full state restore from undo stack",
+      "evidence": "`src/makemove.cob:529\u2013581`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-074",
+      "title": "Unmake: EP capture undo, castling rook undo",
+      "evidence": "`src/makemove.cob:557\u2013613`",
+      "phase": "Phase 6: Core Engine \u2014 Make/Unmake Move",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-080",
+      "title": "Recursive perft node counter (`PROGRAM-ID. PERFT RECURSIVE`)",
+      "evidence": "`src/perft.cob:1\u201366`",
+      "phase": "Phase 7: Core Engine \u2014 Perft",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-081",
+      "title": "`LOCAL-STORAGE SECTION` for per-frame move data (recursion-safe)",
+      "evidence": "`src/perft.cob:24\u201341`",
+      "phase": "Phase 7: Core Engine \u2014 Perft",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-090",
+      "title": "Material values: P=100, N=320, B=330, R=500, Q=900",
+      "evidence": "`src/eval.cob:115\u2013122`",
+      "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-091",
+      "title": "Side-relative scoring (negate for Black)",
+      "evidence": "`src/eval.cob:379\u2013383`",
+      "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-092",
+      "title": "0x88 board traversal with off-board skip",
+      "evidence": "`src/eval.cob:72\u201373, 103\u2013104`",
+      "phase": "Phase 8: Core Engine \u2014 Initial Evaluation",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-100",
+      "title": "Iterative deepening (depth 1 to max)",
+      "evidence": "`src/search.cob:134`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-101",
+      "title": "Basic alpha-beta (negamax framework)",
+      "evidence": "`src/search.cob:540, 758\u2013764`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-102",
+      "title": "Quiescence search (captures + promotions only, recursive)",
+      "evidence": "`src/search.cob:1108\u20131362`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-103",
+      "title": "Stand-pat evaluation in quiescence",
+      "evidence": "`src/search.cob:1198\u20131205`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-104",
+      "title": "Checkmate detection (legal count = 0, in check)",
+      "evidence": "`src/search.cob:837\u2013839`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-105",
+      "title": "Stalemate detection (legal count = 0, not in check)",
+      "evidence": "`src/search.cob:840\u2013842`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-106",
+      "title": "Root move generation + PV output",
+      "evidence": "`src/search.cob:216\u2013217, 192\u2013201`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-107",
+      "title": "UCI `info depth ... nodes ... score cp ... pv ...` output",
+      "evidence": "`src/search.cob:192\u2013201`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-108",
+      "title": "Node counting (`SS-NODES`)",
+      "evidence": "`src/search.cob:113, 546`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-109",
+      "title": "`PROGRAM-ID. ALPHABETA RECURSIVE` + `LOCAL-STORAGE`",
+      "evidence": "`src/search.cob:410 ff.`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-110",
+      "title": "`PROGRAM-ID. QUIESCE RECURSIVE` + `LOCAL-STORAGE`",
+      "evidence": "`src/search.cob:1108 ff.`",
+      "phase": "Phase 9: Core Engine \u2014 Initial Search",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-120",
+      "title": "UCI command loop (`ACCEPT IN-LINE`, dispatch by keyword)",
+      "evidence": "`src/main.cob:119\u2013146`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-121",
+      "title": "`uci` \u2192 id + options + `uciok`",
+      "evidence": "`src/main.cob:123\u2013131`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-122",
+      "title": "`isready` \u2192 `readyok`",
+      "evidence": "`src/main.cob:132\u2013133`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-123",
+      "title": "`ucinewgame` \u2192 reset heuristics",
+      "evidence": "`src/main.cob:134\u2013138`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-124",
+      "title": "`position startpos [moves ...]`",
+      "evidence": "`src/main.cob:139\u2013140, 154\u2013180`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-125",
+      "title": "`position fen <fen> [moves ...]`",
+      "evidence": "`src/main.cob:182\u2013238`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-126",
+      "title": "`go depth <N>` (fixed depth)",
+      "evidence": "`src/main.cob:308\u2013310`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-127",
+      "title": "`go movetime <ms>` (fixed time)",
+      "evidence": "`src/main.cob:311\u2013314`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-128",
+      "title": "`stop`, `quit`",
+      "evidence": "`src/main.cob:143\u2013146`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-129",
+      "title": "`bestmove <uci-move>` output after search",
+      "evidence": "`src/main.cob:339\u2013340`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-130",
+      "title": "Move-to-UCI string conversion (e.g. `e2e4`, `a7a8q`)",
+      "evidence": "`src/uci.cob:1\u201362`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-131",
+      "title": "Move application from UCI notation (generate all legal, match string, apply)",
+      "evidence": "`src/main.cob:269\u2013289`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-132",
+      "title": "Token parser for input lines (whitespace-delimited, up to 4096 chars)",
+      "evidence": "`src/main.cob:249\u2013267`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-133",
+      "title": "`--perft-startpos <depth>` CLI mode",
+      "evidence": "`src/main.cob:85\u201397`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-134",
+      "title": "`--perft <fen> <depth>` CLI mode",
+      "evidence": "`src/main.cob:99\u2013111`",
+      "phase": "Phase 10: Core Engine \u2014 UCI Protocol",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-140",
+      "title": "Wall-clock time in centiseconds via `ACCEPT FROM DATE/TIME` + `INTEGER-OF-DATE`",
+      "evidence": "`src/time.cob:1\u201349`",
+      "phase": "Phase 11: Core Engine \u2014 Time Utility",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-141",
+      "title": "Date-to-days caching for performance",
+      "evidence": "`src/time.cob:19\u201324`",
+      "phase": "Phase 11: Core Engine \u2014 Time Utility",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-150",
+      "title": "Perft test cases: 4 positions (startpos, kiwipete, EP-edge, promotions), depths 1\u20135",
+      "evidence": "`tests/perft_cases.json`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-151",
+      "title": "Perft checker script: runs `cobochess --perft`, compares node counts",
+      "evidence": "`tools/perft_check.py`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-152",
+      "title": "UCI smoke test: sends `uci/isready/position/go depth 3/quit`, verifies responses",
+      "evidence": "`tools/uci_smoke.sh`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-153",
+      "title": "Elo match runner: orchestrates cutechess-cli with Stockfish strength configs, TC, books",
+      "evidence": "`tools/elo_run.py`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-154",
+      "title": "Elo calculator: PGN parser, Elo estimate with 95% Wilson CI",
+      "evidence": "`tools/elo_calc.py`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-155",
+      "title": "Opening book (EPD format, 4 entries from startpos)",
+      "evidence": "`openings/book.epd`",
+      "phase": "Phase 12: Test Suite & Tooling (initial)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-160",
+      "title": "Fix regex character range in PGN result parsing",
+      "evidence": "`tools/elo_calc.py`",
+      "phase": "Phase 13: Elo Calc Bug Fixes",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-161",
+      "title": "Per-game White/Black perspective tracking for correct W/D/L attribution",
+      "evidence": "`tools/elo_calc.py`",
+      "phase": "Phase 13: Elo Calc Bug Fixes",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-170",
+      "title": "UCI input line buffer enlarged from `PIC X(512)` to `PIC X(4096)`",
+      "evidence": "`src/main.cob:25`",
+      "phase": "Phase 14: UCI Buffer Fix",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-180",
+      "title": "Piece-square tables in eval (knight/bishop centralization, pawn advancement with file preference, queen mild centralization)",
+      "evidence": "`src/eval.cob:161\u2013166, 207\u2013211, 234\u2013236`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-181",
+      "title": "MVV-LVA capture ordering: `100000 + victim\u00d710 \u2212 attacker`",
+      "evidence": "`src/search.cob:282\u2013371, 912\u20131009`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-182",
+      "title": "Killer moves: 2 slots per ply (256 plies), +90000/+80000 ordering bonus",
+      "evidence": "`copybooks/searchstate.cpy:9\u201318`, `src/search.cob:993\u2013999, 1046\u20131070`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-183",
+      "title": "History heuristic: 16384-entry table (from\u00d7128+to), depth\u00b2 bonus on cutoff, halving on overflow",
+      "evidence": "`copybooks/searchstate.cpy:19`, `src/search.cob:1001\u20131002, 1072\u20131078`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-184",
+      "title": "In-check extensions: +1 ply when side-to-move king is in check",
+      "evidence": "`src/search.cob:608\u2013611`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-185",
+      "title": "Root promotion bonus (+80000 + piece value)",
+      "evidence": "`src/search.cob:305\u2013316`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-186",
+      "title": "Root castling bonus (+500)",
+      "evidence": "`src/search.cob:318\u2013321`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-187",
+      "title": "Selection sort (pick-best) for move ordering at root, inner nodes, and quiescence",
+      "evidence": "`src/search.cob:373\u2013406, 1011\u20131024, 1327\u20131360`",
+      "phase": "Phase 15: Search Improvements \u2014 Move Ordering & Extensions",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-200",
+      "title": "Zobrist hash tables (EXTERNAL shared singleton across compilation units)",
+      "evidence": "`copybooks/hash.cpy:6`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-201",
+      "title": "LCG PRNG for hash key generation (multiplier=1103515245, increment=12345, modulus=2\u00b3\u00b9\u22121)",
+      "evidence": "`copybooks/hash.cpy:2\u20134`, `src/fen.cob:199\u2013205`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-202",
+      "title": "Piece-square keys: 12 pieces \u00d7 128 squares",
+      "evidence": "`copybooks/hash.cpy:9\u201310`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-203",
+      "title": "Side-to-move key",
+      "evidence": "`copybooks/hash.cpy:11`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-204",
+      "title": "Castling combination keys (16 values)",
+      "evidence": "`copybooks/hash.cpy:12`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-205",
+      "title": "En passant file keys (8 values)",
+      "evidence": "`copybooks/hash.cpy:13`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-206",
+      "title": "Full Zobrist hash computation from position (in FEN parser)",
+      "evidence": "`src/fen.cob:207\u2013244`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-207",
+      "title": "Incremental Zobrist update in MAKEMOVE (pieces, side, castling, EP)",
+      "evidence": "`src/makemove.cob:91\u2013278`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-208",
+      "title": "Transposition table: 1,048,576 entries (key, depth, flag, score, best move)",
+      "evidence": "`copybooks/searchstate.cpy:20\u201329`, `copybooks/constants.cpy:42`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-209",
+      "title": "TT probing: indexed by `MOD(GS-KEY, TT-SIZE) + 1`",
+      "evidence": "`src/search.cob:624\u2013665`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-210",
+      "title": "TT cutoff: exact match returns immediately; lower bound \u2265 beta; upper bound \u2264 alpha",
+      "evidence": "`src/search.cob:645\u2013663`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-211",
+      "title": "TT move extraction for ordering (priority +95000)",
+      "evidence": "`src/search.cob:625\u2013632, 925\u2013930`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-212",
+      "title": "TT mate score normalization (adjust relative to current ply on probe/store)",
+      "evidence": "`src/search.cob:636\u2013643, 1089\u20131097`",
+      "phase": "Phase 16: Zobrist Hashing & Transposition Table",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-220",
+      "title": "Late Move Reductions (LMR): reduce by 1 for quiet moves at depth \u2265 3, legal count \u2265 4; reduce by 2 at depth \u2265 6, legal count \u2265 10; re-search at full depth on fail-high",
+      "evidence": "`src/search.cob:767\u2013796`",
+      "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-221",
+      "title": "Null-move pruning (NMP): R=3 reduction, requires depth \u2265 4, not in check, non-pawn material present; beta cutoff if null-move score \u2265 beta",
+      "evidence": "`src/search.cob:667\u2013705`",
+      "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-222",
+      "title": "Null-move Zobrist update: toggle side, clear EP, adjust hash key",
+      "evidence": "`src/search.cob:866\u2013910`",
+      "phase": "Phase 17: Late Move Reductions & Null-Move Pruning",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-230",
+      "title": "Aspiration windows: for depth \u2265 3, initial \u00b150 around previous score; re-search with full window on fail",
+      "evidence": "`src/search.cob:142\u2013161`",
+      "phase": "Phase 18: Aspiration Windows & PVS",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-231",
+      "title": "Principal Variation Search (PVS): first move full window, rest null window, re-search on fail-high (root + inner)",
+      "evidence": "`src/search.cob:241\u2013260, 758\u2013805`",
+      "phase": "Phase 18: Aspiration Windows & PVS",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-232",
+      "title": "PV move from previous iteration seeded into next iteration",
+      "evidence": "`src/search.cob:135\u2013139`",
+      "phase": "Phase 18: Aspiration Windows & PVS",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-240",
+      "title": "Late Move Pruning (LMP): skip quiet moves at depth \u2264 2 when legal count \u2265 12 (depth 1) or \u2265 20 (depth 2)",
+      "evidence": "`src/search.cob:739\u2013750`",
+      "phase": "Phase 19: Late Move Pruning & Mate Distance Pruning",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-241",
+      "title": "Mate distance pruning: tighten alpha/beta bounds based on `MATE-SCORE \u00b1 GS-PLY`",
+      "evidence": "`src/search.cob:582\u2013594`",
+      "phase": "Phase 19: Late Move Pruning & Mate Distance Pruning",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-250",
+      "title": "Pawn file count precomputation (`WPC`/`BPC` arrays per file)",
+      "evidence": "`src/eval.cob:64\u201389`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-251",
+      "title": "Pawn rank tracking (`WPMIN`/`BPMAX` per file) for passed pawn detection",
+      "evidence": "`src/eval.cob:68\u201369, 82\u201385`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-252",
+      "title": "Doubled pawn penalty: \u22128 cp per extra pawn on same file",
+      "evidence": "`src/eval.cob:91\u2013101`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-253",
+      "title": "Isolated pawn penalty: \u221210 cp if no friendly pawn on adjacent files",
+      "evidence": "`src/eval.cob:168\u2013187`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-254",
+      "title": "Passed pawn bonus: +10 + `rank \u00d7 8` if no enemy pawn ahead on same/adjacent files",
+      "evidence": "`src/eval.cob:189\u2013205`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-255",
+      "title": "Pawn piece-square heuristic: advancement reward + central file bonus",
+      "evidence": "`src/eval.cob:161\u2013166`",
+      "phase": "Phase 20: Evaluation Rewrite \u2014 Pawn Structure",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-260",
+      "title": "Knight centralization: `24 \u2212 (manhattan_dist \u00d7 6)`",
+      "evidence": "`src/eval.cob:207\u2013208`",
+      "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-261",
+      "title": "Bishop centralization: `16 \u2212 (manhattan_dist \u00d7 4)`",
+      "evidence": "`src/eval.cob:209\u2013211`",
+      "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-262",
+      "title": "Queen mild centralization: `5 \u2212 (manhattan_dist \u00d7 2)`",
+      "evidence": "`src/eval.cob:234\u2013236`",
+      "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-263",
+      "title": "Rook on 7th rank bonus: +20 cp",
+      "evidence": "`src/eval.cob:213\u2013215`",
+      "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-264",
+      "title": "Rook on open file: +12 cp (no pawns), semi-open file: +6 cp (no friendly pawn)",
+      "evidence": "`src/eval.cob:216\u2013233`",
+      "phase": "Phase 21: Evaluation Rewrite \u2014 Piece Placement",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-270",
+      "title": "Non-pawn material (NPM) tracking for game phase detection",
+      "evidence": "`src/eval.cob:124\u2013127`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-271",
+      "title": "Endgame detection: `NPM-TOTAL \u2264 2600`",
+      "evidence": "`src/eval.cob:252\u2013254`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-272",
+      "title": "King piece-square (middlegame): encourages edge placement `(dist \u00d7 5) \u2212 20`",
+      "evidence": "`src/eval.cob:274\u2013276, 297\u2013298`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-273",
+      "title": "King piece-square (endgame): encourages centralization `20 \u2212 (dist \u00d7 5)`",
+      "evidence": "`src/eval.cob:272\u2013273, 295\u2013296`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-274",
+      "title": "White king pawn shield: +6 per friendly pawn on 3 forward squares, \u22126 per missing",
+      "evidence": "`src/eval.cob:303\u2013334`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-275",
+      "title": "Black king pawn shield",
+      "evidence": "`src/eval.cob:336\u2013365`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-276",
+      "title": "Pawn shield disabled in endgame",
+      "evidence": "`src/eval.cob:304`",
+      "phase": "Phase 22: Evaluation Rewrite \u2014 King Safety",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-280",
+      "title": "Bishop pair bonus: +30 cp for having 2+ bishops",
+      "evidence": "`src/eval.cob:368\u2013370`",
+      "phase": "Phase 23: Evaluation Rewrite \u2014 Misc Terms",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-281",
+      "title": "Tempo bonus: +10 cp for the side to move",
+      "evidence": "`src/eval.cob:372\u2013377`",
+      "phase": "Phase 23: Evaluation Rewrite \u2014 Misc Terms",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-290",
+      "title": "TT replacement policy: depth-preferred (replace only if new depth \u2265 stored depth or different key)",
+      "evidence": "`src/search.cob:1080\u20131104`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-291",
+      "title": "TT flag determination: EXACT (alpha improved, < beta), LOWER (beta cutoff), UPPER (no improvement)",
+      "evidence": "`src/search.cob:850\u2013860`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-292",
+      "title": "Threefold repetition detection: scan undo stack keys within reversible window, draw on 2 hits",
+      "evidence": "`src/search.cob:566\u2013580`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-293",
+      "title": "50-move rule draw: return 0 if `GS-HALFMOVE \u2265 100`",
+      "evidence": "`src/search.cob:561\u2013564`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-294",
+      "title": "Delta pruning in quiescence: prune if `standpat + 950 < alpha`",
+      "evidence": "`src/search.cob:1207\u20131211`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-295",
+      "title": "Quiescence MVV-LVA + promotion scoring",
+      "evidence": "`src/search.cob:1257\u20131325`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-296",
+      "title": "Time check with countdown: every 2048 nodes, call TIMEUTIL, compare elapsed vs limit",
+      "evidence": "`src/search.cob:547\u2013558, 1183\u20131196`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-297",
+      "title": "Time abort at root: retain previous iteration's best move/score",
+      "evidence": "`src/search.cob:163\u2013171`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-298",
+      "title": "Killer move update on beta cutoff: promote to slot 1, demote old to slot 2",
+      "evidence": "`src/search.cob:1046\u20131070`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-299",
+      "title": "History heuristic update on cutoff: depth\u00b2 bonus, halved on overflow (aging)",
+      "evidence": "`src/search.cob:1072\u20131078`",
+      "phase": "Phase 24: Search Refinements",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-300",
+      "title": "`go wtime/btime/winc/binc/movestogo` support",
+      "evidence": "`src/main.cob:315\u2013327`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-301",
+      "title": "Side-aware clock selection (pick wtime/winc or btime/binc based on side-to-move)",
+      "evidence": "`src/main.cob:344\u2013350`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-302",
+      "title": "Moves-to-go estimation: default 22, clamped [10, 60]",
+      "evidence": "`src/main.cob:352\u2013355`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-303",
+      "title": "Overhead subtraction: 50ms safety margin",
+      "evidence": "`src/main.cob:358\u2013360`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-304",
+      "title": "Time allocation formula: `(safe_remaining / movestogo) + (increment \u00d7 0.8)`",
+      "evidence": "`src/main.cob:362`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-305",
+      "title": "Time cap: think time \u2264 20% of remaining",
+      "evidence": "`src/main.cob:363\u2013364`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-306",
+      "title": "Minimum think time: floor of 20ms",
+      "evidence": "`src/main.cob:366\u2013372`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-307",
+      "title": "Final safety clamp: think \u2264 remaining",
+      "evidence": "`src/main.cob:374`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-308",
+      "title": "Centisecond conversion with minimum 1 cs",
+      "evidence": "`src/main.cob:376\u2013379`",
+      "phase": "Phase 25: Time Management (advanced)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-310",
+      "title": "PGN-format opening book for cutechess-cli diversification (100 games from standard openings)",
+      "evidence": "`openings/book.pgn`",
+      "phase": "Phase 26: Opening Book (PGN format)",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-320",
+      "title": "macOS ad-hoc code signing (`codesign -s - -f`) via `make sign` target",
+      "evidence": "`Makefile:75\u201378`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-321",
+      "title": "macOS quarantine xattr clearing (`xattr -dr com.apple.quarantine/provenance`) via `make unquarantine`",
+      "evidence": "`Makefile:80\u201394`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-322",
+      "title": "Engine health check: `tools/engine_check.py` \u2014 runs `--perft-startpos 1`, checks for SIGKILL, prints macOS diagnostics (Mach-O magic, otool, codesign, xattr, strip version)",
+      "evidence": "`tools/engine_check.py:1\u2013132`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-323",
+      "title": "Build retry loop: up to 5 attempts with `engine_check.py` validation between rebuilds",
+      "evidence": "`Makefile:57\u201366`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-324",
+      "title": "Force Apple toolchain PATH prefix: `PATH=\"/usr/bin:/bin:/usr/sbin:/sbin:$$PATH\"` before `cobc` invocation (prevents GNU `strip` from corrupting Mach-O)",
+      "evidence": "`Makefile:73`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-325",
+      "title": "macOS-specific compiler flags: `-target arm64-apple-macosx`, `-isysroot $(MACOS_SDK)`, `-Wl,-adhoc_codesign`",
+      "evidence": "`Makefile:17\u201324`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-326",
+      "title": "`.NOTPARALLEL:` + explicit `clean \u2192 build` ordering to prevent build races",
+      "evidence": "`Makefile:29\u201337`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-327",
+      "title": "Quarantine/codesign workarounds in tool scripts (`perft_check.py`, `uci_smoke.sh`, `elo_run.py`)",
+      "evidence": "`tools/perft_check.py`, `tools/uci_smoke.sh`, `tools/elo_run.py`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "F-328",
+      "title": "Hash UCI option declaration (`option name Hash type spin default 16 min 1 max 1024`)",
+      "evidence": "`src/main.cob:126`",
+      "phase": "Phase 27: macOS Build System Hardening",
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 184,
+  "readme_features": [
+    "Full rule handling: castling, en passant, promotions, checkmate/stalemate detection, repetition detection, and the 50-move rule inside search.",
+    "UCI support for the common engine loop: `uci`, `isready`, `ucinewgame`, `position startpos|fen`, `go depth`, `go movetime`, and clock-driven `go`.",
+    "CLI perft modes for correctness testing:",
+    "`--perft-startpos <depth>`",
+    "`--perft \"<fen>\" <depth>`",
+    "Root search info output in UCI format.",
+    "Deterministic opening suites in [`openings/book.pgn`](openings/book.pgn) and [`openings/book.epd`](openings/book.epd) for tournament runs.",
+    "Historical tournament artifacts under [`results/`](results/)."
+  ],
+  "prompt_subtasks": [
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "PASS 1 (Extraction): reconstruct the feature backlog + prompt ledger + replay package (repro-first, factual)."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "PASS 2 (Interpretation): characterize agent strategies, outcomes/quality, interaction demand; correlate with lightweight repo metrics."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "I will NOT provide transcripts proactively."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "You must analyze the repo as-is (git history may be minimal/absent)."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Codex stores local state under CODEX_HOME (default ~/.codex). Session artifacts are typically under:"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "$CODEX_HOME/sessions/ (often JSONL files, session-id named)"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "$CODEX_HOME/history.jsonl (if history persistence is enabled)"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "$CODEX_HOME/log/ (diagnostic logs; location may vary via config)"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Prefer transcript evidence from these artifacts; fall back to repo-only when unavailable."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Do NOT invent features, decisions, commands, or outcomes."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Every claim must be traceable to evidence from: repo files, git commits (if any), CODEX_HOME session artifacts, and run/test logs you executed."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "If you infer anything, label it INFERRED and justify why."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Redact secrets (tokens/keys) if encountered in repo or logs."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Keep quotes short (<= 25 words). Prefer pointers."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "[R:path:lines] repo file references (include line ranges when possible)"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "[G:commit <hash>] git commit reference"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "[T:session <id/filename>:event_###] transcript/session-log reference (or timestamp range)"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "[L:run_<n>] outputs of build/test/run commands you executed"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Do NOT list them in the FEATURE BACKLOG table."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "If explicitly requested by the user for reproducibility, put them in a separate section:"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "why it blocks the analysis,"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "what artifact would resolve it,"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "a \u201cDefault if unanswered\u201d assumption."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "repo root, primary language(s), entry points, build system, test framework, CI configs."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "git metadata if present: branch, HEAD, remotes."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Identify project rules that may affect behavior: AGENTS.md, CONTRIBUTING, .codex/config.toml, etc."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Determine CODEX_HOME (env var if set; else ~/.codex)."
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "Search for session files likely tied to this repo by:"
+    },
+    {
+      "ts": "2026-03-19T12:54:52.194000+00:00",
+      "item": "matching the repo absolute"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/Makefile`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/README.md`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/src/` (COBOL programs)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`main.cob` (entry: UCI loop + CLI modes)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`board.cob` (position state init/reset, helpers)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`fen.cob` (FEN parsing/printing)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`movegen.cob` (pseudo-legal generation)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`attack.cob` (is-square-attacked, in-check)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`makemove.cob` (make/unmake + undo stack)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`perft.cob` (perft recursion + CLI hook)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`search.cob` (iterative deepening + alpha-beta + quiescence)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`eval.cob` (evaluation function)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`uci.cob` (parsing UCI commands, \u201cposition/go/stop\u201d glue)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`time.cob` (centisecond clock utilities)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/copybooks/`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`constants.cpy` (piece codes, flags, limits)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`types.cpy` (GAME-STATE, MOVE, UNDO, MOVE-LIST records)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`offsets.cpy` (0x88 offsets arrays)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/tests/`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`perft_cases.json` (FEN + depth + expected nodes)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/tools/`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`perft_check.py` (runs engine perft and compares)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`uci_smoke.sh` (basic UCI handshake script)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`elo_run.py` (runs cutechess-cli match + produces report)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`elo_calc.py` (parses PGN, computes Elo diff + CI)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`/Users/mathieuacher/SANDBOX/COBOL-chess/openings/`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`book.epd` (small deterministic opening suite for cutechess)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Build output: `/Users/mathieuacher/SANDBOX/COBOL-chess/bin/cobochess`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Default mode: **UCI** on stdin/stdout."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Extra CLI modes:"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`cobochess --perft \"<FEN>\" <depth>` \u2192 prints `nodes=<N>` and exits non-zero on parse error."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`cobochess --perft-startpos <depth>` \u2192 same, using standard start position."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`uci` \u2192 prints `id name`, `id author`, `option name Hash type spin default 16 min 1 max 1024`, then `uciok`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`isready` \u2192 `readyok`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`ucinewgame` \u2192 clears internal search state (history, TT if any)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`position startpos [moves ...]`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`position fen <fen> [moves ...]`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`go depth N`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`go movetime M` (M in ms; internally use centiseconds = `M/10` rounded)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`go wtime <ms> btime <ms> winc <ms> binc <ms> movestogo <n>` (simple allocation rule)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`stop` (best-effort: stop after current iteration / node batch; must respond promptly)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`quit`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Always output `bestmove <move>` (UCI coordinate, promotion suffix `q/r/b/n`), or `bestmove 0000` if no legal move."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Periodic `info` lines during search (at least at end of each completed depth): `info depth D nodes N score cp S pv ...`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Use 0x88 indices: `sq = rank*16 + file`, where `file=0..7`, `rank=0..7`."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "\u201cOffboard\u201d check: `sq < 0 OR sq > 127 OR (sq MOD 16) > 7`."
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Integers:"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`EMPTY=0`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "White: `WP=1 WN=2 WB=3 WR=4 WQ=5 WK=6`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Black: `BP=7 BN=8 BB=9 BR=10 BQ=11 BK=12`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "Helper functions:"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`ColorOf(piece)` \u2192 WHITE/BLACK/NONE"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`TypeOf(piece)` \u2192 PAWN/KNIGHT/\u2026 (ignoring color)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`BOARD[128]` piece array"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`SIDE-TO-MOVE` (0=white,1=black)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`CASTLING` bitmask (WK,WQ,BK,BQ)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`EP-SQ` (-1 if none)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`HALFMOVE`, `FULLMOVE`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`KING-SQ[2]`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`HISTORY-KEYS[]` (for repetition; store Zobrist key per ply)"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "(Optional later) `ZKEY` (64-bit), `TT` table"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`FROM-SQ`, `TO-SQ`"
+    },
+    {
+      "ts": "2026-02-09T10:25:02.001000+00:00",
+      "item": "`PROMO-TYPE` (0 none, els"
+    }
+  ],
+  "commit_subjects": [
+    {
+      "sha": "0e2ab146f3",
+      "date": "2026-05-04",
+      "subject": "Add agentic chess-engine README, LICENSE, .gitignore"
+    },
+    {
+      "sha": "faf0f163e9",
+      "date": "2026-03-19",
+      "subject": "Initial commit: cobochess \u2014 COBOL (GnuCOBOL) UCI chess engine (~1600-1700 Elo)"
+    }
+  ],
+  "total_features_proxy": 284
+}

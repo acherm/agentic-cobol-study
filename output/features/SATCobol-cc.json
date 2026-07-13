@@ -1,0 +1,670 @@
+{
+  "project": "SATCobol-cc",
+  "spec_backlog": [
+    {
+      "id": "SB-001",
+      "title": "`049f4b5`",
+      "evidence": "DIMACS CNF parser in free-format COBOL (`--parse`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "`049f4b5`",
+      "evidence": "`./cobsat --parse file.cnf` normalised output mode",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "`049f4b5`",
+      "evidence": "`Makefile` + `cobsat` binary at repo root (no wrapper)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "`049f4b5`",
+      "evidence": "Parser edge-case tests (empty / crlf / trailing / many / interleaved / multiline)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "`049f4b5`",
+      "evidence": "Initial commit on default branch",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "`3fc5cdd`",
+      "evidence": "`--check-model file.cnf model.txt` mode",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "`3fc5cdd`",
+      "evidence": "Per-fixture sat / unsat / partial `.model` fixtures (9 files)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "`3fc5cdd`",
+      "evidence": "Per-clause failure error format (`UNSAT clause N: \u2026`)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "`88e8e99`",
+      "evidence": "SATLIB `%` end-of-data trailer tolerance in parser",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "`88e8e99`",
+      "evidence": "Ship `uf75-325.tar.gz` + `uuf75-325.tar.gz` under `tests/`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "`88e8e99`",
+      "evidence": "200-instance uf75/uuf75 sweep via `--parse` (SAT/UNSAT-agnostic)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "`bdea674`",
+      "evidence": "Baseline DPLL solver (`--solve`, unit-prop + chrono backtrack)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "`bdea674`",
+      "evidence": "`s SATISFIABLE` / `v \u2026 0` / `s UNSATISFIABLE` solver I/O",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "`bdea674`",
+      "evidence": "Solve fixtures (unit_chain, contradiction, xor3, xor3_unsat, php*)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "`bdea674`",
+      "evidence": "Iterative DPLL with explicit trail `(var, kind)` entries",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "`bdea674`",
+      "evidence": "`--check-model` self-validation on every SAT model",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "(post-`bdea674`)",
+      "evidence": "uf75/uuf75 200-instance solve soundness (session-attested)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "`b2d8324`",
+      "evidence": "Split 920-line monolith into 12 copybooks under `src/copy/`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-019",
+      "title": "`b2d8324`",
+      "evidence": "Separate `*-data.cpy` (data) vs `*.cpy` (logic) per module",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "`b2d8324`",
+      "evidence": "`-I src/copy` include path in `Makefile`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "`de35d40`",
+      "evidence": "Two-watched-literals unit propagation",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "`de35d40`",
+      "evidence": "Occurrence-count branching heuristic",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "`de35d40`",
+      "evidence": "`tests/perf.sh` regression-tripwire harness",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "`de35d40`",
+      "evidence": "Larger bench archives (uf100/uuf100/uf125/uuf125/uf150/uuf150)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "`a121b45`",
+      "evidence": "`scripts/crosscheck_minisat.sh` vs MiniSat",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-026",
+      "title": "`a121b45`",
+      "evidence": "Repro capture on mismatch \u2192 `tests/crosscheck_failures/<name>/`",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-027",
+      "title": "`a121b45`",
+      "evidence": "Strip SATLIB `%` trailer before feeding MiniSat",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "(post-`a121b45`)",
+      "evidence": "2400-instance sweep (uf/uuf \u00d7 {100,125,150})",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-029",
+      "title": "`57de05d`",
+      "evidence": "SAT4J acceptance suite translated to DIMACS (113 fixtures)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "`57de05d`",
+      "evidence": "`tests/sat4j/expected.tbl` SAT/UNSAT verdict table",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "`57de05d`",
+      "evidence": "`tests/run_sat4j_tests.sh` runner with timeout + skip handling",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "`57de05d`",
+      "evidence": "Parser lenience: accept missing trailing `0` (SAT4J-style)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-033",
+      "title": "`57de05d`",
+      "evidence": "94 pass / 0 fail / 19 skip result on SAT4J suite (attested)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-034",
+      "title": "`c3b2a7c`",
+      "evidence": "Phase saving (`WS-PHASE(v)` reused across backtracks/restarts)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-035",
+      "title": "`c3b2a7c`",
+      "evidence": "VSIDS-lite activity scoring (`WS-ACT(v)`, decay on conflict)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-036",
+      "title": "`c3b2a7c`",
+      "evidence": "Jeroslow-Wang (JW) initial activity seeding",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-037",
+      "title": "`c3b2a7c`",
+      "evidence": "Luby restart sequence with large base (restarts-as-fail-safe)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-038",
+      "title": "`c3b2a7c`",
+      "evidence": "SAT4J suite regression: 94 \u2192 111 pass (19 \u2192 2 skip)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-039",
+      "title": "(post-`c3b2a7c`)",
+      "evidence": "2400-instance cobsat-vs-minisat benchmark (1.9\u00d7 ratio)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-040",
+      "title": "`EP-POST-1` (uncommitted)",
+      "evidence": "CDCL core: first-UIP + non-chronological backjump + learnt DB",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-041",
+      "title": "`EP-POST-1` (uncommitted)",
+      "evidence": "33/33 unit tests + smokes pass on CDCL build (attested)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-042",
+      "title": "`EP-POST-1` (incomplete)",
+      "evidence": "Final CDCL benchmark launched, **not completed** (session truncated)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "(post)",
+      "evidence": "BL-005 (UI-007)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "(post)",
+      "evidence": "BL-009 (UI-012)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-039",
+      "title": "(post)",
+      "evidence": "BL-012 (UI-016)",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-001",
+      "title": "DIMACS CNF parser (free-format COBOL)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-002",
+      "title": "`--parse` mode",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-003",
+      "title": "Build infrastructure",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-004",
+      "title": "Parser edge-case test harness",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-005",
+      "title": "Initial commit",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-006",
+      "title": "`--check-model` mode",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-007",
+      "title": "Model fixtures",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-008",
+      "title": "Per-clause failure error format",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-009",
+      "title": "SATLIB `%` end-marker tolerance",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-010",
+      "title": "Ship uf75/uuf75 archives",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-011",
+      "title": "200-instance parser sweep",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-012",
+      "title": "Baseline DPLL solver (`--solve`)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-013",
+      "title": "Solver I/O",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-014",
+      "title": "Solve fixtures",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-015",
+      "title": "Iterative (non-recursive) DPLL",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-016",
+      "title": "`--check-model` on every SAT model",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-017",
+      "title": "uf75/uuf75 solve soundness",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-018",
+      "title": "Refactor into copybooks",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-019",
+      "title": "Data/logic split",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-020",
+      "title": "Include path",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-021",
+      "title": "Watched literals",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-022",
+      "title": "Occurrence-count branching",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-023",
+      "title": "Perf harness",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-024",
+      "title": "Larger bench archives",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-025",
+      "title": "MiniSat cross-checker",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-026",
+      "title": "Repro capture",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-027",
+      "title": "SATLIB `%` trailer stripped for MiniSat",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-028",
+      "title": "2400-instance sweep",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-029",
+      "title": "SAT4J fixtures",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-030",
+      "title": "Expected-verdicts table",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-031",
+      "title": "SAT4J runner",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-032",
+      "title": "Parser lenience for SAT4J files",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-033",
+      "title": "SAT4J result (pre-heuristic)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-034",
+      "title": "Phase saving",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-035",
+      "title": "VSIDS-lite",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-036",
+      "title": "JW initial seeding",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-037",
+      "title": "Luby restarts with large base",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-038",
+      "title": "SAT4J result (post-heuristic)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-039",
+      "title": "cobsat-vs-minisat benchmark (2 400 instances)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-040",
+      "title": "CDCL core (UNCOMMITTED)",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-041",
+      "title": "CDCL unit tests attested",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    },
+    {
+      "id": "SB-042",
+      "title": "Final CDCL benchmark \u2014 NOT DELIVERED",
+      "evidence": "",
+      "phase": null,
+      "source": "SPECIFICATION_BACKLOG.md"
+    }
+  ],
+  "delivered_from_backlog": 0,
+  "readme_features": [],
+  "prompt_subtasks": [],
+  "commit_subjects": [
+    {
+      "sha": "6404f111ff",
+      "date": "2026-04-17",
+      "subject": "Conflict-driven clause learning (CDCL) with first-UIP + backjump"
+    },
+    {
+      "sha": "c3b2a7c527",
+      "date": "2026-04-16",
+      "subject": "Phase saving, VSIDS-lite, JW branching, Luby restarts"
+    },
+    {
+      "sha": "57de05d273",
+      "date": "2026-04-16",
+      "subject": "Pass SAT4J's acceptance test suite"
+    },
+    {
+      "sha": "a121b45cae",
+      "date": "2026-04-16",
+      "subject": "Add scripts/crosscheck_minisat.sh to cross-verify against minisat"
+    },
+    {
+      "sha": "de35d40e71",
+      "date": "2026-04-15",
+      "subject": "Two-watched literals + occurrence branching; perf script; larger benchmarks"
+    },
+    {
+      "sha": "b2d8324121",
+      "date": "2026-04-15",
+      "subject": "Refactor cobsat into per-module copybooks (io, parser, cnf, propagate, search)"
+    },
+    {
+      "sha": "bdea674016",
+      "date": "2026-04-15",
+      "subject": "Add baseline DPLL solver (--solve) with unit propagation"
+    },
+    {
+      "sha": "88e8e997ab",
+      "date": "2026-04-15",
+      "subject": "Treat SATLIB '%' line as end-of-data; ship uf75/uuf75 benchmarks"
+    },
+    {
+      "sha": "3fc5cdd2fa",
+      "date": "2026-04-15",
+      "subject": "Add --check-model mode for evaluating CNF assignments"
+    },
+    {
+      "sha": "049f4b5a93",
+      "date": "2026-04-15",
+      "subject": "Initial COBOL DIMACS CNF parser with --parse mode"
+    }
+  ],
+  "total_features_proxy": 57
+}

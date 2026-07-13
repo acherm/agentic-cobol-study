@@ -1,0 +1,411 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-compress-codex",
+  "aggregate": {
+    "num_files": 2,
+    "total_lines": 2021,
+    "code_lines": 1812,
+    "comment_lines": 4,
+    "sections": 7,
+    "paragraphs": 77,
+    "data_items": 173,
+    "max_nesting_any_file": 4,
+    "statements": {
+      "PERFORM": 233,
+      "IF": 188,
+      "EVALUATE": 6,
+      "CALL": 1,
+      "MOVE": 408,
+      "COMPUTE": 29,
+      "READ": 13,
+      "WRITE": 8,
+      "OPEN": 11,
+      "CLOSE": 11,
+      "ACCEPT": 6,
+      "DISPLAY": 14,
+      "GO TO": 0,
+      "EXIT": 132,
+      "STOP": 0,
+      "SET": 0,
+      "ADD": 22,
+      "SUBTRACT": 7,
+      "MULTIPLY": 0,
+      "DIVIDE": 3,
+      "STRING": 6,
+      "UNSTRING": 1,
+      "INSPECT": 0,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 2,
+      "ENVIRONMENT": 2,
+      "DATA": 2,
+      "PROCEDURE": 1
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "src/cobpack.cob",
+        "code_lines": 1341
+      },
+      {
+        "file": "src/cobpack_schema.cob",
+        "code_lines": 471
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 1109,
+        "files_using": 2,
+        "constructs": {
+          "IF": 376,
+          "ELSE": 29,
+          "PERFORM": 272,
+          "PERFORM_VARYING": 28,
+          "PERFORM_UNTIL": 39,
+          "EXIT": 323,
+          "GOBACK": 7,
+          "EVALUATE": 12,
+          "WHEN": 22,
+          "CONTINUE": 1
+        }
+      },
+      "arithmetic": {
+        "total": 71,
+        "files_using": 2,
+        "constructs": {
+          "ADD": 22,
+          "SUBTRACT": 7,
+          "COMPUTE": 36,
+          "DIVIDE": 5,
+          "ROUNDED": 1
+        }
+      },
+      "data_advanced": {
+        "total": 186,
+        "files_using": 2,
+        "constructs": {
+          "PIC_X": 41,
+          "PIC_9": 103,
+          "OCCURS": 3,
+          "USAGE_COMP_5": 39
+        }
+      },
+      "io_file": {
+        "total": 162,
+        "files_using": 2,
+        "constructs": {
+          "FD": 3,
+          "SELECT": 3,
+          "ASSIGN": 3,
+          "OPEN_INPUT": 8,
+          "READ": 55,
+          "START": 21,
+          "CLOSE": 11,
+          "AT_END": 15,
+          "LINE_SEQUENTIAL": 1,
+          "OPEN_OUTPUT": 2,
+          "WRITE": 40
+        }
+      },
+      "string_ops": {
+        "total": 27,
+        "files_using": 2,
+        "constructs": {
+          "STRING": 6,
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 12,
+          "DELIMITED_BY": 7
+        }
+      },
+      "tables_search": {
+        "total": 8,
+        "files_using": 2,
+        "constructs": {
+          "SORT": 2,
+          "INITIALIZE": 4,
+          "SET": 2
+        }
+      },
+      "subprograms": {
+        "total": 7,
+        "files_using": 2,
+        "constructs": {
+          "LINKAGE_SECTION": 1,
+          "USING": 2,
+          "CALL": 1,
+          "GIVING": 3
+        }
+      },
+      "copy_preproc": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "intrinsics": {
+        "total": 13,
+        "files_using": 2,
+        "constructs": {
+          "FUNCTION": 13
+        }
+      },
+      "misc": {
+        "total": 26,
+        "files_using": 1,
+        "constructs": {
+          "DISPLAY": 20,
+          "ACCEPT": 6
+        }
+      }
+    },
+    "mastery_score": 44,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.ROUNDED",
+      "arithmetic.SUBTRACT",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.GOBACK",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.WHEN",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_X",
+      "data_advanced.USAGE_COMP_5",
+      "intrinsics.FUNCTION",
+      "io_file.ASSIGN",
+      "io_file.AT_END",
+      "io_file.CLOSE",
+      "io_file.FD",
+      "io_file.LINE_SEQUENTIAL",
+      "io_file.OPEN_INPUT",
+      "io_file.OPEN_OUTPUT",
+      "io_file.READ",
+      "io_file.SELECT",
+      "io_file.START",
+      "io_file.WRITE",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.STRING",
+      "string_ops.UNSTRING",
+      "subprograms.CALL",
+      "subprograms.GIVING",
+      "subprograms.LINKAGE_SECTION",
+      "subprograms.USING",
+      "tables_search.INITIALIZE",
+      "tables_search.SET",
+      "tables_search.SORT"
+    ],
+    "categories_exercised": 9
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compress-codex/src/cobpack_schema.cob",
+      "total_lines": 528,
+      "code_lines": 471,
+      "comment_lines": 0,
+      "blank_lines": 57,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1
+      },
+      "sections": 4,
+      "paragraphs": 20,
+      "data_items": 63,
+      "statements": {
+        "PERFORM": 43,
+        "IF": 44,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 144,
+        "COMPUTE": 4,
+        "READ": 1,
+        "WRITE": 0,
+        "OPEN": 2,
+        "CLOSE": 2,
+        "ACCEPT": 0,
+        "DISPLAY": 0,
+        "GO TO": 0,
+        "EXIT": 26,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 8,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 1,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 3,
+      "capabilities": {
+        "control_flow": {
+          "IF": 88,
+          "ELSE": 6,
+          "PERFORM": 51,
+          "PERFORM_VARYING": 3,
+          "PERFORM_UNTIL": 8,
+          "EXIT": 26,
+          "GOBACK": 5
+        },
+        "arithmetic": {
+          "ADD": 8,
+          "SUBTRACT": 1,
+          "COMPUTE": 9
+        },
+        "data_advanced": {
+          "PIC_X": 17,
+          "PIC_9": 35,
+          "OCCURS": 2,
+          "USAGE_COMP_5": 3
+        },
+        "io_file": {
+          "FD": 1,
+          "SELECT": 1,
+          "ASSIGN": 1,
+          "OPEN_INPUT": 1,
+          "READ": 2,
+          "START": 15,
+          "CLOSE": 2,
+          "AT_END": 1,
+          "LINE_SEQUENTIAL": 1
+        },
+        "string_ops": {
+          "STRING": 1,
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 5,
+          "DELIMITED_BY": 2
+        },
+        "tables_search": {
+          "SORT": 2,
+          "INITIALIZE": 2
+        },
+        "subprograms": {
+          "LINKAGE_SECTION": 1,
+          "USING": 1
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 2
+        },
+        "misc": {}
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-compress-codex/src/cobpack.cob",
+      "total_lines": 1493,
+      "code_lines": 1341,
+      "comment_lines": 4,
+      "blank_lines": 148,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 3,
+      "paragraphs": 57,
+      "data_items": 110,
+      "statements": {
+        "PERFORM": 190,
+        "IF": 144,
+        "EVALUATE": 6,
+        "CALL": 1,
+        "MOVE": 264,
+        "COMPUTE": 25,
+        "READ": 12,
+        "WRITE": 8,
+        "OPEN": 9,
+        "CLOSE": 9,
+        "ACCEPT": 6,
+        "DISPLAY": 14,
+        "GO TO": 0,
+        "EXIT": 106,
+        "STOP": 0,
+        "SET": 0,
+        "ADD": 14,
+        "SUBTRACT": 6,
+        "MULTIPLY": 0,
+        "DIVIDE": 3,
+        "STRING": 5,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 4,
+      "capabilities": {
+        "control_flow": {
+          "IF": 288,
+          "ELSE": 23,
+          "EVALUATE": 12,
+          "WHEN": 22,
+          "PERFORM": 221,
+          "PERFORM_VARYING": 25,
+          "PERFORM_UNTIL": 31,
+          "EXIT": 297,
+          "CONTINUE": 1,
+          "GOBACK": 2
+        },
+        "arithmetic": {
+          "ADD": 14,
+          "SUBTRACT": 6,
+          "DIVIDE": 5,
+          "COMPUTE": 27,
+          "ROUNDED": 1
+        },
+        "data_advanced": {
+          "PIC_X": 24,
+          "PIC_9": 68,
+          "OCCURS": 1,
+          "USAGE_COMP_5": 36
+        },
+        "io_file": {
+          "FD": 2,
+          "SELECT": 2,
+          "ASSIGN": 2,
+          "OPEN_INPUT": 7,
+          "OPEN_OUTPUT": 2,
+          "READ": 53,
+          "WRITE": 40,
+          "START": 6,
+          "CLOSE": 9,
+          "AT_END": 14
+        },
+        "string_ops": {
+          "STRING": 5,
+          "REFERENCE_MOD": 7,
+          "DELIMITED_BY": 5
+        },
+        "tables_search": {
+          "SET": 2,
+          "INITIALIZE": 2
+        },
+        "subprograms": {
+          "CALL": 1,
+          "USING": 1,
+          "GIVING": 3
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 11
+        },
+        "misc": {
+          "DISPLAY": 20,
+          "ACCEPT": 6
+        }
+      }
+    }
+  ]
+}

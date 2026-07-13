@@ -1,0 +1,257 @@
+{
+  "project": "cobol-compiler-codex",
+  "agent": "Codex",
+  "session_id": "019d5394-145f-7303-a765-98fe5e732d34",
+  "model": "gpt-5.4",
+  "file": "/Users/mathieuacher/.codex/sessions/2026/04/03/rollout-2026-04-03T15-41-46-019d5394-145f-7303-a765-98fe5e732d34.jsonl",
+  "summary": {
+    "model": "gpt-5.4",
+    "context_window": 258400,
+    "turns_with_usage": 26,
+    "peak_context": 120009,
+    "peak_utilization_pct": 46.4,
+    "median_context": 72569,
+    "p90_context": 102480,
+    "p99_context": 114131,
+    "first_context": 14332,
+    "last_context": 120009,
+    "compactions": 0,
+    "compaction_events": []
+  },
+  "series": [
+    {
+      "ts": "2026-04-03T13:41:58.034Z",
+      "input": 4604,
+      "cache_read": 9728,
+      "cache_create": 0,
+      "context": 14332,
+      "output": 474,
+      "reasoning": 161
+    },
+    {
+      "ts": "2026-04-03T13:42:08.333Z",
+      "input": 10155,
+      "cache_read": 14720,
+      "cache_create": 0,
+      "context": 24875,
+      "output": 431,
+      "reasoning": 93
+    },
+    {
+      "ts": "2026-04-03T13:42:17.560Z",
+      "input": 10411,
+      "cache_read": 25216,
+      "cache_create": 0,
+      "context": 35627,
+      "output": 377,
+      "reasoning": 68
+    },
+    {
+      "ts": "2026-04-03T13:42:24.421Z",
+      "input": 6921,
+      "cache_read": 35840,
+      "cache_create": 0,
+      "context": 42761,
+      "output": 305,
+      "reasoning": 129
+    },
+    {
+      "ts": "2026-04-03T13:42:34.090Z",
+      "input": 525,
+      "cache_read": 43008,
+      "cache_create": 0,
+      "context": 43533,
+      "output": 399,
+      "reasoning": 89
+    },
+    {
+      "ts": "2026-04-03T13:42:44.758Z",
+      "input": 976,
+      "cache_read": 43776,
+      "cache_create": 0,
+      "context": 44752,
+      "output": 479,
+      "reasoning": 163
+    },
+    {
+      "ts": "2026-04-03T13:42:53.577Z",
+      "input": 4811,
+      "cache_read": 45056,
+      "cache_create": 0,
+      "context": 49867,
+      "output": 444,
+      "reasoning": 94
+    },
+    {
+      "ts": "2026-04-03T13:43:03.554Z",
+      "input": 48096,
+      "cache_read": 9728,
+      "cache_create": 0,
+      "context": 57824,
+      "output": 362,
+      "reasoning": 269
+    },
+    {
+      "ts": "2026-04-03T13:43:21.731Z",
+      "input": 3083,
+      "cache_read": 58112,
+      "cache_create": 0,
+      "context": 61195,
+      "output": 803,
+      "reasoning": 420
+    },
+    {
+      "ts": "2026-04-03T13:43:27.885Z",
+      "input": 1720,
+      "cache_read": 61824,
+      "cache_create": 0,
+      "context": 63544,
+      "output": 305,
+      "reasoning": 93
+    },
+    {
+      "ts": "2026-04-03T13:44:01.792Z",
+      "input": 4300,
+      "cache_read": 63744,
+      "cache_create": 0,
+      "context": 68044,
+      "output": 1835,
+      "reasoning": 1489
+    },
+    {
+      "ts": "2026-04-03T13:44:07.913Z",
+      "input": 1573,
+      "cache_read": 69760,
+      "cache_create": 0,
+      "context": 71333,
+      "output": 293,
+      "reasoning": 206
+    },
+    {
+      "ts": "2026-04-03T13:44:42.158Z",
+      "input": 1017,
+      "cache_read": 71552,
+      "cache_create": 0,
+      "context": 72569,
+      "output": 1860,
+      "reasoning": 579
+    },
+    {
+      "ts": "2026-04-03T13:44:53.969Z",
+      "input": 224,
+      "cache_read": 74368,
+      "cache_create": 0,
+      "context": 74592,
+      "output": 406,
+      "reasoning": 193
+    },
+    {
+      "ts": "2026-04-03T13:45:08.023Z",
+      "input": 337,
+      "cache_read": 74880,
+      "cache_create": 0,
+      "context": 75217,
+      "output": 553,
+      "reasoning": 280
+    },
+    {
+      "ts": "2026-04-03T13:45:20.889Z",
+      "input": 28500,
+      "cache_read": 50176,
+      "cache_create": 0,
+      "context": 78676,
+      "output": 643,
+      "reasoning": 330
+    },
+    {
+      "ts": "2026-04-03T13:45:30.653Z",
+      "input": 7263,
+      "cache_read": 75648,
+      "cache_create": 0,
+      "context": 82911,
+      "output": 473,
+      "reasoning": 275
+    },
+    {
+      "ts": "2026-04-03T13:45:44.141Z",
+      "input": 6981,
+      "cache_read": 83328,
+      "cache_create": 0,
+      "context": 90309,
+      "output": 134,
+      "reasoning": 46
+    },
+    {
+      "ts": "2026-04-03T13:45:59.479Z",
+      "input": 242,
+      "cache_read": 90368,
+      "cache_create": 0,
+      "context": 90610,
+      "output": 712,
+      "reasoning": 516
+    },
+    {
+      "ts": "2026-04-03T13:46:13.886Z",
+      "input": 1143,
+      "cache_read": 91264,
+      "cache_create": 0,
+      "context": 92407,
+      "output": 756,
+      "reasoning": 429
+    },
+    {
+      "ts": "2026-04-03T13:46:19.824Z",
+      "input": 1306,
+      "cache_read": 93056,
+      "cache_create": 0,
+      "context": 94362,
+      "output": 274,
+      "reasoning": 17
+    },
+    {
+      "ts": "2026-04-03T13:46:26.968Z",
+      "input": 797,
+      "cache_read": 94464,
+      "cache_create": 0,
+      "context": 95261,
+      "output": 347,
+      "reasoning": 231
+    },
+    {
+      "ts": "2026-04-03T13:46:30.980Z",
+      "input": 6992,
+      "cache_read": 95488,
+      "cache_create": 0,
+      "context": 102480,
+      "output": 108,
+      "reasoning": 64
+    },
+    {
+      "ts": "2026-04-03T13:46:36.048Z",
+      "input": 5624,
+      "cache_read": 102528,
+      "cache_create": 0,
+      "context": 108152,
+      "output": 121,
+      "reasoning": 77
+    },
+    {
+      "ts": "2026-04-03T13:46:40.295Z",
+      "input": 5971,
+      "cache_read": 108160,
+      "cache_create": 0,
+      "context": 114131,
+      "output": 130,
+      "reasoning": 86
+    },
+    {
+      "ts": "2026-04-03T13:46:58.470Z",
+      "input": 5833,
+      "cache_read": 114176,
+      "cache_create": 0,
+      "context": 120009,
+      "output": 880,
+      "reasoning": 516
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "chess-cobol-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "COBOL-chess": {
+    "has_specification_backlog": true,
+    "harvested_files": [
+      "SPECIFICATION_BACKLOG.md",
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md"
+    ]
+  },
+  "cobol-compiler-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-compiler-codex": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-compress-codex": {
+    "has_specification_backlog": true,
+    "harvested_files": [
+      "SPECIFICATION_BACKLOG.md",
+      "REPORT.md",
+      "APPENDIX.json",
+      "appendix.json",
+      "TRUST.md"
+    ]
+  },
+  "cobol-compress-cobolcc": {
+    "has_specification_backlog": false,
+    "harvested_files": [
+      "TRUST.md"
+    ]
+  },
+  "cobol-doom-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-doom-codex": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-jb-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-jb-codex": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "COBOL-pygame": {
+    "has_specification_backlog": true,
+    "harvested_files": [
+      "SPECIFICATION_BACKLOG.md",
+      "REPORT.md",
+      "APPENDIX.json",
+      "appendix.json"
+    ]
+  },
+  "cobol-pygame-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "SATCobol-codex": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "SATCobol-cc": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  },
+  "cobol-tictactoe": {
+    "has_specification_backlog": true,
+    "harvested_files": [
+      "SPECIFICATION_BACKLOG.md",
+      "REPLAY_PROMPTS.md"
+    ]
+  },
+  "game15-cobol-codex": {
+    "has_specification_backlog": false,
+    "harvested_files": []
+  }
+}

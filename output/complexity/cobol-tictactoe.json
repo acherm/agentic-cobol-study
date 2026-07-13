@@ -1,0 +1,613 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-tictactoe",
+  "aggregate": {
+    "num_files": 5,
+    "total_lines": 1919,
+    "code_lines": 1537,
+    "comment_lines": 382,
+    "sections": 5,
+    "paragraphs": 34,
+    "data_items": 254,
+    "max_nesting_any_file": 6,
+    "statements": {
+      "PERFORM": 83,
+      "IF": 150,
+      "EVALUATE": 2,
+      "CALL": 0,
+      "MOVE": 314,
+      "COMPUTE": 9,
+      "READ": 0,
+      "WRITE": 0,
+      "OPEN": 0,
+      "CLOSE": 0,
+      "ACCEPT": 5,
+      "DISPLAY": 86,
+      "GO TO": 0,
+      "EXIT": 0,
+      "STOP": 9,
+      "SET": 0,
+      "ADD": 107,
+      "SUBTRACT": 9,
+      "MULTIPLY": 2,
+      "DIVIDE": 13,
+      "STRING": 0,
+      "UNSTRING": 3,
+      "INSPECT": 0,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 5,
+      "DATA": 5,
+      "PROCEDURE": 5
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "game015tree.cob",
+        "code_lines": 436
+      },
+      {
+        "file": "game15tree.cob",
+        "code_lines": 434
+      },
+      {
+        "file": "gameN.cob",
+        "code_lines": 289
+      },
+      {
+        "file": "game15.cob",
+        "code_lines": 189
+      },
+      {
+        "file": "game015.cob",
+        "code_lines": 189
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 565,
+        "files_using": 5,
+        "constructs": {
+          "IF": 299,
+          "ELSE": 90,
+          "WHEN": 7,
+          "PERFORM": 105,
+          "PERFORM_VARYING": 22,
+          "PERFORM_UNTIL": 29,
+          "STOP_RUN": 9,
+          "EVALUATE": 4
+        }
+      },
+      "arithmetic": {
+        "total": 156,
+        "files_using": 5,
+        "constructs": {
+          "ADD": 107,
+          "SUBTRACT": 9,
+          "DIVIDE": 13,
+          "COMPUTE": 25,
+          "MULTIPLY": 2
+        }
+      },
+      "data_advanced": {
+        "total": 258,
+        "files_using": 5,
+        "constructs": {
+          "PIC_X": 34,
+          "PIC_9": 164,
+          "OCCURS": 38,
+          "REDEFINES": 6,
+          "FILLER": 16
+        }
+      },
+      "io_file": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "string_ops": {
+        "total": 17,
+        "files_using": 3,
+        "constructs": {
+          "UNSTRING": 6,
+          "DELIMITED_BY": 3,
+          "REFERENCE_MOD": 8
+        }
+      },
+      "tables_search": {
+        "total": 9,
+        "files_using": 5,
+        "constructs": {
+          "INITIALIZE": 9
+        }
+      },
+      "subprograms": {
+        "total": 18,
+        "files_using": 5,
+        "constructs": {
+          "GIVING": 18
+        }
+      },
+      "copy_preproc": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "intrinsics": {
+        "total": 40,
+        "files_using": 3,
+        "constructs": {
+          "FUNCTION": 20,
+          "FUNCTION_NUMVAL": 4,
+          "FUNCTION_TRIM": 16
+        }
+      },
+      "misc": {
+        "total": 137,
+        "files_using": 5,
+        "constructs": {
+          "DISPLAY": 132,
+          "ACCEPT": 5
+        }
+      }
+    },
+    "mastery_score": 28,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "arithmetic.DIVIDE",
+      "arithmetic.MULTIPLY",
+      "arithmetic.SUBTRACT",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "data_advanced.FILLER",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_X",
+      "data_advanced.REDEFINES",
+      "intrinsics.FUNCTION",
+      "intrinsics.FUNCTION_NUMVAL",
+      "intrinsics.FUNCTION_TRIM",
+      "misc.ACCEPT",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.REFERENCE_MOD",
+      "string_ops.UNSTRING",
+      "subprograms.GIVING",
+      "tables_search.INITIALIZE"
+    ],
+    "categories_exercised": 8
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-tictactoe/gameN.cob",
+      "total_lines": 339,
+      "code_lines": 289,
+      "comment_lines": 50,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 6,
+      "data_items": 40,
+      "statements": {
+        "PERFORM": 9,
+        "IF": 24,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 37,
+        "COMPUTE": 5,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 54,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 5,
+        "SET": 0,
+        "ADD": 10,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 1,
+        "STRING": 0,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 5,
+      "capabilities": {
+        "control_flow": {
+          "IF": 47,
+          "ELSE": 12,
+          "WHEN": 1,
+          "PERFORM": 13,
+          "PERFORM_VARYING": 4,
+          "PERFORM_UNTIL": 5,
+          "STOP_RUN": 5
+        },
+        "arithmetic": {
+          "ADD": 10,
+          "SUBTRACT": 1,
+          "DIVIDE": 1,
+          "COMPUTE": 5
+        },
+        "data_advanced": {
+          "PIC_X": 4,
+          "PIC_9": 26,
+          "OCCURS": 4
+        },
+        "io_file": {},
+        "string_ops": {
+          "UNSTRING": 2,
+          "DELIMITED_BY": 1
+        },
+        "tables_search": {
+          "INITIALIZE": 1
+        },
+        "subprograms": {
+          "GIVING": 2
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 12,
+          "FUNCTION_NUMVAL": 2,
+          "FUNCTION_TRIM": 10
+        },
+        "misc": {
+          "DISPLAY": 66,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-tictactoe/game15tree.cob",
+      "total_lines": 557,
+      "code_lines": 434,
+      "comment_lines": 123,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 10,
+      "data_items": 56,
+      "statements": {
+        "PERFORM": 30,
+        "IF": 46,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 105,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 35,
+        "SUBTRACT": 3,
+        "MULTIPLY": 1,
+        "DIVIDE": 5,
+        "STRING": 0,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 92,
+          "ELSE": 30,
+          "EVALUATE": 2,
+          "WHEN": 3,
+          "PERFORM": 36,
+          "PERFORM_VARYING": 6,
+          "PERFORM_UNTIL": 8,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 35,
+          "SUBTRACT": 3,
+          "MULTIPLY": 1,
+          "DIVIDE": 5,
+          "COMPUTE": 10
+        },
+        "data_advanced": {
+          "PIC_X": 5,
+          "PIC_9": 38,
+          "OCCURS": 11,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 4,
+          "DELIMITED_BY": 1
+        },
+        "tables_search": {
+          "INITIALIZE": 3
+        },
+        "subprograms": {
+          "GIVING": 5
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 4,
+          "FUNCTION_NUMVAL": 1,
+          "FUNCTION_TRIM": 3
+        },
+        "misc": {
+          "DISPLAY": 3,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-tictactoe/game015.cob",
+      "total_lines": 241,
+      "code_lines": 189,
+      "comment_lines": 52,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 4,
+      "data_items": 51,
+      "statements": {
+        "PERFORM": 7,
+        "IF": 17,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 33,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 13,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 13,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 1,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 34,
+          "ELSE": 9,
+          "PERFORM": 10,
+          "PERFORM_VARYING": 3,
+          "PERFORM_UNTIL": 4,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 13,
+          "SUBTRACT": 1,
+          "DIVIDE": 1
+        },
+        "data_advanced": {
+          "PIC_X": 10,
+          "PIC_9": 31,
+          "OCCURS": 6,
+          "REDEFINES": 2,
+          "FILLER": 8
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {
+          "INITIALIZE": 1
+        },
+        "subprograms": {
+          "GIVING": 3
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 30,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-tictactoe/game015tree.cob",
+      "total_lines": 531,
+      "code_lines": 436,
+      "comment_lines": 95,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 10,
+      "data_items": 56,
+      "statements": {
+        "PERFORM": 30,
+        "IF": 46,
+        "EVALUATE": 1,
+        "CALL": 0,
+        "MOVE": 106,
+        "COMPUTE": 2,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 3,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 36,
+        "SUBTRACT": 3,
+        "MULTIPLY": 1,
+        "DIVIDE": 5,
+        "STRING": 0,
+        "UNSTRING": 1,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 92,
+          "ELSE": 30,
+          "EVALUATE": 2,
+          "WHEN": 3,
+          "PERFORM": 36,
+          "PERFORM_VARYING": 6,
+          "PERFORM_UNTIL": 8,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 36,
+          "SUBTRACT": 3,
+          "MULTIPLY": 1,
+          "DIVIDE": 5,
+          "COMPUTE": 10
+        },
+        "data_advanced": {
+          "PIC_X": 5,
+          "PIC_9": 38,
+          "OCCURS": 11,
+          "REDEFINES": 1
+        },
+        "io_file": {},
+        "string_ops": {
+          "UNSTRING": 2,
+          "REFERENCE_MOD": 4,
+          "DELIMITED_BY": 1
+        },
+        "tables_search": {
+          "INITIALIZE": 3
+        },
+        "subprograms": {
+          "GIVING": 5
+        },
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 4,
+          "FUNCTION_NUMVAL": 1,
+          "FUNCTION_TRIM": 3
+        },
+        "misc": {
+          "DISPLAY": 3,
+          "ACCEPT": 1
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-tictactoe/game15.cob",
+      "total_lines": 251,
+      "code_lines": 189,
+      "comment_lines": 62,
+      "blank_lines": 0,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 1,
+      "paragraphs": 4,
+      "data_items": 51,
+      "statements": {
+        "PERFORM": 7,
+        "IF": 17,
+        "EVALUATE": 0,
+        "CALL": 0,
+        "MOVE": 33,
+        "COMPUTE": 0,
+        "READ": 0,
+        "WRITE": 0,
+        "OPEN": 0,
+        "CLOSE": 0,
+        "ACCEPT": 1,
+        "DISPLAY": 13,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 0,
+        "ADD": 13,
+        "SUBTRACT": 1,
+        "MULTIPLY": 0,
+        "DIVIDE": 1,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 6,
+      "capabilities": {
+        "control_flow": {
+          "IF": 34,
+          "ELSE": 9,
+          "PERFORM": 10,
+          "PERFORM_VARYING": 3,
+          "PERFORM_UNTIL": 4,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 13,
+          "SUBTRACT": 1,
+          "DIVIDE": 1
+        },
+        "data_advanced": {
+          "PIC_X": 10,
+          "PIC_9": 31,
+          "OCCURS": 6,
+          "REDEFINES": 2,
+          "FILLER": 8
+        },
+        "io_file": {},
+        "string_ops": {},
+        "tables_search": {
+          "INITIALIZE": 1
+        },
+        "subprograms": {
+          "GIVING": 3
+        },
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 30,
+          "ACCEPT": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/SATCobol-codex",
+  "has_git": true,
+  "commits": 10,
+  "commit_log": [
+    {
+      "sha": "e7b5156eb1a0fb3ef4533cad16bc830612f5ff12",
+      "date": "2026-04-16T07:43:21+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Improve learned clauses and document benchmarks"
+    },
+    {
+      "sha": "edb0942bdc83b1e3808f124735bdfc984223b810",
+      "date": "2026-04-16T07:13:14+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add clause learning and backjumping"
+    },
+    {
+      "sha": "8c6ebcf114457a733dc4ce658659d7a4d1657149",
+      "date": "2026-04-16T06:46:11+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Minisat comparison benchmark script"
+    },
+    {
+      "sha": "c8cc713f307780a8f3e7b489241a07d48da5708c",
+      "date": "2026-04-15T21:24:10+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add restarts and activity-based branching"
+    },
+    {
+      "sha": "bad44e0a4fd10418decd95ac3189e292928926ab",
+      "date": "2026-04-15T18:46:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add translated SAT4J regression suite"
+    },
+    {
+      "sha": "ca9a67a790f734b394dbea6bd1ae1bd3cc445fa5",
+      "date": "2026-04-15T17:30:14+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add Minisat cross-check script"
+    },
+    {
+      "sha": "1ebd388fdba5bd47aa164be5b7e115909ddde0aa",
+      "date": "2026-04-15T17:10:30+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Optimize solver propagation and branching"
+    },
+    {
+      "sha": "14555932a04343ae496e582c326b19eb45291b3e",
+      "date": "2026-04-15T16:25:58+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor solver into modules"
+    },
+    {
+      "sha": "59d47ff9983513112a1ae414f78b435ff26ecf28",
+      "date": "2026-04-15T16:08:02+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add model checking and baseline DPLL solver"
+    },
+    {
+      "sha": "6e49eb7e139f96264b6d3cc5660dc7f5b0262977",
+      "date": "2026-04-15T14:36:59+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add COBOL DIMACS parser and tests"
+    }
+  ],
+  "first_commit": "2026-04-15T14:36:59+02:00",
+  "last_commit": "2026-04-16T07:43:21+02:00",
+  "authors": {
+    "Mathieu Acher": 10
+  },
+  "churn": {
+    "files_changed_total": 208,
+    "insertions_total": 72281,
+    "deletions_total": 1260,
+    "per_commit": [
+      {
+        "sha": "e7b5156eb1a0fb3ef4533cad16bc830612f5ff12",
+        "date": "2026-04-16T07:43:21+02:00",
+        "files": 4,
+        "ins": 320,
+        "del": 0
+      },
+      {
+        "sha": "edb0942bdc83b1e3808f124735bdfc984223b810",
+        "date": "2026-04-16T07:13:14+02:00",
+        "files": 4,
+        "ins": 289,
+        "del": 42
+      },
+      {
+        "sha": "8c6ebcf114457a733dc4ce658659d7a4d1657149",
+        "date": "2026-04-16T06:46:11+02:00",
+        "files": 2,
+        "ins": 257,
+        "del": 1
+      },
+      {
+        "sha": "c8cc713f307780a8f3e7b489241a07d48da5708c",
+        "date": "2026-04-15T21:24:10+02:00",
+        "files": 5,
+        "ins": 250,
+        "del": 62
+      },
+      {
+        "sha": "bad44e0a4fd10418decd95ac3189e292928926ab",
+        "date": "2026-04-15T18:46:45+02:00",
+        "files": 145,
+        "ins": 67903,
+        "del": 1
+      },
+      {
+        "sha": "ca9a67a790f734b394dbea6bd1ae1bd3cc445fa5",
+        "date": "2026-04-15T17:30:14+02:00",
+        "files": 3,
+        "ins": 125,
+        "del": 0
+      },
+      {
+        "sha": "1ebd388fdba5bd47aa164be5b7e115909ddde0aa",
+        "date": "2026-04-15T17:10:30+02:00",
+        "files": 6,
+        "ins": 457,
+        "del": 81
+      },
+      {
+        "sha": "14555932a04343ae496e582c326b19eb45291b3e",
+        "date": "2026-04-15T16:25:58+02:00",
+        "files": 8,
+        "ins": 1027,
+        "del": 1020
+      },
+      {
+        "sha": "59d47ff9983513112a1ae414f78b435ff26ecf28",
+        "date": "2026-04-15T16:08:02+02:00",
+        "files": 16,
+        "ins": 969,
+        "del": 53
+      },
+      {
+        "sha": "6e49eb7e139f96264b6d3cc5660dc7f5b0262977",
+        "date": "2026-04-15T14:36:59+02:00",
+        "files": 15,
+        "ins": 684,
+        "del": 0
+      }
+    ]
+  }
+}

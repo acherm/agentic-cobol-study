@@ -1,0 +1,293 @@
+{
+  "project": "COBOL-chess",
+  "agent": "Codex",
+  "session_id": "019d0663-34ad-7a03-8d12-888778029a2a",
+  "model": "gpt-5.4",
+  "file": "/Users/mathieuacher/.codex/sessions/2026/03/19/rollout-2026-03-19T14-57-38-019d0663-34ad-7a03-8d12-888778029a2a.jsonl",
+  "summary": {
+    "model": "gpt-5.4",
+    "context_window": 258400,
+    "turns_with_usage": 30,
+    "peak_context": 126455,
+    "peak_utilization_pct": 48.9,
+    "median_context": 100900,
+    "p90_context": 113838,
+    "p99_context": 124964,
+    "first_context": 11234,
+    "last_context": 126455,
+    "compactions": 0,
+    "compaction_events": []
+  },
+  "series": [
+    {
+      "ts": "2026-03-19T14:01:03.960Z",
+      "input": 4194,
+      "cache_read": 7040,
+      "cache_create": 0,
+      "context": 11234,
+      "output": 393,
+      "reasoning": 148
+    },
+    {
+      "ts": "2026-03-19T14:01:09.144Z",
+      "input": 7907,
+      "cache_read": 11520,
+      "cache_create": 0,
+      "context": 19427,
+      "output": 364,
+      "reasoning": 103
+    },
+    {
+      "ts": "2026-03-19T14:01:15.205Z",
+      "input": 2342,
+      "cache_read": 19712,
+      "cache_create": 0,
+      "context": 22054,
+      "output": 426,
+      "reasoning": 70
+    },
+    {
+      "ts": "2026-03-19T14:01:21.429Z",
+      "input": 2390,
+      "cache_read": 22400,
+      "cache_create": 0,
+      "context": 24790,
+      "output": 450,
+      "reasoning": 108
+    },
+    {
+      "ts": "2026-03-19T14:01:25.899Z",
+      "input": 16666,
+      "cache_read": 25088,
+      "cache_create": 0,
+      "context": 41754,
+      "output": 279,
+      "reasoning": 27
+    },
+    {
+      "ts": "2026-03-19T14:01:31.044Z",
+      "input": 22854,
+      "cache_read": 41856,
+      "cache_create": 0,
+      "context": 64710,
+      "output": 279,
+      "reasoning": 29
+    },
+    {
+      "ts": "2026-03-19T14:01:35.179Z",
+      "input": 11651,
+      "cache_read": 64896,
+      "cache_create": 0,
+      "context": 76547,
+      "output": 264,
+      "reasoning": 15
+    },
+    {
+      "ts": "2026-03-19T14:01:38.669Z",
+      "input": 3087,
+      "cache_read": 76672,
+      "cache_create": 0,
+      "context": 79759,
+      "output": 226,
+      "reasoning": 15
+    },
+    {
+      "ts": "2026-03-19T14:01:44.273Z",
+      "input": 2375,
+      "cache_read": 79872,
+      "cache_create": 0,
+      "context": 82247,
+      "output": 389,
+      "reasoning": 51
+    },
+    {
+      "ts": "2026-03-19T14:01:51.468Z",
+      "input": 8500,
+      "cache_read": 82560,
+      "cache_create": 0,
+      "context": 91060,
+      "output": 281,
+      "reasoning": 15
+    },
+    {
+      "ts": "2026-03-19T14:02:03.031Z",
+      "input": 13815,
+      "cache_read": 91264,
+      "cache_create": 0,
+      "context": 105079,
+      "output": 533,
+      "reasoning": 441
+    },
+    {
+      "ts": "2026-03-19T14:02:09.630Z",
+      "input": 4181,
+      "cache_read": 92544,
+      "cache_create": 0,
+      "context": 96725,
+      "output": 248,
+      "reasoning": 63
+    },
+    {
+      "ts": "2026-03-19T14:02:11.933Z",
+      "input": 1351,
+      "cache_read": 96896,
+      "cache_create": 0,
+      "context": 98247,
+      "output": 121,
+      "reasoning": 59
+    },
+    {
+      "ts": "2026-03-19T14:02:15.777Z",
+      "input": 1768,
+      "cache_read": 98304,
+      "cache_create": 0,
+      "context": 100072,
+      "output": 146,
+      "reasoning": 79
+    },
+    {
+      "ts": "2026-03-19T14:02:22.260Z",
+      "input": 208,
+      "cache_read": 100096,
+      "cache_create": 0,
+      "context": 100304,
+      "output": 441,
+      "reasoning": 111
+    },
+    {
+      "ts": "2026-03-19T14:02:25.658Z",
+      "input": 292,
+      "cache_read": 100608,
+      "cache_create": 0,
+      "context": 100900,
+      "output": 96,
+      "reasoning": 10
+    },
+    {
+      "ts": "2026-03-19T14:02:34.332Z",
+      "input": 181,
+      "cache_read": 100864,
+      "cache_create": 0,
+      "context": 101045,
+      "output": 52,
+      "reasoning": 13
+    },
+    {
+      "ts": "2026-03-19T14:02:43.021Z",
+      "input": 153,
+      "cache_read": 100992,
+      "cache_create": 0,
+      "context": 101145,
+      "output": 49,
+      "reasoning": 10
+    },
+    {
+      "ts": "2026-03-19T14:02:52.005Z",
+      "input": 121,
+      "cache_read": 101120,
+      "cache_create": 0,
+      "context": 101241,
+      "output": 53,
+      "reasoning": 14
+    },
+    {
+      "ts": "2026-03-19T14:02:59.892Z",
+      "input": 223,
+      "cache_read": 101120,
+      "cache_create": 0,
+      "context": 101343,
+      "output": 57,
+      "reasoning": 18
+    },
+    {
+      "ts": "2026-03-19T14:03:06.390Z",
+      "input": 199,
+      "cache_read": 101248,
+      "cache_create": 0,
+      "context": 101447,
+      "output": 50,
+      "reasoning": 11
+    },
+    {
+      "ts": "2026-03-19T14:03:38.854Z",
+      "input": 12462,
+      "cache_read": 101376,
+      "cache_create": 0,
+      "context": 113838,
+      "output": 1017,
+      "reasoning": 677
+    },
+    {
+      "ts": "2026-03-19T14:03:45.209Z",
+      "input": 3200,
+      "cache_read": 100736,
+      "cache_create": 0,
+      "context": 103936,
+      "output": 387,
+      "reasoning": 10
+    },
+    {
+      "ts": "2026-03-19T14:03:51.642Z",
+      "input": 799,
+      "cache_read": 104192,
+      "cache_create": 0,
+      "context": 104991,
+      "output": 342,
+      "reasoning": 282
+    },
+    {
+      "ts": "2026-03-19T14:03:58.171Z",
+      "input": 648,
+      "cache_read": 105216,
+      "cache_create": 0,
+      "context": 105864,
+      "output": 308,
+      "reasoning": 136
+    },
+    {
+      "ts": "2026-03-19T14:04:49.498Z",
+      "input": 374,
+      "cache_read": 106112,
+      "cache_create": 0,
+      "context": 106486,
+      "output": 2878,
+      "reasoning": 2839
+    },
+    {
+      "ts": "2026-03-19T14:07:18.866Z",
+      "input": 916,
+      "cache_read": 109312,
+      "cache_create": 0,
+      "context": 110228,
+      "output": 9697,
+      "reasoning": 3291
+    },
+    {
+      "ts": "2026-03-19T14:07:23.700Z",
+      "input": 165,
+      "cache_read": 119808,
+      "cache_create": 0,
+      "context": 119973,
+      "output": 310,
+      "reasoning": 34
+    },
+    {
+      "ts": "2026-03-19T14:07:25.924Z",
+      "input": 4772,
+      "cache_read": 120192,
+      "cache_create": 0,
+      "context": 124964,
+      "output": 95,
+      "reasoning": 36
+    },
+    {
+      "ts": "2026-03-19T14:07:48.147Z",
+      "input": 1527,
+      "cache_read": 124928,
+      "cache_create": 0,
+      "context": 126455,
+      "output": 1468,
+      "reasoning": 1222
+    }
+  ]
+}

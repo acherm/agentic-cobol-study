@@ -1,0 +1,149 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-doom-codex",
+  "has_git": true,
+  "commits": 10,
+  "commit_log": [
+    {
+      "sha": "02f13a1ea6d27298ab06f0f599d46b2665d79d67",
+      "date": "2026-04-18T14:49:28+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add demo launcher and SDL polish"
+    },
+    {
+      "sha": "9fbcff207bedd4035c4e585632c44f8bb7198cb9",
+      "date": "2026-04-18T14:43:48+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Split COBOL core into copybooks"
+    },
+    {
+      "sha": "76758985db7d4fe6d5680760e91ead7c5befbfe4",
+      "date": "2026-04-18T14:33:50+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Refactor COBOL game core structure"
+    },
+    {
+      "sha": "eee50f8318b417bd4b074c3ffbf59c7e106e0f58",
+      "date": "2026-04-18T13:13:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add multi-level campaign and start menu"
+    },
+    {
+      "sha": "fd84dc9fbc8829ec3141ffbe478f5aa4a7add771",
+      "date": "2026-04-18T10:05:45+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add pickups weapons and HUD"
+    },
+    {
+      "sha": "866fe4d1b774cbcc0eb27b526bfd503e749b2aa2",
+      "date": "2026-04-17T20:16:48+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add enemies and combat systems"
+    },
+    {
+      "sha": "4219ca24591da66100a7d69860c74bee7435e4cc",
+      "date": "2026-04-17T19:26:02+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Move raycasting core back into COBOL"
+    },
+    {
+      "sha": "6c516b8c5a88bb435f70976767bf0b449f94ae1c",
+      "date": "2026-04-17T19:14:33+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add helper-backed visual raycaster"
+    },
+    {
+      "sha": "ec5133ee932716265ac01eb4bd165594b1d7868f",
+      "date": "2026-04-17T18:52:42+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Fix terminal grid alignment"
+    },
+    {
+      "sha": "8127df8d7667445808c72e9f4c9e042cbcc5c7c7",
+      "date": "2026-04-17T18:48:56+02:00",
+      "author": "Mathieu Acher",
+      "subject": "Add terminal COBOL grid walker"
+    }
+  ],
+  "first_commit": "2026-04-17T18:48:56+02:00",
+  "last_commit": "2026-04-18T14:49:28+02:00",
+  "authors": {
+    "Mathieu Acher": 10
+  },
+  "churn": {
+    "files_changed_total": 32,
+    "insertions_total": 6811,
+    "deletions_total": 2852,
+    "per_commit": [
+      {
+        "sha": "02f13a1ea6d27298ab06f0f599d46b2665d79d67",
+        "date": "2026-04-18T14:49:28+02:00",
+        "files": 4,
+        "ins": 689,
+        "del": 22
+      },
+      {
+        "sha": "9fbcff207bedd4035c4e585632c44f8bb7198cb9",
+        "date": "2026-04-18T14:43:48+02:00",
+        "files": 11,
+        "ins": 1639,
+        "del": 1629
+      },
+      {
+        "sha": "76758985db7d4fe6d5680760e91ead7c5befbfe4",
+        "date": "2026-04-18T14:33:50+02:00",
+        "files": 1,
+        "ins": 466,
+        "del": 260
+      },
+      {
+        "sha": "eee50f8318b417bd4b074c3ffbf59c7e106e0f58",
+        "date": "2026-04-18T13:13:45+02:00",
+        "files": 3,
+        "ins": 1078,
+        "del": 141
+      },
+      {
+        "sha": "fd84dc9fbc8829ec3141ffbe478f5aa4a7add771",
+        "date": "2026-04-18T10:05:45+02:00",
+        "files": 2,
+        "ins": 633,
+        "del": 87
+      },
+      {
+        "sha": "866fe4d1b774cbcc0eb27b526bfd503e749b2aa2",
+        "date": "2026-04-17T20:16:48+02:00",
+        "files": 2,
+        "ins": 798,
+        "del": 30
+      },
+      {
+        "sha": "4219ca24591da66100a7d69860c74bee7435e4cc",
+        "date": "2026-04-17T19:26:02+02:00",
+        "files": 3,
+        "ins": 816,
+        "del": 425
+      },
+      {
+        "sha": "6c516b8c5a88bb435f70976767bf0b449f94ae1c",
+        "date": "2026-04-17T19:14:33+02:00",
+        "files": 3,
+        "ins": 425,
+        "del": 257
+      },
+      {
+        "sha": "ec5133ee932716265ac01eb4bd165594b1d7868f",
+        "date": "2026-04-17T18:52:42+02:00",
+        "files": 1,
+        "ins": 3,
+        "del": 1
+      },
+      {
+        "sha": "8127df8d7667445808c72e9f4c9e042cbcc5c7c7",
+        "date": "2026-04-17T18:48:56+02:00",
+        "files": 2,
+        "ins": 264,
+        "del": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "root": "/Users/mathieuacher/SANDBOX/cobol-jb",
+  "aggregate": {
+    "num_files": 2,
+    "total_lines": 1100,
+    "code_lines": 906,
+    "comment_lines": 35,
+    "sections": 7,
+    "paragraphs": 32,
+    "data_items": 246,
+    "max_nesting_any_file": 12,
+    "statements": {
+      "PERFORM": 37,
+      "IF": 20,
+      "EVALUATE": 9,
+      "CALL": 0,
+      "MOVE": 164,
+      "COMPUTE": 29,
+      "READ": 2,
+      "WRITE": 43,
+      "OPEN": 9,
+      "CLOSE": 6,
+      "ACCEPT": 0,
+      "DISPLAY": 45,
+      "GO TO": 0,
+      "EXIT": 4,
+      "STOP": 2,
+      "SET": 15,
+      "ADD": 9,
+      "SUBTRACT": 0,
+      "MULTIPLY": 0,
+      "DIVIDE": 0,
+      "STRING": 2,
+      "UNSTRING": 0,
+      "INSPECT": 0,
+      "SEARCH": 0,
+      "SORT": 0
+    },
+    "divisions": {
+      "IDENTIFICATION": 2,
+      "ENVIRONMENT": 2,
+      "DATA": 2,
+      "PROCEDURE": 2
+    },
+    "top_files_by_code_lines": [
+      {
+        "file": "program.cbl",
+        "code_lines": 568
+      },
+      {
+        "file": "case-study-1/program.cbl",
+        "code_lines": 338
+      }
+    ],
+    "capabilities": {
+      "control_flow": {
+        "total": 138,
+        "files_using": 2,
+        "constructs": {
+          "IF": 24,
+          "ELSE": 8,
+          "EVALUATE": 12,
+          "WHEN": 37,
+          "PERFORM": 37,
+          "PERFORM_UNTIL": 5,
+          "CONTINUE": 6,
+          "STOP_RUN": 2,
+          "PERFORM_VARYING": 3,
+          "EXIT": 4
+        }
+      },
+      "arithmetic": {
+        "total": 40,
+        "files_using": 2,
+        "constructs": {
+          "ADD": 9,
+          "COMPUTE": 31
+        }
+      },
+      "data_advanced": {
+        "total": 310,
+        "files_using": 2,
+        "constructs": {
+          "PIC_X": 110,
+          "PIC_9": 89,
+          "PIC_S9": 1,
+          "PIC_V": 7,
+          "LEVEL_88": 35,
+          "FILLER": 67,
+          "OCCURS": 1
+        }
+      },
+      "io_file": {
+        "total": 106,
+        "files_using": 2,
+        "constructs": {
+          "FD": 6,
+          "SELECT": 6,
+          "ASSIGN": 6,
+          "OPEN_INPUT": 2,
+          "OPEN_OUTPUT": 4,
+          "READ": 8,
+          "WRITE": 56,
+          "CLOSE": 8,
+          "AT_END": 4,
+          "LINE_SEQUENTIAL": 6
+        }
+      },
+      "string_ops": {
+        "total": 10,
+        "files_using": 1,
+        "constructs": {
+          "STRING": 3,
+          "DELIMITED_BY": 7
+        }
+      },
+      "tables_search": {
+        "total": 18,
+        "files_using": 2,
+        "constructs": {
+          "SET": 15,
+          "INITIALIZE": 3
+        }
+      },
+      "subprograms": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "copy_preproc": {
+        "total": 0,
+        "files_using": 0,
+        "constructs": {}
+      },
+      "intrinsics": {
+        "total": 1,
+        "files_using": 1,
+        "constructs": {
+          "FUNCTION": 1
+        }
+      },
+      "misc": {
+        "total": 54,
+        "files_using": 2,
+        "constructs": {
+          "DISPLAY": 54
+        }
+      }
+    },
+    "mastery_score": 35,
+    "mastery_constructs": [
+      "arithmetic.ADD",
+      "arithmetic.COMPUTE",
+      "control_flow.CONTINUE",
+      "control_flow.ELSE",
+      "control_flow.EVALUATE",
+      "control_flow.EXIT",
+      "control_flow.IF",
+      "control_flow.PERFORM",
+      "control_flow.PERFORM_UNTIL",
+      "control_flow.PERFORM_VARYING",
+      "control_flow.STOP_RUN",
+      "control_flow.WHEN",
+      "data_advanced.FILLER",
+      "data_advanced.LEVEL_88",
+      "data_advanced.OCCURS",
+      "data_advanced.PIC_9",
+      "data_advanced.PIC_S9",
+      "data_advanced.PIC_V",
+      "data_advanced.PIC_X",
+      "intrinsics.FUNCTION",
+      "io_file.ASSIGN",
+      "io_file.AT_END",
+      "io_file.CLOSE",
+      "io_file.FD",
+      "io_file.LINE_SEQUENTIAL",
+      "io_file.OPEN_INPUT",
+      "io_file.OPEN_OUTPUT",
+      "io_file.READ",
+      "io_file.SELECT",
+      "io_file.WRITE",
+      "misc.DISPLAY",
+      "string_ops.DELIMITED_BY",
+      "string_ops.STRING",
+      "tables_search.INITIALIZE",
+      "tables_search.SET"
+    ],
+    "categories_exercised": 8
+  },
+  "per_file": [
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-jb/program.cbl",
+      "total_lines": 705,
+      "code_lines": 568,
+      "comment_lines": 13,
+      "blank_lines": 124,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 3,
+      "paragraphs": 13,
+      "data_items": 169,
+      "statements": {
+        "PERFORM": 13,
+        "IF": 9,
+        "EVALUATE": 4,
+        "CALL": 0,
+        "MOVE": 95,
+        "COMPUTE": 16,
+        "READ": 1,
+        "WRITE": 41,
+        "OPEN": 6,
+        "CLOSE": 3,
+        "ACCEPT": 0,
+        "DISPLAY": 30,
+        "GO TO": 0,
+        "EXIT": 0,
+        "STOP": 1,
+        "SET": 7,
+        "ADD": 6,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 2,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 12,
+      "capabilities": {
+        "control_flow": {
+          "IF": 9,
+          "ELSE": 4,
+          "EVALUATE": 5,
+          "WHEN": 13,
+          "PERFORM": 13,
+          "PERFORM_UNTIL": 1,
+          "CONTINUE": 1,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 6,
+          "COMPUTE": 16
+        },
+        "data_advanced": {
+          "PIC_X": 86,
+          "PIC_9": 48,
+          "PIC_S9": 1,
+          "PIC_V": 7,
+          "LEVEL_88": 20,
+          "FILLER": 67
+        },
+        "io_file": {
+          "FD": 3,
+          "SELECT": 3,
+          "ASSIGN": 3,
+          "OPEN_INPUT": 1,
+          "OPEN_OUTPUT": 2,
+          "READ": 5,
+          "WRITE": 47,
+          "CLOSE": 3,
+          "AT_END": 2,
+          "LINE_SEQUENTIAL": 3
+        },
+        "string_ops": {
+          "STRING": 3,
+          "DELIMITED_BY": 7
+        },
+        "tables_search": {
+          "SET": 7,
+          "INITIALIZE": 1
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {
+          "FUNCTION": 1
+        },
+        "misc": {
+          "DISPLAY": 35
+        }
+      }
+    },
+    {
+      "path": "/Users/mathieuacher/SANDBOX/cobol-jb/case-study-1/program.cbl",
+      "total_lines": 395,
+      "code_lines": 338,
+      "comment_lines": 22,
+      "blank_lines": 35,
+      "divisions": {
+        "IDENTIFICATION": 1,
+        "ENVIRONMENT": 1,
+        "DATA": 1,
+        "PROCEDURE": 1
+      },
+      "sections": 4,
+      "paragraphs": 19,
+      "data_items": 77,
+      "statements": {
+        "PERFORM": 24,
+        "IF": 11,
+        "EVALUATE": 5,
+        "CALL": 0,
+        "MOVE": 69,
+        "COMPUTE": 13,
+        "READ": 1,
+        "WRITE": 2,
+        "OPEN": 3,
+        "CLOSE": 3,
+        "ACCEPT": 0,
+        "DISPLAY": 15,
+        "GO TO": 0,
+        "EXIT": 4,
+        "STOP": 1,
+        "SET": 8,
+        "ADD": 3,
+        "SUBTRACT": 0,
+        "MULTIPLY": 0,
+        "DIVIDE": 0,
+        "STRING": 0,
+        "UNSTRING": 0,
+        "INSPECT": 0,
+        "SEARCH": 0,
+        "SORT": 0
+      },
+      "max_nesting": 12,
+      "capabilities": {
+        "control_flow": {
+          "IF": 15,
+          "ELSE": 4,
+          "EVALUATE": 7,
+          "WHEN": 24,
+          "PERFORM": 24,
+          "PERFORM_VARYING": 3,
+          "PERFORM_UNTIL": 4,
+          "EXIT": 4,
+          "CONTINUE": 5,
+          "STOP_RUN": 1
+        },
+        "arithmetic": {
+          "ADD": 3,
+          "COMPUTE": 15
+        },
+        "data_advanced": {
+          "PIC_X": 24,
+          "PIC_9": 41,
+          "OCCURS": 1,
+          "LEVEL_88": 15
+        },
+        "io_file": {
+          "FD": 3,
+          "SELECT": 3,
+          "ASSIGN": 3,
+          "OPEN_INPUT": 1,
+          "OPEN_OUTPUT": 2,
+          "READ": 3,
+          "WRITE": 9,
+          "CLOSE": 5,
+          "AT_END": 2,
+          "LINE_SEQUENTIAL": 3
+        },
+        "string_ops": {},
+        "tables_search": {
+          "SET": 8,
+          "INITIALIZE": 2
+        },
+        "subprograms": {},
+        "copy_preproc": {},
+        "intrinsics": {},
+        "misc": {
+          "DISPLAY": 19
+        }
+      }
+    }
+  ]
+}
