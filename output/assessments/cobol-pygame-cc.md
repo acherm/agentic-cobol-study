@@ -1,4 +1,4 @@
-# Assessment — `cobol-pygame-cc` — evidence of what the coding agent actually achieved
+# Assessment — `PYGAME-COBOL-CLAUDE` (folder `cobol-pygame-cc`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

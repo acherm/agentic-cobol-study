@@ -1,4 +1,4 @@
-# Assessment — `cobol-compiler-codex` — evidence of what the coding agent actually achieved
+# Assessment — `COMPILER-COBOL-CODEX` (folder `cobol-compiler-codex`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

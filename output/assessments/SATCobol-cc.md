@@ -1,4 +1,4 @@
-# Assessment — `SATCobol-cc` — evidence of what the coding agent actually achieved
+# Assessment — `SAT-COBOL-CLAUDE` (folder `SATCobol-cc`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

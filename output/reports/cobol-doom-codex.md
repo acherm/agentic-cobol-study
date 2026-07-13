@@ -1,4 +1,4 @@
-# `cobol-doom-codex` — Case Study
+# `DOOM-COBOL-CODEX` — Case Study (repository folder `cobol-doom-codex`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-doom-codex/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-doom-codex` assessment](../assessments/cobol-doom-codex.md)  
@@ -237,7 +237,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 20h 14m |
 | Active collaboration time | 2h 1m |
 | Tool calls | 631 |
-| Input tokens | 44,542,491 |
+| Input tokens | 1,900,699 |
 | Output tokens | 357,679 |
 | Cache-read tokens | 42,641,792 |
 | Cache-create tokens | 0 |

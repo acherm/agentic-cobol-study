@@ -1,4 +1,4 @@
-# `cobol-jb-cc` — Case Study
+# `PAYROLL-COBOL-CLAUDE` — Case Study (repository folder `cobol-jb-cc`)
 
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-jb-cc` assessment](../assessments/cobol-jb-cc.md)  
 > 📖 **Feature ledger** (agent-centric, step-wise): [`SPECIFICATION_BACKLOG.md`](../backlogs/cobol-jb-cc/SPECIFICATION_BACKLOG.md)

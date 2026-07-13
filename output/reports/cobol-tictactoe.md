@@ -1,4 +1,4 @@
-# `cobol-tictactoe` — Case Study
+# `TTTGAME15-COBOL-CLAUDE` — Case Study (repository folder `cobol-tictactoe`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-tictactoe/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-tictactoe` assessment](../assessments/cobol-tictactoe.md)  

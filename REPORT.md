@@ -39,22 +39,22 @@
 
 | Project | Domain | Agent(s) | Sessions | COBOL files / LOC | Tool calls | Dur (Σ wall) | Cost est. (USD) |
 |---|---|---|---:|---:|---:|---:|---:|
-| `chess-cobol-cc` | Chess engine in COBOL (GnuCOBOL); engine playability + ELO measurement via cutechess. | Cl×1 | 1 | 1 / 3,460 | 1,156 | 17d 22h 51m | $518 |
-| `COBOL-chess` | Chess engine in COBOL (multi-session); architecture + specification backlog. | Co×2+Cl×1 | 3 | 16 / 3,988 | 1,990 | 29d 22h 9m | $66 |
-| `cobol-compiler-cc` | A COBOL compiler (and interpreter) written in COBOL. Translates COBOL to C; self-hosts non | Cl×3 | 3 | 36 / 18,908 | 3,740 | 11d 14h 20m | $5,185 |
-| `cobol-compiler-codex` | Alternative COBOL-to-C 'minicobc' compiler, driven by Codex. Benchmarks vs. GnuCOBOL. | Co×4 | 4 | 69 / 13,173 | 5,370 | 4d 21h 53m | $108 |
-| `cobol-compress-codex` | COBPACK — columnar packer / compressor for fixed-record COBOL data, implemented in pure CO | Co×2+Cl×1 | 3 | 2 / 2,021 | 305 | 11d 15h 46m | $29 |
-| `cobol-compress-cobolcc` | COBPACK — columnar compressor (Claude-Code-built) — second-agent replica of the COBPACK do | Cl×1 | 1 | 3 / 2,126 | 136 | 1d 10h 48m | $129 |
-| `cobol-doom-cc` | Doom-like FPS in COBOL (Claude Code) — modular walker + ray-casting + enemies + levels. | Cl×1 | 1 | 8 / 1,869 | 152 | 20h 12m | $367 |
-| `cobol-doom-codex` | Doom-like FPS in COBOL (Codex) — gridwalker + SDL2 bridge + 11 COPY books + BMP sprites. | Co×1 | 1 | 12 / 2,096 | 631 | 20h 14m | $11 |
-| `cobol-jb-cc` | — | Cl×1 | 1 | 1 / 598 | 136 | 26d 1h 34m | $13 |
-| `cobol-jb-codex` | — | Co×2 | 2 | 1 / 647 | 199 | 26d 2h 2m | $3 |
-| `COBOL-pygame` | A pygame-style framework in COBOL (GnuCOBOL), exposing a Python-pygame-like interface. | Co×1+Cl×1 | 2 | 3 / 492 | 82 | 1h 35m | $17 |
-| `cobol-pygame-cc` | — | Cl×1 | 1 | 5 / 915 | 153 | 5h 30m | $90 |
-| `SATCobol-codex` | SAT solver in COBOL (Codex) — modular COPY books + MiniSat/SAT4J cross-checks + uf/uuf ben | Co×1 | 1 | 6 / 1,934 | 508 | 17h 24m | $11 |
-| `SATCobol-cc` | SAT solver in COBOL (Claude Code) — second-agent replica of the SAT domain. | Cl×1 | 1 | 13 / 1,675 | 360 | 1d 22h 41m | $474 |
-| `cobol-tictactoe` | Game-of-15 and tic-tac-toe variants in COBOL with minimax-style tree search (Claude Code). | Cl×2 | 2 | 5 / 1,919 | 142 | 34d 19h 28m | $88 |
-| `game15-cobol-codex` | Game of 15 in COBOL (Codex) — second-agent replica of the small-game domain. | Co×1 | 1 | 5 / 2,822 | 173 | 3h 37m | $3 |
+| `CHESS-COBOL-CLAUDE` | Chess engine in COBOL (GnuCOBOL); engine playability + ELO measurement via cutechess. | Cl×1 | 1 | 1 / 3,460 | 1,156 | 17d 22h 51m | $518 |
+| `CHESS-COBOL-CODEX` | Chess engine in COBOL (multi-session); architecture + specification backlog. | Co×2+Cl×1 | 3 | 16 / 3,988 | 1,990 | 29d 22h 9m | $66 |
+| `COMPILER-COBOL-CLAUDE` | A COBOL compiler (and interpreter) written in COBOL. Translates COBOL to C; self-hosts non | Cl×3 | 3 | 36 / 18,908 | 3,740 | 11d 14h 20m | $5,185 |
+| `COMPILER-COBOL-CODEX` | Alternative COBOL-to-C 'minicobc' compiler, driven by Codex. Benchmarks vs. GnuCOBOL. | Co×4 | 4 | 69 / 13,173 | 5,370 | 4d 21h 53m | $108 |
+| `COMPRESS-COBOL-CODEX` | COBPACK — columnar packer / compressor for fixed-record COBOL data, implemented in pure CO | Co×2+Cl×1 | 3 | 2 / 2,021 | 305 | 11d 15h 46m | $29 |
+| `COMPRESS-COBOL-CLAUDE` | COBPACK — columnar compressor (Claude-Code-built) — second-agent replica of the COBPACK do | Cl×1 | 1 | 3 / 2,126 | 136 | 1d 10h 48m | $129 |
+| `DOOM-COBOL-CLAUDE` | Doom-like FPS in COBOL (Claude Code) — modular walker + ray-casting + enemies + levels. | Cl×1 | 1 | 8 / 1,869 | 152 | 20h 12m | $367 |
+| `DOOM-COBOL-CODEX` | Doom-like FPS in COBOL (Codex) — gridwalker + SDL2 bridge + 11 COPY books + BMP sprites. | Co×1 | 1 | 12 / 2,096 | 631 | 20h 14m | $11 |
+| `PAYROLL-COBOL-CLAUDE` | — | Cl×1 | 1 | 1 / 598 | 136 | 26d 1h 34m | $13 |
+| `PAYROLL-COBOL-CODEX` | — | Co×2 | 2 | 1 / 647 | 199 | 26d 2h 2m | $3 |
+| `PYGAME-COBOL-CODEX` | A pygame-style framework in COBOL (GnuCOBOL), exposing a Python-pygame-like interface. | Co×1+Cl×1 | 2 | 3 / 492 | 82 | 1h 35m | $17 |
+| `PYGAME-COBOL-CLAUDE` | — | Cl×1 | 1 | 5 / 915 | 153 | 5h 30m | $90 |
+| `SAT-COBOL-CODEX` | SAT solver in COBOL (Codex) — modular COPY books + MiniSat/SAT4J cross-checks + uf/uuf ben | Co×1 | 1 | 6 / 1,934 | 508 | 17h 24m | $11 |
+| `SAT-COBOL-CLAUDE` | SAT solver in COBOL (Claude Code) — second-agent replica of the SAT domain. | Cl×1 | 1 | 13 / 1,675 | 360 | 1d 22h 41m | $474 |
+| `TTTGAME15-COBOL-CLAUDE` | Game-of-15 and tic-tac-toe variants in COBOL with minimax-style tree search (Claude Code). | Cl×2 | 2 | 5 / 1,919 | 142 | 34d 19h 28m | $88 |
+| `TTTGAME15-COBOL-CODEX` | Game of 15 in COBOL (Codex) — second-agent replica of the small-game domain. | Co×1 | 1 | 5 / 2,822 | 173 | 3h 37m | $3 |
 
 Legend: `Cl×N` = Claude Code sessions; `Co×N` = Codex sessions.
 
@@ -317,43 +317,43 @@ Each row: narrative story, case study (RQ-labeled metrics), calibrated assessmen
 
 | Project | Story | Case study | Assessment | Backlog | Key features | Replay prompts |
 |---|---|---|---|---|---|---|
-| `chess-cobol-cc` | [story](output/backlogs/chess-cobol-cc/STORY.md) | [report](output/reports/chess-cobol-cc.md) | [assessment](output/assessments/chess-cobol-cc.md) | [backlog](output/backlogs/chess-cobol-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/chess-cobol-cc/KEY_FEATURES.md) | — |
-| `COBOL-chess` | [story](output/backlogs/COBOL-chess/STORY.md) | [report](output/reports/COBOL-chess.md) | [assessment](output/assessments/COBOL-chess.md) | [backlog](output/backlogs/COBOL-chess/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/COBOL-chess/KEY_FEATURES.md) | [replay](output/backlogs/COBOL-chess/REPLAY_PROMPTS.md) |
-| `cobol-compiler-cc` | [story](output/backlogs/cobol-compiler-cc/STORY.md) | [report](output/reports/cobol-compiler-cc.md) | [assessment](output/assessments/cobol-compiler-cc.md) | [backlog](output/backlogs/cobol-compiler-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compiler-cc/KEY_FEATURES.md) | — |
-| `cobol-compiler-codex` | [story](output/backlogs/cobol-compiler-codex/STORY.md) | [report](output/reports/cobol-compiler-codex.md) | [assessment](output/assessments/cobol-compiler-codex.md) | [backlog](output/backlogs/cobol-compiler-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compiler-codex/KEY_FEATURES.md) | [replay](output/backlogs/cobol-compiler-codex/REPLAY_PROMPTS.md) |
-| `cobol-compress-codex` | [story](output/backlogs/cobol-compress-codex/STORY.md) | [report](output/reports/cobol-compress-codex.md) | [assessment](output/assessments/cobol-compress-codex.md) | [backlog](output/backlogs/cobol-compress-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compress-codex/KEY_FEATURES.md) | [replay](output/backlogs/cobol-compress-codex/REPLAY_PROMPTS.md) |
-| `cobol-compress-cobolcc` | [story](output/backlogs/cobol-compress-cobolcc/STORY.md) | [report](output/reports/cobol-compress-cobolcc.md) | [assessment](output/assessments/cobol-compress-cobolcc.md) | [backlog](output/backlogs/cobol-compress-cobolcc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compress-cobolcc/KEY_FEATURES.md) | — |
-| `cobol-doom-cc` | [story](output/backlogs/cobol-doom-cc/STORY.md) | [report](output/reports/cobol-doom-cc.md) | [assessment](output/assessments/cobol-doom-cc.md) | [backlog](output/backlogs/cobol-doom-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-cc/KEY_FEATURES.md) | — |
-| `cobol-doom-codex` | [story](output/backlogs/cobol-doom-codex/STORY.md) | [report](output/reports/cobol-doom-codex.md) | [assessment](output/assessments/cobol-doom-codex.md) | [backlog](output/backlogs/cobol-doom-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-codex/KEY_FEATURES.md) | — |
-| `cobol-jb-cc` | — | [report](output/reports/cobol-jb-cc.md) | [assessment](output/assessments/cobol-jb-cc.md) | [backlog](output/backlogs/cobol-jb-cc/SPECIFICATION_BACKLOG.md) | — | — |
-| `cobol-jb-codex` | — | [report](output/reports/cobol-jb-codex.md) | [assessment](output/assessments/cobol-jb-codex.md) | [backlog](output/backlogs/cobol-jb-codex/SPECIFICATION_BACKLOG.md) | — | — |
-| `COBOL-pygame` | [story](output/backlogs/COBOL-pygame/STORY.md) | [report](output/reports/COBOL-pygame.md) | [assessment](output/assessments/COBOL-pygame.md) | [backlog](output/backlogs/COBOL-pygame/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/COBOL-pygame/KEY_FEATURES.md) | [replay](output/backlogs/COBOL-pygame/REPLAY_PROMPTS.md) |
-| `cobol-pygame-cc` | — | [report](output/reports/cobol-pygame-cc.md) | [assessment](output/assessments/cobol-pygame-cc.md) | [backlog](output/backlogs/cobol-pygame-cc/SPECIFICATION_BACKLOG.md) | — | — |
-| `SATCobol-codex` | [story](output/backlogs/SATCobol-codex/STORY.md) | [report](output/reports/SATCobol-codex.md) | [assessment](output/assessments/SATCobol-codex.md) | [backlog](output/backlogs/SATCobol-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-codex/KEY_FEATURES.md) | [replay](output/backlogs/SATCobol-codex/REPLAY_PROMPTS.md) |
-| `SATCobol-cc` | [story](output/backlogs/SATCobol-cc/STORY.md) | [report](output/reports/SATCobol-cc.md) | [assessment](output/assessments/SATCobol-cc.md) | [backlog](output/backlogs/SATCobol-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-cc/KEY_FEATURES.md) | — |
-| `cobol-tictactoe` | [story](output/backlogs/cobol-tictactoe/STORY.md) | [report](output/reports/cobol-tictactoe.md) | [assessment](output/assessments/cobol-tictactoe.md) | [backlog](output/backlogs/cobol-tictactoe/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-tictactoe/KEY_FEATURES.md) | [replay](output/backlogs/cobol-tictactoe/REPLAY_PROMPTS.md) |
-| `game15-cobol-codex` | [story](output/backlogs/game15-cobol-codex/STORY.md) | [report](output/reports/game15-cobol-codex.md) | [assessment](output/assessments/game15-cobol-codex.md) | [backlog](output/backlogs/game15-cobol-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/game15-cobol-codex/KEY_FEATURES.md) | — |
+| `CHESS-COBOL-CLAUDE` | [story](output/backlogs/chess-cobol-cc/STORY.md) | [report](output/reports/chess-cobol-cc.md) | [assessment](output/assessments/chess-cobol-cc.md) | [backlog](output/backlogs/chess-cobol-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/chess-cobol-cc/KEY_FEATURES.md) | — |
+| `CHESS-COBOL-CODEX` | [story](output/backlogs/COBOL-chess/STORY.md) | [report](output/reports/COBOL-chess.md) | [assessment](output/assessments/COBOL-chess.md) | [backlog](output/backlogs/COBOL-chess/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/COBOL-chess/KEY_FEATURES.md) | [replay](output/backlogs/COBOL-chess/REPLAY_PROMPTS.md) |
+| `COMPILER-COBOL-CLAUDE` | [story](output/backlogs/cobol-compiler-cc/STORY.md) | [report](output/reports/cobol-compiler-cc.md) | [assessment](output/assessments/cobol-compiler-cc.md) | [backlog](output/backlogs/cobol-compiler-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compiler-cc/KEY_FEATURES.md) | — |
+| `COMPILER-COBOL-CODEX` | [story](output/backlogs/cobol-compiler-codex/STORY.md) | [report](output/reports/cobol-compiler-codex.md) | [assessment](output/assessments/cobol-compiler-codex.md) | [backlog](output/backlogs/cobol-compiler-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compiler-codex/KEY_FEATURES.md) | [replay](output/backlogs/cobol-compiler-codex/REPLAY_PROMPTS.md) |
+| `COMPRESS-COBOL-CODEX` | [story](output/backlogs/cobol-compress-codex/STORY.md) | [report](output/reports/cobol-compress-codex.md) | [assessment](output/assessments/cobol-compress-codex.md) | [backlog](output/backlogs/cobol-compress-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compress-codex/KEY_FEATURES.md) | [replay](output/backlogs/cobol-compress-codex/REPLAY_PROMPTS.md) |
+| `COMPRESS-COBOL-CLAUDE` | [story](output/backlogs/cobol-compress-cobolcc/STORY.md) | [report](output/reports/cobol-compress-cobolcc.md) | [assessment](output/assessments/cobol-compress-cobolcc.md) | [backlog](output/backlogs/cobol-compress-cobolcc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compress-cobolcc/KEY_FEATURES.md) | — |
+| `DOOM-COBOL-CLAUDE` | [story](output/backlogs/cobol-doom-cc/STORY.md) | [report](output/reports/cobol-doom-cc.md) | [assessment](output/assessments/cobol-doom-cc.md) | [backlog](output/backlogs/cobol-doom-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-cc/KEY_FEATURES.md) | — |
+| `DOOM-COBOL-CODEX` | [story](output/backlogs/cobol-doom-codex/STORY.md) | [report](output/reports/cobol-doom-codex.md) | [assessment](output/assessments/cobol-doom-codex.md) | [backlog](output/backlogs/cobol-doom-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-codex/KEY_FEATURES.md) | — |
+| `PAYROLL-COBOL-CLAUDE` | — | [report](output/reports/cobol-jb-cc.md) | [assessment](output/assessments/cobol-jb-cc.md) | [backlog](output/backlogs/cobol-jb-cc/SPECIFICATION_BACKLOG.md) | — | — |
+| `PAYROLL-COBOL-CODEX` | — | [report](output/reports/cobol-jb-codex.md) | [assessment](output/assessments/cobol-jb-codex.md) | [backlog](output/backlogs/cobol-jb-codex/SPECIFICATION_BACKLOG.md) | — | — |
+| `PYGAME-COBOL-CODEX` | [story](output/backlogs/COBOL-pygame/STORY.md) | [report](output/reports/COBOL-pygame.md) | [assessment](output/assessments/COBOL-pygame.md) | [backlog](output/backlogs/COBOL-pygame/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/COBOL-pygame/KEY_FEATURES.md) | [replay](output/backlogs/COBOL-pygame/REPLAY_PROMPTS.md) |
+| `PYGAME-COBOL-CLAUDE` | — | [report](output/reports/cobol-pygame-cc.md) | [assessment](output/assessments/cobol-pygame-cc.md) | [backlog](output/backlogs/cobol-pygame-cc/SPECIFICATION_BACKLOG.md) | — | — |
+| `SAT-COBOL-CODEX` | [story](output/backlogs/SATCobol-codex/STORY.md) | [report](output/reports/SATCobol-codex.md) | [assessment](output/assessments/SATCobol-codex.md) | [backlog](output/backlogs/SATCobol-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-codex/KEY_FEATURES.md) | [replay](output/backlogs/SATCobol-codex/REPLAY_PROMPTS.md) |
+| `SAT-COBOL-CLAUDE` | [story](output/backlogs/SATCobol-cc/STORY.md) | [report](output/reports/SATCobol-cc.md) | [assessment](output/assessments/SATCobol-cc.md) | [backlog](output/backlogs/SATCobol-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-cc/KEY_FEATURES.md) | — |
+| `TTTGAME15-COBOL-CLAUDE` | [story](output/backlogs/cobol-tictactoe/STORY.md) | [report](output/reports/cobol-tictactoe.md) | [assessment](output/assessments/cobol-tictactoe.md) | [backlog](output/backlogs/cobol-tictactoe/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-tictactoe/KEY_FEATURES.md) | [replay](output/backlogs/cobol-tictactoe/REPLAY_PROMPTS.md) |
+| `TTTGAME15-COBOL-CODEX` | [story](output/backlogs/game15-cobol-codex/STORY.md) | [report](output/reports/game15-cobol-codex.md) | [assessment](output/assessments/game15-cobol-codex.md) | [backlog](output/backlogs/game15-cobol-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/game15-cobol-codex/KEY_FEATURES.md) | — |
 
 ### Cross-project quantitative view (from deep analysis)
 
 | Project | Difficulty | Turns | Active time | bug_fix share | Error rate | User prompts | Avg prompt len |
 |---|---|---:|---:|---:|---:|---:|---:|
-| `cobol-compiler-cc` | Very-High (0.83) | 10,225 | 1d 8h 30m | 3.2% | 8.7% | 98 | 512 |
-| `cobol-compiler-codex` | Very-High (0.81) | 15,631 | 10h 58m | 3.9% | 20.0% | 97 | 83 |
-| `COBOL-chess` | High (0.74) | 5,640 | 4h 58m | 2.4% | 3.4% | 26 | 1554 |
-| `cobol-jb-codex` | High (0.72) | 638 | 30m 41s | 11.9% | 16.1% | 19 | 698 |
-| `cobol-jb-cc` | High (0.63) | 415 | 1h 57m | 7.0% | 5.1% | 21 | 1153 |
-| `chess-cobol-cc` | High (0.61) | 3,023 | 15h 31m | 0.3% | 2.8% | 47 | 1793 |
-| `cobol-pygame-cc` | High (0.57) | 434 | 2h 6m | 7.8% | 3.3% | 17 | 2086 |
-| `cobol-compress-codex` | High (0.55) | 802 | 54m 56s | 0.4% | 14.4% | 10 | 1054 |
-| `cobol-doom-codex` | Medium (0.46) | 1,920 | 2h 1m | 0.2% | 3.3% | 32 | 283 |
-| `SATCobol-codex` | Medium (0.44) | 620 | 45m 49s | 7.0% | 13.9% | 15 | 138 |
-| `cobol-doom-cc` | Medium (0.41) | 506 | 3h 14m | 0.7% | 0.7% | 20 | 479 |
-| `COBOL-pygame` | Medium (0.37) | 97 | 4m 16s | 5.1% | 9.7% | 3 | 115 |
-| `cobol-tictactoe` | Medium (0.29) | 206 | 2h 4m | 0.0% | 1.5% | 12 | 953 |
-| `game15-cobol-codex` | Medium (0.26) | 533 | 33m 4s | 0.1% | 3.5% | 11 | 396 |
-| `SATCobol-cc` | Low (0.23) | 316 | 1h 14m | 0.1% | 1.7% | 8 | 170 |
-| `cobol-compress-cobolcc` | Low (0.08) | 4 | 1m 2s | 0.0% | 0.0% | 1 | 7285 |
+| `COMPILER-COBOL-CLAUDE` | Very-High (0.83) | 10,225 | 1d 8h 30m | 3.2% | 8.7% | 98 | 512 |
+| `COMPILER-COBOL-CODEX` | Very-High (0.81) | 15,631 | 10h 58m | 3.9% | 20.0% | 97 | 83 |
+| `CHESS-COBOL-CODEX` | High (0.74) | 5,640 | 4h 58m | 2.4% | 3.4% | 26 | 1554 |
+| `PAYROLL-COBOL-CODEX` | High (0.72) | 638 | 30m 41s | 11.9% | 16.1% | 19 | 698 |
+| `PAYROLL-COBOL-CLAUDE` | High (0.63) | 415 | 1h 57m | 7.0% | 5.1% | 21 | 1153 |
+| `CHESS-COBOL-CLAUDE` | High (0.61) | 3,023 | 15h 31m | 0.3% | 2.8% | 47 | 1793 |
+| `PYGAME-COBOL-CLAUDE` | High (0.57) | 434 | 2h 6m | 7.8% | 3.3% | 17 | 2086 |
+| `COMPRESS-COBOL-CODEX` | High (0.55) | 802 | 54m 56s | 0.4% | 14.4% | 10 | 1054 |
+| `DOOM-COBOL-CODEX` | Medium (0.46) | 1,920 | 2h 1m | 0.2% | 3.3% | 32 | 283 |
+| `SAT-COBOL-CODEX` | Medium (0.44) | 620 | 45m 49s | 7.0% | 13.9% | 15 | 138 |
+| `DOOM-COBOL-CLAUDE` | Medium (0.41) | 506 | 3h 14m | 0.7% | 0.7% | 20 | 479 |
+| `PYGAME-COBOL-CODEX` | Medium (0.37) | 97 | 4m 16s | 5.1% | 9.7% | 3 | 115 |
+| `TTTGAME15-COBOL-CLAUDE` | Medium (0.29) | 206 | 2h 4m | 0.0% | 1.5% | 12 | 953 |
+| `TTTGAME15-COBOL-CODEX` | Medium (0.26) | 533 | 33m 4s | 0.1% | 3.5% | 11 | 396 |
+| `SAT-COBOL-CLAUDE` | Low (0.23) | 316 | 1h 14m | 0.1% | 1.7% | 8 | 170 |
+| `COMPRESS-COBOL-CLAUDE` | Low (0.08) | 4 | 1m 2s | 0.0% | 0.0% | 1 | 7285 |
 
 ### COBOL language mastery (what programs exercise the language surface)
 
@@ -361,22 +361,22 @@ Mastery score = number of distinct COBOL constructs observed in the project's `.
 
 | Project | Mastery | Categories | Paragraphs (≈functions) | Sections | LOC (code) | Notable constructs |
 |---|---:|---:|---:|---:|---:|---|
-| `cobol-compiler-cc` | 57 | 10/10 | 266 | 40 | 15,912 | `CALL`(55), `RECURSIVE`(23), `OCCURS`(161), `REDEFINES`(21), `USAGE_COMP_5`(2), `COPY`(45) |
-| `cobol-compiler-codex` | 60 | 10/10 | 246 | 70 | 11,680 | `CALL`(277), `RECURSIVE`(14), `OCCURS`(217), `REDEFINES`(60), `USAGE_COMP_5`(149), `COPY`(44) |
-| `COBOL-chess` | 40 | 10/10 | 70 | 30 | 3,359 | `CALL`(77), `RECURSIVE`(3), `OCCURS`(25), `USAGE_COMP_5`(489), `COPY`(34), `UNSTRING`(4) |
-| `cobol-jb-codex` | 34 | 7/10 | 14 | 3 | 572 | `OCCURS`(1), `FD`(5) |
-| `cobol-jb-cc` | 30 | 5/10 | 23 | 4 | 535 | `OCCURS`(1), `REDEFINES`(1), `FD`(5) |
-| `chess-cobol-cc` | 38 | 10/10 | 81 | 2 | 2,920 | `RECURSIVE`(1), `OCCURS`(23), `REDEFINES`(9), `COPY`(3), `FUNCTION`(29) |
-| `cobol-pygame-cc` | 28 | 10/10 | 48 | 4 | 764 | `CALL`(94), `OCCURS`(1), `COPY`(4), `FUNCTION`(2) |
-| `cobol-compress-codex` | 44 | 9/10 | 77 | 7 | 1,812 | `CALL`(1), `OCCURS`(3), `USAGE_COMP_5`(39), `FD`(3), `UNSTRING`(2), `FUNCTION`(13) |
-| `cobol-doom-codex` | 28 | 10/10 | 169 | 10 | 1,906 | `CALL`(42), `OCCURS`(28), `USAGE_COMP_5`(220), `COPY`(11), `FUNCTION`(40) |
-| `SATCobol-codex` | 42 | 9/10 | 70 | 3 | 1,706 | `OCCURS`(22), `USAGE_COMP_5`(81), `COPY`(5), `FD`(2), `FUNCTION`(67) |
-| `cobol-doom-cc` | 34 | 9/10 | 71 | 1 | 1,616 | `CALL`(15), `OCCURS`(7), `REDEFINES`(1), `USAGE_COMP_5`(12), `COPY`(7), `FUNCTION`(43) |
-| `COBOL-pygame` | 31 | 10/10 | 11 | 2 | 398 | `CALL`(39), `OCCURS`(1), `USAGE_COMP_5`(55), `COPY`(2), `FUNCTION`(4) |
-| `cobol-tictactoe` | 28 | 8/10 | 34 | 5 | 1,537 | `OCCURS`(38), `REDEFINES`(6), `UNSTRING`(6), `FUNCTION`(20) |
-| `game15-cobol-codex` | 35 | 9/10 | 88 | 5 | 2,264 | `OCCURS`(69), `UNSTRING`(3), `FUNCTION`(34) |
-| `SATCobol-cc` | 41 | 9/10 | 94 | 3 | 1,347 | `OCCURS`(19), `USAGE_COMP_5`(67), `COPY`(12), `FD`(2), `FUNCTION`(23) |
-| `cobol-compress-cobolcc` | 50 | 10/10 | 74 | 10 | 1,819 | `CALL`(46), `OCCURS`(3), `REDEFINES`(11), `USAGE_COMP_5`(105), `COPY`(13), `FD`(1) |
+| `COMPILER-COBOL-CLAUDE` | 57 | 10/10 | 266 | 40 | 15,912 | `CALL`(55), `RECURSIVE`(23), `OCCURS`(161), `REDEFINES`(21), `USAGE_COMP_5`(2), `COPY`(45) |
+| `COMPILER-COBOL-CODEX` | 60 | 10/10 | 246 | 70 | 11,680 | `CALL`(277), `RECURSIVE`(14), `OCCURS`(217), `REDEFINES`(60), `USAGE_COMP_5`(149), `COPY`(44) |
+| `CHESS-COBOL-CODEX` | 40 | 10/10 | 70 | 30 | 3,359 | `CALL`(77), `RECURSIVE`(3), `OCCURS`(25), `USAGE_COMP_5`(489), `COPY`(34), `UNSTRING`(4) |
+| `PAYROLL-COBOL-CODEX` | 34 | 7/10 | 14 | 3 | 572 | `OCCURS`(1), `FD`(5) |
+| `PAYROLL-COBOL-CLAUDE` | 30 | 5/10 | 23 | 4 | 535 | `OCCURS`(1), `REDEFINES`(1), `FD`(5) |
+| `CHESS-COBOL-CLAUDE` | 38 | 10/10 | 81 | 2 | 2,920 | `RECURSIVE`(1), `OCCURS`(23), `REDEFINES`(9), `COPY`(3), `FUNCTION`(29) |
+| `PYGAME-COBOL-CLAUDE` | 28 | 10/10 | 48 | 4 | 764 | `CALL`(94), `OCCURS`(1), `COPY`(4), `FUNCTION`(2) |
+| `COMPRESS-COBOL-CODEX` | 44 | 9/10 | 77 | 7 | 1,812 | `CALL`(1), `OCCURS`(3), `USAGE_COMP_5`(39), `FD`(3), `UNSTRING`(2), `FUNCTION`(13) |
+| `DOOM-COBOL-CODEX` | 28 | 10/10 | 169 | 10 | 1,906 | `CALL`(42), `OCCURS`(28), `USAGE_COMP_5`(220), `COPY`(11), `FUNCTION`(40) |
+| `SAT-COBOL-CODEX` | 42 | 9/10 | 70 | 3 | 1,706 | `OCCURS`(22), `USAGE_COMP_5`(81), `COPY`(5), `FD`(2), `FUNCTION`(67) |
+| `DOOM-COBOL-CLAUDE` | 34 | 9/10 | 71 | 1 | 1,616 | `CALL`(15), `OCCURS`(7), `REDEFINES`(1), `USAGE_COMP_5`(12), `COPY`(7), `FUNCTION`(43) |
+| `PYGAME-COBOL-CODEX` | 31 | 10/10 | 11 | 2 | 398 | `CALL`(39), `OCCURS`(1), `USAGE_COMP_5`(55), `COPY`(2), `FUNCTION`(4) |
+| `TTTGAME15-COBOL-CLAUDE` | 28 | 8/10 | 34 | 5 | 1,537 | `OCCURS`(38), `REDEFINES`(6), `UNSTRING`(6), `FUNCTION`(20) |
+| `TTTGAME15-COBOL-CODEX` | 35 | 9/10 | 88 | 5 | 2,264 | `OCCURS`(69), `UNSTRING`(3), `FUNCTION`(34) |
+| `SAT-COBOL-CLAUDE` | 41 | 9/10 | 94 | 3 | 1,347 | `OCCURS`(19), `USAGE_COMP_5`(67), `COPY`(12), `FD`(2), `FUNCTION`(23) |
+| `COMPRESS-COBOL-CLAUDE` | 50 | 10/10 | 74 | 10 | 1,819 | `CALL`(46), `OCCURS`(3), `REDEFINES`(11), `USAGE_COMP_5`(105), `COPY`(13), `FD`(1) |
 
 ### Feature inventory (what was actually built)
 
@@ -384,22 +384,22 @@ A prompt often expands into many sub-features. The ledger tallies features from 
 
 | Project | F-### backlog | README features | Prompt subtasks | Git commits | Total (dedup proxy) |
 |---|---:|---:|---:|---:|---:|
-| `cobol-compiler-cc` | **32** | 0 | 80 | 74 | 112 |
-| `cobol-compiler-codex` | **61** | 0 | 0 | 13 | 61 |
-| `COBOL-chess` | **184** | 8 | 92 | 2 | 284 |
-| `cobol-jb-codex` | **0** | 0 | 128 | 6 | 128 |
-| `cobol-jb-cc` | **0** | 0 | 143 | 6 | 143 |
-| `chess-cobol-cc` | **51** | 0 | 99 | 1 | 115 |
-| `cobol-pygame-cc` | **0** | 0 | 41 | 2 | 41 |
-| `cobol-compress-codex` | **18** | 0 | 168 | 1 | 186 |
-| `cobol-doom-codex` | **0** | 0 | 0 | 10 | 0 |
-| `SATCobol-codex` | **63** | 0 | 0 | 10 | 44 |
-| `cobol-doom-cc` | **13** | 0 | 0 | 15 | 13 |
-| `COBOL-pygame` | **11** | 0 | 31 | 1 | 42 |
-| `cobol-tictactoe` | **31** | 0 | 70 | 5 | 101 |
-| `game15-cobol-codex` | **35** | 0 | 0 | 4 | 35 |
-| `SATCobol-cc` | **87** | 0 | 0 | 10 | 57 |
-| `cobol-compress-cobolcc` | **11** | 0 | 62 | 1 | 73 |
+| `COMPILER-COBOL-CLAUDE` | **32** | 0 | 80 | 74 | 112 |
+| `COMPILER-COBOL-CODEX` | **61** | 0 | 0 | 13 | 61 |
+| `CHESS-COBOL-CODEX` | **184** | 8 | 92 | 2 | 284 |
+| `PAYROLL-COBOL-CODEX` | **0** | 0 | 128 | 6 | 128 |
+| `PAYROLL-COBOL-CLAUDE` | **0** | 0 | 143 | 6 | 143 |
+| `CHESS-COBOL-CLAUDE` | **51** | 0 | 99 | 1 | 115 |
+| `PYGAME-COBOL-CLAUDE` | **0** | 0 | 41 | 2 | 41 |
+| `COMPRESS-COBOL-CODEX` | **18** | 0 | 168 | 1 | 186 |
+| `DOOM-COBOL-CODEX` | **0** | 0 | 0 | 10 | 0 |
+| `SAT-COBOL-CODEX` | **63** | 0 | 0 | 10 | 44 |
+| `DOOM-COBOL-CLAUDE` | **13** | 0 | 0 | 15 | 13 |
+| `PYGAME-COBOL-CODEX` | **11** | 0 | 31 | 1 | 42 |
+| `TTTGAME15-COBOL-CLAUDE` | **31** | 0 | 70 | 5 | 101 |
+| `TTTGAME15-COBOL-CODEX` | **35** | 0 | 0 | 4 | 35 |
+| `SAT-COBOL-CLAUDE` | **87** | 0 | 0 | 10 | 57 |
+| `COMPRESS-COBOL-CLAUDE` | **11** | 0 | 62 | 1 | 73 |
 
 ### Difficulty signals (raw values)
 
@@ -407,22 +407,22 @@ Each project's difficulty label is the quartile of its mean rank across seven si
 
 | Project | Active h | Span d | Prompts | Redirect/bug | Err rate | Fix cycles | Fix-time share |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `cobol-compiler-cc` | 32.51 | 11 | 98 | 14 | 8.7% | 42 | 3.2% |
-| `cobol-compiler-codex` | 10.97 | 4 | 97 | 5 | 20.0% | 152 | 3.9% |
-| `COBOL-chess` | 4.98 | 38 | 26 | 10 | 3.4% | 6 | 2.4% |
-| `cobol-jb-codex` | 0.51 | 26 | 19 | 6 | 16.1% | 7 | 11.9% |
-| `cobol-jb-cc` | 1.95 | 26 | 21 | 7 | 5.1% | 1 | 7.0% |
-| `chess-cobol-cc` | 15.52 | 17 | 47 | 3 | 2.8% | 5 | 0.3% |
-| `cobol-pygame-cc` | 2.11 | 0 | 17 | 14 | 3.3% | 2 | 7.8% |
-| `cobol-compress-codex` | 0.92 | 34 | 10 | 3 | 14.4% | 5 | 0.4% |
-| `cobol-doom-codex` | 2.03 | 0 | 32 | 4 | 3.3% | 3 | 0.2% |
-| `SATCobol-codex` | 0.76 | 0 | 15 | 0 | 13.9% | 3 | 7.0% |
-| `cobol-doom-cc` | 3.24 | 0 | 20 | 4 | 0.7% | 1 | 0.7% |
-| `COBOL-pygame` | 0.07 | 0 | 3 | 1 | 9.7% | 3 | 5.1% |
-| `cobol-tictactoe` | 2.07 | 6 | 12 | 1 | 1.5% | 0 | — |
-| `game15-cobol-codex` | 0.55 | 0 | 11 | 1 | 3.5% | 1 | 0.1% |
-| `SATCobol-cc` | 1.24 | 1 | 8 | 0 | 1.7% | 1 | 0.1% |
-| `cobol-compress-cobolcc` | 0.02 | 1 | 1 | 0 | — | 0 | — |
+| `COMPILER-COBOL-CLAUDE` | 32.51 | 11 | 98 | 14 | 8.7% | 42 | 3.2% |
+| `COMPILER-COBOL-CODEX` | 10.97 | 4 | 97 | 5 | 20.0% | 152 | 3.9% |
+| `CHESS-COBOL-CODEX` | 4.98 | 38 | 26 | 10 | 3.4% | 6 | 2.4% |
+| `PAYROLL-COBOL-CODEX` | 0.51 | 26 | 19 | 6 | 16.1% | 7 | 11.9% |
+| `PAYROLL-COBOL-CLAUDE` | 1.95 | 26 | 21 | 7 | 5.1% | 1 | 7.0% |
+| `CHESS-COBOL-CLAUDE` | 15.52 | 17 | 47 | 3 | 2.8% | 5 | 0.3% |
+| `PYGAME-COBOL-CLAUDE` | 2.11 | 0 | 17 | 14 | 3.3% | 2 | 7.8% |
+| `COMPRESS-COBOL-CODEX` | 0.92 | 34 | 10 | 3 | 14.4% | 5 | 0.4% |
+| `DOOM-COBOL-CODEX` | 2.03 | 0 | 32 | 4 | 3.3% | 3 | 0.2% |
+| `SAT-COBOL-CODEX` | 0.76 | 0 | 15 | 0 | 13.9% | 3 | 7.0% |
+| `DOOM-COBOL-CLAUDE` | 3.24 | 0 | 20 | 4 | 0.7% | 1 | 0.7% |
+| `PYGAME-COBOL-CODEX` | 0.07 | 0 | 3 | 1 | 9.7% | 3 | 5.1% |
+| `TTTGAME15-COBOL-CLAUDE` | 2.07 | 6 | 12 | 1 | 1.5% | 0 | — |
+| `TTTGAME15-COBOL-CODEX` | 0.55 | 0 | 11 | 1 | 3.5% | 1 | 0.1% |
+| `SAT-COBOL-CLAUDE` | 1.24 | 1 | 8 | 0 | 1.7% | 1 | 0.1% |
+| `COMPRESS-COBOL-CLAUDE` | 0.02 | 1 | 1 | 0 | — | 0 | — |
 
 ## 4. Per-project detail
 

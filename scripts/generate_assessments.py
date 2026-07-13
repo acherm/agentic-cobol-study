@@ -15,6 +15,9 @@ coding agent working in COBOL, without hagiography and without nit-picking.
 """
 import argparse, json, os, sys
 from statistics import mean
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from system_names import display
+
 
 # -----------------------------------------------------------------------------
 # STANDARDS — hand-authored context per project
@@ -709,7 +712,7 @@ def render(project, metrics_path, appendix_path, proj_root, diff_path):
 
     L = []; E = L.append
 
-    E(f"# Assessment — `{project}` — evidence of what the coding agent actually achieved")
+    E(f"# Assessment — `{display(project)}` (folder `{project}`) — evidence of what the coding agent actually achieved")
     E("")
     # TL;DR
     diff_lab = difficulty.get("label", "—")

@@ -1,4 +1,4 @@
-# Assessment — `cobol-compiler-cc` — evidence of what the coding agent actually achieved
+# Assessment — `COMPILER-COBOL-CLAUDE` (folder `cobol-compiler-cc`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

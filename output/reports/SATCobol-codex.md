@@ -1,4 +1,4 @@
-# `SATCobol-codex` — Case Study
+# `SAT-COBOL-CODEX` — Case Study (repository folder `SATCobol-codex`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/SATCobol-codex/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`SATCobol-codex` assessment](../assessments/SATCobol-codex.md)  
@@ -244,7 +244,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 17h 24m |
 | Active collaboration time | 45m 49s |
 | Tool calls | 508 |
-| Input tokens | 43,570,745 |
+| Input tokens | 2,096,697 |
 | Output tokens | 290,821 |
 | Cache-read tokens | 41,474,048 |
 | Cache-create tokens | 0 |

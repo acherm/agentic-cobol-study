@@ -1,4 +1,4 @@
-# Assessment — `game15-cobol-codex` — evidence of what the coding agent actually achieved
+# Assessment — `TTTGAME15-COBOL-CODEX` (folder `game15-cobol-codex`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

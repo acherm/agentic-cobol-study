@@ -1,4 +1,4 @@
-# `chess-cobol-cc` — Case Study
+# `CHESS-COBOL-CLAUDE` — Case Study (repository folder `chess-cobol-cc`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/chess-cobol-cc/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`chess-cobol-cc` assessment](../assessments/chess-cobol-cc.md)  

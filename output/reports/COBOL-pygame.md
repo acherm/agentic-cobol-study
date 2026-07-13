@@ -1,4 +1,4 @@
-# `COBOL-pygame` — Case Study
+# `PYGAME-COBOL-CODEX` — Case Study (repository folder `COBOL-pygame`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/COBOL-pygame/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`COBOL-pygame` assessment](../assessments/COBOL-pygame.md)  
@@ -248,7 +248,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 1h 1m |
 | Active collaboration time | 4m 16s |
 | Tool calls | 31 |
-| Input tokens | 1,102,142 |
+| Input tokens | 76,222 |
 | Output tokens | 47,872 |
 | Cache-read tokens | 1,025,920 |
 | Cache-create tokens | 0 |

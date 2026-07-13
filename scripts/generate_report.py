@@ -2,6 +2,9 @@
 """Generate a Markdown meta-report from projects.json."""
 import json, os, sys, argparse
 from collections import Counter, defaultdict
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from system_names import display
+
 
 # Project descriptions (domain of interest) — filled in by hand + file inspection
 DOMAIN_NOTES = {
@@ -161,7 +164,7 @@ def main():
         dur = sum(s.get("duration_s", 0) for s in sess)
         cost = sum(s.get("cost_usd", 0) for s in sess)
         tools = sum(s.get("tool_calls_total", 0) for s in sess)
-        E(f"| `{proj}` | {DOMAIN_NOTES.get(proj,'—')[:90]} | {ag_s} | {len(sess)} | {cob.get('files',0)} / {fmt_int(cob.get('loc',0))} | {fmt_int(tools)} | {fmt_dur(dur)} | ${cost:,.0f} |")
+        E(f"| `{display(proj)}` | {DOMAIN_NOTES.get(proj,'—')[:90]} | {ag_s} | {len(sess)} | {cob.get('files',0)} / {fmt_int(cob.get('loc',0))} | {fmt_int(tools)} | {fmt_dur(dur)} | ${cost:,.0f} |")
     E("")
     E("Legend: `Cl×N` = Claude Code sessions; `Co×N` = Codex sessions.")
     E("")
@@ -210,7 +213,7 @@ def main():
         for proj in data.keys():
             def _cell(rel, label):
                 return f"[{label}]({rel})" if os.path.exists(os.path.join(base_abs_dir, rel)) else "—"
-            E(f"| `{proj}` "
+            E(f"| `{display(proj)}` "
               f"| {_cell(f'output/backlogs/{proj}/STORY.md','story')} "
               f"| [report]({args.reports_dir}/{proj}.md) "
               f"| [assessment](output/assessments/{proj}.md) "
@@ -244,7 +247,7 @@ def main():
             lab = d.get("label","—")
             idx = d.get("index")
             lab_s = f"{lab} ({idx:.2f})" if idx is not None else lab
-            E(f"| `{proj}` | {lab_s} | {m.get('n_turns',0):,} | {fmt_dur(tot)} | {_pct(fix,tot)} | {_pct(errs.get('tool_output_errors',0), errs.get('tool_outputs',0))} | {up.get('count',0)} | {up.get('avg_len',0):.0f} |")
+            E(f"| `{display(proj)}` | {lab_s} | {m.get('n_turns',0):,} | {fmt_dur(tot)} | {_pct(fix,tot)} | {_pct(errs.get('tool_output_errors',0), errs.get('tool_outputs',0))} | {up.get('count',0)} | {up.get('avg_len',0):.0f} |")
         E("")
         # COBOL mastery + feature count
         E("### COBOL language mastery (what programs exercise the language surface)")
@@ -271,7 +274,7 @@ def main():
                 if v:
                     nt.append(f"`{name}`({v})")
             n_cats = comp.get("categories_exercised", 0)
-            E(f"| `{proj}` | {comp.get('mastery_score',0)} | {n_cats}/10 | {comp.get('paragraphs',0)} | {comp.get('sections',0)} | {comp.get('code_lines',0):,} | " +
+            E(f"| `{display(proj)}` | {comp.get('mastery_score',0)} | {n_cats}/10 | {comp.get('paragraphs',0)} | {comp.get('sections',0)} | {comp.get('code_lines',0):,} | " +
               (", ".join(nt[:6]) if nt else "—") + " |")
         E("")
         # Feature ledger summary
@@ -284,7 +287,7 @@ def main():
         for proj in order:
             m = metrics.get(proj) or {}
             feats = m.get("features") or {}
-            E(f"| `{proj}` | **{len(feats.get('spec_backlog') or [])}** | {len(feats.get('readme_features') or [])} | {len(feats.get('prompt_subtasks') or [])} | {len(feats.get('commit_subjects') or [])} | {feats.get('total_features_proxy', 0)} |")
+            E(f"| `{display(proj)}` | **{len(feats.get('spec_backlog') or [])}** | {len(feats.get('readme_features') or [])} | {len(feats.get('prompt_subtasks') or [])} | {len(feats.get('commit_subjects') or [])} | {feats.get('total_features_proxy', 0)} |")
         E("")
         # Difficulty signals matrix
         E("### Difficulty signals (raw values)")
@@ -296,7 +299,7 @@ def main():
         for proj in order:
             d = difficulty.get(proj, {})
             s = d.get("signals") or {}
-            E(f"| `{proj}` | {s.get('active_hours','-')} | {s.get('span_days','-')} | {s.get('user_prompts','-')} | {s.get('redirect_bug_prompts','-')} | {_pct_f(s.get('error_rate',0))} | {s.get('fix_cycles','-')} | {_pct_f(s.get('fix_time_share',0))} |")
+            E(f"| `{display(proj)}` | {s.get('active_hours','-')} | {s.get('span_days','-')} | {s.get('user_prompts','-')} | {s.get('redirect_bug_prompts','-')} | {_pct_f(s.get('error_rate',0))} | {s.get('fix_cycles','-')} | {_pct_f(s.get('fix_time_share',0))} |")
         E("")
 
     E("## 4. Per-project detail")

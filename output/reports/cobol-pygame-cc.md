@@ -1,4 +1,4 @@
-# `cobol-pygame-cc` — Case Study
+# `PYGAME-COBOL-CLAUDE` — Case Study (repository folder `cobol-pygame-cc`)
 
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-pygame-cc` assessment](../assessments/cobol-pygame-cc.md)  
 > 📖 **Feature ledger** (agent-centric, step-wise): [`SPECIFICATION_BACKLOG.md`](../backlogs/cobol-pygame-cc/SPECIFICATION_BACKLOG.md)

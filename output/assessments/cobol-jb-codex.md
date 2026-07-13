@@ -1,4 +1,4 @@
-# Assessment — `cobol-jb-codex` — evidence of what the coding agent actually achieved
+# Assessment — `PAYROLL-COBOL-CODEX` (folder `cobol-jb-codex`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

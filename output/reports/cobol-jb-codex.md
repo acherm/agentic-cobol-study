@@ -1,4 +1,4 @@
-# `cobol-jb-codex` — Case Study
+# `PAYROLL-COBOL-CODEX` — Case Study (repository folder `cobol-jb-codex`)
 
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-jb-codex` assessment](../assessments/cobol-jb-codex.md)  
 > 📖 **Feature ledger** (agent-centric, step-wise): [`SPECIFICATION_BACKLOG.md`](../backlogs/cobol-jb-codex/SPECIFICATION_BACKLOG.md)
@@ -239,7 +239,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 26d 2h 2m |
 | Active collaboration time | 30m 41s |
 | Tool calls | 199 |
-| Input tokens | 10,701,852 |
+| Input tokens | 501,276 |
 | Output tokens | 94,626 |
 | Cache-read tokens | 10,200,576 |
 | Cache-create tokens | 0 |

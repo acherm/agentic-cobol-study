@@ -1,4 +1,4 @@
-# Assessment — `chess-cobol-cc` — evidence of what the coding agent actually achieved
+# Assessment — `CHESS-COBOL-CLAUDE` (folder `chess-cobol-cc`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

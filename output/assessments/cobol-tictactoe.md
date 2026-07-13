@@ -1,4 +1,4 @@
-# Assessment — `cobol-tictactoe` — evidence of what the coding agent actually achieved
+# Assessment — `TTTGAME15-COBOL-CLAUDE` (folder `cobol-tictactoe`) — evidence of what the coding agent actually achieved
 
 ## TL;DR — calibrated verdict
 

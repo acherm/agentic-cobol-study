@@ -79,6 +79,12 @@ equivalent): the opening prompt with the COBOL-boundary constraint, expected
 deliverables, and oracles per activity, so a third agent can be run
 activity-by-activity against the same specifications.
 
+## License
+
+MIT (see `LICENSE`), covering the analysis code and, for simplicity, the
+committed datasets and generated reports in this repository. Each system
+repository carries its own MIT license.
+
 ## Citation
 
 Paper under submission (arXiv preprint forthcoming). Until then, please cite

@@ -1,4 +1,4 @@
-# `cobol-compress-cobolcc` — Case Study
+# `COMPRESS-COBOL-CLAUDE` — Case Study (repository folder `cobol-compress-cobolcc`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-compress-cobolcc/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-compress-cobolcc` assessment](../assessments/cobol-compress-cobolcc.md)  

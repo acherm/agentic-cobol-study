@@ -1,4 +1,4 @@
-# `SATCobol-cc` — Case Study
+# `SAT-COBOL-CLAUDE` — Case Study (repository folder `SATCobol-cc`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/SATCobol-cc/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`SATCobol-cc` assessment](../assessments/SATCobol-cc.md)  

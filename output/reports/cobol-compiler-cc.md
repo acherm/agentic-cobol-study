@@ -1,4 +1,4 @@
-# `cobol-compiler-cc` — Case Study
+# `COMPILER-COBOL-CLAUDE` — Case Study (repository folder `cobol-compiler-cc`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-compiler-cc/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-compiler-cc` assessment](../assessments/cobol-compiler-cc.md)  

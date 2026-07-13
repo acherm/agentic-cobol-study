@@ -1,4 +1,4 @@
-# `COBOL-chess` — Case Study
+# `CHESS-COBOL-CODEX` — Case Study (repository folder `COBOL-chess`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/COBOL-chess/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`COBOL-chess` assessment](../assessments/COBOL-chess.md)  
@@ -326,7 +326,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 2d 1h 23m |
 | Active collaboration time | 4h 58m |
 | Tool calls | 1,935 |
-| Input tokens | 236,150,053 |
+| Input tokens | 3,717,413 |
 | Output tokens | 1,146,954 |
 | Cache-read tokens | 232,432,640 |
 | Cache-create tokens | 0 |

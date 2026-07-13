@@ -1,4 +1,4 @@
-# `game15-cobol-codex` — Case Study
+# `TTTGAME15-COBOL-CODEX` — Case Study (repository folder `game15-cobol-codex`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/game15-cobol-codex/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`game15-cobol-codex` assessment](../assessments/game15-cobol-codex.md)  
@@ -245,7 +245,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 3h 37m |
 | Active collaboration time | 33m 4s |
 | Tool calls | 173 |
-| Input tokens | 8,899,716 |
+| Input tokens | 465,028 |
 | Output tokens | 113,459 |
 | Cache-read tokens | 8,434,688 |
 | Cache-create tokens | 0 |

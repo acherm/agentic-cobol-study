@@ -8,6 +8,9 @@ the project itself (not hand-authored).
 """
 import argparse, json, os, re, sys
 from collections import Counter
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from system_names import display
+
 
 DOMAIN_NOTES = {
     "chess-cobol-cc": {
@@ -127,7 +130,7 @@ def render(m, difficulty=None):
 
     L = []
     E = L.append
-    E(f"# `{proj}` — Case Study")
+    E(f"# `{display(proj)}` — Case Study (repository folder `{proj}`)")
     E("")
     # Link to the calibrated assessment + backlog artefacts + replay prompts
     assessment_rel = f"../assessments/{proj}.md"

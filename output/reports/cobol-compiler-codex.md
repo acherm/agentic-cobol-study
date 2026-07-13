@@ -1,4 +1,4 @@
-# `cobol-compiler-codex` — Case Study
+# `COMPILER-COBOL-CODEX` — Case Study (repository folder `cobol-compiler-codex`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-compiler-codex/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-compiler-codex` assessment](../assessments/cobol-compiler-codex.md)  
@@ -261,7 +261,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 4d 21h 53m |
 | Active collaboration time | 10h 58m |
 | Tool calls | 5,370 |
-| Input tokens | 499,374,995 |
+| Input tokens | 19,706,259 |
 | Output tokens | 2,350,772 |
 | Cache-read tokens | 479,668,736 |
 | Cache-create tokens | 0 |

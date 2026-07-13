@@ -1,4 +1,4 @@
-# `cobol-compress-codex` — Case Study
+# `COMPRESS-COBOL-CODEX` — Case Study (repository folder `cobol-compress-codex`)
 
 > 📝 **Story** (full narrative: context, novelty, evolution, validation, insight): [`STORY.md`](../backlogs/cobol-compress-codex/STORY.md)  
 > 📋 **Calibrated assessment** (evidence + strengths + honest gaps): [`cobol-compress-codex` assessment](../assessments/cobol-compress-codex.md)  
@@ -276,7 +276,7 @@ _Note: calendar span can be inflated by resumed sessions across multiple days; r
 | Wall-clock session span (sum, incl. idle) | 10d 17h 12m |
 | Active collaboration time | 54m 56s |
 | Tool calls | 263 |
-| Input tokens | 17,091,122 |
+| Input tokens | 677,810 |
 | Output tokens | 145,816 |
 | Cache-read tokens | 16,413,312 |
 | Cache-create tokens | 0 |
