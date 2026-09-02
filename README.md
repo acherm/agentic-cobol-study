@@ -1,12 +1,13 @@
-# Coding Agents Develop COBOL Systems — study hub
+# Coding Agents Can Develop COBOL Systems — study hub
 
-Companion repository for the multi-case empirical study **“Coding Agents
-Develop COBOL Systems”** (2026): 16 non-trivial COBOL systems developed from
+Companion repository for the multi-case empirical study **“Coding Agents Can Develop COBOL Systems”** (2026): 16 non-trivial COBOL systems developed from
 scratch by two frontier coding agents (Claude Code and Codex CLI) across 8
-domain families, each family implemented by **both** agents on identical
-specifications, and every deliverable held to demanding, externally checkable
-oracles (differential execution, rated tournaments, cross-solver checks,
-byte-identical replays).
+domain families, each family implemented by **both** agents (paired runs shared goals or
+replay specifications to varying degrees). Validation evidence ranges from
+independent differential checks and known values (differential execution
+against GnuCOBOL, rated tournaments, cross-solver checks, byte-identical
+replays) to property tests, demonstrations, and source inspection, and its
+independence and coverage vary by system.
 
 This hub contains the **analysis pipeline, derived datasets, session
 material, and reproducible tables/figures**. Each system lives in its own
@@ -18,7 +19,7 @@ repository (below), preserved as the agent produced it.
 |---|---|---|---|---|
 | `CHESS-COBOL-CLAUDE` | [agentic-chessengine-cobol-cc](https://github.com/acherm/agentic-chessengine-cobol-cc) | a UCI chess engine written in COBOL | Claude Code (`claude-opus-4-6`) | High |
 | `CHESS-COBOL-CODEX` | [agentic-chessengine-cobol-codex](https://github.com/acherm/agentic-chessengine-cobol-codex) | a UCI chess engine written in COBOL, architecture-first (184-feature backlog) | Codex (`gpt-5.2`) | High |
-| `COMPILER-COBOL-CLAUDE` | [agentic-cobol-compiler-cobolcc](https://github.com/acherm/agentic-cobol-compiler-cobolcc) | a self-hosting COBOL compiler (and interpreter) written in COBOL, emitting C | Claude Code (`claude-opus-4-6`) | Very-High |
+| `COMPILER-COBOL-CLAUDE` | [agentic-cobol-compiler-cobolcc](https://github.com/acherm/agentic-cobol-compiler-cobolcc) | a COBOL compiler (and interpreter) written in COBOL, emitting C (self-hosting reported in the transcript, not independently reproduced) | Claude Code (`claude-opus-4-6`) | Very-High |
 | `COMPILER-COBOL-CODEX` | [agentic-cobol-compiler-minicobc](https://github.com/acherm/agentic-cobol-compiler-minicobc) | minicobc, a COBOL-to-C compiler written in COBOL | Codex (`gpt-5.4`) | Very-High |
 | `COMPRESS-COBOL-CLAUDE` | [agentic-cobol-compress-cc](https://github.com/acherm/agentic-cobol-compress-cc) | the COBPACK columnar compression container implemented in COBOL | Claude Code (`claude-opus-4-6`) | Low |
 | `COMPRESS-COBOL-CODEX` | [agentic-cobol-compress](https://github.com/acherm/agentic-cobol-compress) | the COBPACK columnar compression container implemented in COBOL | Codex (`gpt-5.4`) | High |
@@ -67,9 +68,9 @@ python3 scripts/make_figures.py  # regenerates figures/ from output/
 ```
 
 **Frozen inputs**: `output/sessions_all.json` and `output/turns/` are frozen.
-20 of 38 raw session logs were deleted by the agent CLI's 30-day local
-retention before archiving; re-running stage 1 would silently rebuild from
-the surviving raw logs only. The archived survivors are in
+18 of 38 study-relevant raw session logs were deleted by the agent CLI's
+30-day local retention before archiving (20 survive). Re-running stage 1
+would silently rebuild from the surviving raw logs only. The archived survivors are in
 `output/raw_sessions/`. See the study's data-provenance appendix.
 
 ## Replay packs
