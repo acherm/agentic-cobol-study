@@ -37,6 +37,40 @@ repository (below), preserved as the agent produced it.
 System identifiers follow `FAMILY-COBOL-AGENT`. The repositories keep their
 original folder/repo names, which key every artifact in `output/`.
 
+## Identifier-to-folder mapping
+
+The paper refers to systems by canonical identifiers. The released material
+under `output/` (session logs, derived measurements and reports, replay packs)
+is organized by the historical working-folder names of the sessions, which
+are frozen provenance: the raw session logs and the per-session derived
+artifacts embed them.
+
+| Paper identifier | Folder name in `output/` | GitHub repository |
+|---|---|---|
+| `CHESS-COBOL-CLAUDE` | `chess-cobol-cc` | `agentic-chessengine-cobol-cc` |
+| `CHESS-COBOL-CODEX` | `COBOL-chess` | `agentic-chessengine-cobol-codex` |
+| `COMPILER-COBOL-CLAUDE` | `cobol-compiler-cc` | `agentic-cobol-compiler-cobolcc` |
+| `COMPILER-COBOL-CODEX` | `cobol-compiler-codex` | `agentic-cobol-compiler-minicobc` |
+| `COMPRESS-COBOL-CLAUDE` | `cobol-compress-cobolcc` | `agentic-cobol-compress-cc` |
+| `COMPRESS-COBOL-CODEX` | `cobol-compress-codex` | `agentic-cobol-compress` |
+| `DOOM-COBOL-CLAUDE` | `cobol-doom-cc` | `agentic-cobol-doom-cc` |
+| `DOOM-COBOL-CODEX` | `cobol-doom-codex` | `agentic-cobol-doom-codex` |
+| `PAYROLL-COBOL-CLAUDE` | `cobol-jb-cc` | `agentic-cobol-payroll-cc` |
+| `PAYROLL-COBOL-CODEX` | `cobol-jb-codex` | `agentic-cobol-payroll-codex` |
+| `PYGAME-COBOL-CLAUDE` | `cobol-pygame-cc` | `agentic-cobol-pygame-cc` |
+| `PYGAME-COBOL-CODEX` | `COBOL-pygame` | `agentic-cobol-pygame` |
+| `SAT-COBOL-CLAUDE` | `SATCobol-cc` | `agentic-cobol-sat-cc` |
+| `SAT-COBOL-CODEX` | `SATCobol-codex` | `agentic-cobol-sat-codex` |
+| `TTTGAME15-COBOL-CLAUDE` | `cobol-tictactoe` | `agentic-cobol-game15tictactoe` |
+| `TTTGAME15-COBOL-CODEX` | `game15-cobol-codex` | `agentic-cobol-game15-codex` |
+
+Excluded or superseded attempts keep their original folder names:
+`chess-revisit-java-toCOBOL`, `cobol-compress-cc` (the C-only compression
+attempt; not to be confused with the GitHub repository of
+`COMPRESS-COBOL-CLAUDE`, which carries the same name), `cobol-jb` (an earlier
+single-agent payroll attempt, superseded by the payroll pair), `cobol-doom`,
+`cobol-SAT`, `cobol-vibes`, and `test-cline-COBOL`.
+
 ## What is in this repository
 
 - `scripts/` — the full analysis pipeline (`run_all.sh`, 8 stages: session
