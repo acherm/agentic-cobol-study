@@ -99,43 +99,43 @@ Dollars are rack-rate estimates and don't compare cleanly between Claude Code an
 | Project | Agent | Sessions | Input | Output | Cache read | Cache create | Reasoning | **Total tokens** | Cache hit % | Est. $ |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | `chess-cobol-cc` | Claude Code | 1 | 1,937 | 591,930 | 166,713,533 | 11,943,652 | 0 | **179,251,052** | 100.0% | $518 |
-| `COBOL-chess` | Codex | 2 | 236,150,053 | 1,146,954 | 232,432,640 | 0 | 897,503 | **470,627,150** | 49.6% | $45 |
+| `COBOL-chess` | Codex | 2 | 236,150,053 | 1,146,954 | 232,432,640 | 0 | 897,503 | **237,297,007** | 49.6% | $45 |
 | `cobol-compiler-cc` | Claude Code | 2 | 7,243 | 1,567,526 | 2,933,801,019 | 35,551,366 | 0 | **2,970,927,154** | 100.0% | $5185 |
-| `cobol-compiler-codex` | Codex | 4 | 499,374,995 | 2,350,772 | 479,668,736 | 0 | 1,187,284 | **982,581,787** | 49.0% | $108 |
-| `cobol-compress-codex` | Codex | 2 | 17,091,122 | 145,816 | 16,413,312 | 0 | 73,872 | **33,724,122** | 49.0% | $4 |
+| `cobol-compiler-codex` | Codex | 4 | 499,374,995 | 2,350,772 | 479,668,736 | 0 | 1,187,284 | **501,725,767** | 49.0% | $108 |
+| `cobol-compress-codex` | Codex | 2 | 17,091,122 | 145,816 | 16,413,312 | 0 | 73,872 | **17,236,938** | 49.0% | $4 |
 | `cobol-compress-cobolcc` | Claude Code | 1 | 486 | 550,583 | 37,422,175 | 1,708,980 | 0 | **39,682,224** | 100.0% | $129 |
 | `cobol-doom-cc` | Claude Code | 1 | 628 | 1,684,363 | 130,194,776 | 2,425,304 | 0 | **134,305,071** | 100.0% | $367 |
-| `cobol-doom-codex` | Codex | 1 | 44,542,491 | 357,679 | 42,641,792 | 0 | 191,316 | **87,733,278** | 48.9% | $11 |
+| `cobol-doom-codex` | Codex | 1 | 44,542,491 | 357,679 | 42,641,792 | 0 | 191,316 | **44,900,170** | 48.9% | $11 |
 | `cobol-jb-cc` | Claude Code | 1 | 1,171 | 222,078 | 19,457,587 | 1,113,176 | 0 | **20,794,012** | 100.0% | $13 |
-| `cobol-jb-codex` | Codex | 2 | 10,701,852 | 94,626 | 10,200,576 | 0 | 49,754 | **21,046,808** | 48.8% | $3 |
-| `COBOL-pygame` | Codex | 1 | 1,102,142 | 47,872 | 1,025,920 | 0 | 34,000 | **2,209,934** | 48.2% | $1 |
+| `cobol-jb-codex` | Codex | 2 | 10,701,852 | 94,626 | 10,200,576 | 0 | 49,754 | **10,796,478** | 48.8% | $3 |
+| `COBOL-pygame` | Codex | 1 | 1,102,142 | 47,872 | 1,025,920 | 0 | 34,000 | **1,150,014** | 48.2% | $1 |
 | `cobol-pygame-cc` | Claude Code | 1 | 345 | 489,521 | 25,086,132 | 837,119 | 0 | **26,413,117** | 100.0% | $90 |
-| `SATCobol-codex` | Codex | 1 | 43,570,745 | 290,821 | 41,474,048 | 0 | 146,500 | **85,482,114** | 48.8% | $11 |
+| `SATCobol-codex` | Codex | 1 | 43,570,745 | 290,821 | 41,474,048 | 0 | 146,500 | **43,861,566** | 48.8% | $11 |
 | `SATCobol-cc` | Claude Code | 1 | 977 | 984,752 | 168,569,731 | 7,843,062 | 0 | **177,398,522** | 100.0% | $474 |
 | `cobol-tictactoe` | Claude Code | 1 | 188 | 318,409 | 7,877,782 | 911,207 | 0 | **9,107,586** | 100.0% | $53 |
-| `game15-cobol-codex` | Codex | 1 | 8,899,716 | 113,459 | 8,434,688 | 0 | 68,774 | **17,516,637** | 48.7% | $3 |
+| `game15-cobol-codex` | Codex | 1 | 8,899,716 | 113,459 | 8,434,688 | 0 | 68,774 | **9,013,175** | 48.7% | $3 |
 
 ### B. Per-project totals (agents summed)
 
 | Project | Sessions | Input | Output | Cache read | Cache create | Reasoning | **Total tokens** | Est. $ |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | `cobol-compiler-cc` | 2 | 7,243 | 1,567,526 | 2,933,801,019 | 35,551,366 | 0 | **2,970,927,154** | $5185 |
-| `cobol-compiler-codex` | 4 | 499,374,995 | 2,350,772 | 479,668,736 | 0 | 1,187,284 | **982,581,787** | $108 |
-| `COBOL-chess` | 2 | 236,150,053 | 1,146,954 | 232,432,640 | 0 | 897,503 | **470,627,150** | $45 |
+| `cobol-compiler-codex` | 4 | 499,374,995 | 2,350,772 | 479,668,736 | 0 | 1,187,284 | **501,725,767** | $108 |
+| `COBOL-chess` | 2 | 236,150,053 | 1,146,954 | 232,432,640 | 0 | 897,503 | **237,297,007** | $45 |
 | `chess-cobol-cc` | 1 | 1,937 | 591,930 | 166,713,533 | 11,943,652 | 0 | **179,251,052** | $518 |
 | `SATCobol-cc` | 1 | 977 | 984,752 | 168,569,731 | 7,843,062 | 0 | **177,398,522** | $474 |
 | `cobol-doom-cc` | 1 | 628 | 1,684,363 | 130,194,776 | 2,425,304 | 0 | **134,305,071** | $367 |
-| `cobol-doom-codex` | 1 | 44,542,491 | 357,679 | 42,641,792 | 0 | 191,316 | **87,733,278** | $11 |
-| `SATCobol-codex` | 1 | 43,570,745 | 290,821 | 41,474,048 | 0 | 146,500 | **85,482,114** | $11 |
+| `cobol-doom-codex` | 1 | 44,542,491 | 357,679 | 42,641,792 | 0 | 191,316 | **44,900,170** | $11 |
+| `SATCobol-codex` | 1 | 43,570,745 | 290,821 | 41,474,048 | 0 | 146,500 | **43,861,566** | $11 |
 | `cobol-compress-cobolcc` | 1 | 486 | 550,583 | 37,422,175 | 1,708,980 | 0 | **39,682,224** | $129 |
-| `cobol-compress-codex` | 2 | 17,091,122 | 145,816 | 16,413,312 | 0 | 73,872 | **33,724,122** | $4 |
 | `cobol-pygame-cc` | 1 | 345 | 489,521 | 25,086,132 | 837,119 | 0 | **26,413,117** | $90 |
-| `cobol-jb-codex` | 2 | 10,701,852 | 94,626 | 10,200,576 | 0 | 49,754 | **21,046,808** | $3 |
 | `cobol-jb-cc` | 1 | 1,171 | 222,078 | 19,457,587 | 1,113,176 | 0 | **20,794,012** | $13 |
-| `game15-cobol-codex` | 1 | 8,899,716 | 113,459 | 8,434,688 | 0 | 68,774 | **17,516,637** | $3 |
+| `cobol-compress-codex` | 2 | 17,091,122 | 145,816 | 16,413,312 | 0 | 73,872 | **17,236,938** | $4 |
+| `cobol-jb-codex` | 2 | 10,701,852 | 94,626 | 10,200,576 | 0 | 49,754 | **10,796,478** | $3 |
 | `cobol-tictactoe` | 1 | 188 | 318,409 | 7,877,782 | 911,207 | 0 | **9,107,586** | $53 |
-| `COBOL-pygame` | 1 | 1,102,142 | 47,872 | 1,025,920 | 0 | 34,000 | **2,209,934** | $1 |
-| **GRAND TOTAL** | — | **861,446,091** | **10,957,161** | **4,321,414,447** | **62,333,866** | **2,649,003** | **5,258,800,568** | **$7016** |
+| `game15-cobol-codex` | 1 | 8,899,716 | 113,459 | 8,434,688 | 0 | 68,774 | **9,013,175** | $3 |
+| `COBOL-pygame` | 1 | 1,102,142 | 47,872 | 1,025,920 | 0 | 34,000 | **1,150,014** | $1 |
+| **GRAND TOTAL** | — | **861,446,091** | **10,957,161** | **4,321,414,447** | **62,333,866** | **2,649,003** | **4,423,859,853** | **$7016** |
 
 ### C. Normalized ratios (compute per unit of deliverable)
 
@@ -156,12 +156,12 @@ Output tokens are the cleanest comparison axis (everything the agent actually ge
 | `cobol-doom-codex` | 357,679 | 1,906 | 188 | 0 | — | 31 | 11,538 |
 | `SATCobol-codex` | 290,821 | 1,706 | 170 | 63 | 4,616 | 29 | 10,028 |
 | `cobol-compress-cobolcc` | 550,583 | 1,819 | 303 | 11 | 50,053 | 7 | 78,655 |
-| `cobol-compress-codex` | 145,816 | 1,812 | 80 | 18 | 8,101 | 9 | 16,202 |
 | `cobol-pygame-cc` | 489,521 | 764 | 641 | 0 | — | 17 | 28,795 |
-| `cobol-jb-codex` | 94,626 | 572 | 165 | 0 | — | 19 | 4,980 |
 | `cobol-jb-cc` | 222,078 | 535 | 415 | 0 | — | 29 | 7,658 |
-| `game15-cobol-codex` | 113,459 | 2,264 | 50 | 35 | 3,242 | 11 | 10,314 |
+| `cobol-compress-codex` | 145,816 | 1,812 | 80 | 18 | 8,101 | 9 | 16,202 |
+| `cobol-jb-codex` | 94,626 | 572 | 165 | 0 | — | 19 | 4,980 |
 | `cobol-tictactoe` | 318,409 | 1,537 | 207 | 31 | 10,271 | 14 | 22,744 |
+| `game15-cobol-codex` | 113,459 | 2,264 | 50 | 35 | 3,242 | 11 | 10,314 |
 | `COBOL-pygame` | 47,872 | 398 | 120 | 11 | 4,352 | 3 | 15,957 |
 
 ### D. Caveats on token semantics
@@ -325,10 +325,10 @@ Each row: narrative story, case study (RQ-labeled metrics), calibrated assessmen
 | `COMPRESS-COBOL-CLAUDE` | [story](output/backlogs/cobol-compress-cobolcc/STORY.md) | [report](output/reports/cobol-compress-cobolcc.md) | [assessment](output/assessments/cobol-compress-cobolcc.md) | [backlog](output/backlogs/cobol-compress-cobolcc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-compress-cobolcc/KEY_FEATURES.md) | — |
 | `DOOM-COBOL-CLAUDE` | [story](output/backlogs/cobol-doom-cc/STORY.md) | [report](output/reports/cobol-doom-cc.md) | [assessment](output/assessments/cobol-doom-cc.md) | [backlog](output/backlogs/cobol-doom-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-cc/KEY_FEATURES.md) | — |
 | `DOOM-COBOL-CODEX` | [story](output/backlogs/cobol-doom-codex/STORY.md) | [report](output/reports/cobol-doom-codex.md) | [assessment](output/assessments/cobol-doom-codex.md) | [backlog](output/backlogs/cobol-doom-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-doom-codex/KEY_FEATURES.md) | — |
-| `PAYROLL-COBOL-CLAUDE` | — | [report](output/reports/cobol-jb-cc.md) | [assessment](output/assessments/cobol-jb-cc.md) | [backlog](output/backlogs/cobol-jb-cc/SPECIFICATION_BACKLOG.md) | — | — |
-| `PAYROLL-COBOL-CODEX` | — | [report](output/reports/cobol-jb-codex.md) | [assessment](output/assessments/cobol-jb-codex.md) | [backlog](output/backlogs/cobol-jb-codex/SPECIFICATION_BACKLOG.md) | — | — |
+| `PAYROLL-COBOL-CLAUDE` | — | [report](output/reports/cobol-jb-cc.md) | [assessment](output/assessments/cobol-jb-cc.md) | [backlog](output/backlogs/cobol-jb-cc/KEY_FEATURES.md) | [key](output/backlogs/cobol-jb-cc/KEY_FEATURES.md) | — |
+| `PAYROLL-COBOL-CODEX` | — | [report](output/reports/cobol-jb-codex.md) | [assessment](output/assessments/cobol-jb-codex.md) | [backlog](output/backlogs/cobol-jb-codex/KEY_FEATURES.md) | [key](output/backlogs/cobol-jb-codex/KEY_FEATURES.md) | — |
 | `PYGAME-COBOL-CODEX` | [story](output/backlogs/COBOL-pygame/STORY.md) | [report](output/reports/COBOL-pygame.md) | [assessment](output/assessments/COBOL-pygame.md) | [backlog](output/backlogs/COBOL-pygame/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/COBOL-pygame/KEY_FEATURES.md) | [replay](output/backlogs/COBOL-pygame/REPLAY_PROMPTS.md) |
-| `PYGAME-COBOL-CLAUDE` | — | [report](output/reports/cobol-pygame-cc.md) | [assessment](output/assessments/cobol-pygame-cc.md) | [backlog](output/backlogs/cobol-pygame-cc/SPECIFICATION_BACKLOG.md) | — | — |
+| `PYGAME-COBOL-CLAUDE` | — | [report](output/reports/cobol-pygame-cc.md) | [assessment](output/assessments/cobol-pygame-cc.md) | [backlog](output/backlogs/cobol-pygame-cc/KEY_FEATURES.md) | [key](output/backlogs/cobol-pygame-cc/KEY_FEATURES.md) | — |
 | `SAT-COBOL-CODEX` | [story](output/backlogs/SATCobol-codex/STORY.md) | [report](output/reports/SATCobol-codex.md) | [assessment](output/assessments/SATCobol-codex.md) | [backlog](output/backlogs/SATCobol-codex/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-codex/KEY_FEATURES.md) | [replay](output/backlogs/SATCobol-codex/REPLAY_PROMPTS.md) |
 | `SAT-COBOL-CLAUDE` | [story](output/backlogs/SATCobol-cc/STORY.md) | [report](output/reports/SATCobol-cc.md) | [assessment](output/assessments/SATCobol-cc.md) | [backlog](output/backlogs/SATCobol-cc/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/SATCobol-cc/KEY_FEATURES.md) | — |
 | `TTTGAME15-COBOL-CLAUDE` | [story](output/backlogs/cobol-tictactoe/STORY.md) | [report](output/reports/cobol-tictactoe.md) | [assessment](output/assessments/cobol-tictactoe.md) | [backlog](output/backlogs/cobol-tictactoe/SPECIFICATION_BACKLOG.md) | [key](output/backlogs/cobol-tictactoe/KEY_FEATURES.md) | [replay](output/backlogs/cobol-tictactoe/REPLAY_PROMPTS.md) |
@@ -340,19 +340,19 @@ Each row: narrative story, case study (RQ-labeled metrics), calibrated assessmen
 |---|---|---:|---:|---:|---:|---:|---:|
 | `COMPILER-COBOL-CLAUDE` | Very-High (0.83) | 10,225 | 1d 8h 30m | 3.2% | 8.7% | 98 | 512 |
 | `COMPILER-COBOL-CODEX` | Very-High (0.81) | 15,631 | 10h 58m | 3.9% | 20.0% | 97 | 83 |
-| `CHESS-COBOL-CODEX` | High (0.74) | 5,640 | 4h 58m | 2.4% | 3.4% | 26 | 1554 |
-| `PAYROLL-COBOL-CODEX` | High (0.72) | 638 | 30m 41s | 11.9% | 16.1% | 19 | 698 |
+| `CHESS-COBOL-CODEX` | High (0.73) | 5,640 | 4h 58m | 2.4% | 3.4% | 26 | 1554 |
+| `PAYROLL-COBOL-CODEX` | High (0.71) | 638 | 30m 41s | 11.9% | 16.1% | 19 | 698 |
 | `PAYROLL-COBOL-CLAUDE` | High (0.63) | 415 | 1h 57m | 7.0% | 5.1% | 21 | 1153 |
 | `CHESS-COBOL-CLAUDE` | High (0.61) | 3,023 | 15h 31m | 0.3% | 2.8% | 47 | 1793 |
-| `PYGAME-COBOL-CLAUDE` | High (0.57) | 434 | 2h 6m | 7.8% | 3.3% | 17 | 2086 |
-| `COMPRESS-COBOL-CODEX` | High (0.55) | 802 | 54m 56s | 0.4% | 14.4% | 10 | 1054 |
+| `PYGAME-COBOL-CLAUDE` | High (0.56) | 434 | 2h 6m | 7.8% | 3.3% | 17 | 2086 |
+| `COMPRESS-COBOL-CODEX` | High (0.54) | 802 | 54m 56s | 0.4% | 14.4% | 10 | 1054 |
+| `SAT-COBOL-CODEX` | High (0.50) | 1,676 | 1h 50m | 4.6% | 11.0% | 29 | 124 |
 | `DOOM-COBOL-CODEX` | Medium (0.46) | 1,920 | 2h 1m | 0.2% | 3.3% | 32 | 283 |
-| `SAT-COBOL-CODEX` | Medium (0.44) | 620 | 45m 49s | 7.0% | 13.9% | 15 | 138 |
-| `DOOM-COBOL-CLAUDE` | Medium (0.41) | 506 | 3h 14m | 0.7% | 0.7% | 20 | 479 |
+| `DOOM-COBOL-CLAUDE` | Medium (0.40) | 506 | 3h 14m | 0.7% | 0.7% | 20 | 479 |
 | `PYGAME-COBOL-CODEX` | Medium (0.37) | 97 | 4m 16s | 5.1% | 9.7% | 3 | 115 |
 | `TTTGAME15-COBOL-CLAUDE` | Medium (0.29) | 206 | 2h 4m | 0.0% | 1.5% | 12 | 953 |
 | `TTTGAME15-COBOL-CODEX` | Medium (0.26) | 533 | 33m 4s | 0.1% | 3.5% | 11 | 396 |
-| `SAT-COBOL-CLAUDE` | Low (0.23) | 316 | 1h 14m | 0.1% | 1.7% | 8 | 170 |
+| `SAT-COBOL-CLAUDE` | Low (0.22) | 316 | 1h 14m | 0.1% | 1.7% | 8 | 170 |
 | `COMPRESS-COBOL-CLAUDE` | Low (0.08) | 4 | 1m 2s | 0.0% | 0.0% | 1 | 7285 |
 
 ### COBOL language mastery (what programs exercise the language surface)
@@ -369,8 +369,8 @@ Mastery score = number of distinct COBOL constructs observed in the project's `.
 | `CHESS-COBOL-CLAUDE` | 38 | 10/10 | 81 | 2 | 2,920 | `RECURSIVE`(1), `OCCURS`(23), `REDEFINES`(9), `COPY`(3), `FUNCTION`(29) |
 | `PYGAME-COBOL-CLAUDE` | 28 | 10/10 | 48 | 4 | 764 | `CALL`(94), `OCCURS`(1), `COPY`(4), `FUNCTION`(2) |
 | `COMPRESS-COBOL-CODEX` | 44 | 9/10 | 77 | 7 | 1,812 | `CALL`(1), `OCCURS`(3), `USAGE_COMP_5`(39), `FD`(3), `UNSTRING`(2), `FUNCTION`(13) |
-| `DOOM-COBOL-CODEX` | 28 | 10/10 | 169 | 10 | 1,906 | `CALL`(42), `OCCURS`(28), `USAGE_COMP_5`(220), `COPY`(11), `FUNCTION`(40) |
 | `SAT-COBOL-CODEX` | 42 | 9/10 | 70 | 3 | 1,706 | `OCCURS`(22), `USAGE_COMP_5`(81), `COPY`(5), `FD`(2), `FUNCTION`(67) |
+| `DOOM-COBOL-CODEX` | 28 | 10/10 | 169 | 10 | 1,906 | `CALL`(42), `OCCURS`(28), `USAGE_COMP_5`(220), `COPY`(11), `FUNCTION`(40) |
 | `DOOM-COBOL-CLAUDE` | 34 | 9/10 | 71 | 1 | 1,616 | `CALL`(15), `OCCURS`(7), `REDEFINES`(1), `USAGE_COMP_5`(12), `COPY`(7), `FUNCTION`(43) |
 | `PYGAME-COBOL-CODEX` | 31 | 10/10 | 11 | 2 | 398 | `CALL`(39), `OCCURS`(1), `USAGE_COMP_5`(55), `COPY`(2), `FUNCTION`(4) |
 | `TTTGAME15-COBOL-CLAUDE` | 28 | 8/10 | 34 | 5 | 1,537 | `OCCURS`(38), `REDEFINES`(6), `UNSTRING`(6), `FUNCTION`(20) |
@@ -392,8 +392,8 @@ A prompt often expands into many sub-features. The ledger tallies features from 
 | `CHESS-COBOL-CLAUDE` | **51** | 0 | 99 | 1 | 115 |
 | `PYGAME-COBOL-CLAUDE` | **0** | 0 | 41 | 2 | 41 |
 | `COMPRESS-COBOL-CODEX` | **18** | 0 | 168 | 1 | 186 |
-| `DOOM-COBOL-CODEX` | **0** | 0 | 0 | 10 | 0 |
 | `SAT-COBOL-CODEX` | **63** | 0 | 0 | 10 | 44 |
+| `DOOM-COBOL-CODEX` | **0** | 0 | 0 | 10 | 0 |
 | `DOOM-COBOL-CLAUDE` | **13** | 0 | 0 | 15 | 13 |
 | `PYGAME-COBOL-CODEX` | **11** | 0 | 31 | 1 | 42 |
 | `TTTGAME15-COBOL-CLAUDE` | **31** | 0 | 70 | 5 | 101 |
@@ -415,8 +415,8 @@ Each project's difficulty label is the quartile of its mean rank across seven si
 | `CHESS-COBOL-CLAUDE` | 15.52 | 17 | 47 | 3 | 2.8% | 5 | 0.3% |
 | `PYGAME-COBOL-CLAUDE` | 2.11 | 0 | 17 | 14 | 3.3% | 2 | 7.8% |
 | `COMPRESS-COBOL-CODEX` | 0.92 | 34 | 10 | 3 | 14.4% | 5 | 0.4% |
+| `SAT-COBOL-CODEX` | 1.84 | 0 | 29 | 0 | 11.0% | 4 | 4.6% |
 | `DOOM-COBOL-CODEX` | 2.03 | 0 | 32 | 4 | 3.3% | 3 | 0.2% |
-| `SAT-COBOL-CODEX` | 0.76 | 0 | 15 | 0 | 13.9% | 3 | 7.0% |
 | `DOOM-COBOL-CLAUDE` | 3.24 | 0 | 20 | 4 | 0.7% | 1 | 0.7% |
 | `PYGAME-COBOL-CODEX` | 0.07 | 0 | 3 | 1 | 9.7% | 3 | 5.1% |
 | `TTTGAME15-COBOL-CLAUDE` | 2.07 | 6 | 12 | 1 | 1.5% | 0 | — |
